@@ -15,6 +15,21 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -79,6 +94,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
@@ -126,12 +144,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BackUpData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BackUpData.Designer.cs">
+      <DependentUpon>BackUpData.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAO\BillDAO.cs" />
     <Compile Include="DAO\BillInfoDAO.cs" />
     <Compile Include="DAO\RoomCategoryDAO.cs" />
     <Compile Include="DAO\ServiceCategoryDAO.cs" />
     <Compile Include="DAO\ServiceDAO.cs" />
     <Compile Include="DAO\MenuDAO.cs" />
+    <Compile Include="DAO\Z\Nudge.cs" />
+    <Compile Include="dataSetB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dataSetB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DTB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DTB.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DTO\AccountDTO.cs" />
     <Compile Include="DTO\BillDTO.cs" />
     <Compile Include="DTO\BillInfoDTO.cs" />
@@ -151,6 +186,12 @@
     <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\RoomDAO.cs" />
+    <Compile Include="GUI\InvoicePrintting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\InvoicePrintting.Designer.cs">
+      <DependentUpon>InvoicePrintting.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,11 +204,11 @@
     <Compile Include="GUI\Profile.Designer.cs">
       <DependentUpon>Profile.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ReportBill.cs">
+    <Compile Include="GUI\ReportB.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\ReportBill.Designer.cs">
-      <DependentUpon>ReportBill.cs</DependentUpon>
+    <Compile Include="GUI\ReportB.Designer.cs">
+      <DependentUpon>ReportB.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -182,9 +223,46 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLiPhongKaraokeDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QuanLiPhongKaraokeDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiPhongKaraokeDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiPhongKaraokeDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiPhongKaraokeDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiPhongKaraokeDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiPhongKaraokeDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiPhongKaraokeDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiPhongKaraokeDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportBillByRoomDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportBillByRoomDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="TestLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestLogin.Designer.cs">
+      <DependentUpon>TestLogin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BackUpData.resx">
+      <DependentUpon>BackUpData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\InvoicePrintting.resx">
+      <DependentUpon>InvoicePrintting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\login.resx">
       <DependentUpon>login.cs</DependentUpon>
@@ -192,8 +270,8 @@
     <EmbeddedResource Include="GUI\Profile.resx">
       <DependentUpon>Profile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ReportBill.resx">
-      <DependentUpon>ReportBill.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\ReportB.resx">
+      <DependentUpon>ReportB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -204,11 +282,38 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="GUI\RoomManager.resx">
       <DependentUpon>RoomManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\ReportBiLL.rdlc" />
+    <EmbeddedResource Include="Report\ReportB.rdlc" />
+    <EmbeddedResource Include="Report\ReportBillForRoom.rdlc" />
+    <EmbeddedResource Include="TestLogin.resx">
+      <DependentUpon>TestLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="dataSetB.xsc">
+      <DependentUpon>dataSetB.xsd</DependentUpon>
+    </None>
+    <None Include="dataSetB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dataSetB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dataSetB.xss">
+      <DependentUpon>dataSetB.xsd</DependentUpon>
+    </None>
+    <None Include="DTB.xsc">
+      <DependentUpon>DTB.xsd</DependentUpon>
+    </None>
+    <None Include="DTB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DTB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DTB.xss">
+      <DependentUpon>DTB.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -230,6 +335,61 @@
     <None Include="QuanLiPhongKaraokeDataSet.xss">
       <DependentUpon>QuanLiPhongKaraokeDataSet.xsd</DependentUpon>
     </None>
+    <None Include="QuanLiPhongKaraokeDataSet1.xsc">
+      <DependentUpon>QuanLiPhongKaraokeDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiPhongKaraokeDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiPhongKaraokeDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiPhongKaraokeDataSet1.xss">
+      <DependentUpon>QuanLiPhongKaraokeDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiPhongKaraokeDataSet2.xsc">
+      <DependentUpon>QuanLiPhongKaraokeDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiPhongKaraokeDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiPhongKaraokeDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiPhongKaraokeDataSet2.xss">
+      <DependentUpon>QuanLiPhongKaraokeDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiPhongKaraokeDataSet3.xsc">
+      <DependentUpon>QuanLiPhongKaraokeDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiPhongKaraokeDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiPhongKaraokeDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiPhongKaraokeDataSet3.xss">
+      <DependentUpon>QuanLiPhongKaraokeDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiPhongKaraokeDataSet4.xsc">
+      <DependentUpon>QuanLiPhongKaraokeDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiPhongKaraokeDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiPhongKaraokeDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiPhongKaraokeDataSet4.xss">
+      <DependentUpon>QuanLiPhongKaraokeDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="ReportBillByRoomDataSet.xsc">
+      <DependentUpon>ReportBillByRoomDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ReportBillByRoomDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportBillByRoomDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ReportBillByRoomDataSet.xss">
+      <DependentUpon>ReportBillByRoomDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -238,6 +398,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Logo AGU draw.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -252,7 +413,18 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

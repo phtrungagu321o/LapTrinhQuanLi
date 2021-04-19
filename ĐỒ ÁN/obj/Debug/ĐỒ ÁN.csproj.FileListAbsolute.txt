@@ -511,7 +511,6 @@ D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.Admin.resources
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.login.resources
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.AccountProfile.resources
-D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.GUI.ReportBill.resources
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.Properties.Resources.resources
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.RoomManager.resources
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ ÁN.csproj.GenerateResource.cache
@@ -522,3 +521,8 @@ D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ ÁN.csproj.CopyComplete
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ ÁN.exe
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ ÁN.pdb
+D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.GUI.invoicePrintting.resources
+D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.GUI.ReportB.resources
+D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.BackUpAndRestoreData.resources
+D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.TestLogin.resources
+D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\bin\Debug\FontAwesome.Sharp.dll

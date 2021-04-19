@@ -1,4 +1,5 @@
 ﻿using ĐỒ_ÁN.DAO;
+using ĐỒ_ÁN.DAO.Z;
 using ĐỒ_ÁN.DTO;
 using System;
 using System.Collections.Generic;
@@ -101,7 +102,10 @@ namespace ĐỒ_ÁN
             }
             else
             {
+                var a = new Nudge(this);
+                a.NudgeMe();
                 MessageBox.Show("Sai tên tài khoản hoặc mật khẩu", "Thông báo");
+                
             }    
         }
         bool Login(string UserName,string PassWord)
@@ -112,6 +116,12 @@ namespace ĐỒ_ÁN
         private void txtUser_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRestoreAndBackup_Click(object sender, EventArgs e)
+        {
+            TestLogin f = new TestLogin();
+            f.ShowDialog();
         }
     }
 }

@@ -10,24 +10,21 @@ using System.Windows.Forms;
 
 namespace ĐỒ_ÁN.GUI
 {
-    public partial class ReportBill : Form
+    public partial class ReportB : Form
     {
-        private DateTime checkin;
+        private DateTime checkIn;
         private DateTime checkOut;
-        public ReportBill()
+        public ReportB()
         {
             InitializeComponent();
-            
-
         }
 
-        public DateTime Checkin { get => checkin; set => checkin = value; }
+        public DateTime CheckIn { get => checkIn; set => checkIn = value; }
         public DateTime CheckOut { get => checkOut; set => checkOut = value; }
 
-        private void ReportBill_Load(object sender, EventArgs e)
+        private void ReportB_Load(object sender, EventArgs e)
         {
-            this.uSP_GetListBillByDateForReportTableAdapter.Fill(this.quanLiPhongKaraokeDataSet.USP_GetListBillByDateForReport,checkin,checkOut);
-            
+            this.uSP_GetListBillByDateForReportTableAdapter.Fill(this.quanLiPhongKaraokeDataSet4.USP_GetListBillByDateForReport,CheckIn,CheckOut);
             this.reportViewer1.RefreshReport();
         }
     }

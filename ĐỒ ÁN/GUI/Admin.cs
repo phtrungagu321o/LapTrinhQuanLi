@@ -285,22 +285,29 @@ namespace ĐỒ_ÁN
         {
             string name = txtNameServiceCategory.Text;
             int id = Convert.ToInt32(txtIDServiceCategory.Text);
-            DialogResult t;
-            t = MessageBox.Show(string.Format("Bạn có muốn Xóa loại {0} không ?", name), "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (t == DialogResult.Yes)
+            if (id == 24)
             {
-                if (ServiceCategoryDAO.Instance.DeleteServiceCategory(id))
+                MessageBox.Show("Không được xóa", "Thông báo");
+            }
+            else
+            {
+                DialogResult t;
+                t = MessageBox.Show(string.Format("Bạn có muốn Xóa loại {0} không ?", name), "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (t == DialogResult.Yes)
                 {
-                    MessageBox.Show("Xóa danh mục dịch vụ thành công");
-                    loadListServiceCategory();
-                    LoadListService();
-                    LoadCategoryIntoComboBox(cbbServiceCategory);
-                    if (deleteServiceCategory != null)
-                        deleteServiceCategory(this, new EventArgs());
-                }
-                else
-                {
-                    MessageBox.Show("Có lỗi khi Xóa!!");
+                    if (ServiceCategoryDAO.Instance.DeleteServiceCategory(id))
+                    {
+                        MessageBox.Show("Xóa danh mục dịch vụ thành công");
+                        loadListServiceCategory();
+                        LoadListService();
+                        LoadCategoryIntoComboBox(cbbServiceCategory);
+                        if (deleteServiceCategory != null)
+                            deleteServiceCategory(this, new EventArgs());
+                    }
+                    else
+                    {
+                        MessageBox.Show("Có lỗi khi Xóa!!");
+                    }
                 }
             }
         }
@@ -308,22 +315,29 @@ namespace ĐỒ_ÁN
         {
             string name = txtNameServiceCategory.Text;
             int id = Convert.ToInt32(txtIDServiceCategory.Text);
-            DialogResult t;
-            t = MessageBox.Show(string.Format("Bạn có muốn Sửa loại này không ?"), "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (t == DialogResult.Yes)
+            if (id == 24)
             {
-                if (ServiceCategoryDAO.Instance.UpdateServiceCategory(name,id))
+                MessageBox.Show("Không được sửa", "Thông báo");
+            }
+            else
+            {
+                DialogResult t;
+                t = MessageBox.Show(string.Format("Bạn có muốn Sửa loại này không ?"), "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (t == DialogResult.Yes)
                 {
-                    MessageBox.Show("Sủa danh mục dịch vụ thành công");
-                    loadListServiceCategory();
-                    LoadListService();
-                    LoadCategoryIntoComboBox(cbbServiceCategory);
-                    if (updateServiceCategory != null)
-                        updateServiceCategory(this, new EventArgs());
-                }
-                else
-                {
-                    MessageBox.Show("Có lỗi khi Sửa!!");
+                    if (ServiceCategoryDAO.Instance.UpdateServiceCategory(name, id))
+                    {
+                        MessageBox.Show("Sửa danh mục dịch vụ thành công");
+                        loadListServiceCategory();
+                        LoadListService();
+                        LoadCategoryIntoComboBox(cbbServiceCategory);
+                        if (updateServiceCategory != null)
+                            updateServiceCategory(this, new EventArgs());
+                    }
+                    else
+                    {
+                        MessageBox.Show("Có lỗi khi Sửa!!");
+                    }
                 }
             }
         }
@@ -352,6 +366,12 @@ namespace ĐỒ_ÁN
             int categoryID = (cbbServiceCategory.SelectedItem as ServiceCategoryDTO).ID;
             float price = (float)nudPrice.Value;
             int id = Convert.ToInt32(txtServiceID.Text);
+            if(id==50)
+            {
+                MessageBox.Show("Không được sửa", "Thông báo");
+
+            }   
+            else
             if (ServiceDAO.Instance.UpdateService(id, categoryID, name, price))
             {
                 MessageBox.Show("Sửa món thành công");
@@ -370,6 +390,11 @@ namespace ĐỒ_ÁN
         private void btnDeleteFood_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(txtServiceID.Text);
+            if (id == 50)
+            {
+                MessageBox.Show("Không được xóa", "Thông báo");
+            }  
+            else
             if (ServiceDAO.Instance.DeleteService(id))
             {
                 MessageBox.Show("Xóa món thành công");
@@ -797,8 +822,8 @@ namespace ĐỒ_ÁN
         private void btnReport_Click(object sender, EventArgs e)
         {
             
-            ReportBill rp = new ReportBill();
-            rp.Checkin = dtpFromTime.Value;
+            ReportB rp = new ReportB();
+            rp.CheckIn = dtpFromTime.Value;
             rp.CheckOut = dtpToTime.Value;
             rp.ShowDialog();
 

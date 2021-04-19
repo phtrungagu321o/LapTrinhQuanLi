@@ -1,5 +1,6 @@
 ﻿using ĐỒ_ÁN.DAO;
 using ĐỒ_ÁN.DTO;
+using ĐỒ_ÁN.GUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,6 +34,8 @@ namespace ĐỒ_ÁN
             LoadRoom();
             LoadServiceCategory();
             LoadComboBoxRoom(cbbSwitchRoom);
+            customizeDesigning();
+            
         }
         #region Method
         
@@ -40,7 +43,7 @@ namespace ĐỒ_ÁN
         {
             adminToolStripMenuItem.Enabled = type ==1;
             
-            thôngTinTàiKhoảnToolStripMenuItem.Text += " (" + loginAccount.DisPlayName + ")";
+            btnProFile.Text += " (" + loginAccount.DisPlayName + ")";
         }
         void LoadRoom()
         {
@@ -52,11 +55,10 @@ namespace ĐỒ_ÁN
                 Button btn = new Button() {Width=RoomDAO.RoomWidth,Height=RoomDAO.RoomHeight };
                 btn.Text = item.Name + "\n" + item.Status;
                
-                btn.Click += Btn_Click;
-                  
-    
+               btn.Click += Btn_Click;
+             
                 btn.Tag = item;
-               
+                btn.ContextMenuStrip = contextMenuStrip1;
 
                 switch (item.Status)
                 {
@@ -76,6 +78,21 @@ namespace ĐỒ_ÁN
             }   
                 
         }
+        private void Btn_Click(object sender, EventArgs e)
+        {
+
+            int roomID = ((sender as Button).Tag as RoomDTO).ID;
+            lstvBill.Tag = (sender as Button).Tag;
+            ShowServiceBill(roomID);
+            ShowTimeBill(roomID);
+            AddPriceOld(roomID);
+            TotalPrice();
+
+
+
+
+        }
+        
 
         void ShowServiceBill(int id)
         {
@@ -188,25 +205,21 @@ namespace ĐỒ_ÁN
             cbbService.DataSource = listFood;
             cbbService.DisplayMember = "name";
         }
+        void  checkListView()
+        {
+            RoomDTO room = lstvBill.Tag as RoomDTO;
+            int idBill = BillDAO.Instance.GetUnCheckBillIDByRoomID(room.ID);
+            int idRoom = (lstvBill.Tag as RoomDTO).ID;
+             BillInfoDAO.Instance.InsertBillInfo(idBill, 50, 0, idRoom);
+             
+
+        }
      
 
         #endregion
 
         #region Events
-        private void Btn_Click(object sender, EventArgs e)
-        {
-            
-            int roomID = ((sender as Button).Tag as RoomDTO).ID;
-            lstvBill.Tag = (sender as Button).Tag;
-            ShowServiceBill(roomID);          
-            ShowTimeBill(roomID);
-            AddPriceOld(roomID);
-            TotalPrice();
-           
-          
-
-
-        }
+       
         private void Btn_DoubleClick(object sender, EventArgs e)
         {
 
@@ -235,7 +248,7 @@ namespace ĐỒ_ÁN
 
         private void Af_UpdateAccount(object sender, AccountEvent e)
         {
-            thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản (" + e.Acc.DisPlayName + ")";
+            btnProFile.Text = "Thông tin tài khoản (" + e.Acc.DisPlayName + ")";
         }
 
         private void adminToolStripMenuItem_Click(object sender, EventArgs e)
@@ -366,29 +379,61 @@ namespace ĐỒ_ÁN
 
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
-            AddTimeBill();
+            
             RoomDTO room = lstvBill.Tag as RoomDTO;
+            
+            if (room == null)
+            {
+                MessageBox.Show("Hãy chọn bàn!!!");
+                return;
+            }
+            int id = (lstvBill.Tag as RoomDTO).ID;
+           
+            List<RoomDTO> lits = RoomDAO.Instance.LoadRoomListByID(id);
+            foreach(RoomDTO item in lits)
+            {
+                if(item.Status==" Trống")
+                {
+                    MessageBox.Show("Phòng hiện tại đang Trống", "Thông báo");
+                    return;
+                }    
+            }
+            
             int idBill = BillDAO.Instance.GetUnCheckBillIDByRoomID(room.ID);
             int disCount = (int)nmrDiscount.Value;
-
+            int maxidBill = BillDAO.Instance.GetMaxIDBill();
             double totalPrice = float.Parse(txtToTalPriceTest.Text);
 
             double FinalTotalPrice = totalPrice - (totalPrice / 100) * disCount;
 
             string totalTime = txtAddTime.Text;
             float priceoldtime = float.Parse(txtTimeOldTest.Text);
-            if(idBill !=-1) //bill đã có
+               
+            if (idBill !=-1) //bill đã có
             {
-                if(MessageBox.Show(string.Format("Bạn có chắc muốn thanhe toán hóa đơn cho bàn {0}\n Tổng tiền - (Tổng Tiền / 100) x Giảm giá\n<=> {1} - ({1}/100) x {2} = {3}",room.Name, totalPrice,disCount, FinalTotalPrice),"Thông báo",MessageBoxButtons.OKCancel,MessageBoxIcon.Question)==System.Windows.Forms.DialogResult.OK)
+                if(MessageBox.Show(string.Format("Bạn có chắc muốn thanh toán hóa đơn cho bàn {0}\n Tổng tiền - (Tổng Tiền / 100) x Giảm giá\n<=> {1} - ({1}/100) x {2} = {3}",room.Name, totalPrice,disCount, FinalTotalPrice),"Thông báo",MessageBoxButtons.OKCancel,MessageBoxIcon.Question)==System.Windows.Forms.DialogResult.OK)
                 {
+                    if (lstvBill.Items.Count == 0)
+                    {
+                        checkListView();
+                    }
                     BillDAO.Instance.CheckOut(idBill, disCount, totalTime, priceoldtime,(float)FinalTotalPrice);
                     
                     ShowServiceBill(room.ID);
                 }   
             }
+             
+               
+                
             LoadRoom();
             ShowTimeBill(room.ID);
             AddPriceOld(room.ID);
+            if (MessageBox.Show(string.Format("Bạn có muốn in hóa đơn không ?"), "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+            {
+                invoicePrintting f = new invoicePrintting();
+                f.IDBill = idBill;
+                f.ShowDialog();
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -415,6 +460,7 @@ namespace ĐỒ_ÁN
         }
         private void btnAddFood_Click(object sender, EventArgs e)
         {
+            
             RoomDTO room = lstvBill.Tag as RoomDTO;
             if(room==null)
             {
@@ -453,8 +499,14 @@ namespace ĐỒ_ÁN
         private void btnSwitchRoom_Click(object sender, EventArgs e)
         {
             RoomDTO room = lstvBill.Tag as RoomDTO;
+            if(room==null)
+            {
+                MessageBox.Show("Vui lòng chọn phòng cần chuyển", "Thông báo");
+                return;
+            }    
             int id1 = (lstvBill.Tag as RoomDTO).ID;
             int id2 = (cbbSwitchRoom.SelectedItem as RoomDTO).ID;
+            string name1 = (lstvBill.Tag as RoomDTO).Status;
             List<RoomDTO> list = RoomDAO.Instance.LoadRoomListByID(id2);
             foreach (RoomDTO item in list)
             {
@@ -464,7 +516,12 @@ namespace ĐỒ_ÁN
                     if (f=="Có Người")
                         {
                              MessageBox.Show(string.Format("{0} đã có người", (cbbSwitchRoom.SelectedItem as RoomDTO).Name));
-                         }    
+                         } 
+                    else if(name1==" Trống")
+                    {
+                        MessageBox.Show(string.Format("Bàn {0} đang trống !!! ", (lstvBill.Tag as RoomDTO).Name));
+                    }
+                    
                     else 
                     {
                         RoomDAO.Instance.SwitchRoom(id1, id2);
@@ -500,7 +557,8 @@ namespace ĐỒ_ÁN
             if (idBill == -1)//không có bill nào hết ;
             {
                 BillDAO.Instance.InsertStartBill(room.ID);
-                
+              
+
             }
 
         
@@ -540,6 +598,287 @@ namespace ĐỒ_ÁN
         private void chuyểnPhòngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             btnSwitchRoom_Click(this, new EventArgs());
+        }
+
+        private void thanhToánToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnCheckOut_Click(this, new EventArgs());
+        }
+
+        private void bắtĐầuToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            btnStart_Click(this, new EventArgs());
+        }
+
+        private void mởAdminToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            adminToolStripMenuItem_Click(this, new EventArgs());
+        }
+
+        private void mởThôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            thôngTinCáNhânToolStripMenuItem_Click(this, new EventArgs());
+        }
+
+        private void màuNềnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RoomManager_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AccountProfile af = new AccountProfile(loginAccount);
+            af.UpdateAccount += Af_UpdateAccount;
+            af.ShowDialog();
+            hideSubMenu();
+        }
+        private void customizeDesigning()
+        {
+            panelProfile.Visible = false;
+            panelKeyOff.Visible = false;
+        }
+
+        private void hideSubMenu()
+        {
+            if(panelProfile.Visible==true)
+            {
+                panelProfile.Visible = false;
+            }
+            if (panelKeyOff.Visible == true)
+                panelKeyOff.Visible = false;
+        }
+
+        private void showSubMenu(Panel subMenu)
+        {
+            if(subMenu.Visible==false)
+            {
+                hideSubMenu();
+                subMenu.Visible = true;
+            }    
+            else
+            {
+                subMenu.Visible = false;
+            }    
+        }
+
+        private void btnProFile_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelProfile);
+        }
+
+        private void btnOut_Click(object sender, EventArgs e)
+        {
+            DialogResult t;
+            t = MessageBox.Show("Bạn có muốn đăng xuất không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (t == DialogResult.Yes)
+                this.Close();
+            hideSubMenu();
+        }
+
+        private void btnKeyOff_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelKeyOff);
+        }
+
+        private void buttonAddFood_Click(object sender, EventArgs e)
+        {
+            btnAddFood_Click(this, new EventArgs());
+            hideSubMenu();
+        }
+
+        private void buttonStart_Click(object sender, EventArgs e)
+        {
+            btnStart_Click(this, new EventArgs());
+            hideSubMenu();
+        }
+
+        private void buttonCheckout_Click(object sender, EventArgs e)
+        {
+            btnCheckOut_Click(this, new EventArgs());
+            hideSubMenu();
+        }
+
+        private void buttonSwitch_Click(object sender, EventArgs e)
+        {
+            btnSwitchRoom_Click(this, new EventArgs());
+            hideSubMenu();
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            Admin a = new Admin();
+            a.loginAccount = LoginAccount;
+            a.InsertService += A_InsertService;
+            a.UpdateService += A_UpdateService;
+            a.DeleteService += A_DeleteService;
+
+            a.InsertRoom += A_InsertRoom;
+            a.UpdateRoom += A_UpdateRoom;
+            a.DeleteRoom += A_DeleteRoom;
+
+            a.InsertServiceCategory += A_InsertServiceCategory;
+            a.UpdateServiceCategory += A_UpdateServiceCategory;
+            a.DeleteServiceCategory += A_DeleteServiceCategory;
+
+            a.InsertRoomCategory += A_InsertRoomCategory;
+            a.UpdateRoomCategory += A_UpdateRoomCategory;
+            a.DeleteRoomCategory += A_DeleteRoomCategory;
+            a.ShowDialog();
+            hideSubMenu();
+        }
+
+        private void buttonHelp_Click(object sender, EventArgs e)
+        {
+            //
+            hideSubMenu();
+        }
+
+        private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void phímTắtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            RoomDTO room = lstvBill.Tag as RoomDTO;
+            if (room == null)
+            {
+                MessageBox.Show("Vui lòng chọn phòng cần chuyển", "Thông báo");
+                return;
+            }
+            int id1 = (lstvBill.Tag as RoomDTO).ID;
+            int id2 = (cbbSwitchRoom.SelectedItem as RoomDTO).ID;
+            string name1 = (lstvBill.Tag as RoomDTO).Status;
+            List<RoomDTO> list = RoomDAO.Instance.LoadRoomListByID(id2);
+            foreach (RoomDTO item in list)
+            {
+                string f = item.Status;
+                if (MessageBox.Show(string.Format("Bạn có thật sự muốn chuyển  {0} qua  {1}", (lstvBill.Tag as RoomDTO).Name, (cbbSwitchRoom.SelectedItem as RoomDTO).Name), "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                {
+                    if (f == "Có Người")
+                    {
+                        MessageBox.Show(string.Format("{0} đã có người", (cbbSwitchRoom.SelectedItem as RoomDTO).Name));
+                    }
+                    else if (name1 == " Trống")
+                    {
+                        MessageBox.Show(string.Format("Bàn {0} đang trống !!! ", (lstvBill.Tag as RoomDTO).Name));
+                    }
+
+                    else
+                    {
+                        RoomDAO.Instance.SwitchRoom(id1, id2);
+                        RoomDAO.Instance.SwitchOldTimePrice(id1, id2);
+                        LoadRoom();
+                        ShowTimeBill(room.ID);
+                        AddPriceOld(room.ID);
+                    }
+
+                }
+            }
+        }
+
+        private void iconButtonCheckOut_Click(object sender, EventArgs e)
+        {
+
+            RoomDTO room = lstvBill.Tag as RoomDTO;
+
+            if (room == null)
+            {
+                MessageBox.Show("Hãy chọn bàn!!!");
+                return;
+            }
+            int id = (lstvBill.Tag as RoomDTO).ID;
+
+            List<RoomDTO> lits = RoomDAO.Instance.LoadRoomListByID(id);
+            foreach (RoomDTO item in lits)
+            {
+                if (item.Status == " Trống")
+                {
+                    MessageBox.Show("Phòng hiện tại đang Trống", "Thông báo");
+                    return;
+                }
+            }
+
+            int idBill = BillDAO.Instance.GetUnCheckBillIDByRoomID(room.ID);
+            int disCount = (int)nmrDiscount.Value;
+            int maxidBill = BillDAO.Instance.GetMaxIDBill();
+            double totalPrice = float.Parse(txtToTalPriceTest.Text);
+
+            double FinalTotalPrice = totalPrice - (totalPrice / 100) * disCount;
+
+            string totalTime = txtAddTime.Text;
+            float priceoldtime = float.Parse(txtTimeOldTest.Text);
+
+            if (idBill != -1) //bill đã có
+            {
+                if (MessageBox.Show(string.Format("Bạn có chắc muốn thanh toán hóa đơn cho bàn {0}\n Tổng tiền - (Tổng Tiền / 100) x Giảm giá\n<=> {1} - ({1}/100) x {2} = {3}", room.Name, totalPrice, disCount, FinalTotalPrice), "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+                {
+                    if (lstvBill.Items.Count == 0)
+                    {
+                        checkListView();
+                    }
+                    BillDAO.Instance.CheckOut(idBill, disCount, totalTime, priceoldtime, (float)FinalTotalPrice);
+
+                    ShowServiceBill(room.ID);
+                }
+            }
+
+
+
+            LoadRoom();
+            ShowTimeBill(room.ID);
+            AddPriceOld(room.ID);
+            if (MessageBox.Show(string.Format("Bạn có muốn in hóa đơn không ?"), "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+            {
+                invoicePrintting f = new invoicePrintting();
+                f.IDBill = idBill;
+                f.ShowDialog();
+            }
+        }
+
+        private void iconButton1_Click_1(object sender, EventArgs e)
+        {
+
+            RoomDTO room = lstvBill.Tag as RoomDTO;
+            if (room == null)
+            {
+                MessageBox.Show("Hãy chọn bàn!!!");
+                return;
+            }
+
+            int idBill = BillDAO.Instance.GetUnCheckBillIDByRoomID(room.ID);
+            int Service = (cbbService.SelectedItem as ServiceDTO).ID;
+            int countService = (int)nmrCountService.Value;
+            int idRoom = (lstvBill.Tag as RoomDTO).ID;
+
+            if (idBill == -1)//không có bill nào hết ;
+            {
+                BillDAO.Instance.InsertBill(room.ID);
+                BillInfoDAO.Instance.InsertBillInfo(BillDAO.Instance.GetMaxIDBill(), Service, countService, idRoom);
+            }
+            else //Bill đã tồn tại
+            {
+                BillInfoDAO.Instance.InsertBillInfo(idBill, Service, countService, idRoom);
+            }
+            ShowServiceBill(room.ID);
+            TotalPrice();
+            LoadRoom();
+            ShowTimeBill(room.ID);
         }
     }
 }

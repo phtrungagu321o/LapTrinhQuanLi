@@ -143,6 +143,7 @@ namespace ĐỒ_ÁN
             this.btnPervious = new System.Windows.Forms.Button();
             this.tcService = new System.Windows.Forms.TabControl();
             this.USP_GetListBillByDateForReportTableAdapter = new ĐỒ_ÁN.QuanLiPhongKaraokeDataSetTableAdapters.USP_GetListBillByDateForReportTableAdapter();
+            this.panel13 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.USP_GetListBillByDateForReportBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuanLiPhongKaraokeDataSet)).BeginInit();
             this.tpAccount.SuspendLayout();
@@ -196,6 +197,7 @@ namespace ĐỒ_ÁN
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBill)).BeginInit();
             this.tcService.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // USP_GetListBillByDateForReportBindingSource
@@ -1164,24 +1166,21 @@ namespace ĐỒ_ÁN
             // 
             // tpBill
             // 
-            this.tpBill.Controls.Add(this.btnLast);
-            this.tpBill.Controls.Add(this.btnNext);
-            this.tpBill.Controls.Add(this.txtNumPage);
+            this.tpBill.Controls.Add(this.panel13);
             this.tpBill.Controls.Add(this.panel2);
             this.tpBill.Controls.Add(this.panel1);
-            this.tpBill.Controls.Add(this.btnFristPage);
-            this.tpBill.Controls.Add(this.btnPervious);
+            this.tpBill.Controls.Add(this.dtpFromTime);
             this.tpBill.Location = new System.Drawing.Point(4, 22);
             this.tpBill.Name = "tpBill";
             this.tpBill.Padding = new System.Windows.Forms.Padding(3);
-            this.tpBill.Size = new System.Drawing.Size(594, 410);
+            this.tpBill.Size = new System.Drawing.Size(598, 415);
             this.tpBill.TabIndex = 0;
             this.tpBill.Text = "Doanh thu";
             this.tpBill.UseVisualStyleBackColor = true;
             // 
             // btnLast
             // 
-            this.btnLast.Location = new System.Drawing.Point(481, 368);
+            this.btnLast.Location = new System.Drawing.Point(478, 11);
             this.btnLast.Name = "btnLast";
             this.btnLast.Size = new System.Drawing.Size(82, 26);
             this.btnLast.TabIndex = 3;
@@ -1191,7 +1190,7 @@ namespace ĐỒ_ÁN
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(393, 368);
+            this.btnNext.Location = new System.Drawing.Point(390, 11);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(82, 26);
             this.btnNext.TabIndex = 4;
@@ -1201,7 +1200,7 @@ namespace ĐỒ_ÁN
             // 
             // txtNumPage
             // 
-            this.txtNumPage.Location = new System.Drawing.Point(251, 368);
+            this.txtNumPage.Location = new System.Drawing.Point(248, 11);
             this.txtNumPage.Name = "txtNumPage";
             this.txtNumPage.ReadOnly = true;
             this.txtNumPage.Size = new System.Drawing.Size(91, 20);
@@ -1215,10 +1214,10 @@ namespace ĐỒ_ÁN
             this.panel2.Controls.Add(this.btnReport);
             this.panel2.Controls.Add(this.btnViewBill);
             this.panel2.Controls.Add(this.dtpToTime);
-            this.panel2.Controls.Add(this.dtpFromTime);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(567, 26);
+            this.panel2.Size = new System.Drawing.Size(592, 26);
             this.panel2.TabIndex = 1;
             // 
             // btnReport
@@ -1250,7 +1249,7 @@ namespace ĐỒ_ÁN
             // 
             // dtpFromTime
             // 
-            this.dtpFromTime.Location = new System.Drawing.Point(3, 3);
+            this.dtpFromTime.Location = new System.Drawing.Point(8, 35);
             this.dtpFromTime.Name = "dtpFromTime";
             this.dtpFromTime.Size = new System.Drawing.Size(170, 20);
             this.dtpFromTime.TabIndex = 0;
@@ -1258,23 +1257,25 @@ namespace ĐỒ_ÁN
             // panel1
             // 
             this.panel1.Controls.Add(this.dgvBill);
-            this.panel1.Location = new System.Drawing.Point(3, 50);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(3, 115);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(567, 297);
+            this.panel1.Size = new System.Drawing.Size(592, 297);
             this.panel1.TabIndex = 0;
             // 
             // dgvBill
             // 
             this.dgvBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvBill.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBill.Location = new System.Drawing.Point(3, 3);
+            this.dgvBill.Location = new System.Drawing.Point(-3, 0);
             this.dgvBill.Name = "dgvBill";
-            this.dgvBill.Size = new System.Drawing.Size(561, 289);
+            this.dgvBill.Size = new System.Drawing.Size(582, 289);
             this.dgvBill.TabIndex = 0;
             // 
             // btnFristPage
             // 
-            this.btnFristPage.Location = new System.Drawing.Point(6, 368);
+            this.btnFristPage.Location = new System.Drawing.Point(3, 11);
             this.btnFristPage.Name = "btnFristPage";
             this.btnFristPage.Size = new System.Drawing.Size(82, 26);
             this.btnFristPage.TabIndex = 1;
@@ -1284,7 +1285,7 @@ namespace ĐỒ_ÁN
             // 
             // btnPervious
             // 
-            this.btnPervious.Location = new System.Drawing.Point(94, 368);
+            this.btnPervious.Location = new System.Drawing.Point(91, 11);
             this.btnPervious.Name = "btnPervious";
             this.btnPervious.Size = new System.Drawing.Size(82, 26);
             this.btnPervious.TabIndex = 2;
@@ -1299,15 +1300,29 @@ namespace ĐỒ_ÁN
             this.tcService.Controls.Add(this.tpFoodCategory);
             this.tcService.Controls.Add(this.tpRoom);
             this.tcService.Controls.Add(this.tpAccount);
-            this.tcService.Location = new System.Drawing.Point(1, 3);
+            this.tcService.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tcService.Location = new System.Drawing.Point(0, 0);
             this.tcService.Name = "tcService";
             this.tcService.SelectedIndex = 0;
-            this.tcService.Size = new System.Drawing.Size(602, 436);
+            this.tcService.Size = new System.Drawing.Size(606, 441);
             this.tcService.TabIndex = 0;
             // 
             // USP_GetListBillByDateForReportTableAdapter
             // 
             this.USP_GetListBillByDateForReportTableAdapter.ClearBeforeFill = true;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.btnLast);
+            this.panel13.Controls.Add(this.btnNext);
+            this.panel13.Controls.Add(this.txtNumPage);
+            this.panel13.Controls.Add(this.btnFristPage);
+            this.panel13.Controls.Add(this.btnPervious);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel13.Location = new System.Drawing.Point(3, 63);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(592, 52);
+            this.panel13.TabIndex = 6;
             // 
             // Admin
             // 
@@ -1384,11 +1399,12 @@ namespace ĐỒ_ÁN
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvService)).EndInit();
             this.tpBill.ResumeLayout(false);
-            this.tpBill.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBill)).EndInit();
             this.tcService.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1500,7 +1516,6 @@ namespace ĐỒ_ÁN
         private System.Windows.Forms.Button btnViewBill;
         private System.Windows.Forms.DateTimePicker dtpToTime;
         private System.Windows.Forms.DateTimePicker dtpFromTime;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvBill;
         private System.Windows.Forms.Button btnFristPage;
         private System.Windows.Forms.Button btnPervious;
@@ -1508,5 +1523,7 @@ namespace ĐỒ_ÁN
         private System.Windows.Forms.BindingSource USP_GetListBillByDateForReportBindingSource;
         private QuanLiPhongKaraokeDataSet QuanLiPhongKaraokeDataSet;
         private QuanLiPhongKaraokeDataSetTableAdapters.USP_GetListBillByDateForReportTableAdapter USP_GetListBillByDateForReportTableAdapter;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel1;
     }
 }

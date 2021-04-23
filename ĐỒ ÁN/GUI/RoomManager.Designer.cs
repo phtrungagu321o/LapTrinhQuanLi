@@ -48,18 +48,23 @@ namespace ĐỒ_ÁN
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtTotalPrice = new System.Windows.Forms.TextBox();
-            this.txttotalPriceOldTest = new System.Windows.Forms.TextBox();
-            this.txtToTalPriceTest = new System.Windows.Forms.TextBox();
-            this.txtPriceTimeTest = new System.Windows.Forms.TextBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.iconButtonAddFood = new FontAwesome.Sharp.IconButton();
+            this.cbbServiceCategory = new System.Windows.Forms.ComboBox();
+            this.nmrCountService = new System.Windows.Forms.NumericUpDown();
+            this.cbbService = new System.Windows.Forms.ComboBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.iconButtonCheckOut = new FontAwesome.Sharp.IconButton();
+            this.iconButtonSwitchRoom = new FontAwesome.Sharp.IconButton();
             this.cbbSwitchRoom = new System.Windows.Forms.ComboBox();
+            this.txtTotalPrice = new System.Windows.Forms.TextBox();
+            this.txtPriceTimeTest = new System.Windows.Forms.TextBox();
+            this.txtTotalPriceService = new System.Windows.Forms.TextBox();
+            this.txtToTalPriceTest = new System.Windows.Forms.TextBox();
             this.txtTimeOldTest = new System.Windows.Forms.TextBox();
             this.nmrDiscount = new System.Windows.Forms.NumericUpDown();
-            this.txtTotalPriceService = new System.Windows.Forms.TextBox();
-            this.nmrCountService = new System.Windows.Forms.NumericUpDown();
-            this.btnAddService = new System.Windows.Forms.Button();
-            this.cbbService = new System.Windows.Forms.ComboBox();
-            this.cbbServiceCategory = new System.Windows.Forms.ComboBox();
+            this.txttotalPriceOldTest = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpNormalRoom = new System.Windows.Forms.TabPage();
             this.flpNormalRoom = new System.Windows.Forms.FlowLayoutPanel();
@@ -76,54 +81,47 @@ namespace ĐỒ_ÁN
             this.thanhToánToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bắtĐầuToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.btnAdmin = new System.Windows.Forms.Button();
-            this.btnProFile = new System.Windows.Forms.Button();
-            this.panelProfile = new System.Windows.Forms.Panel();
-            this.btnEditProfile = new System.Windows.Forms.Button();
-            this.btnOut = new System.Windows.Forms.Button();
+            this.buttonHelp = new System.Windows.Forms.Button();
             this.panelKeyOff = new System.Windows.Forms.Panel();
+            this.buttonSwitch = new System.Windows.Forms.Button();
+            this.buttonCheckout = new System.Windows.Forms.Button();
             this.buttonStart = new System.Windows.Forms.Button();
             this.buttonAddFood = new System.Windows.Forms.Button();
             this.btnKeyOff = new System.Windows.Forms.Button();
-            this.buttonCheckout = new System.Windows.Forms.Button();
-            this.buttonSwitch = new System.Windows.Forms.Button();
-            this.buttonHelp = new System.Windows.Forms.Button();
+            this.panelProfile = new System.Windows.Forms.Panel();
+            this.btnOut = new System.Windows.Forms.Button();
+            this.btnEditProfile = new System.Windows.Forms.Button();
+            this.btnProFile = new System.Windows.Forms.Button();
+            this.btnAdmin = new System.Windows.Forms.Button();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelPlayer = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.iconButtonSwitchRoom = new FontAwesome.Sharp.IconButton();
-            this.iconButtonCheckOut = new FontAwesome.Sharp.IconButton();
-            this.iconButtonAddFood = new FontAwesome.Sharp.IconButton();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nmrDiscount)).BeginInit();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmrCountService)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrDiscount)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tpNormalRoom.SuspendLayout();
-            this.flpNormalRoom.SuspendLayout();
             this.tpVIPRoom.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panelLogo.SuspendLayout();
-            this.panelProfile.SuspendLayout();
             this.panelKeyOff.SuspendLayout();
+            this.panelProfile.SuspendLayout();
+            this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelPlayer.SuspendLayout();
             this.panelChildForm.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -161,14 +159,14 @@ namespace ĐỒ_ÁN
             // thôngTinCáNhânToolStripMenuItem
             // 
             this.thôngTinCáNhânToolStripMenuItem.Name = "thôngTinCáNhânToolStripMenuItem";
-            this.thôngTinCáNhânToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.thôngTinCáNhânToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.thôngTinCáNhânToolStripMenuItem.Text = "Thông tin cá nhân";
             this.thôngTinCáNhânToolStripMenuItem.Click += new System.EventHandler(this.thôngTinCáNhânToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
@@ -282,80 +280,52 @@ namespace ĐỒ_ÁN
             this.panel2.Size = new System.Drawing.Size(831, 73);
             this.panel2.TabIndex = 3;
             // 
-            // txtTotalPrice
+            // panel7
             // 
-            this.txtTotalPrice.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalPrice.ForeColor = System.Drawing.Color.Red;
-            this.txtTotalPrice.Location = new System.Drawing.Point(152, 11);
-            this.txtTotalPrice.Name = "txtTotalPrice";
-            this.txtTotalPrice.ReadOnly = true;
-            this.txtTotalPrice.Size = new System.Drawing.Size(138, 25);
-            this.txtTotalPrice.TabIndex = 13;
-            this.txtTotalPrice.Text = "0,00 ₫";
-            this.txtTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.panel7.Controls.Add(this.panel8);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(377, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(454, 73);
+            this.panel7.TabIndex = 1;
             // 
-            // txttotalPriceOldTest
+            // panel8
             // 
-            this.txttotalPriceOldTest.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttotalPriceOldTest.Location = new System.Drawing.Point(174, 11);
-            this.txttotalPriceOldTest.Name = "txttotalPriceOldTest";
-            this.txttotalPriceOldTest.Size = new System.Drawing.Size(116, 20);
-            this.txttotalPriceOldTest.TabIndex = 16;
-            this.txttotalPriceOldTest.Text = "0";
-            this.txttotalPriceOldTest.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            this.panel8.Controls.Add(this.iconButtonAddFood);
+            this.panel8.Controls.Add(this.cbbServiceCategory);
+            this.panel8.Controls.Add(this.nmrCountService);
+            this.panel8.Controls.Add(this.cbbService);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel8.Location = new System.Drawing.Point(37, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(417, 73);
+            this.panel8.TabIndex = 7;
             // 
-            // txtToTalPriceTest
+            // iconButtonAddFood
             // 
-            this.txtToTalPriceTest.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtToTalPriceTest.Location = new System.Drawing.Point(174, 11);
-            this.txtToTalPriceTest.Name = "txtToTalPriceTest";
-            this.txtToTalPriceTest.Size = new System.Drawing.Size(116, 20);
-            this.txtToTalPriceTest.TabIndex = 15;
-            this.txtToTalPriceTest.Text = "0";
+            this.iconButtonAddFood.FlatAppearance.BorderSize = 0;
+            this.iconButtonAddFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonAddFood.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
+            this.iconButtonAddFood.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonAddFood.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonAddFood.IconSize = 60;
+            this.iconButtonAddFood.Location = new System.Drawing.Point(255, 6);
+            this.iconButtonAddFood.Name = "iconButtonAddFood";
+            this.iconButtonAddFood.Size = new System.Drawing.Size(75, 56);
+            this.iconButtonAddFood.TabIndex = 7;
+            this.iconButtonAddFood.UseVisualStyleBackColor = true;
+            this.iconButtonAddFood.Click += new System.EventHandler(this.iconButton1_Click_1);
             // 
-            // txtPriceTimeTest
+            // cbbServiceCategory
             // 
-            this.txtPriceTimeTest.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPriceTimeTest.Location = new System.Drawing.Point(174, 11);
-            this.txtPriceTimeTest.Name = "txtPriceTimeTest";
-            this.txtPriceTimeTest.Size = new System.Drawing.Size(116, 20);
-            this.txtPriceTimeTest.TabIndex = 13;
-            this.txtPriceTimeTest.Text = "0";
-            // 
-            // cbbSwitchRoom
-            // 
-            this.cbbSwitchRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbbSwitchRoom.FormattingEnabled = true;
-            this.cbbSwitchRoom.Location = new System.Drawing.Point(11, 44);
-            this.cbbSwitchRoom.Name = "cbbSwitchRoom";
-            this.cbbSwitchRoom.Size = new System.Drawing.Size(134, 23);
-            this.cbbSwitchRoom.TabIndex = 12;
-            // 
-            // txtTimeOldTest
-            // 
-            this.txtTimeOldTest.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimeOldTest.Location = new System.Drawing.Point(174, 11);
-            this.txtTimeOldTest.Name = "txtTimeOldTest";
-            this.txtTimeOldTest.Size = new System.Drawing.Size(116, 20);
-            this.txtTimeOldTest.TabIndex = 14;
-            this.txtTimeOldTest.Text = "0";
-            // 
-            // nmrDiscount
-            // 
-            this.nmrDiscount.Location = new System.Drawing.Point(152, 44);
-            this.nmrDiscount.Name = "nmrDiscount";
-            this.nmrDiscount.Size = new System.Drawing.Size(139, 22);
-            this.nmrDiscount.TabIndex = 10;
-            this.nmrDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtTotalPriceService
-            // 
-            this.txtTotalPriceService.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalPriceService.Location = new System.Drawing.Point(174, 11);
-            this.txtTotalPriceService.Name = "txtTotalPriceService";
-            this.txtTotalPriceService.Size = new System.Drawing.Size(116, 20);
-            this.txtTotalPriceService.TabIndex = 12;
-            this.txtTotalPriceService.Text = "0";
+            this.cbbServiceCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbbServiceCategory.FormattingEnabled = true;
+            this.cbbServiceCategory.Location = new System.Drawing.Point(1, 5);
+            this.cbbServiceCategory.Name = "cbbServiceCategory";
+            this.cbbServiceCategory.Size = new System.Drawing.Size(248, 23);
+            this.cbbServiceCategory.TabIndex = 0;
+            this.cbbServiceCategory.Text = "Trống";
+            this.cbbServiceCategory.SelectedIndexChanged += new System.EventHandler(this.cbbFoodCategory_SelectedIndexChanged);
             // 
             // nmrCountService
             // 
@@ -374,16 +344,6 @@ namespace ĐỒ_ÁN
             0,
             0});
             // 
-            // btnAddService
-            // 
-            this.btnAddService.Location = new System.Drawing.Point(3, 3);
-            this.btnAddService.Name = "btnAddService";
-            this.btnAddService.Size = new System.Drawing.Size(87, 57);
-            this.btnAddService.TabIndex = 4;
-            this.btnAddService.Text = "Thêm món";
-            this.btnAddService.UseVisualStyleBackColor = true;
-            this.btnAddService.Click += new System.EventHandler(this.btnAddFood_Click);
-            // 
             // cbbService
             // 
             this.cbbService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -394,16 +354,135 @@ namespace ĐỒ_ÁN
             this.cbbService.TabIndex = 1;
             this.cbbService.Text = "Trống";
             // 
-            // cbbServiceCategory
+            // panel6
             // 
-            this.cbbServiceCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbbServiceCategory.FormattingEnabled = true;
-            this.cbbServiceCategory.Location = new System.Drawing.Point(1, 5);
-            this.cbbServiceCategory.Name = "cbbServiceCategory";
-            this.cbbServiceCategory.Size = new System.Drawing.Size(248, 23);
-            this.cbbServiceCategory.TabIndex = 0;
-            this.cbbServiceCategory.Text = "Trống";
-            this.cbbServiceCategory.SelectedIndexChanged += new System.EventHandler(this.cbbFoodCategory_SelectedIndexChanged);
+            this.panel6.Controls.Add(this.iconButtonCheckOut);
+            this.panel6.Controls.Add(this.iconButtonSwitchRoom);
+            this.panel6.Controls.Add(this.cbbSwitchRoom);
+            this.panel6.Controls.Add(this.txtTotalPrice);
+            this.panel6.Controls.Add(this.txtPriceTimeTest);
+            this.panel6.Controls.Add(this.txtTotalPriceService);
+            this.panel6.Controls.Add(this.txtToTalPriceTest);
+            this.panel6.Controls.Add(this.txtTimeOldTest);
+            this.panel6.Controls.Add(this.nmrDiscount);
+            this.panel6.Controls.Add(this.txttotalPriceOldTest);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(377, 73);
+            this.panel6.TabIndex = 0;
+            // 
+            // iconButtonCheckOut
+            // 
+            this.iconButtonCheckOut.FlatAppearance.BorderSize = 0;
+            this.iconButtonCheckOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonCheckOut.IconChar = FontAwesome.Sharp.IconChar.CashRegister;
+            this.iconButtonCheckOut.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonCheckOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonCheckOut.IconSize = 60;
+            this.iconButtonCheckOut.Location = new System.Drawing.Point(299, 6);
+            this.iconButtonCheckOut.Name = "iconButtonCheckOut";
+            this.iconButtonCheckOut.Size = new System.Drawing.Size(75, 64);
+            this.iconButtonCheckOut.TabIndex = 18;
+            this.iconButtonCheckOut.UseVisualStyleBackColor = true;
+            this.iconButtonCheckOut.Click += new System.EventHandler(this.iconButtonCheckOut_Click);
+            // 
+            // iconButtonSwitchRoom
+            // 
+            this.iconButtonSwitchRoom.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.iconButtonSwitchRoom.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.iconButtonSwitchRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonSwitchRoom.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonSwitchRoom.IconChar = FontAwesome.Sharp.IconChar.Buromobelexperte;
+            this.iconButtonSwitchRoom.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonSwitchRoom.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonSwitchRoom.IconSize = 32;
+            this.iconButtonSwitchRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonSwitchRoom.Location = new System.Drawing.Point(11, 6);
+            this.iconButtonSwitchRoom.Name = "iconButtonSwitchRoom";
+            this.iconButtonSwitchRoom.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.iconButtonSwitchRoom.Size = new System.Drawing.Size(135, 32);
+            this.iconButtonSwitchRoom.TabIndex = 17;
+            this.iconButtonSwitchRoom.Text = "Chuyển phòng";
+            this.iconButtonSwitchRoom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonSwitchRoom.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButtonSwitchRoom.UseVisualStyleBackColor = true;
+            this.iconButtonSwitchRoom.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // cbbSwitchRoom
+            // 
+            this.cbbSwitchRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbbSwitchRoom.FormattingEnabled = true;
+            this.cbbSwitchRoom.Location = new System.Drawing.Point(11, 44);
+            this.cbbSwitchRoom.Name = "cbbSwitchRoom";
+            this.cbbSwitchRoom.Size = new System.Drawing.Size(134, 23);
+            this.cbbSwitchRoom.TabIndex = 12;
+            // 
+            // txtTotalPrice
+            // 
+            this.txtTotalPrice.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalPrice.ForeColor = System.Drawing.Color.Red;
+            this.txtTotalPrice.Location = new System.Drawing.Point(152, 11);
+            this.txtTotalPrice.Name = "txtTotalPrice";
+            this.txtTotalPrice.ReadOnly = true;
+            this.txtTotalPrice.Size = new System.Drawing.Size(138, 25);
+            this.txtTotalPrice.TabIndex = 13;
+            this.txtTotalPrice.Text = "0,00 ₫";
+            this.txtTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtPriceTimeTest
+            // 
+            this.txtPriceTimeTest.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPriceTimeTest.Location = new System.Drawing.Point(174, 11);
+            this.txtPriceTimeTest.Name = "txtPriceTimeTest";
+            this.txtPriceTimeTest.Size = new System.Drawing.Size(116, 20);
+            this.txtPriceTimeTest.TabIndex = 13;
+            this.txtPriceTimeTest.Text = "0";
+            // 
+            // txtTotalPriceService
+            // 
+            this.txtTotalPriceService.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalPriceService.Location = new System.Drawing.Point(174, 11);
+            this.txtTotalPriceService.Name = "txtTotalPriceService";
+            this.txtTotalPriceService.Size = new System.Drawing.Size(116, 20);
+            this.txtTotalPriceService.TabIndex = 12;
+            this.txtTotalPriceService.Text = "0";
+            // 
+            // txtToTalPriceTest
+            // 
+            this.txtToTalPriceTest.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtToTalPriceTest.Location = new System.Drawing.Point(174, 11);
+            this.txtToTalPriceTest.Name = "txtToTalPriceTest";
+            this.txtToTalPriceTest.Size = new System.Drawing.Size(116, 20);
+            this.txtToTalPriceTest.TabIndex = 15;
+            this.txtToTalPriceTest.Text = "0";
+            // 
+            // txtTimeOldTest
+            // 
+            this.txtTimeOldTest.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimeOldTest.Location = new System.Drawing.Point(174, 11);
+            this.txtTimeOldTest.Name = "txtTimeOldTest";
+            this.txtTimeOldTest.Size = new System.Drawing.Size(116, 20);
+            this.txtTimeOldTest.TabIndex = 14;
+            this.txtTimeOldTest.Text = "0";
+            // 
+            // nmrDiscount
+            // 
+            this.nmrDiscount.Location = new System.Drawing.Point(152, 44);
+            this.nmrDiscount.Name = "nmrDiscount";
+            this.nmrDiscount.Size = new System.Drawing.Size(139, 22);
+            this.nmrDiscount.TabIndex = 10;
+            this.nmrDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txttotalPriceOldTest
+            // 
+            this.txttotalPriceOldTest.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttotalPriceOldTest.Location = new System.Drawing.Point(174, 11);
+            this.txttotalPriceOldTest.Name = "txttotalPriceOldTest";
+            this.txttotalPriceOldTest.Size = new System.Drawing.Size(116, 20);
+            this.txttotalPriceOldTest.TabIndex = 16;
+            this.txttotalPriceOldTest.Text = "0";
+            this.txttotalPriceOldTest.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // tabControl1
             // 
@@ -430,7 +509,6 @@ namespace ĐỒ_ÁN
             // flpNormalRoom
             // 
             this.flpNormalRoom.AutoScroll = true;
-            this.flpNormalRoom.Controls.Add(this.btnAddService);
             this.flpNormalRoom.Location = new System.Drawing.Point(3, 6);
             this.flpNormalRoom.Name = "flpNormalRoom";
             this.flpNormalRoom.Size = new System.Drawing.Size(364, 418);
@@ -563,87 +641,20 @@ namespace ĐỒ_ÁN
             this.panel3.Size = new System.Drawing.Size(200, 531);
             this.panel3.TabIndex = 17;
             // 
-            // panelLogo
+            // buttonHelp
             // 
-            this.panelLogo.Controls.Add(this.pictureBox1);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(274, 116);
-            this.panelLogo.TabIndex = 0;
-            // 
-            // btnAdmin
-            // 
-            this.btnAdmin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAdmin.FlatAppearance.BorderSize = 0;
-            this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmin.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnAdmin.Location = new System.Drawing.Point(0, 116);
-            this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(274, 51);
-            this.btnAdmin.TabIndex = 0;
-            this.btnAdmin.Text = "Admin";
-            this.btnAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdmin.UseVisualStyleBackColor = true;
-            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
-            // 
-            // btnProFile
-            // 
-            this.btnProFile.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProFile.FlatAppearance.BorderSize = 0;
-            this.btnProFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProFile.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnProFile.Location = new System.Drawing.Point(0, 167);
-            this.btnProFile.Name = "btnProFile";
-            this.btnProFile.Size = new System.Drawing.Size(274, 51);
-            this.btnProFile.TabIndex = 1;
-            this.btnProFile.Text = "Thông tin cá nhân";
-            this.btnProFile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProFile.UseVisualStyleBackColor = true;
-            this.btnProFile.Click += new System.EventHandler(this.btnProFile_Click);
-            // 
-            // panelProfile
-            // 
-            this.panelProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelProfile.Controls.Add(this.btnOut);
-            this.panelProfile.Controls.Add(this.btnEditProfile);
-            this.panelProfile.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelProfile.Location = new System.Drawing.Point(0, 218);
-            this.panelProfile.Name = "panelProfile";
-            this.panelProfile.Size = new System.Drawing.Size(274, 110);
-            this.panelProfile.TabIndex = 2;
-            // 
-            // btnEditProfile
-            // 
-            this.btnEditProfile.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEditProfile.FlatAppearance.BorderSize = 0;
-            this.btnEditProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditProfile.ForeColor = System.Drawing.Color.LightGray;
-            this.btnEditProfile.Location = new System.Drawing.Point(0, 0);
-            this.btnEditProfile.Name = "btnEditProfile";
-            this.btnEditProfile.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnEditProfile.Size = new System.Drawing.Size(274, 51);
-            this.btnEditProfile.TabIndex = 0;
-            this.btnEditProfile.Text = "Chỉnh sửa thông tin";
-            this.btnEditProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditProfile.UseVisualStyleBackColor = true;
-            this.btnEditProfile.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnOut
-            // 
-            this.btnOut.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOut.FlatAppearance.BorderSize = 0;
-            this.btnOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOut.ForeColor = System.Drawing.Color.LightGray;
-            this.btnOut.Location = new System.Drawing.Point(0, 51);
-            this.btnOut.Name = "btnOut";
-            this.btnOut.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnOut.Size = new System.Drawing.Size(274, 51);
-            this.btnOut.TabIndex = 1;
-            this.btnOut.Text = "Đăng xuất";
-            this.btnOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOut.UseVisualStyleBackColor = true;
-            this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
+            this.buttonHelp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonHelp.FlatAppearance.BorderSize = 0;
+            this.buttonHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHelp.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonHelp.Location = new System.Drawing.Point(0, 595);
+            this.buttonHelp.Name = "buttonHelp";
+            this.buttonHelp.Size = new System.Drawing.Size(274, 51);
+            this.buttonHelp.TabIndex = 5;
+            this.buttonHelp.Text = "Help";
+            this.buttonHelp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonHelp.UseVisualStyleBackColor = true;
+            this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
             // 
             // panelKeyOff
             // 
@@ -657,6 +668,38 @@ namespace ĐỒ_ÁN
             this.panelKeyOff.Name = "panelKeyOff";
             this.panelKeyOff.Size = new System.Drawing.Size(274, 216);
             this.panelKeyOff.TabIndex = 4;
+            // 
+            // buttonSwitch
+            // 
+            this.buttonSwitch.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonSwitch.FlatAppearance.BorderSize = 0;
+            this.buttonSwitch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSwitch.ForeColor = System.Drawing.Color.LightGray;
+            this.buttonSwitch.Location = new System.Drawing.Point(0, 153);
+            this.buttonSwitch.Name = "buttonSwitch";
+            this.buttonSwitch.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.buttonSwitch.Size = new System.Drawing.Size(274, 51);
+            this.buttonSwitch.TabIndex = 3;
+            this.buttonSwitch.Text = "Chuyển phòng (Ctrl+D)";
+            this.buttonSwitch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSwitch.UseVisualStyleBackColor = true;
+            this.buttonSwitch.Click += new System.EventHandler(this.buttonSwitch_Click);
+            // 
+            // buttonCheckout
+            // 
+            this.buttonCheckout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonCheckout.FlatAppearance.BorderSize = 0;
+            this.buttonCheckout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCheckout.ForeColor = System.Drawing.Color.LightGray;
+            this.buttonCheckout.Location = new System.Drawing.Point(0, 102);
+            this.buttonCheckout.Name = "buttonCheckout";
+            this.buttonCheckout.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.buttonCheckout.Size = new System.Drawing.Size(274, 51);
+            this.buttonCheckout.TabIndex = 2;
+            this.buttonCheckout.Text = "Thanh toán (Ctrl+C)";
+            this.buttonCheckout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCheckout.UseVisualStyleBackColor = true;
+            this.buttonCheckout.Click += new System.EventHandler(this.buttonCheckout_Click);
             // 
             // buttonStart
             // 
@@ -705,52 +748,97 @@ namespace ĐỒ_ÁN
             this.btnKeyOff.UseVisualStyleBackColor = true;
             this.btnKeyOff.Click += new System.EventHandler(this.btnKeyOff_Click);
             // 
-            // buttonCheckout
+            // panelProfile
             // 
-            this.buttonCheckout.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonCheckout.FlatAppearance.BorderSize = 0;
-            this.buttonCheckout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCheckout.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonCheckout.Location = new System.Drawing.Point(0, 102);
-            this.buttonCheckout.Name = "buttonCheckout";
-            this.buttonCheckout.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.buttonCheckout.Size = new System.Drawing.Size(274, 51);
-            this.buttonCheckout.TabIndex = 2;
-            this.buttonCheckout.Text = "Thanh toán (Ctrl+C)";
-            this.buttonCheckout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCheckout.UseVisualStyleBackColor = true;
-            this.buttonCheckout.Click += new System.EventHandler(this.buttonCheckout_Click);
+            this.panelProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelProfile.Controls.Add(this.btnOut);
+            this.panelProfile.Controls.Add(this.btnEditProfile);
+            this.panelProfile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelProfile.Location = new System.Drawing.Point(0, 218);
+            this.panelProfile.Name = "panelProfile";
+            this.panelProfile.Size = new System.Drawing.Size(274, 110);
+            this.panelProfile.TabIndex = 2;
             // 
-            // buttonSwitch
+            // btnOut
             // 
-            this.buttonSwitch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonSwitch.FlatAppearance.BorderSize = 0;
-            this.buttonSwitch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSwitch.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonSwitch.Location = new System.Drawing.Point(0, 153);
-            this.buttonSwitch.Name = "buttonSwitch";
-            this.buttonSwitch.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.buttonSwitch.Size = new System.Drawing.Size(274, 51);
-            this.buttonSwitch.TabIndex = 3;
-            this.buttonSwitch.Text = "Chuyển phòng (Ctrl+D)";
-            this.buttonSwitch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSwitch.UseVisualStyleBackColor = true;
-            this.buttonSwitch.Click += new System.EventHandler(this.buttonSwitch_Click);
+            this.btnOut.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOut.FlatAppearance.BorderSize = 0;
+            this.btnOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOut.ForeColor = System.Drawing.Color.LightGray;
+            this.btnOut.Location = new System.Drawing.Point(0, 51);
+            this.btnOut.Name = "btnOut";
+            this.btnOut.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnOut.Size = new System.Drawing.Size(274, 51);
+            this.btnOut.TabIndex = 1;
+            this.btnOut.Text = "Đăng xuất";
+            this.btnOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOut.UseVisualStyleBackColor = true;
+            this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
             // 
-            // buttonHelp
+            // btnEditProfile
             // 
-            this.buttonHelp.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonHelp.FlatAppearance.BorderSize = 0;
-            this.buttonHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHelp.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonHelp.Location = new System.Drawing.Point(0, 595);
-            this.buttonHelp.Name = "buttonHelp";
-            this.buttonHelp.Size = new System.Drawing.Size(274, 51);
-            this.buttonHelp.TabIndex = 5;
-            this.buttonHelp.Text = "Help";
-            this.buttonHelp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHelp.UseVisualStyleBackColor = true;
-            this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
+            this.btnEditProfile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEditProfile.FlatAppearance.BorderSize = 0;
+            this.btnEditProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditProfile.ForeColor = System.Drawing.Color.LightGray;
+            this.btnEditProfile.Location = new System.Drawing.Point(0, 0);
+            this.btnEditProfile.Name = "btnEditProfile";
+            this.btnEditProfile.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnEditProfile.Size = new System.Drawing.Size(274, 51);
+            this.btnEditProfile.TabIndex = 0;
+            this.btnEditProfile.Text = "Chỉnh sửa thông tin";
+            this.btnEditProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditProfile.UseVisualStyleBackColor = true;
+            this.btnEditProfile.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnProFile
+            // 
+            this.btnProFile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProFile.FlatAppearance.BorderSize = 0;
+            this.btnProFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProFile.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnProFile.Location = new System.Drawing.Point(0, 167);
+            this.btnProFile.Name = "btnProFile";
+            this.btnProFile.Size = new System.Drawing.Size(274, 51);
+            this.btnProFile.TabIndex = 1;
+            this.btnProFile.Text = "Thông tin cá nhân";
+            this.btnProFile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProFile.UseVisualStyleBackColor = true;
+            this.btnProFile.Click += new System.EventHandler(this.btnProFile_Click);
+            // 
+            // btnAdmin
+            // 
+            this.btnAdmin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAdmin.FlatAppearance.BorderSize = 0;
+            this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdmin.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAdmin.Location = new System.Drawing.Point(0, 116);
+            this.btnAdmin.Name = "btnAdmin";
+            this.btnAdmin.Size = new System.Drawing.Size(274, 51);
+            this.btnAdmin.TabIndex = 0;
+            this.btnAdmin.Text = "Admin";
+            this.btnAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdmin.UseVisualStyleBackColor = true;
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.Controls.Add(this.pictureBox1);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(274, 116);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ĐỒ_ÁN.Properties.Resources.Logo_AGU_draw;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(178, 116);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panelPlayer
             // 
@@ -793,16 +881,6 @@ namespace ĐỒ_ÁN
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ĐỒ_ÁN.Properties.Resources.Logo_AGU_draw;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(178, 116);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel4);
@@ -820,97 +898,6 @@ namespace ĐỒ_ÁN
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(450, 365);
             this.panel5.TabIndex = 21;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.iconButtonCheckOut);
-            this.panel6.Controls.Add(this.iconButtonSwitchRoom);
-            this.panel6.Controls.Add(this.cbbSwitchRoom);
-            this.panel6.Controls.Add(this.txtTotalPrice);
-            this.panel6.Controls.Add(this.txtPriceTimeTest);
-            this.panel6.Controls.Add(this.txtTotalPriceService);
-            this.panel6.Controls.Add(this.txtToTalPriceTest);
-            this.panel6.Controls.Add(this.txtTimeOldTest);
-            this.panel6.Controls.Add(this.nmrDiscount);
-            this.panel6.Controls.Add(this.txttotalPriceOldTest);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(377, 73);
-            this.panel6.TabIndex = 0;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.panel8);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(377, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(454, 73);
-            this.panel7.TabIndex = 1;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.iconButtonAddFood);
-            this.panel8.Controls.Add(this.cbbServiceCategory);
-            this.panel8.Controls.Add(this.nmrCountService);
-            this.panel8.Controls.Add(this.cbbService);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel8.Location = new System.Drawing.Point(37, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(417, 73);
-            this.panel8.TabIndex = 7;
-            // 
-            // iconButtonSwitchRoom
-            // 
-            this.iconButtonSwitchRoom.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.iconButtonSwitchRoom.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.iconButtonSwitchRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonSwitchRoom.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButtonSwitchRoom.IconChar = FontAwesome.Sharp.IconChar.Buromobelexperte;
-            this.iconButtonSwitchRoom.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButtonSwitchRoom.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonSwitchRoom.IconSize = 32;
-            this.iconButtonSwitchRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonSwitchRoom.Location = new System.Drawing.Point(11, 6);
-            this.iconButtonSwitchRoom.Name = "iconButtonSwitchRoom";
-            this.iconButtonSwitchRoom.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.iconButtonSwitchRoom.Size = new System.Drawing.Size(135, 32);
-            this.iconButtonSwitchRoom.TabIndex = 17;
-            this.iconButtonSwitchRoom.Text = "Chuyển phòng";
-            this.iconButtonSwitchRoom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonSwitchRoom.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButtonSwitchRoom.UseVisualStyleBackColor = true;
-            this.iconButtonSwitchRoom.Click += new System.EventHandler(this.iconButton1_Click);
-            // 
-            // iconButtonCheckOut
-            // 
-            this.iconButtonCheckOut.FlatAppearance.BorderSize = 0;
-            this.iconButtonCheckOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonCheckOut.IconChar = FontAwesome.Sharp.IconChar.CashRegister;
-            this.iconButtonCheckOut.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButtonCheckOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonCheckOut.IconSize = 60;
-            this.iconButtonCheckOut.Location = new System.Drawing.Point(299, 6);
-            this.iconButtonCheckOut.Name = "iconButtonCheckOut";
-            this.iconButtonCheckOut.Size = new System.Drawing.Size(75, 64);
-            this.iconButtonCheckOut.TabIndex = 18;
-            this.iconButtonCheckOut.UseVisualStyleBackColor = true;
-            this.iconButtonCheckOut.Click += new System.EventHandler(this.iconButtonCheckOut_Click);
-            // 
-            // iconButtonAddFood
-            // 
-            this.iconButtonAddFood.FlatAppearance.BorderSize = 0;
-            this.iconButtonAddFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonAddFood.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
-            this.iconButtonAddFood.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButtonAddFood.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonAddFood.IconSize = 60;
-            this.iconButtonAddFood.Location = new System.Drawing.Point(255, 6);
-            this.iconButtonAddFood.Name = "iconButtonAddFood";
-            this.iconButtonAddFood.Size = new System.Drawing.Size(75, 56);
-            this.iconButtonAddFood.TabIndex = 7;
-            this.iconButtonAddFood.UseVisualStyleBackColor = true;
-            this.iconButtonAddFood.Click += new System.EventHandler(this.iconButton1_Click_1);
             // 
             // RoomManager
             // 
@@ -933,29 +920,28 @@ namespace ĐỒ_ÁN
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nmrDiscount)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nmrCountService)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrDiscount)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tpNormalRoom.ResumeLayout(false);
-            this.flpNormalRoom.ResumeLayout(false);
             this.tpVIPRoom.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panelLogo.ResumeLayout(false);
-            this.panelProfile.ResumeLayout(false);
             this.panelKeyOff.ResumeLayout(false);
+            this.panelProfile.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelPlayer.ResumeLayout(false);
             this.panelChildForm.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -970,7 +956,6 @@ namespace ĐỒ_ÁN
         private System.Windows.Forms.ListView lstvBill;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.NumericUpDown nmrCountService;
-        private System.Windows.Forms.Button btnAddService;
         private System.Windows.Forms.ComboBox cbbService;
         private System.Windows.Forms.ComboBox cbbServiceCategory;
         private System.Windows.Forms.ComboBox cbbSwitchRoom;

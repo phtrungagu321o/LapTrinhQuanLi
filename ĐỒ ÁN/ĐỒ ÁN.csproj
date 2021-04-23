@@ -204,11 +204,23 @@
     <Compile Include="GUI\Profile.Designer.cs">
       <DependentUpon>Profile.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\progress-bar_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\progress-bar_Form.Designer.cs">
+      <DependentUpon>progress-bar_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ReportB.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\ReportB.Designer.cs">
       <DependentUpon>ReportB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ToolEncrytAndDecryt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ToolEncrytAndDecryt.Designer.cs">
+      <DependentUpon>ToolEncrytAndDecryt.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -270,8 +282,14 @@
     <EmbeddedResource Include="GUI\Profile.resx">
       <DependentUpon>Profile.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\progress-bar_Form.resx">
+      <DependentUpon>progress-bar_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ReportB.resx">
       <DependentUpon>ReportB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ToolEncrytAndDecryt.resx">
+      <DependentUpon>ToolEncrytAndDecryt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

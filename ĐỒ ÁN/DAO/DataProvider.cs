@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace ĐỒ_ÁN.DAO
         }
         private DataProvider() { }
 
-        private string connectionSTR = @"Data Source=DESKTOP-BSHIH1R;Initial Catalog=QuanLiPhongKaraoke;Integrated Security=True";
+        private string connectionSTR = ConfigurationManager.ConnectionStrings["QL_Karaoke"].ConnectionString;
 
         
         public DataTable ExcuteQuery(String query, object[] parameter = null)

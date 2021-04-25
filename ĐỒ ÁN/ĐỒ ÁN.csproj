@@ -204,11 +204,11 @@
     <Compile Include="GUI\Profile.Designer.cs">
       <DependentUpon>Profile.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\progress-bar_Form.cs">
+    <Compile Include="GUI\progress_bar_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\progress-bar_Form.Designer.cs">
-      <DependentUpon>progress-bar_Form.cs</DependentUpon>
+    <Compile Include="GUI\progress_bar_Form.Designer.cs">
+      <DependentUpon>progress_bar_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\ReportB.cs">
       <SubType>Form</SubType>
@@ -282,8 +282,8 @@
     <EmbeddedResource Include="GUI\Profile.resx">
       <DependentUpon>Profile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\progress-bar_Form.resx">
-      <DependentUpon>progress-bar_Form.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\progress_bar_Form.resx">
+      <DependentUpon>progress_bar_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ReportB.resx">
       <DependentUpon>ReportB.cs</DependentUpon>

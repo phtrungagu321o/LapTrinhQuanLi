@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ĐỒ_ÁN.DAO;
+using ĐỒ_ÁN.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,10 @@ namespace ĐỒ_ÁN.GUI
 {
     public partial class progress_bar_Form : Form
     {
+        private string userN;
+
+        public string UserN { get => userN; set => userN = value; }
+
         public progress_bar_Form()
         {
             InitializeComponent();
@@ -29,9 +35,11 @@ namespace ĐỒ_ÁN.GUI
             }
         }
 
+
         private void timer1_Tick(object sender, EventArgs e)
         {
-            login frm = new login();    
+            AccountDTO loginAccount = AccountDAO.Instance.GetAccountByUserName(UserN);
+            RoomManager frm = new RoomManager(loginAccount);    
             PGB.Increment(1);
             lbl_complete.Text = "Connecting to from " + PGB.Value.ToString() + "%";
             if (PGB.Value == PGB.Maximum)
@@ -40,6 +48,11 @@ namespace ĐỒ_ÁN.GUI
                 this.Hide();
                 frm.ShowDialog();
             }
+        }
+
+        private void progress_bar_Form_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

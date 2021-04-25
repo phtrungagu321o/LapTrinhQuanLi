@@ -1,6 +1,7 @@
 ﻿using ĐỒ_ÁN.DAO;
 using ĐỒ_ÁN.DAO.Z;
 using ĐỒ_ÁN.DTO;
+using ĐỒ_ÁN.GUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -93,10 +94,11 @@ namespace ĐỒ_ÁN
             string passWord = txtPassWord.Text;
             if (Login(userName,passWord))
             {
-                AccountDTO loginAccount = AccountDAO.Instance.GetAccountByUserName(userName);
+                
 
-                RoomManager R = new RoomManager(loginAccount);
+                progress_bar_Form R = new progress_bar_Form();
                 this.Hide();
+                R.UserN = txtUser.Text;
                 R.ShowDialog();
                 this.Show();
             }

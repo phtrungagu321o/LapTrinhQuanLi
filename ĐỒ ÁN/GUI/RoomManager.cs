@@ -835,20 +835,22 @@ namespace ĐỒ_ÁN
                     BillDAO.Instance.CheckOut(idBill, disCount, totalTime, priceoldtime, (float)FinalTotalPrice);
 
                     ShowServiceBill(room.ID);
+                    LoadRoom();
+                    if (MessageBox.Show(string.Format("Bạn có muốn in hóa đơn không ?"), "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
+                    {
+                        invoicePrintting f = new invoicePrintting();
+                        f.IDBill = idBill;
+                        f.ShowDialog();
+                    }
                 }
             }
 
 
 
-            LoadRoom();
+            
             ShowTimeBill(room.ID);
             AddPriceOld(room.ID);
-            if (MessageBox.Show(string.Format("Bạn có muốn in hóa đơn không ?"), "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
-            {
-                invoicePrintting f = new invoicePrintting();
-                f.IDBill = idBill;
-                f.ShowDialog();
-            }
+           
         }
 
         private void iconButton1_Click_1(object sender, EventArgs e)

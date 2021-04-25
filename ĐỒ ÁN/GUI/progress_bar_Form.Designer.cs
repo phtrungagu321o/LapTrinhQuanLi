@@ -44,7 +44,7 @@ namespace ĐỒ_ÁN.GUI
             // 
             // timer1
             // 
-            this.timer1.Interval = 10;
+            this.timer1.Interval = 5;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // lbl_complete
@@ -52,9 +52,8 @@ namespace ĐỒ_ÁN.GUI
             this.lbl_complete.AutoSize = true;
             this.lbl_complete.Location = new System.Drawing.Point(97, 9);
             this.lbl_complete.Name = "lbl_complete";
-            this.lbl_complete.Size = new System.Drawing.Size(35, 13);
+            this.lbl_complete.Size = new System.Drawing.Size(0, 13);
             this.lbl_complete.TabIndex = 1;
-            this.lbl_complete.Text = "label1";
             // 
             // progress_bar_Form
             // 
@@ -67,6 +66,7 @@ namespace ĐỒ_ÁN.GUI
             this.Name = "progress_bar_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "progress_bar_Form";
+            this.Load += new System.EventHandler(this.progress_bar_Form_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

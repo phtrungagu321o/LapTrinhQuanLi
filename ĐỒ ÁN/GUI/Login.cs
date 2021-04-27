@@ -43,8 +43,8 @@ namespace ĐỒ_ÁN
             if (txtUser.Text == "Vui lòng nhập Tài Khoản")
             {
                 txtUser.Text = "";
-                txtUser.ForeColor = Color.Black;
-                txtUser.Font = new Font(txtUser.Font.Name, txtUser.Font.Size, FontStyle.Bold);
+                txtUser.ForeColor = Color.White;
+                txtUser.Font = new Font(txtUser.Font.Name, txtUser.Font.Size, FontStyle.Regular);
             }
         }
         private void TxtUser_Leave(object sender, EventArgs e)
@@ -73,8 +73,8 @@ namespace ĐỒ_ÁN
             if (txtPassWord.Text == "Vui lòng nhập Mật Khẩu")
             {
                 txtPassWord.Text = "";
-                txtPassWord.ForeColor = Color.Black;
-                txtPassWord.Font = new Font(txtPassWord.Font.Name, txtPassWord.Font.Size, FontStyle.Bold);
+                txtPassWord.ForeColor = Color.White;
+                txtPassWord.Font = new Font(txtPassWord.Font.Name, txtPassWord.Font.Size, FontStyle.Regular);
             }
         }
 
@@ -90,25 +90,7 @@ namespace ĐỒ_ÁN
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string userName = txtUser.Text;
-            string passWord = txtPassWord.Text;
-            if (Login(userName,passWord))
-            {
-                
-
-                progress_bar_Form R = new progress_bar_Form();
-                this.Hide();
-                R.UserN = txtUser.Text;
-                R.ShowDialog();
-                this.Show();
-            }
-            else
-            {
-                var a = new Nudge(this);
-                a.NudgeMe();
-                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu", "Thông báo");
-                
-            }    
+           
         }
         bool Login(string UserName,string PassWord)
         {
@@ -124,6 +106,37 @@ namespace ĐỒ_ÁN
         {
             TestLogin f = new TestLogin();
             f.ShowDialog();
+        }
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
+        {
+            string userName = txtUser.Text;
+            string passWord = txtPassWord.Text;
+            if (Login(userName, passWord))
+            {
+
+                AccountDTO loginAccount = AccountDAO.Instance.GetAccountByUserName(userName);          
+                progress_bar_Form R = new progress_bar_Form(loginAccount);
+                this.Hide();
+                R.UserN = txtUser.Text;
+                R.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                var a = new Nudge(this);
+                a.NudgeMe();
+                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu", "Thông báo");
+
+            }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            DialogResult t;
+            t = MessageBox.Show("Bạn có muốn thoát chương trình ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (t == DialogResult.Yes)
+                Application.Exit();
         }
     }
 }

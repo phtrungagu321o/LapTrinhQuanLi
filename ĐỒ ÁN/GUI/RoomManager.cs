@@ -1,6 +1,7 @@
 ﻿using ĐỒ_ÁN.DAO;
 using ĐỒ_ÁN.DTO;
 using ĐỒ_ÁN.GUI;
+using FontAwesome.Sharp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +17,9 @@ namespace ĐỒ_ÁN
 {
     public partial class RoomManager : Form
     {
+        private Form currentChildRoom;
         private AccountDTO loginAccount;
+        
 
         public AccountDTO LoginAccount 
         {
@@ -41,7 +44,7 @@ namespace ĐỒ_ÁN
         
         void ChangeAccount(int type)
         {
-            adminToolStripMenuItem.Enabled = type ==1;
+            btnAdmin.Enabled = type ==1;
             
             btnProFile.Text += " (" + loginAccount.DisPlayName + ")";
         }
@@ -52,7 +55,7 @@ namespace ĐỒ_ÁN
            List<RoomDTO> RoomList= RoomDAO.Instance.LoadRoomList();
             foreach(RoomDTO item in RoomList)
             {
-                Button btn = new Button() {Width=RoomDAO.RoomWidth,Height=RoomDAO.RoomHeight };
+                IconButton btn = new IconButton() {Width=RoomDAO.RoomWidth,Height=RoomDAO.RoomHeight };
                 btn.Text = item.Name + "\n" + item.Status;
                
                btn.Click += Btn_Click;
@@ -882,5 +885,20 @@ namespace ĐỒ_ÁN
             LoadRoom();
             ShowTimeBill(room.ID);
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            lblGetDate.Text = DateTime.Now.ToString();
+        }
+        private void OpenChildForm(Form childForm)
+        {
+            currentChildRoom.Close();
+            currentChildRoom = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+        }
+
     }
 }

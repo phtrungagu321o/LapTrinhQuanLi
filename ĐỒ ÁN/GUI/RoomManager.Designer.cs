@@ -42,34 +42,23 @@ namespace ĐỒ_ÁN
             this.chuyểnPhòngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mởAdminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mởThôngTinTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lstvBill = new System.Windows.Forms.ListView();
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.iconButtonAddFood = new FontAwesome.Sharp.IconButton();
-            this.cbbServiceCategory = new System.Windows.Forms.ComboBox();
             this.nmrCountService = new System.Windows.Forms.NumericUpDown();
-            this.cbbService = new System.Windows.Forms.ComboBox();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.iconButtonCheckOut = new FontAwesome.Sharp.IconButton();
+            this.cbbService = new System.Windows.Forms.ComboBox();
+            this.cbbServiceCategory = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.iconButtonSwitchRoom = new FontAwesome.Sharp.IconButton();
-            this.cbbSwitchRoom = new System.Windows.Forms.ComboBox();
-            this.txtTotalPrice = new System.Windows.Forms.TextBox();
-            this.txtPriceTimeTest = new System.Windows.Forms.TextBox();
-            this.txtTotalPriceService = new System.Windows.Forms.TextBox();
-            this.txtToTalPriceTest = new System.Windows.Forms.TextBox();
-            this.txtTimeOldTest = new System.Windows.Forms.TextBox();
             this.nmrDiscount = new System.Windows.Forms.NumericUpDown();
+            this.txtTotalPrice = new System.Windows.Forms.TextBox();
             this.txttotalPriceOldTest = new System.Windows.Forms.TextBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tpNormalRoom = new System.Windows.Forms.TabPage();
-            this.flpNormalRoom = new System.Windows.Forms.FlowLayoutPanel();
-            this.tpVIPRoom = new System.Windows.Forms.TabPage();
-            this.flpVIPRoom = new System.Windows.Forms.FlowLayoutPanel();
+            this.cbbSwitchRoom = new System.Windows.Forms.ComboBox();
+            this.txtToTalPriceTest = new System.Windows.Forms.TextBox();
+            this.txtTotalPriceService = new System.Windows.Forms.TextBox();
+            this.txtTimeOldTest = new System.Windows.Forms.TextBox();
+            this.txtPriceTimeTest = new System.Windows.Forms.TextBox();
             this.txtAddTime = new System.Windows.Forms.TextBox();
             this.txtPriceTime = new System.Windows.Forms.TextBox();
             this.txtPriceTimeBillOld = new System.Windows.Forms.TextBox();
@@ -94,23 +83,32 @@ namespace ĐỒ_ÁN
             this.btnProFile = new System.Windows.Forms.Button();
             this.btnAdmin = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.lblGetDate = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelPlayer = new System.Windows.Forms.Panel();
-            this.panelChildForm = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tpNormalRoom = new System.Windows.Forms.TabPage();
+            this.flpNormalRoom = new System.Windows.Forms.FlowLayoutPanel();
+            this.tpVIPRoom = new System.Windows.Forms.TabPage();
+            this.flpVIPRoom = new System.Windows.Forms.FlowLayoutPanel();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lstvBill = new System.Windows.Forms.ListView();
+            this.pnForm = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmrCountService)).BeginInit();
-            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmrDiscount)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            this.tpNormalRoom.SuspendLayout();
-            this.tpVIPRoom.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelKeyOff.SuspendLayout();
@@ -118,10 +116,13 @@ namespace ĐỒ_ÁN
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelPlayer.SuspendLayout();
-            this.panelChildForm.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tpNormalRoom.SuspendLayout();
+            this.tpVIPRoom.SuspendLayout();
+            this.pnForm.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -233,47 +234,10 @@ namespace ĐỒ_ÁN
             this.mởThôngTinTàiKhoảnToolStripMenuItem.Text = "Mở Thông Tin Tài Khoản";
             this.mởThôngTinTàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.mởThôngTinTàiKhoảnToolStripMenuItem_Click);
             // 
-            // lstvBill
-            // 
-            this.lstvBill.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader9});
-            this.lstvBill.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstvBill.GridLines = true;
-            this.lstvBill.HideSelection = false;
-            this.lstvBill.Location = new System.Drawing.Point(0, 0);
-            this.lstvBill.Name = "lstvBill";
-            this.lstvBill.Size = new System.Drawing.Size(450, 365);
-            this.lstvBill.TabIndex = 0;
-            this.lstvBill.UseCompatibleStateImageBehavior = false;
-            this.lstvBill.View = System.Windows.Forms.View.Details;
-            this.lstvBill.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Tên Món";
-            this.columnHeader3.Width = 139;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Giá Tiền";
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Số lượng";
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Thành Tiền";
-            this.columnHeader9.Width = 89;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.panel2.Controls.Add(this.panel7);
-            this.panel2.Controls.Add(this.panel6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -282,61 +246,59 @@ namespace ĐỒ_ÁN
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.panel8);
+            this.panel7.Controls.Add(this.iconButtonAddFood);
+            this.panel7.Controls.Add(this.nmrCountService);
+            this.panel7.Controls.Add(this.iconButtonCheckOut);
+            this.panel7.Controls.Add(this.cbbService);
+            this.panel7.Controls.Add(this.cbbServiceCategory);
+            this.panel7.Controls.Add(this.textBox1);
+            this.panel7.Controls.Add(this.iconButtonSwitchRoom);
+            this.panel7.Controls.Add(this.nmrDiscount);
+            this.panel7.Controls.Add(this.txtTotalPrice);
+            this.panel7.Controls.Add(this.txttotalPriceOldTest);
+            this.panel7.Controls.Add(this.cbbSwitchRoom);
+            this.panel7.Controls.Add(this.txtToTalPriceTest);
+            this.panel7.Controls.Add(this.txtTotalPriceService);
+            this.panel7.Controls.Add(this.txtTimeOldTest);
+            this.panel7.Controls.Add(this.txtPriceTimeTest);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(377, 0);
+            this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(454, 73);
+            this.panel7.Size = new System.Drawing.Size(831, 73);
             this.panel7.TabIndex = 1;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.iconButtonAddFood);
-            this.panel8.Controls.Add(this.cbbServiceCategory);
-            this.panel8.Controls.Add(this.nmrCountService);
-            this.panel8.Controls.Add(this.cbbService);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel8.Location = new System.Drawing.Point(37, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(417, 73);
-            this.panel8.TabIndex = 7;
             // 
             // iconButtonAddFood
             // 
+            this.iconButtonAddFood.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.iconButtonAddFood.FlatAppearance.BorderSize = 0;
+            this.iconButtonAddFood.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.iconButtonAddFood.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.iconButtonAddFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButtonAddFood.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
             this.iconButtonAddFood.IconColor = System.Drawing.Color.Gainsboro;
             this.iconButtonAddFood.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonAddFood.IconSize = 60;
-            this.iconButtonAddFood.Location = new System.Drawing.Point(255, 6);
+            this.iconButtonAddFood.IconSize = 70;
+            this.iconButtonAddFood.Location = new System.Drawing.Point(668, 13);
             this.iconButtonAddFood.Name = "iconButtonAddFood";
-            this.iconButtonAddFood.Size = new System.Drawing.Size(75, 56);
+            this.iconButtonAddFood.Size = new System.Drawing.Size(75, 57);
             this.iconButtonAddFood.TabIndex = 7;
             this.iconButtonAddFood.UseVisualStyleBackColor = true;
             this.iconButtonAddFood.Click += new System.EventHandler(this.iconButton1_Click_1);
             // 
-            // cbbServiceCategory
-            // 
-            this.cbbServiceCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbbServiceCategory.FormattingEnabled = true;
-            this.cbbServiceCategory.Location = new System.Drawing.Point(1, 5);
-            this.cbbServiceCategory.Name = "cbbServiceCategory";
-            this.cbbServiceCategory.Size = new System.Drawing.Size(248, 23);
-            this.cbbServiceCategory.TabIndex = 0;
-            this.cbbServiceCategory.Text = "Trống";
-            this.cbbServiceCategory.SelectedIndexChanged += new System.EventHandler(this.cbbFoodCategory_SelectedIndexChanged);
-            // 
             // nmrCountService
             // 
-            this.nmrCountService.Location = new System.Drawing.Point(348, 19);
+            this.nmrCountService.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.nmrCountService.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.nmrCountService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nmrCountService.ForeColor = System.Drawing.Color.White;
+            this.nmrCountService.Location = new System.Drawing.Point(749, 23);
             this.nmrCountService.Minimum = new decimal(new int[] {
             100,
             0,
             0,
             -2147483648});
             this.nmrCountService.Name = "nmrCountService";
-            this.nmrCountService.Size = new System.Drawing.Size(50, 22);
+            this.nmrCountService.Size = new System.Drawing.Size(50, 26);
             this.nmrCountService.TabIndex = 6;
             this.nmrCountService.Value = new decimal(new int[] {
             1,
@@ -344,64 +306,81 @@ namespace ĐỒ_ÁN
             0,
             0});
             // 
-            // cbbService
-            // 
-            this.cbbService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbbService.FormattingEnabled = true;
-            this.cbbService.Location = new System.Drawing.Point(1, 38);
-            this.cbbService.Name = "cbbService";
-            this.cbbService.Size = new System.Drawing.Size(248, 23);
-            this.cbbService.TabIndex = 1;
-            this.cbbService.Text = "Trống";
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.iconButtonCheckOut);
-            this.panel6.Controls.Add(this.iconButtonSwitchRoom);
-            this.panel6.Controls.Add(this.cbbSwitchRoom);
-            this.panel6.Controls.Add(this.txtTotalPrice);
-            this.panel6.Controls.Add(this.txtPriceTimeTest);
-            this.panel6.Controls.Add(this.txtTotalPriceService);
-            this.panel6.Controls.Add(this.txtToTalPriceTest);
-            this.panel6.Controls.Add(this.txtTimeOldTest);
-            this.panel6.Controls.Add(this.nmrDiscount);
-            this.panel6.Controls.Add(this.txttotalPriceOldTest);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(377, 73);
-            this.panel6.TabIndex = 0;
-            // 
             // iconButtonCheckOut
             // 
+            this.iconButtonCheckOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.iconButtonCheckOut.FlatAppearance.BorderSize = 0;
+            this.iconButtonCheckOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.iconButtonCheckOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.iconButtonCheckOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButtonCheckOut.IconChar = FontAwesome.Sharp.IconChar.CashRegister;
             this.iconButtonCheckOut.IconColor = System.Drawing.Color.Gainsboro;
             this.iconButtonCheckOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonCheckOut.IconSize = 60;
-            this.iconButtonCheckOut.Location = new System.Drawing.Point(299, 6);
+            this.iconButtonCheckOut.IconSize = 70;
+            this.iconButtonCheckOut.Location = new System.Drawing.Point(306, 6);
             this.iconButtonCheckOut.Name = "iconButtonCheckOut";
-            this.iconButtonCheckOut.Size = new System.Drawing.Size(75, 64);
+            this.iconButtonCheckOut.Size = new System.Drawing.Size(76, 64);
             this.iconButtonCheckOut.TabIndex = 18;
             this.iconButtonCheckOut.UseVisualStyleBackColor = true;
             this.iconButtonCheckOut.Click += new System.EventHandler(this.iconButtonCheckOut_Click);
             // 
+            // cbbService
+            // 
+            this.cbbService.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbService.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.cbbService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbbService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbService.ForeColor = System.Drawing.Color.White;
+            this.cbbService.FormattingEnabled = true;
+            this.cbbService.Location = new System.Drawing.Point(414, 41);
+            this.cbbService.Name = "cbbService";
+            this.cbbService.Size = new System.Drawing.Size(248, 27);
+            this.cbbService.TabIndex = 1;
+            this.cbbService.Text = "Trống";
+            // 
+            // cbbServiceCategory
+            // 
+            this.cbbServiceCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbServiceCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.cbbServiceCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbbServiceCategory.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbServiceCategory.ForeColor = System.Drawing.Color.White;
+            this.cbbServiceCategory.FormattingEnabled = true;
+            this.cbbServiceCategory.Location = new System.Drawing.Point(414, 8);
+            this.cbbServiceCategory.Name = "cbbServiceCategory";
+            this.cbbServiceCategory.Size = new System.Drawing.Size(248, 27);
+            this.cbbServiceCategory.TabIndex = 0;
+            this.cbbServiceCategory.Text = "Trống";
+            this.cbbServiceCategory.SelectedIndexChanged += new System.EventHandler(this.cbbFoodCategory_SelectedIndexChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Location = new System.Drawing.Point(148, 36);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(138, 1);
+            this.textBox1.TabIndex = 18;
+            // 
             // iconButtonSwitchRoom
             // 
+            this.iconButtonSwitchRoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.iconButtonSwitchRoom.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.iconButtonSwitchRoom.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.iconButtonSwitchRoom.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.iconButtonSwitchRoom.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.iconButtonSwitchRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonSwitchRoom.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButtonSwitchRoom.ForeColor = System.Drawing.Color.Gainsboro;
             this.iconButtonSwitchRoom.IconChar = FontAwesome.Sharp.IconChar.Buromobelexperte;
             this.iconButtonSwitchRoom.IconColor = System.Drawing.Color.Gainsboro;
             this.iconButtonSwitchRoom.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonSwitchRoom.IconSize = 32;
             this.iconButtonSwitchRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonSwitchRoom.Location = new System.Drawing.Point(11, 6);
+            this.iconButtonSwitchRoom.Location = new System.Drawing.Point(8, 5);
             this.iconButtonSwitchRoom.Name = "iconButtonSwitchRoom";
             this.iconButtonSwitchRoom.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.iconButtonSwitchRoom.Size = new System.Drawing.Size(135, 32);
+            this.iconButtonSwitchRoom.Size = new System.Drawing.Size(136, 32);
             this.iconButtonSwitchRoom.TabIndex = 17;
             this.iconButtonSwitchRoom.Text = "Chuyển phòng";
             this.iconButtonSwitchRoom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -409,133 +388,107 @@ namespace ĐỒ_ÁN
             this.iconButtonSwitchRoom.UseVisualStyleBackColor = true;
             this.iconButtonSwitchRoom.Click += new System.EventHandler(this.iconButton1_Click);
             // 
-            // cbbSwitchRoom
+            // nmrDiscount
             // 
-            this.cbbSwitchRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbbSwitchRoom.FormattingEnabled = true;
-            this.cbbSwitchRoom.Location = new System.Drawing.Point(11, 44);
-            this.cbbSwitchRoom.Name = "cbbSwitchRoom";
-            this.cbbSwitchRoom.Size = new System.Drawing.Size(134, 23);
-            this.cbbSwitchRoom.TabIndex = 12;
+            this.nmrDiscount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.nmrDiscount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.nmrDiscount.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nmrDiscount.ForeColor = System.Drawing.Color.White;
+            this.nmrDiscount.Location = new System.Drawing.Point(148, 43);
+            this.nmrDiscount.Name = "nmrDiscount";
+            this.nmrDiscount.Size = new System.Drawing.Size(139, 26);
+            this.nmrDiscount.TabIndex = 10;
+            this.nmrDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtTotalPrice
             // 
-            this.txtTotalPrice.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalPrice.ForeColor = System.Drawing.Color.Red;
-            this.txtTotalPrice.Location = new System.Drawing.Point(152, 11);
+            this.txtTotalPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtTotalPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.txtTotalPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTotalPrice.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtTotalPrice.Location = new System.Drawing.Point(150, 13);
+            this.txtTotalPrice.Multiline = true;
             this.txtTotalPrice.Name = "txtTotalPrice";
             this.txtTotalPrice.ReadOnly = true;
-            this.txtTotalPrice.Size = new System.Drawing.Size(138, 25);
+            this.txtTotalPrice.Size = new System.Drawing.Size(138, 32);
             this.txtTotalPrice.TabIndex = 13;
             this.txtTotalPrice.Text = "0,00 ₫";
             this.txtTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // txtPriceTimeTest
-            // 
-            this.txtPriceTimeTest.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPriceTimeTest.Location = new System.Drawing.Point(174, 11);
-            this.txtPriceTimeTest.Name = "txtPriceTimeTest";
-            this.txtPriceTimeTest.Size = new System.Drawing.Size(116, 20);
-            this.txtPriceTimeTest.TabIndex = 13;
-            this.txtPriceTimeTest.Text = "0";
-            // 
-            // txtTotalPriceService
-            // 
-            this.txtTotalPriceService.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalPriceService.Location = new System.Drawing.Point(174, 11);
-            this.txtTotalPriceService.Name = "txtTotalPriceService";
-            this.txtTotalPriceService.Size = new System.Drawing.Size(116, 20);
-            this.txtTotalPriceService.TabIndex = 12;
-            this.txtTotalPriceService.Text = "0";
-            // 
-            // txtToTalPriceTest
-            // 
-            this.txtToTalPriceTest.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtToTalPriceTest.Location = new System.Drawing.Point(174, 11);
-            this.txtToTalPriceTest.Name = "txtToTalPriceTest";
-            this.txtToTalPriceTest.Size = new System.Drawing.Size(116, 20);
-            this.txtToTalPriceTest.TabIndex = 15;
-            this.txtToTalPriceTest.Text = "0";
-            // 
-            // txtTimeOldTest
-            // 
-            this.txtTimeOldTest.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimeOldTest.Location = new System.Drawing.Point(174, 11);
-            this.txtTimeOldTest.Name = "txtTimeOldTest";
-            this.txtTimeOldTest.Size = new System.Drawing.Size(116, 20);
-            this.txtTimeOldTest.TabIndex = 14;
-            this.txtTimeOldTest.Text = "0";
-            // 
-            // nmrDiscount
-            // 
-            this.nmrDiscount.Location = new System.Drawing.Point(152, 44);
-            this.nmrDiscount.Name = "nmrDiscount";
-            this.nmrDiscount.Size = new System.Drawing.Size(139, 22);
-            this.nmrDiscount.TabIndex = 10;
-            this.nmrDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // txttotalPriceOldTest
             // 
+            this.txttotalPriceOldTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txttotalPriceOldTest.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttotalPriceOldTest.Location = new System.Drawing.Point(174, 11);
+            this.txttotalPriceOldTest.Location = new System.Drawing.Point(165, 13);
             this.txttotalPriceOldTest.Name = "txttotalPriceOldTest";
             this.txttotalPriceOldTest.Size = new System.Drawing.Size(116, 20);
             this.txttotalPriceOldTest.TabIndex = 16;
             this.txttotalPriceOldTest.Text = "0";
             this.txttotalPriceOldTest.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
-            // tabControl1
+            // cbbSwitchRoom
             // 
-            this.tabControl1.Controls.Add(this.tpNormalRoom);
-            this.tabControl1.Controls.Add(this.tpVIPRoom);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(381, 458);
-            this.tabControl1.TabIndex = 5;
+            this.cbbSwitchRoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cbbSwitchRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.cbbSwitchRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbbSwitchRoom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbSwitchRoom.ForeColor = System.Drawing.Color.White;
+            this.cbbSwitchRoom.FormattingEnabled = true;
+            this.cbbSwitchRoom.Location = new System.Drawing.Point(8, 43);
+            this.cbbSwitchRoom.Name = "cbbSwitchRoom";
+            this.cbbSwitchRoom.Size = new System.Drawing.Size(136, 27);
+            this.cbbSwitchRoom.TabIndex = 12;
             // 
-            // tpNormalRoom
+            // txtToTalPriceTest
             // 
-            this.tpNormalRoom.Controls.Add(this.flpNormalRoom);
-            this.tpNormalRoom.Location = new System.Drawing.Point(4, 24);
-            this.tpNormalRoom.Name = "tpNormalRoom";
-            this.tpNormalRoom.Padding = new System.Windows.Forms.Padding(3);
-            this.tpNormalRoom.Size = new System.Drawing.Size(373, 430);
-            this.tpNormalRoom.TabIndex = 0;
-            this.tpNormalRoom.Text = "Phòng Thường";
-            this.tpNormalRoom.UseVisualStyleBackColor = true;
+            this.txtToTalPriceTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtToTalPriceTest.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtToTalPriceTest.Location = new System.Drawing.Point(165, 13);
+            this.txtToTalPriceTest.Name = "txtToTalPriceTest";
+            this.txtToTalPriceTest.Size = new System.Drawing.Size(116, 20);
+            this.txtToTalPriceTest.TabIndex = 15;
+            this.txtToTalPriceTest.Text = "0";
             // 
-            // flpNormalRoom
+            // txtTotalPriceService
             // 
-            this.flpNormalRoom.AutoScroll = true;
-            this.flpNormalRoom.Location = new System.Drawing.Point(3, 6);
-            this.flpNormalRoom.Name = "flpNormalRoom";
-            this.flpNormalRoom.Size = new System.Drawing.Size(364, 418);
-            this.flpNormalRoom.TabIndex = 2;
+            this.txtTotalPriceService.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtTotalPriceService.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalPriceService.Location = new System.Drawing.Point(170, 13);
+            this.txtTotalPriceService.Name = "txtTotalPriceService";
+            this.txtTotalPriceService.Size = new System.Drawing.Size(116, 20);
+            this.txtTotalPriceService.TabIndex = 12;
+            this.txtTotalPriceService.Text = "0";
             // 
-            // tpVIPRoom
+            // txtTimeOldTest
             // 
-            this.tpVIPRoom.Controls.Add(this.flpVIPRoom);
-            this.tpVIPRoom.Location = new System.Drawing.Point(4, 24);
-            this.tpVIPRoom.Name = "tpVIPRoom";
-            this.tpVIPRoom.Padding = new System.Windows.Forms.Padding(3);
-            this.tpVIPRoom.Size = new System.Drawing.Size(373, 430);
-            this.tpVIPRoom.TabIndex = 1;
-            this.tpVIPRoom.Text = "Phòng V.I.P";
-            this.tpVIPRoom.UseVisualStyleBackColor = true;
+            this.txtTimeOldTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtTimeOldTest.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimeOldTest.Location = new System.Drawing.Point(165, 13);
+            this.txtTimeOldTest.Name = "txtTimeOldTest";
+            this.txtTimeOldTest.Size = new System.Drawing.Size(116, 20);
+            this.txtTimeOldTest.TabIndex = 14;
+            this.txtTimeOldTest.Text = "0";
             // 
-            // flpVIPRoom
+            // txtPriceTimeTest
             // 
-            this.flpVIPRoom.AutoScroll = true;
-            this.flpVIPRoom.Location = new System.Drawing.Point(5, 6);
-            this.flpVIPRoom.Name = "flpVIPRoom";
-            this.flpVIPRoom.Size = new System.Drawing.Size(362, 418);
-            this.flpVIPRoom.TabIndex = 3;
+            this.txtPriceTimeTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtPriceTimeTest.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPriceTimeTest.Location = new System.Drawing.Point(165, 13);
+            this.txtPriceTimeTest.Name = "txtPriceTimeTest";
+            this.txtPriceTimeTest.Size = new System.Drawing.Size(116, 20);
+            this.txtPriceTimeTest.TabIndex = 13;
+            this.txtPriceTimeTest.Text = "0";
             // 
             // txtAddTime
             // 
-            this.txtAddTime.Location = new System.Drawing.Point(3, 9);
+            this.txtAddTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAddTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.txtAddTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAddTime.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddTime.ForeColor = System.Drawing.Color.White;
+            this.txtAddTime.Location = new System.Drawing.Point(80, 24);
+            this.txtAddTime.Multiline = true;
             this.txtAddTime.Name = "txtAddTime";
             this.txtAddTime.ReadOnly = true;
             this.txtAddTime.Size = new System.Drawing.Size(116, 22);
@@ -545,27 +498,39 @@ namespace ĐỒ_ÁN
             // 
             // txtPriceTime
             // 
-            this.txtPriceTime.Location = new System.Drawing.Point(3, 41);
+            this.txtPriceTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPriceTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.txtPriceTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPriceTime.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPriceTime.ForeColor = System.Drawing.Color.White;
+            this.txtPriceTime.Location = new System.Drawing.Point(96, 48);
+            this.txtPriceTime.Multiline = true;
             this.txtPriceTime.Name = "txtPriceTime";
             this.txtPriceTime.ReadOnly = true;
-            this.txtPriceTime.Size = new System.Drawing.Size(116, 22);
+            this.txtPriceTime.Size = new System.Drawing.Size(97, 22);
             this.txtPriceTime.TabIndex = 11;
             this.txtPriceTime.Text = "0,00 ₫";
             this.txtPriceTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtPriceTimeBillOld
             // 
-            this.txtPriceTimeBillOld.Location = new System.Drawing.Point(324, 34);
+            this.txtPriceTimeBillOld.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPriceTimeBillOld.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.txtPriceTimeBillOld.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPriceTimeBillOld.ForeColor = System.Drawing.Color.White;
+            this.txtPriceTimeBillOld.Location = new System.Drawing.Point(286, 45);
             this.txtPriceTimeBillOld.Name = "txtPriceTimeBillOld";
-            this.txtPriceTimeBillOld.Size = new System.Drawing.Size(116, 22);
+            this.txtPriceTimeBillOld.Size = new System.Drawing.Size(116, 26);
             this.txtPriceTimeBillOld.TabIndex = 12;
             this.txtPriceTimeBillOld.Text = "0,00 ₫";
+            this.txtPriceTimeBillOld.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lbPriceAdditionalTime
             // 
+            this.lbPriceAdditionalTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbPriceAdditionalTime.AutoSize = true;
-            this.lbPriceAdditionalTime.ForeColor = System.Drawing.Color.Black;
-            this.lbPriceAdditionalTime.Location = new System.Drawing.Point(338, 16);
+            this.lbPriceAdditionalTime.ForeColor = System.Drawing.Color.White;
+            this.lbPriceAdditionalTime.Location = new System.Drawing.Point(303, 27);
             this.lbPriceAdditionalTime.Name = "lbPriceAdditionalTime";
             this.lbPriceAdditionalTime.Size = new System.Drawing.Size(82, 15);
             this.lbPriceAdditionalTime.TabIndex = 13;
@@ -573,9 +538,10 @@ namespace ĐỒ_ÁN
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(154, 12);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(202, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 15);
             this.label1.TabIndex = 14;
@@ -583,9 +549,10 @@ namespace ĐỒ_ÁN
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(142, 44);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(202, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 15);
             this.label2.TabIndex = 15;
@@ -593,12 +560,20 @@ namespace ĐỒ_ÁN
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(230, 9);
+            this.btnStart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.btnStart.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnStart.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnStart.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.ForeColor = System.Drawing.Color.White;
+            this.btnStart.Location = new System.Drawing.Point(6, 23);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(87, 54);
+            this.btnStart.Size = new System.Drawing.Size(65, 50);
             this.btnStart.TabIndex = 16;
             this.btnStart.Text = "Bắt Đầu";
-            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.UseVisualStyleBackColor = false;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // contextMenuStrip1
@@ -823,6 +798,7 @@ namespace ĐỒ_ÁN
             // 
             // panelLogo
             // 
+            this.panelLogo.Controls.Add(this.lblGetDate);
             this.panelLogo.Controls.Add(this.pictureBox1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
@@ -830,12 +806,22 @@ namespace ĐỒ_ÁN
             this.panelLogo.Size = new System.Drawing.Size(274, 116);
             this.panelLogo.TabIndex = 0;
             // 
+            // lblGetDate
+            // 
+            this.lblGetDate.AutoSize = true;
+            this.lblGetDate.ForeColor = System.Drawing.Color.White;
+            this.lblGetDate.Location = new System.Drawing.Point(67, 93);
+            this.lblGetDate.Name = "lblGetDate";
+            this.lblGetDate.Size = new System.Drawing.Size(40, 15);
+            this.lblGetDate.TabIndex = 1;
+            this.lblGetDate.Text = "label3";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ĐỒ_ÁN.Properties.Resources.Logo_AGU_draw;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(24, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(178, 116);
+            this.pictureBox1.Size = new System.Drawing.Size(130, 78);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -850,54 +836,182 @@ namespace ĐỒ_ÁN
             this.panelPlayer.Size = new System.Drawing.Size(831, 73);
             this.panelPlayer.TabIndex = 18;
             // 
-            // panelChildForm
-            // 
-            this.panelChildForm.BackColor = System.Drawing.Color.White;
-            this.panelChildForm.Controls.Add(this.tabControl1);
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelChildForm.Location = new System.Drawing.Point(200, 0);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(381, 458);
-            this.panelChildForm.TabIndex = 19;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.txtAddTime);
-            this.panel4.Controls.Add(this.lbPriceAdditionalTime);
-            this.panel4.Controls.Add(this.txtPriceTimeBillOld);
-            this.panel4.Controls.Add(this.txtPriceTime);
-            this.panel4.Controls.Add(this.btnStart);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(450, 93);
-            this.panel4.TabIndex = 14;
-            // 
             // imageList1
             // 
             this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // panel1
+            // timer1
             // 
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(581, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(450, 93);
-            this.panel1.TabIndex = 20;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl1.Controls.Add(this.tpNormalRoom);
+            this.tabControl1.Controls.Add(this.tpVIPRoom);
+            this.tabControl1.Location = new System.Drawing.Point(3, 4);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(408, 377);
+            this.tabControl1.TabIndex = 5;
+            // 
+            // tpNormalRoom
+            // 
+            this.tpNormalRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.tpNormalRoom.Controls.Add(this.flpNormalRoom);
+            this.tpNormalRoom.Location = new System.Drawing.Point(4, 24);
+            this.tpNormalRoom.Name = "tpNormalRoom";
+            this.tpNormalRoom.Padding = new System.Windows.Forms.Padding(3);
+            this.tpNormalRoom.Size = new System.Drawing.Size(400, 349);
+            this.tpNormalRoom.TabIndex = 0;
+            this.tpNormalRoom.Text = "Phòng Thường";
+            // 
+            // flpNormalRoom
+            // 
+            this.flpNormalRoom.AutoScroll = true;
+            this.flpNormalRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.flpNormalRoom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpNormalRoom.Location = new System.Drawing.Point(3, 3);
+            this.flpNormalRoom.Name = "flpNormalRoom";
+            this.flpNormalRoom.Size = new System.Drawing.Size(394, 343);
+            this.flpNormalRoom.TabIndex = 2;
+            // 
+            // tpVIPRoom
+            // 
+            this.tpVIPRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.tpVIPRoom.Controls.Add(this.flpVIPRoom);
+            this.tpVIPRoom.Location = new System.Drawing.Point(4, 24);
+            this.tpVIPRoom.Name = "tpVIPRoom";
+            this.tpVIPRoom.Padding = new System.Windows.Forms.Padding(3);
+            this.tpVIPRoom.Size = new System.Drawing.Size(400, 349);
+            this.tpVIPRoom.TabIndex = 1;
+            this.tpVIPRoom.Text = "Phòng V.I.P";
+            // 
+            // flpVIPRoom
+            // 
+            this.flpVIPRoom.AutoScroll = true;
+            this.flpVIPRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.flpVIPRoom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpVIPRoom.Location = new System.Drawing.Point(3, 3);
+            this.flpVIPRoom.Name = "flpVIPRoom";
+            this.flpVIPRoom.Size = new System.Drawing.Size(394, 343);
+            this.flpVIPRoom.TabIndex = 3;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Tên Món";
+            this.columnHeader3.Width = 122;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Giá Tiền";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Số lượng";
+            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader5.Width = 68;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Thành Tiền";
+            this.columnHeader9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader9.Width = 105;
+            // 
+            // lstvBill
+            // 
+            this.lstvBill.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lstvBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.lstvBill.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader9});
+            this.lstvBill.ForeColor = System.Drawing.Color.White;
+            this.lstvBill.GridLines = true;
+            this.lstvBill.HideSelection = false;
+            this.lstvBill.Location = new System.Drawing.Point(6, 6);
+            this.lstvBill.Name = "lstvBill";
+            this.lstvBill.Size = new System.Drawing.Size(399, 445);
+            this.lstvBill.TabIndex = 0;
+            this.lstvBill.UseCompatibleStateImageBehavior = false;
+            this.lstvBill.View = System.Windows.Forms.View.Details;
+            this.lstvBill.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // pnForm
+            // 
+            this.pnForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.pnForm.Controls.Add(this.panel9);
+            this.pnForm.Controls.Add(this.panel5);
+            this.pnForm.Controls.Add(this.panel4);
+            this.pnForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnForm.Location = new System.Drawing.Point(200, 0);
+            this.pnForm.Name = "pnForm";
+            this.pnForm.Size = new System.Drawing.Size(831, 458);
+            this.pnForm.TabIndex = 19;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.tabControl1);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(0, 74);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(414, 384);
+            this.panel9.TabIndex = 19;
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.lstvBill);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(581, 93);
+            this.panel5.Controls.Add(this.textBox3);
+            this.panel5.Controls.Add(this.textBox2);
+            this.panel5.Controls.Add(this.txtAddTime);
+            this.panel5.Controls.Add(this.lbPriceAdditionalTime);
+            this.panel5.Controls.Add(this.txtPriceTimeBillOld);
+            this.panel5.Controls.Add(this.txtPriceTime);
+            this.panel5.Controls.Add(this.btnStart);
+            this.panel5.Controls.Add(this.label1);
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(450, 365);
-            this.panel5.TabIndex = 21;
+            this.panel5.Size = new System.Drawing.Size(414, 74);
+            this.panel5.TabIndex = 18;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Location = new System.Drawing.Point(80, 66);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(116, 1);
+            this.textBox3.TabIndex = 20;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Location = new System.Drawing.Point(80, 44);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(116, 1);
+            this.textBox2.TabIndex = 19;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.lstvBill);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(414, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(417, 458);
+            this.panel4.TabIndex = 17;
             // 
             // RoomManager
             // 
@@ -905,9 +1019,7 @@ namespace ĐỒ_ÁN
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1031, 531);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panelChildForm);
+            this.Controls.Add(this.pnForm);
             this.Controls.Add(this.panelPlayer);
             this.Controls.Add(this.panel3);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -921,27 +1033,26 @@ namespace ĐỒ_ÁN
             this.menuStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
+            this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmrCountService)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmrDiscount)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.tpNormalRoom.ResumeLayout(false);
-            this.tpVIPRoom.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panelKeyOff.ResumeLayout(false);
             this.panelProfile.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
+            this.panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelPlayer.ResumeLayout(false);
-            this.panelChildForm.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tpNormalRoom.ResumeLayout(false);
+            this.tpVIPRoom.ResumeLayout(false);
+            this.pnForm.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -953,22 +1064,12 @@ namespace ĐỒ_ÁN
         private System.Windows.Forms.ToolStripMenuItem thôngTinTàiKhoảnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thôngTinCáNhânToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
-        private System.Windows.Forms.ListView lstvBill;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.NumericUpDown nmrCountService;
         private System.Windows.Forms.ComboBox cbbService;
         private System.Windows.Forms.ComboBox cbbServiceCategory;
         private System.Windows.Forms.ComboBox cbbSwitchRoom;
         private System.Windows.Forms.NumericUpDown nmrDiscount;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tpNormalRoom;
-        private System.Windows.Forms.FlowLayoutPanel flpNormalRoom;
-        private System.Windows.Forms.TabPage tpVIPRoom;
-        private System.Windows.Forms.FlowLayoutPanel flpVIPRoom;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.TextBox txtAddTime;
         private System.Windows.Forms.TextBox txtPriceTime;
         private System.Windows.Forms.TextBox txtTotalPrice;
@@ -1007,17 +1108,30 @@ namespace ĐỒ_ÁN
         private System.Windows.Forms.Button buttonAddFood;
         private System.Windows.Forms.Button btnKeyOff;
         private System.Windows.Forms.Panel panelPlayer;
-        private System.Windows.Forms.Panel panelChildForm;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel8;
         private FontAwesome.Sharp.IconButton iconButtonSwitchRoom;
         private FontAwesome.Sharp.IconButton iconButtonCheckOut;
         private FontAwesome.Sharp.IconButton iconButtonAddFood;
+        private System.Windows.Forms.Label lblGetDate;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tpNormalRoom;
+        private System.Windows.Forms.FlowLayoutPanel flpNormalRoom;
+        private System.Windows.Forms.TabPage tpVIPRoom;
+        private System.Windows.Forms.FlowLayoutPanel flpVIPRoom;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ListView lstvBill;
+        private System.Windows.Forms.Panel pnForm;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

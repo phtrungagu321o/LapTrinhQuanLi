@@ -51,14 +51,15 @@ namespace ĐỒ_ÁN.GUI
             // 
             // reportViewer1
             // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSetB";
             reportDataSource1.Value = this.uSPGetListBillByDateForReportBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "ĐỒ_ÁN.Report.ReportB.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 85);
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1083, 353);
+            this.reportViewer1.Size = new System.Drawing.Size(1096, 450);
             this.reportViewer1.TabIndex = 0;
             // 
             // uSP_GetListBillByDateForReportTableAdapter

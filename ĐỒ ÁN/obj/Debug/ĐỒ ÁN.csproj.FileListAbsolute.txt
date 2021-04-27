@@ -528,3 +528,6 @@ D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\bin\Debug\FontAwesome.Sharp.dll
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.GUI.progress_bar_Form.resources
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.GUI.ToolEncrytAnDecryt.resources
+D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\bin\Debug\CircularProgressBar.dll
+D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\bin\Debug\WinFormAnimation.dll
+D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\bin\Debug\CircularProgressBar.xml

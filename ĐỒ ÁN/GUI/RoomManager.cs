@@ -17,37 +17,25 @@ namespace ĐỒ_ÁN
 {
     public partial class RoomManager : Form
     {
-        private Form currentChildRoom;
-        private AccountDTO loginAccount;
         
+      
 
-        public AccountDTO LoginAccount 
-        {
-            get { return loginAccount; }
-            set { loginAccount = value; }
-        
-        }
-
-        public RoomManager(AccountDTO acc)
+        public RoomManager()
         {
             InitializeComponent();
 
-            this.loginAccount = acc;
-            ChangeAccount(loginAccount.Type);
+            
             LoadRoom();
             LoadServiceCategory();
             LoadComboBoxRoom(cbbSwitchRoom);
-            customizeDesigning();
             
+            loadAdmin();
+
+
         }
         #region Method
         
-        void ChangeAccount(int type)
-        {
-            btnAdmin.Enabled = type ==1;
-            
-            btnProFile.Text += " (" + loginAccount.DisPlayName + ")";
-        }
+        
         void LoadRoom()
         {
             flpNormalRoom.Controls.Clear();
@@ -57,8 +45,12 @@ namespace ĐỒ_ÁN
             {
                 IconButton btn = new IconButton() {Width=RoomDAO.RoomWidth,Height=RoomDAO.RoomHeight };
                 btn.Text = item.Name + "\n" + item.Status;
-               
-               btn.Click += Btn_Click;
+                btn.IconChar = IconChar.Tablet;
+                btn.TextAlign = ContentAlignment.MiddleCenter;
+                btn.TextImageRelation = TextImageRelation.ImageAboveText;
+                btn.ImageAlign = ContentAlignment.MiddleCenter;
+                btn.ForeColor= Color.Gainsboro;
+                btn.Click += Btn_Click;
              
                 btn.Tag = item;
                 btn.ContextMenuStrip = contextMenuStrip1;
@@ -66,10 +58,10 @@ namespace ĐỒ_ÁN
                 switch (item.Status)
                 {
                     case " Trống":
-                        btn.BackColor = Color.LightBlue;
+                        btn.IconColor = Color.LightBlue;
                         break;
                     default:
-                        btn.BackColor = Color.LightCoral;
+                        btn.IconColor = Color.LightCoral;
                         break;
                 }    
                 
@@ -235,29 +227,25 @@ namespace ĐỒ_ÁN
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult t;
-            t = MessageBox.Show("Bạn có muốn đăng xuất không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (t == DialogResult.Yes)
-                this.Close();
+            
         }
 
         private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AccountProfile af = new AccountProfile(loginAccount);
+           /* AccountProfile af = new AccountProfile();
             af.UpdateAccount += Af_UpdateAccount;
-            af.ShowDialog();
+            af.ShowDialog();*/
             
         }
 
         private void Af_UpdateAccount(object sender, AccountEvent e)
         {
-            btnProFile.Text = "Thông tin tài khoản (" + e.Acc.DisPlayName + ")";
+            /*btnProFile.Text = "Thông tin tài khoản (" + e.Acc.DisPlayName + ")";*/
         }
-
-        private void adminToolStripMenuItem_Click(object sender, EventArgs e)
+        void loadAdmin()
         {
             Admin a = new Admin();
-            a.loginAccount = LoginAccount;
+           /* a.loginAccount = LoginAccount;*/
             a.InsertService += A_InsertService;
             a.UpdateService += A_UpdateService;
             a.DeleteService += A_DeleteService;
@@ -273,7 +261,11 @@ namespace ĐỒ_ÁN
             a.InsertRoomCategory += A_InsertRoomCategory;
             a.UpdateRoomCategory += A_UpdateRoomCategory;
             a.DeleteRoomCategory += A_DeleteRoomCategory;
-            a.ShowDialog();
+        }
+        private void adminToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           /* Admin a = new Admin();
+            a.ShowDialog();*/
         }
 
         private void A_DeleteRoomCategory(object sender, EventArgs e)
@@ -583,25 +575,7 @@ namespace ĐỒ_ÁN
 
         }
 
-        private void thêmMónToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            btnAddFood_Click(this, new EventArgs());
-        }
-
-        private void bắtĐầuToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            btnStart_Click(this, new EventArgs());
-        }
-
-        private void thànhToánToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            btnCheckOut_Click(this, new EventArgs());
-        }
-
-        private void chuyểnPhòngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            btnSwitchRoom_Click(this, new EventArgs());
-        }
+       
 
         private void thanhToánToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -640,87 +614,19 @@ namespace ĐỒ_ÁN
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AccountProfile af = new AccountProfile(loginAccount);
+           /* AccountProfile af = new AccountProfile(loginAccount);
             af.UpdateAccount += Af_UpdateAccount;
             af.ShowDialog();
-            hideSubMenu();
+            hideSubMenu();*/
         }
-        private void customizeDesigning()
-        {
-            panelProfile.Visible = false;
-            panelKeyOff.Visible = false;
-        }
+        
 
-        private void hideSubMenu()
-        {
-            if(panelProfile.Visible==true)
-            {
-                panelProfile.Visible = false;
-            }
-            if (panelKeyOff.Visible == true)
-                panelKeyOff.Visible = false;
-        }
-
-        private void showSubMenu(Panel subMenu)
-        {
-            if(subMenu.Visible==false)
-            {
-                hideSubMenu();
-                subMenu.Visible = true;
-            }    
-            else
-            {
-                subMenu.Visible = false;
-            }    
-        }
-
-        private void btnProFile_Click(object sender, EventArgs e)
-        {
-            showSubMenu(panelProfile);
-        }
-
-        private void btnOut_Click(object sender, EventArgs e)
-        {
-            DialogResult t;
-            t = MessageBox.Show("Bạn có muốn đăng xuất không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (t == DialogResult.Yes)
-                this.Close();
-            hideSubMenu();
-        }
-
-        private void btnKeyOff_Click(object sender, EventArgs e)
-        {
-            showSubMenu(panelKeyOff);
-        }
-
-        private void buttonAddFood_Click(object sender, EventArgs e)
-        {
-            btnAddFood_Click(this, new EventArgs());
-            hideSubMenu();
-        }
-
-        private void buttonStart_Click(object sender, EventArgs e)
-        {
-            btnStart_Click(this, new EventArgs());
-            hideSubMenu();
-        }
-
-        private void buttonCheckout_Click(object sender, EventArgs e)
-        {
-            btnCheckOut_Click(this, new EventArgs());
-            hideSubMenu();
-        }
-
-        private void buttonSwitch_Click(object sender, EventArgs e)
-        {
-            btnSwitchRoom_Click(this, new EventArgs());
-            hideSubMenu();
-        }
+      
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
             Admin a = new Admin();
-            a.loginAccount = LoginAccount;
+           /* a.loginAccount = LoginAccount;*/
             a.InsertService += A_InsertService;
             a.UpdateService += A_UpdateService;
             a.DeleteService += A_DeleteService;
@@ -737,14 +643,9 @@ namespace ĐỒ_ÁN
             a.UpdateRoomCategory += A_UpdateRoomCategory;
             a.DeleteRoomCategory += A_DeleteRoomCategory;
             a.ShowDialog();
-            hideSubMenu();
+           
         }
 
-        private void buttonHelp_Click(object sender, EventArgs e)
-        {
-            //
-            hideSubMenu();
-        }
 
         private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -889,16 +790,27 @@ namespace ĐỒ_ÁN
         private void timer1_Tick(object sender, EventArgs e)
         {
 
-            lblGetDate.Text = DateTime.Now.ToString();
-        }
-        private void OpenChildForm(Form childForm)
-        {
-            currentChildRoom.Close();
-            currentChildRoom = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
+     
         }
 
+        private void thêmMónToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            btnAddFood_Click(this, new EventArgs());
+        }
+
+        private void bắtĐầuToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            btnStart_Click(this, new EventArgs());
+        }
+
+        private void chuyểnPhòngToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            btnSwitchRoom_Click(this, new EventArgs());
+        }
+
+        private void thanhToánToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            btnCheckOut_Click(this, new EventArgs());
+        }
     }
 }

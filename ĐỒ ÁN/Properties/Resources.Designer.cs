@@ -63,6 +63,17 @@ namespace ĐỒ_ÁN.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap kisspng_vector_graphics_stock_photography_illustration_log_5d0e5ca6e6aeb7_2806614415612223109449 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-vector-graphics-stock-photography-illustration-log-5d0e5ca6e6aeb7.2806614" +
+                        "415612223109449", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap login {
             get {
                 object obj = ResourceManager.GetObject("login", resourceCulture);

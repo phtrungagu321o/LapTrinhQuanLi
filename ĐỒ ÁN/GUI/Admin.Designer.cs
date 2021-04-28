@@ -129,22 +129,18 @@ namespace ĐỒ_ÁN
             this.btnDeleteFood = new System.Windows.Forms.Button();
             this.btnAddFood = new System.Windows.Forms.Button();
             this.tpBill = new System.Windows.Forms.TabPage();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.btnReport = new System.Windows.Forms.Button();
-            this.btnViewBill = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.dgvBill = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnReport = new System.Windows.Forms.Button();
             this.dtpToTime = new System.Windows.Forms.DateTimePicker();
+            this.btnViewBill = new System.Windows.Forms.Button();
             this.dtpFromTime = new System.Windows.Forms.DateTimePicker();
             this.panel13 = new System.Windows.Forms.Panel();
             this.txtNumPage = new System.Windows.Forms.TextBox();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.btnNext = new System.Windows.Forms.Button();
             this.btnLast = new System.Windows.Forms.Button();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.btnPervious = new System.Windows.Forms.Button();
             this.btnFristPage = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.btnPervious = new System.Windows.Forms.Button();
             this.tcService = new System.Windows.Forms.TabControl();
             this.USP_GetListBillByDateForReportTableAdapter = new ĐỒ_ÁN.QuanLiPhongKaraokeDataSetTableAdapters.USP_GetListBillByDateForReportTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.USP_GetListBillByDateForReportBindingSource)).BeginInit();
@@ -196,13 +192,9 @@ namespace ĐỒ_ÁN
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.tpBill.SuspendLayout();
-            this.panel19.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBill)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel13.SuspendLayout();
-            this.panel25.SuspendLayout();
-            this.panel18.SuspendLayout();
             this.tcService.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -225,7 +217,7 @@ namespace ĐỒ_ÁN
             this.tpAccount.Margin = new System.Windows.Forms.Padding(4);
             this.tpAccount.Name = "tpAccount";
             this.tpAccount.Padding = new System.Windows.Forms.Padding(4);
-            this.tpAccount.Size = new System.Drawing.Size(901, 561);
+            this.tpAccount.Size = new System.Drawing.Size(676, 403);
             this.tpAccount.TabIndex = 5;
             this.tpAccount.Text = "Tài Khoản";
             this.tpAccount.UseVisualStyleBackColor = true;
@@ -238,7 +230,7 @@ namespace ĐỒ_ÁN
             this.panel47.Location = new System.Drawing.Point(4, 79);
             this.panel47.Margin = new System.Windows.Forms.Padding(4);
             this.panel47.Name = "panel47";
-            this.panel47.Size = new System.Drawing.Size(482, 478);
+            this.panel47.Size = new System.Drawing.Size(257, 320);
             this.panel47.TabIndex = 6;
             // 
             // dgvAccount
@@ -249,7 +241,7 @@ namespace ĐỒ_ÁN
             this.dgvAccount.Location = new System.Drawing.Point(0, 0);
             this.dgvAccount.Margin = new System.Windows.Forms.Padding(4);
             this.dgvAccount.Name = "dgvAccount";
-            this.dgvAccount.Size = new System.Drawing.Size(482, 478);
+            this.dgvAccount.Size = new System.Drawing.Size(257, 320);
             this.dgvAccount.TabIndex = 0;
             // 
             // panel40
@@ -259,10 +251,10 @@ namespace ĐỒ_ÁN
             this.panel40.Controls.Add(this.panel44);
             this.panel40.Controls.Add(this.panel45);
             this.panel40.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel40.Location = new System.Drawing.Point(486, 79);
+            this.panel40.Location = new System.Drawing.Point(261, 79);
             this.panel40.Margin = new System.Windows.Forms.Padding(4);
             this.panel40.Name = "panel40";
-            this.panel40.Size = new System.Drawing.Size(411, 478);
+            this.panel40.Size = new System.Drawing.Size(411, 320);
             this.panel40.TabIndex = 7;
             // 
             // btnResetPassWord
@@ -385,14 +377,14 @@ namespace ĐỒ_ÁN
             this.panel46.Location = new System.Drawing.Point(4, 4);
             this.panel46.Margin = new System.Windows.Forms.Padding(4);
             this.panel46.Name = "panel46";
-            this.panel46.Size = new System.Drawing.Size(893, 75);
+            this.panel46.Size = new System.Drawing.Size(668, 75);
             this.panel46.TabIndex = 8;
             // 
             // btnShowAccount
             // 
             this.btnShowAccount.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnShowAccount.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowAccount.Location = new System.Drawing.Point(369, 4);
+            this.btnShowAccount.Location = new System.Drawing.Point(257, 4);
             this.btnShowAccount.Margin = new System.Windows.Forms.Padding(4);
             this.btnShowAccount.Name = "btnShowAccount";
             this.btnShowAccount.Size = new System.Drawing.Size(112, 65);
@@ -405,7 +397,7 @@ namespace ĐỒ_ÁN
             // 
             this.btnUpdateAccount.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnUpdateAccount.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateAccount.Location = new System.Drawing.Point(247, 4);
+            this.btnUpdateAccount.Location = new System.Drawing.Point(135, 4);
             this.btnUpdateAccount.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdateAccount.Name = "btnUpdateAccount";
             this.btnUpdateAccount.Size = new System.Drawing.Size(112, 65);
@@ -418,7 +410,7 @@ namespace ĐỒ_ÁN
             // 
             this.btnDeleteAccount.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnDeleteAccount.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteAccount.Location = new System.Drawing.Point(126, 4);
+            this.btnDeleteAccount.Location = new System.Drawing.Point(14, 4);
             this.btnDeleteAccount.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteAccount.Name = "btnDeleteAccount";
             this.btnDeleteAccount.Size = new System.Drawing.Size(112, 65);
@@ -431,7 +423,7 @@ namespace ĐỒ_ÁN
             // 
             this.btnAddAccount.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAddAccount.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddAccount.Location = new System.Drawing.Point(4, 4);
+            this.btnAddAccount.Location = new System.Drawing.Point(-108, 4);
             this.btnAddAccount.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddAccount.Name = "btnAddAccount";
             this.btnAddAccount.Size = new System.Drawing.Size(112, 65);
@@ -449,7 +441,7 @@ namespace ĐỒ_ÁN
             this.tpRoom.Margin = new System.Windows.Forms.Padding(4);
             this.tpRoom.Name = "tpRoom";
             this.tpRoom.Padding = new System.Windows.Forms.Padding(4);
-            this.tpRoom.Size = new System.Drawing.Size(901, 561);
+            this.tpRoom.Size = new System.Drawing.Size(676, 403);
             this.tpRoom.TabIndex = 3;
             this.tpRoom.Text = "Phòng";
             this.tpRoom.UseVisualStyleBackColor = true;
@@ -462,7 +454,7 @@ namespace ĐỒ_ÁN
             this.panel32.Location = new System.Drawing.Point(4, 79);
             this.panel32.Margin = new System.Windows.Forms.Padding(4);
             this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(482, 478);
+            this.panel32.Size = new System.Drawing.Size(257, 320);
             this.panel32.TabIndex = 3;
             // 
             // dgvRoom
@@ -473,7 +465,7 @@ namespace ĐỒ_ÁN
             this.dgvRoom.Location = new System.Drawing.Point(0, 0);
             this.dgvRoom.Margin = new System.Windows.Forms.Padding(4);
             this.dgvRoom.Name = "dgvRoom";
-            this.dgvRoom.Size = new System.Drawing.Size(482, 478);
+            this.dgvRoom.Size = new System.Drawing.Size(257, 320);
             this.dgvRoom.TabIndex = 0;
             // 
             // panel26
@@ -482,10 +474,10 @@ namespace ĐỒ_ÁN
             this.panel26.Controls.Add(this.panel29);
             this.panel26.Controls.Add(this.panel30);
             this.panel26.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel26.Location = new System.Drawing.Point(486, 79);
+            this.panel26.Location = new System.Drawing.Point(261, 79);
             this.panel26.Margin = new System.Windows.Forms.Padding(4);
             this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(411, 478);
+            this.panel26.Size = new System.Drawing.Size(411, 320);
             this.panel26.TabIndex = 4;
             // 
             // panel12
@@ -591,14 +583,14 @@ namespace ĐỒ_ÁN
             this.panel31.Location = new System.Drawing.Point(4, 4);
             this.panel31.Margin = new System.Windows.Forms.Padding(4);
             this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(893, 75);
+            this.panel31.Size = new System.Drawing.Size(668, 75);
             this.panel31.TabIndex = 5;
             // 
             // btnShowRoom
             // 
             this.btnShowRoom.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnShowRoom.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowRoom.Location = new System.Drawing.Point(369, 4);
+            this.btnShowRoom.Location = new System.Drawing.Point(257, 4);
             this.btnShowRoom.Margin = new System.Windows.Forms.Padding(4);
             this.btnShowRoom.Name = "btnShowRoom";
             this.btnShowRoom.Size = new System.Drawing.Size(112, 65);
@@ -611,7 +603,7 @@ namespace ĐỒ_ÁN
             // 
             this.btnUpdateRoom.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnUpdateRoom.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateRoom.Location = new System.Drawing.Point(247, 4);
+            this.btnUpdateRoom.Location = new System.Drawing.Point(135, 4);
             this.btnUpdateRoom.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdateRoom.Name = "btnUpdateRoom";
             this.btnUpdateRoom.Size = new System.Drawing.Size(112, 65);
@@ -624,7 +616,7 @@ namespace ĐỒ_ÁN
             // 
             this.btnDeleteRoom.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnDeleteRoom.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteRoom.Location = new System.Drawing.Point(126, 4);
+            this.btnDeleteRoom.Location = new System.Drawing.Point(14, 4);
             this.btnDeleteRoom.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteRoom.Name = "btnDeleteRoom";
             this.btnDeleteRoom.Size = new System.Drawing.Size(112, 65);
@@ -637,7 +629,7 @@ namespace ĐỒ_ÁN
             // 
             this.btnAddRoom.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAddRoom.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddRoom.Location = new System.Drawing.Point(4, 4);
+            this.btnAddRoom.Location = new System.Drawing.Point(-108, 4);
             this.btnAddRoom.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddRoom.Name = "btnAddRoom";
             this.btnAddRoom.Size = new System.Drawing.Size(112, 65);
@@ -653,7 +645,7 @@ namespace ĐỒ_ÁN
             this.tpFoodCategory.Margin = new System.Windows.Forms.Padding(4);
             this.tpFoodCategory.Name = "tpFoodCategory";
             this.tpFoodCategory.Padding = new System.Windows.Forms.Padding(4);
-            this.tpFoodCategory.Size = new System.Drawing.Size(901, 561);
+            this.tpFoodCategory.Size = new System.Drawing.Size(676, 403);
             this.tpFoodCategory.TabIndex = 2;
             this.tpFoodCategory.Text = "Danh mục";
             this.tpFoodCategory.UseVisualStyleBackColor = true;
@@ -667,7 +659,7 @@ namespace ĐỒ_ÁN
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(893, 553);
+            this.tabControl1.Size = new System.Drawing.Size(668, 395);
             this.tabControl1.TabIndex = 0;
             // 
             // tpServiceCategory
@@ -679,7 +671,7 @@ namespace ĐỒ_ÁN
             this.tpServiceCategory.Margin = new System.Windows.Forms.Padding(4);
             this.tpServiceCategory.Name = "tpServiceCategory";
             this.tpServiceCategory.Padding = new System.Windows.Forms.Padding(4);
-            this.tpServiceCategory.Size = new System.Drawing.Size(885, 521);
+            this.tpServiceCategory.Size = new System.Drawing.Size(660, 363);
             this.tpServiceCategory.TabIndex = 0;
             this.tpServiceCategory.Text = "Dịch Vụ";
             this.tpServiceCategory.UseVisualStyleBackColor = true;
@@ -692,7 +684,7 @@ namespace ĐỒ_ÁN
             this.panel17.Location = new System.Drawing.Point(4, 79);
             this.panel17.Margin = new System.Windows.Forms.Padding(4);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(550, 438);
+            this.panel17.Size = new System.Drawing.Size(325, 280);
             this.panel17.TabIndex = 3;
             // 
             // dgvServiceCategory
@@ -703,7 +695,7 @@ namespace ĐỒ_ÁN
             this.dgvServiceCategory.Location = new System.Drawing.Point(0, 0);
             this.dgvServiceCategory.Margin = new System.Windows.Forms.Padding(4);
             this.dgvServiceCategory.Name = "dgvServiceCategory";
-            this.dgvServiceCategory.Size = new System.Drawing.Size(550, 438);
+            this.dgvServiceCategory.Size = new System.Drawing.Size(325, 280);
             this.dgvServiceCategory.TabIndex = 0;
             // 
             // panel11
@@ -711,10 +703,10 @@ namespace ĐỒ_ÁN
             this.panel11.Controls.Add(this.panel14);
             this.panel11.Controls.Add(this.panel15);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel11.Location = new System.Drawing.Point(554, 79);
+            this.panel11.Location = new System.Drawing.Point(329, 79);
             this.panel11.Margin = new System.Windows.Forms.Padding(4);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(327, 438);
+            this.panel11.Size = new System.Drawing.Size(327, 280);
             this.panel11.TabIndex = 2;
             // 
             // panel14
@@ -790,14 +782,14 @@ namespace ĐỒ_ÁN
             this.panel16.Location = new System.Drawing.Point(4, 4);
             this.panel16.Margin = new System.Windows.Forms.Padding(4);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(877, 75);
+            this.panel16.Size = new System.Drawing.Size(652, 75);
             this.panel16.TabIndex = 4;
             // 
             // btnShowServiceCategory
             // 
             this.btnShowServiceCategory.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnShowServiceCategory.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowServiceCategory.Location = new System.Drawing.Point(369, 4);
+            this.btnShowServiceCategory.Location = new System.Drawing.Point(257, 4);
             this.btnShowServiceCategory.Margin = new System.Windows.Forms.Padding(4);
             this.btnShowServiceCategory.Name = "btnShowServiceCategory";
             this.btnShowServiceCategory.Size = new System.Drawing.Size(112, 65);
@@ -810,7 +802,7 @@ namespace ĐỒ_ÁN
             // 
             this.btnUpdateServiceCategory.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnUpdateServiceCategory.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateServiceCategory.Location = new System.Drawing.Point(247, 4);
+            this.btnUpdateServiceCategory.Location = new System.Drawing.Point(135, 4);
             this.btnUpdateServiceCategory.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdateServiceCategory.Name = "btnUpdateServiceCategory";
             this.btnUpdateServiceCategory.Size = new System.Drawing.Size(112, 65);
@@ -823,7 +815,7 @@ namespace ĐỒ_ÁN
             // 
             this.btnDeleteServicecategory.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnDeleteServicecategory.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteServicecategory.Location = new System.Drawing.Point(126, 4);
+            this.btnDeleteServicecategory.Location = new System.Drawing.Point(14, 4);
             this.btnDeleteServicecategory.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteServicecategory.Name = "btnDeleteServicecategory";
             this.btnDeleteServicecategory.Size = new System.Drawing.Size(112, 65);
@@ -836,7 +828,7 @@ namespace ĐỒ_ÁN
             // 
             this.btnAddServiceCategory.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAddServiceCategory.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddServiceCategory.Location = new System.Drawing.Point(4, 4);
+            this.btnAddServiceCategory.Location = new System.Drawing.Point(-108, 4);
             this.btnAddServiceCategory.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddServiceCategory.Name = "btnAddServiceCategory";
             this.btnAddServiceCategory.Size = new System.Drawing.Size(112, 65);
@@ -1066,7 +1058,7 @@ namespace ĐỒ_ÁN
             this.tpService.Margin = new System.Windows.Forms.Padding(4);
             this.tpService.Name = "tpService";
             this.tpService.Padding = new System.Windows.Forms.Padding(4);
-            this.tpService.Size = new System.Drawing.Size(901, 561);
+            this.tpService.Size = new System.Drawing.Size(676, 403);
             this.tpService.TabIndex = 1;
             this.tpService.Text = "Dịch vụ";
             this.tpService.UseVisualStyleBackColor = true;
@@ -1079,7 +1071,7 @@ namespace ĐỒ_ÁN
             this.panel3.Location = new System.Drawing.Point(4, 79);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(483, 478);
+            this.panel3.Size = new System.Drawing.Size(258, 320);
             this.panel3.TabIndex = 0;
             // 
             // dgvService
@@ -1090,7 +1082,7 @@ namespace ĐỒ_ÁN
             this.dgvService.Location = new System.Drawing.Point(0, 0);
             this.dgvService.Margin = new System.Windows.Forms.Padding(4);
             this.dgvService.Name = "dgvService";
-            this.dgvService.Size = new System.Drawing.Size(483, 478);
+            this.dgvService.Size = new System.Drawing.Size(258, 320);
             this.dgvService.TabIndex = 0;
             // 
             // panel5
@@ -1101,10 +1093,10 @@ namespace ĐỒ_ÁN
             this.panel5.Controls.Add(this.panel7);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel5.Location = new System.Drawing.Point(487, 79);
+            this.panel5.Location = new System.Drawing.Point(262, 79);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(410, 478);
+            this.panel5.Size = new System.Drawing.Size(410, 320);
             this.panel5.TabIndex = 1;
             // 
             // panel10
@@ -1256,7 +1248,7 @@ namespace ĐỒ_ÁN
             this.panel4.Location = new System.Drawing.Point(4, 4);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(893, 75);
+            this.panel4.Size = new System.Drawing.Size(668, 75);
             this.panel4.TabIndex = 1;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
@@ -1265,7 +1257,7 @@ namespace ĐỒ_ÁN
             this.panel6.Controls.Add(this.txtSearchServiceName);
             this.panel6.Controls.Add(this.btnSearchFood);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(483, 0);
+            this.panel6.Location = new System.Drawing.Point(258, 0);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(410, 75);
@@ -1296,7 +1288,7 @@ namespace ĐỒ_ÁN
             // 
             this.btnShowFood.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnShowFood.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowFood.Location = new System.Drawing.Point(371, 4);
+            this.btnShowFood.Location = new System.Drawing.Point(259, 4);
             this.btnShowFood.Margin = new System.Windows.Forms.Padding(4);
             this.btnShowFood.Name = "btnShowFood";
             this.btnShowFood.Size = new System.Drawing.Size(112, 65);
@@ -1309,7 +1301,7 @@ namespace ĐỒ_ÁN
             // 
             this.btnUpdateFood.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnUpdateFood.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateFood.Location = new System.Drawing.Point(249, 4);
+            this.btnUpdateFood.Location = new System.Drawing.Point(137, 4);
             this.btnUpdateFood.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdateFood.Name = "btnUpdateFood";
             this.btnUpdateFood.Size = new System.Drawing.Size(112, 65);
@@ -1322,7 +1314,7 @@ namespace ĐỒ_ÁN
             // 
             this.btnDeleteFood.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnDeleteFood.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteFood.Location = new System.Drawing.Point(128, 4);
+            this.btnDeleteFood.Location = new System.Drawing.Point(16, 4);
             this.btnDeleteFood.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteFood.Name = "btnDeleteFood";
             this.btnDeleteFood.Size = new System.Drawing.Size(112, 65);
@@ -1335,7 +1327,7 @@ namespace ĐỒ_ÁN
             // 
             this.btnAddFood.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAddFood.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddFood.Location = new System.Drawing.Point(6, 4);
+            this.btnAddFood.Location = new System.Drawing.Point(-106, 4);
             this.btnAddFood.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddFood.Name = "btnAddFood";
             this.btnAddFood.Size = new System.Drawing.Size(112, 65);
@@ -1346,120 +1338,103 @@ namespace ĐỒ_ÁN
             // 
             // tpBill
             // 
-            this.tpBill.Controls.Add(this.panel19);
-            this.tpBill.Controls.Add(this.panel1);
+            this.tpBill.Controls.Add(this.dgvBill);
             this.tpBill.Controls.Add(this.panel2);
             this.tpBill.Controls.Add(this.panel13);
             this.tpBill.Location = new System.Drawing.Point(4, 28);
             this.tpBill.Margin = new System.Windows.Forms.Padding(4);
             this.tpBill.Name = "tpBill";
             this.tpBill.Padding = new System.Windows.Forms.Padding(4);
-            this.tpBill.Size = new System.Drawing.Size(901, 561);
+            this.tpBill.Size = new System.Drawing.Size(687, 406);
             this.tpBill.TabIndex = 0;
             this.tpBill.Text = "Doanh thu";
             this.tpBill.UseVisualStyleBackColor = true;
             // 
-            // panel19
-            // 
-            this.panel19.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel19.Controls.Add(this.btnReport);
-            this.panel19.Controls.Add(this.btnViewBill);
-            this.panel19.Location = new System.Drawing.Point(255, 4);
-            this.panel19.Margin = new System.Windows.Forms.Padding(4);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(368, 60);
-            this.panel19.TabIndex = 4;
-            // 
-            // btnReport
-            // 
-            this.btnReport.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnReport.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReport.Location = new System.Drawing.Point(196, 0);
-            this.btnReport.Margin = new System.Windows.Forms.Padding(4);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(172, 60);
-            this.btnReport.TabIndex = 3;
-            this.btnReport.Text = "Báo cáo";
-            this.btnReport.UseVisualStyleBackColor = true;
-            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
-            // 
-            // btnViewBill
-            // 
-            this.btnViewBill.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnViewBill.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewBill.Location = new System.Drawing.Point(0, 0);
-            this.btnViewBill.Margin = new System.Windows.Forms.Padding(4);
-            this.btnViewBill.Name = "btnViewBill";
-            this.btnViewBill.Size = new System.Drawing.Size(172, 60);
-            this.btnViewBill.TabIndex = 2;
-            this.btnViewBill.Text = "Thống kê";
-            this.btnViewBill.UseVisualStyleBackColor = true;
-            this.btnViewBill.Click += new System.EventHandler(this.btnViewBill_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.dgvBill);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(4, 71);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(893, 419);
-            this.panel1.TabIndex = 0;
-            // 
             // dgvBill
             // 
+            this.dgvBill.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBill.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBill.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvBill.Location = new System.Drawing.Point(0, 0);
+            this.dgvBill.Location = new System.Drawing.Point(4, 75);
             this.dgvBill.Margin = new System.Windows.Forms.Padding(4);
             this.dgvBill.Name = "dgvBill";
-            this.dgvBill.Size = new System.Drawing.Size(893, 419);
+            this.dgvBill.Size = new System.Drawing.Size(679, 252);
             this.dgvBill.TabIndex = 0;
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnReport);
             this.panel2.Controls.Add(this.dtpToTime);
+            this.panel2.Controls.Add(this.btnViewBill);
             this.panel2.Controls.Add(this.dtpFromTime);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(4, 4);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(893, 67);
+            this.panel2.Size = new System.Drawing.Size(679, 67);
             this.panel2.TabIndex = 1;
+            // 
+            // btnReport
+            // 
+            this.btnReport.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnReport.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.Location = new System.Drawing.Point(358, 7);
+            this.btnReport.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(92, 26);
+            this.btnReport.TabIndex = 3;
+            this.btnReport.Text = "Báo cáo";
+            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // dtpToTime
             // 
-            this.dtpToTime.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dtpToTime.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpToTime.Location = new System.Drawing.Point(634, 0);
+            this.dtpToTime.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtpToTime.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpToTime.Location = new System.Drawing.Point(495, 7);
             this.dtpToTime.Margin = new System.Windows.Forms.Padding(4);
             this.dtpToTime.Name = "dtpToTime";
-            this.dtpToTime.Size = new System.Drawing.Size(259, 32);
+            this.dtpToTime.Size = new System.Drawing.Size(173, 26);
             this.dtpToTime.TabIndex = 1;
+            // 
+            // btnViewBill
+            // 
+            this.btnViewBill.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnViewBill.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewBill.Location = new System.Drawing.Point(250, 7);
+            this.btnViewBill.Margin = new System.Windows.Forms.Padding(4);
+            this.btnViewBill.Name = "btnViewBill";
+            this.btnViewBill.Size = new System.Drawing.Size(100, 26);
+            this.btnViewBill.TabIndex = 2;
+            this.btnViewBill.Text = "Thống kê";
+            this.btnViewBill.UseVisualStyleBackColor = true;
+            this.btnViewBill.Click += new System.EventHandler(this.btnViewBill_Click);
             // 
             // dtpFromTime
             // 
-            this.dtpFromTime.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dtpFromTime.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFromTime.Location = new System.Drawing.Point(0, 0);
+            this.dtpFromTime.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtpFromTime.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFromTime.Location = new System.Drawing.Point(10, 7);
             this.dtpFromTime.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFromTime.Name = "dtpFromTime";
-            this.dtpFromTime.Size = new System.Drawing.Size(239, 32);
+            this.dtpFromTime.Size = new System.Drawing.Size(181, 26);
             this.dtpFromTime.TabIndex = 0;
             // 
             // panel13
             // 
             this.panel13.Controls.Add(this.txtNumPage);
-            this.panel13.Controls.Add(this.panel25);
-            this.panel13.Controls.Add(this.panel18);
+            this.panel13.Controls.Add(this.btnLast);
+            this.panel13.Controls.Add(this.btnFristPage);
+            this.panel13.Controls.Add(this.btnNext);
+            this.panel13.Controls.Add(this.btnPervious);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel13.Location = new System.Drawing.Point(4, 490);
+            this.panel13.Location = new System.Drawing.Point(4, 335);
             this.panel13.Margin = new System.Windows.Forms.Padding(4);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(893, 67);
+            this.panel13.Size = new System.Drawing.Size(679, 67);
             this.panel13.TabIndex = 6;
             // 
             // txtNumPage
@@ -1467,91 +1442,69 @@ namespace ĐỒ_ÁN
             this.txtNumPage.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txtNumPage.BackColor = System.Drawing.Color.White;
             this.txtNumPage.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNumPage.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumPage.Location = new System.Drawing.Point(336, 8);
+            this.txtNumPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumPage.Location = new System.Drawing.Point(278, 23);
             this.txtNumPage.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumPage.Multiline = true;
             this.txtNumPage.Name = "txtNumPage";
             this.txtNumPage.ReadOnly = true;
-            this.txtNumPage.Size = new System.Drawing.Size(219, 54);
+            this.txtNumPage.Size = new System.Drawing.Size(134, 28);
             this.txtNumPage.TabIndex = 5;
             this.txtNumPage.Text = "1";
             this.txtNumPage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNumPage.TextChanged += new System.EventHandler(this.txtNumPage_TextChanged);
             // 
-            // panel25
-            // 
-            this.panel25.Controls.Add(this.btnNext);
-            this.panel25.Controls.Add(this.btnLast);
-            this.panel25.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel25.Location = new System.Drawing.Point(563, 0);
-            this.panel25.Margin = new System.Windows.Forms.Padding(4);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(330, 67);
-            this.panel25.TabIndex = 7;
-            // 
-            // btnNext
-            // 
-            this.btnNext.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnNext.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext.Location = new System.Drawing.Point(0, 0);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(4);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(172, 67);
-            this.btnNext.TabIndex = 4;
-            this.btnNext.Text = "Next";
-            this.btnNext.UseVisualStyleBackColor = true;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
             // btnLast
             // 
-            this.btnLast.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnLast.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLast.Location = new System.Drawing.Point(182, 0);
+            this.btnLast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLast.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLast.Location = new System.Drawing.Point(590, 15);
             this.btnLast.Margin = new System.Windows.Forms.Padding(4);
             this.btnLast.Name = "btnLast";
-            this.btnLast.Size = new System.Drawing.Size(148, 67);
+            this.btnLast.Size = new System.Drawing.Size(84, 36);
             this.btnLast.TabIndex = 3;
             this.btnLast.Text = "Last";
             this.btnLast.UseVisualStyleBackColor = true;
             this.btnLast.Click += new System.EventHandler(this.btnLast_Click);
             // 
-            // panel18
-            // 
-            this.panel18.Controls.Add(this.btnPervious);
-            this.panel18.Controls.Add(this.btnFristPage);
-            this.panel18.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel18.Location = new System.Drawing.Point(0, 0);
-            this.panel18.Margin = new System.Windows.Forms.Padding(4);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(337, 67);
-            this.panel18.TabIndex = 6;
-            // 
-            // btnPervious
-            // 
-            this.btnPervious.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnPervious.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPervious.Location = new System.Drawing.Point(175, 0);
-            this.btnPervious.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPervious.Name = "btnPervious";
-            this.btnPervious.Size = new System.Drawing.Size(162, 67);
-            this.btnPervious.TabIndex = 2;
-            this.btnPervious.Text = "Previous";
-            this.btnPervious.UseVisualStyleBackColor = true;
-            this.btnPervious.Click += new System.EventHandler(this.btnPervious_Click);
-            // 
             // btnFristPage
             // 
-            this.btnFristPage.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnFristPage.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFristPage.Location = new System.Drawing.Point(0, 0);
+            this.btnFristPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnFristPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFristPage.Location = new System.Drawing.Point(5, 15);
             this.btnFristPage.Margin = new System.Windows.Forms.Padding(4);
             this.btnFristPage.Name = "btnFristPage";
-            this.btnFristPage.Size = new System.Drawing.Size(166, 67);
+            this.btnFristPage.Size = new System.Drawing.Size(102, 36);
             this.btnFristPage.TabIndex = 1;
             this.btnFristPage.Text = "First";
             this.btnFristPage.UseVisualStyleBackColor = true;
             this.btnFristPage.Click += new System.EventHandler(this.btnFristPage_Click);
+            // 
+            // btnNext
+            // 
+            this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.Location = new System.Drawing.Point(474, 15);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(108, 36);
+            this.btnNext.TabIndex = 4;
+            this.btnNext.Text = "Next";
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnPervious
+            // 
+            this.btnPervious.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnPervious.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPervious.Location = new System.Drawing.Point(115, 15);
+            this.btnPervious.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPervious.Name = "btnPervious";
+            this.btnPervious.Size = new System.Drawing.Size(98, 36);
+            this.btnPervious.TabIndex = 2;
+            this.btnPervious.Text = "Previous";
+            this.btnPervious.UseVisualStyleBackColor = true;
+            this.btnPervious.Click += new System.EventHandler(this.btnPervious_Click);
             // 
             // tcService
             // 
@@ -1565,7 +1518,7 @@ namespace ĐỒ_ÁN
             this.tcService.Margin = new System.Windows.Forms.Padding(4);
             this.tcService.Name = "tcService";
             this.tcService.SelectedIndex = 0;
-            this.tcService.Size = new System.Drawing.Size(909, 593);
+            this.tcService.Size = new System.Drawing.Size(695, 438);
             this.tcService.TabIndex = 0;
             // 
             // USP_GetListBillByDateForReportTableAdapter
@@ -1576,12 +1529,14 @@ namespace ĐỒ_ÁN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(909, 593);
+            this.ClientSize = new System.Drawing.Size(695, 438);
             this.Controls.Add(this.tcService);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(925, 632);
+            this.MinimumSize = new System.Drawing.Size(711, 477);
             this.Name = "Admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
@@ -1651,14 +1606,10 @@ namespace ĐỒ_ÁN
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.tpBill.ResumeLayout(false);
-            this.panel19.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBill)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
-            this.panel25.ResumeLayout(false);
-            this.panel18.ResumeLayout(false);
             this.tcService.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1779,9 +1730,5 @@ namespace ĐỒ_ÁN
         private QuanLiPhongKaraokeDataSet QuanLiPhongKaraokeDataSet;
         private QuanLiPhongKaraokeDataSetTableAdapters.USP_GetListBillByDateForReportTableAdapter USP_GetListBillByDateForReportTableAdapter;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel25;
-        private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Panel panel19;
     }
 }

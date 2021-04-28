@@ -41,11 +41,9 @@ namespace ĐỒ_ÁN.GUI
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-             
-            
-           
+
             AccountDTO loginAccount = AccountDAO.Instance.GetAccountByUserName(UserN);
-            RoomManager frm = new RoomManager(loginAccount);
+            MainForm frm = new MainForm(loginAccount);
             if (this.Opacity < 1) this.Opacity += 0.05;
             circularProgressBar1.Value += 1;
             circularProgressBar1.Text = circularProgressBar1.Value.ToString();

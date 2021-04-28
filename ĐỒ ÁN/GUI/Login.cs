@@ -121,6 +121,7 @@ namespace ĐỒ_ÁN
                 R.UserN = txtUser.Text;
                 R.ShowDialog();
                 this.Show();
+                
             }
             else
             {

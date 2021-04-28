@@ -20,8 +20,10 @@ namespace ĐỒ_ÁN
         BindingSource ServiceCategoryList = new BindingSource();
         BindingSource RoomCategoryList = new BindingSource();
         BindingSource AccountList = new BindingSource();
+        private AccountDTO loginAccount;
 
-        public AccountDTO loginAccount;
+        public AccountDTO LoginAccount { get => loginAccount; set => loginAccount = value; }
+
         public Admin()
         {
             InitializeComponent();
@@ -698,7 +700,7 @@ namespace ĐỒ_ÁN
             t = MessageBox.Show(string.Format("Bạn có muốn Xóa tài khoản {0} không ?", user), "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (t == DialogResult.Yes)
             {
-                if (loginAccount.UserName.Equals(user))
+                if (LoginAccount.UserName.Equals(user))
                 {
                     MessageBox.Show("Tài Khoản đang chạy");
                     return;

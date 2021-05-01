@@ -104,8 +104,7 @@ namespace ĐỒ_ÁN
 
         private void btnRestoreAndBackup_Click(object sender, EventArgs e)
         {
-            TestLogin f = new TestLogin();
-            f.ShowDialog();
+            
         }
 
         private void btnLogin_Click_1(object sender, EventArgs e)

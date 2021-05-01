@@ -29,6 +29,7 @@ namespace ĐỒ_ÁN.GUI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.iconButtonHelp = new FontAwesome.Sharp.IconButton();
@@ -45,6 +46,7 @@ namespace ĐỒ_ÁN.GUI
             this.iconButtonRoomManager = new FontAwesome.Sharp.IconButton();
             this.iconButtonAdmin = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.llblRestoreAndBackUp = new System.Windows.Forms.LinkLabel();
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
@@ -54,7 +56,7 @@ namespace ĐỒ_ÁN.GUI
             this.iconCurrenChildRoom = new FontAwesome.Sharp.IconPictureBox();
             this.panelShadows = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.lblTime = new System.Windows.Forms.Label();
+            this.labeltime = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             this.linkLabelFaceBooK = new System.Windows.Forms.LinkLabel();
@@ -64,6 +66,7 @@ namespace ĐỒ_ÁN.GUI
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelMenu.SuspendLayout();
             this.panelKeyOff.SuspendLayout();
             this.panelProfile.SuspendLayout();
@@ -121,7 +124,7 @@ namespace ĐỒ_ÁN.GUI
             // 
             // panelKeyOff
             // 
-            this.panelKeyOff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelKeyOff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.panelKeyOff.Controls.Add(this.iconButtonSwitch);
             this.panelKeyOff.Controls.Add(this.iconButtonCheckOut);
             this.panelKeyOff.Controls.Add(this.iconButtonStart);
@@ -134,6 +137,7 @@ namespace ĐỒ_ÁN.GUI
             // 
             // iconButtonSwitch
             // 
+            this.iconButtonSwitch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.iconButtonSwitch.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButtonSwitch.Enabled = false;
             this.iconButtonSwitch.FlatAppearance.BorderSize = 0;
@@ -153,11 +157,12 @@ namespace ĐỒ_ÁN.GUI
             this.iconButtonSwitch.Text = "Chuyển Phòng (Ctrl + D)";
             this.iconButtonSwitch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButtonSwitch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButtonSwitch.UseVisualStyleBackColor = true;
+            this.iconButtonSwitch.UseVisualStyleBackColor = false;
             this.iconButtonSwitch.Click += new System.EventHandler(this.iconButton10_Click);
             // 
             // iconButtonCheckOut
             // 
+            this.iconButtonCheckOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.iconButtonCheckOut.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButtonCheckOut.Enabled = false;
             this.iconButtonCheckOut.FlatAppearance.BorderSize = 0;
@@ -177,11 +182,12 @@ namespace ĐỒ_ÁN.GUI
             this.iconButtonCheckOut.Text = "Thanh toán (Ctrl + C)";
             this.iconButtonCheckOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButtonCheckOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButtonCheckOut.UseVisualStyleBackColor = true;
+            this.iconButtonCheckOut.UseVisualStyleBackColor = false;
             this.iconButtonCheckOut.Click += new System.EventHandler(this.iconButton9_Click);
             // 
             // iconButtonStart
             // 
+            this.iconButtonStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.iconButtonStart.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButtonStart.Enabled = false;
             this.iconButtonStart.FlatAppearance.BorderSize = 0;
@@ -201,11 +207,12 @@ namespace ĐỒ_ÁN.GUI
             this.iconButtonStart.Text = "Bắt đầu (Ctrl + B)";
             this.iconButtonStart.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButtonStart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButtonStart.UseVisualStyleBackColor = true;
+            this.iconButtonStart.UseVisualStyleBackColor = false;
             this.iconButtonStart.Click += new System.EventHandler(this.iconButton8_Click);
             // 
             // iconButtonAddFood
             // 
+            this.iconButtonAddFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.iconButtonAddFood.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButtonAddFood.Enabled = false;
             this.iconButtonAddFood.FlatAppearance.BorderSize = 0;
@@ -225,7 +232,7 @@ namespace ĐỒ_ÁN.GUI
             this.iconButtonAddFood.Text = "Thêm món (Ctrl + A)";
             this.iconButtonAddFood.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButtonAddFood.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButtonAddFood.UseVisualStyleBackColor = true;
+            this.iconButtonAddFood.UseVisualStyleBackColor = false;
             this.iconButtonAddFood.Click += new System.EventHandler(this.iconButton11_Click);
             // 
             // iconButtonshortcutkey
@@ -253,7 +260,7 @@ namespace ĐỒ_ÁN.GUI
             // 
             // panelProfile
             // 
-            this.panelProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.panelProfile.Controls.Add(this.iconButtonExit);
             this.panelProfile.Controls.Add(this.iconButtonEditProFile);
             this.panelProfile.Dock = System.Windows.Forms.DockStyle.Top;
@@ -264,6 +271,7 @@ namespace ĐỒ_ÁN.GUI
             // 
             // iconButtonExit
             // 
+            this.iconButtonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.iconButtonExit.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButtonExit.FlatAppearance.BorderSize = 0;
             this.iconButtonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -282,11 +290,12 @@ namespace ĐỒ_ÁN.GUI
             this.iconButtonExit.Text = "Đăng xuất";
             this.iconButtonExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButtonExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButtonExit.UseVisualStyleBackColor = true;
+            this.iconButtonExit.UseVisualStyleBackColor = false;
             this.iconButtonExit.Click += new System.EventHandler(this.iconButtonExit_Click);
             // 
             // iconButtonEditProFile
             // 
+            this.iconButtonEditProFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.iconButtonEditProFile.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButtonEditProFile.FlatAppearance.BorderSize = 0;
             this.iconButtonEditProFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -305,7 +314,7 @@ namespace ĐỒ_ÁN.GUI
             this.iconButtonEditProFile.Text = "Chỉnh sửa thông tin";
             this.iconButtonEditProFile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButtonEditProFile.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButtonEditProFile.UseVisualStyleBackColor = true;
+            this.iconButtonEditProFile.UseVisualStyleBackColor = false;
             this.iconButtonEditProFile.Click += new System.EventHandler(this.iconButtonEditProFile_Click);
             // 
             // iconButtonProfile
@@ -379,6 +388,7 @@ namespace ĐỒ_ÁN.GUI
             // 
             // panelLogo
             // 
+            this.panelLogo.Controls.Add(this.llblRestoreAndBackUp);
             this.panelLogo.Controls.Add(this.btnHome);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
@@ -386,12 +396,25 @@ namespace ĐỒ_ÁN.GUI
             this.panelLogo.Size = new System.Drawing.Size(256, 140);
             this.panelLogo.TabIndex = 0;
             // 
+            // llblRestoreAndBackUp
+            // 
+            this.llblRestoreAndBackUp.AutoSize = true;
+            this.llblRestoreAndBackUp.Font = new System.Drawing.Font("UTM Neo Sans Intel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llblRestoreAndBackUp.LinkColor = System.Drawing.Color.Gainsboro;
+            this.llblRestoreAndBackUp.Location = new System.Drawing.Point(69, 121);
+            this.llblRestoreAndBackUp.Name = "llblRestoreAndBackUp";
+            this.llblRestoreAndBackUp.Size = new System.Drawing.Size(113, 18);
+            this.llblRestoreAndBackUp.TabIndex = 1;
+            this.llblRestoreAndBackUp.TabStop = true;
+            this.llblRestoreAndBackUp.Text = "Phục hồi và sao lưu";
+            this.llblRestoreAndBackUp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // btnHome
             // 
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.Location = new System.Drawing.Point(12, 12);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(229, 122);
+            this.btnHome.Size = new System.Drawing.Size(229, 106);
             this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnHome.TabIndex = 0;
             this.btnHome.TabStop = false;
@@ -468,7 +491,7 @@ namespace ĐỒ_ÁN.GUI
             this.lblChildRoom.AutoSize = true;
             this.lblChildRoom.Font = new System.Drawing.Font("UTM Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChildRoom.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblChildRoom.Location = new System.Drawing.Point(73, 32);
+            this.lblChildRoom.Location = new System.Drawing.Point(73, 17);
             this.lblChildRoom.Name = "lblChildRoom";
             this.lblChildRoom.Size = new System.Drawing.Size(66, 28);
             this.lblChildRoom.TabIndex = 1;
@@ -482,7 +505,7 @@ namespace ĐỒ_ÁN.GUI
             this.iconCurrenChildRoom.IconColor = System.Drawing.Color.MediumPurple;
             this.iconCurrenChildRoom.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconCurrenChildRoom.IconSize = 48;
-            this.iconCurrenChildRoom.Location = new System.Drawing.Point(17, 21);
+            this.iconCurrenChildRoom.Location = new System.Drawing.Point(17, 6);
             this.iconCurrenChildRoom.Name = "iconCurrenChildRoom";
             this.iconCurrenChildRoom.Size = new System.Drawing.Size(50, 48);
             this.iconCurrenChildRoom.TabIndex = 0;
@@ -499,8 +522,8 @@ namespace ĐỒ_ÁN.GUI
             // 
             // panelDesktop
             // 
-            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.panelDesktop.Controls.Add(this.lblTime);
+            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.panelDesktop.Controls.Add(this.labeltime);
             this.panelDesktop.Controls.Add(this.label4);
             this.panelDesktop.Controls.Add(this.iconPictureBox3);
             this.panelDesktop.Controls.Add(this.linkLabelFaceBooK);
@@ -511,21 +534,25 @@ namespace ĐỒ_ÁN.GUI
             this.panelDesktop.Controls.Add(this.label1);
             this.panelDesktop.Controls.Add(this.pictureBox1);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.panelDesktop.Location = new System.Drawing.Point(273, 84);
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(861, 477);
             this.panelDesktop.TabIndex = 3;
+            this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
             // 
-            // lblTime
+            // labeltime
             // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblTime.Location = new System.Drawing.Point(425, 315);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(60, 20);
-            this.lblTime.TabIndex = 41;
-            this.lblTime.Text = "label3";
+            this.labeltime.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labeltime.AutoSize = true;
+            this.labeltime.Font = new System.Drawing.Font("UTM Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeltime.ForeColor = System.Drawing.Color.Gainsboro;
+            this.labeltime.Location = new System.Drawing.Point(373, 296);
+            this.labeltime.Name = "labeltime";
+            this.labeltime.Size = new System.Drawing.Size(202, 28);
+            this.labeltime.TabIndex = 41;
+            this.labeltime.Text = "00/00/0000 00:00:00";
+            this.labeltime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -558,6 +585,7 @@ namespace ĐỒ_ÁN.GUI
             this.linkLabelFaceBooK.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabelFaceBooK.AutoSize = true;
             this.linkLabelFaceBooK.Font = new System.Drawing.Font("UTM Neo Sans Intel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelFaceBooK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(188)))), ((int)(((byte)(173)))));
             this.linkLabelFaceBooK.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
             this.linkLabelFaceBooK.Location = new System.Drawing.Point(350, 364);
             this.linkLabelFaceBooK.Name = "linkLabelFaceBooK";
@@ -565,6 +593,7 @@ namespace ĐỒ_ÁN.GUI
             this.linkLabelFaceBooK.TabIndex = 34;
             this.linkLabelFaceBooK.TabStop = true;
             this.linkLabelFaceBooK.Text = "https://www.facebook.com/phung.mcdoin.988";
+            this.linkLabelFaceBooK.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelFaceBooK_LinkClicked);
             // 
             // label2
             // 
@@ -622,7 +651,7 @@ namespace ĐỒ_ÁN.GUI
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("UTM Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(188)))), ((int)(((byte)(173)))));
             this.label1.Location = new System.Drawing.Point(191, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(564, 40);
@@ -639,6 +668,12 @@ namespace ĐỒ_ÁN.GUI
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // MainForm
             // 
@@ -657,6 +692,7 @@ namespace ĐỒ_ÁN.GUI
             this.panelKeyOff.ResumeLayout(false);
             this.panelProfile.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
+            this.panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -706,6 +742,8 @@ namespace ĐỒ_ÁN.GUI
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label labeltime;
+        private System.Windows.Forms.LinkLabel llblRestoreAndBackUp;
     }
 }

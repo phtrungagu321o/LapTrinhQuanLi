@@ -24,7 +24,7 @@ namespace ĐỒ_ÁN.GUI
         private Panel leftBorderBtn;
         private Form currentChildRoom;
         private AccountDTO loginAccount;
-
+       
 
         public AccountDTO LoginAccount
         {
@@ -32,6 +32,9 @@ namespace ĐỒ_ÁN.GUI
             set { loginAccount = value; }
 
         }
+
+        
+
         public MainForm(AccountDTO acc)
         {
             InitializeComponent();
@@ -46,6 +49,7 @@ namespace ĐỒ_ÁN.GUI
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             
+            
         }
        void ChangeAccount(int type)
         {
@@ -53,7 +57,9 @@ namespace ĐỒ_ÁN.GUI
 
             iconButtonProfile.Text += "\n (" + loginAccount.DisPlayName + ")";
         }
+     
         //Structs
+
         private struct RGBColors
         {
             public static Color color1 = Color.FromArgb(172, 126, 241);
@@ -77,7 +83,7 @@ namespace ĐỒ_ÁN.GUI
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
                 currentBtn.IconColor = color;
                 currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
-                currentBtn.ImageAlign = ContentAlignment.MiddleRight;
+                currentBtn.ImageAlign = ContentAlignment.MiddleCenter;
 
                 //left border button
                 leftBorderBtn.BackColor = color;
@@ -88,6 +94,22 @@ namespace ĐỒ_ÁN.GUI
                 iconCurrenChildRoom.IconChar = currentBtn.IconChar;
                 iconCurrenChildRoom.IconColor = color;
             }    
+        }
+        private void ActivateLinkLable(object senderbtn, Color color)
+        {
+            if (senderbtn != null)
+            {
+                DisableButton();
+
+                //left border button
+                leftBorderBtn.BackColor = color;
+                leftBorderBtn.Location = new Point(0, iconButtonAdmin.Location.Y);
+                leftBorderBtn.Visible = true;
+                leftBorderBtn.BringToFront();
+                //icon child room current
+                iconCurrenChildRoom.IconChar = iconButtonAdmin.IconChar;
+                iconCurrenChildRoom.IconColor = color;
+            }
         }
         private void ActivateShortCutKeyButton(object senderbtn, Color color)
         {
@@ -190,16 +212,11 @@ namespace ĐỒ_ÁN.GUI
 
         private void iconButtonAdmin_Click(object sender, EventArgs e)
         {
-           
-            
-          
             hideSubMenu();
             ActivateButton(sender, RGBColors.color1);
             Admin a = new Admin();
             OpenChildForm(a);
             a.LoginAccount = loginAccount;
-            
-
         }
 
 
@@ -343,6 +360,47 @@ namespace ĐỒ_ÁN.GUI
         private void iconButton1_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            labeltime.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+        }
+
+        private void linkLabelFaceBooK_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.facebook.com/phung.mcdoin.988");
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
+                if (loginAccount.Type == 0)
+                {
+                    MessageBox.Show("Admin mới có thể sử dụng quyền hạn này!", "Thông báo");
+                }
+                else
+                {
+                    ActivateLinkLable(sender, RGBColors.color1);
+                    hideSubMenu();
+                    AccountDTO account = AccountDAO.Instance.GetAccountByUserName(loginAccount.UserName);
+                    AccountVerification f = new AccountVerification(account);
+                    f.ShowDialog();
+
+                if (f.TestVerification == 1)
+                {
+                    BackUpAndRestoreData fB = new BackUpAndRestoreData();
+                    OpenChildForm(fB);
+                }
+                    
+                }
+         
+            
+        }
+
+        private void panelDesktop_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

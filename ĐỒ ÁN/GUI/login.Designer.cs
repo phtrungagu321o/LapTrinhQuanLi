@@ -31,7 +31,6 @@ namespace ĐỒ_ÁN
         {
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtPassWord = new System.Windows.Forms.TextBox();
-            this.btnRestoreAndBackup = new System.Windows.Forms.Button();
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.btnLogin = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,7 +47,7 @@ namespace ĐỒ_ÁN
             // 
             // txtUser
             // 
-            this.txtUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.txtUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUser.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.ForeColor = System.Drawing.Color.White;
@@ -62,7 +61,7 @@ namespace ĐỒ_ÁN
             // 
             // txtPassWord
             // 
-            this.txtPassWord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.txtPassWord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.txtPassWord.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassWord.CausesValidation = false;
             this.txtPassWord.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -75,19 +74,6 @@ namespace ĐỒ_ÁN
             this.txtPassWord.TabIndex = 3;
             this.txtPassWord.Text = "0";
             // 
-            // btnRestoreAndBackup
-            // 
-            this.btnRestoreAndBackup.FlatAppearance.BorderSize = 0;
-            this.btnRestoreAndBackup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRestoreAndBackup.ForeColor = System.Drawing.Color.White;
-            this.btnRestoreAndBackup.Location = new System.Drawing.Point(108, 275);
-            this.btnRestoreAndBackup.Name = "btnRestoreAndBackup";
-            this.btnRestoreAndBackup.Size = new System.Drawing.Size(187, 34);
-            this.btnRestoreAndBackup.TabIndex = 6;
-            this.btnRestoreAndBackup.Text = "Sao Lưu và Khôi Phục";
-            this.btnRestoreAndBackup.UseVisualStyleBackColor = true;
-            this.btnRestoreAndBackup.Click += new System.EventHandler(this.btnRestoreAndBackup_Click);
-            // 
             // btnExit
             // 
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
@@ -95,7 +81,7 @@ namespace ĐỒ_ÁN
             this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("UTM Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnExit.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnExit.IconColor = System.Drawing.Color.Black;
             this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -113,7 +99,7 @@ namespace ĐỒ_ÁN
             this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("UTM Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnLogin.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnLogin.IconColor = System.Drawing.Color.Black;
             this.btnLogin.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -128,9 +114,9 @@ namespace ĐỒ_ÁN
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.label1.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
             this.label1.Location = new System.Drawing.Point(70, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(258, 31);
@@ -139,7 +125,7 @@ namespace ĐỒ_ÁN
             // 
             // iconPictureBox1
             // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Users;
             this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
@@ -173,9 +159,10 @@ namespace ĐỒ_ÁN
             // 
             // iconPictureBox2
             // 
-            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.iconPictureBox2.ForeColor = System.Drawing.Color.Gainsboro;
             this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.iconPictureBox2.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.Gainsboro;
             this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox2.Location = new System.Drawing.Point(34, 139);
             this.iconPictureBox2.Name = "iconPictureBox2";
@@ -185,9 +172,10 @@ namespace ĐỒ_ÁN
             // 
             // iconPictureBox3
             // 
-            this.iconPictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.iconPictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.iconPictureBox3.ForeColor = System.Drawing.Color.Gainsboro;
             this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.UnlockAlt;
-            this.iconPictureBox3.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox3.IconColor = System.Drawing.Color.Gainsboro;
             this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox3.Location = new System.Drawing.Point(34, 170);
             this.iconPictureBox3.Name = "iconPictureBox3";
@@ -208,7 +196,7 @@ namespace ĐỒ_ÁN
             this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(386, 331);
             this.Controls.Add(this.textBox2);
@@ -222,7 +210,6 @@ namespace ĐỒ_ÁN
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.btnRestoreAndBackup);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -240,7 +227,6 @@ namespace ĐỒ_ÁN
         #endregion
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.TextBox txtPassWord;
-        private System.Windows.Forms.Button btnRestoreAndBackup;
         private FontAwesome.Sharp.IconButton btnLogin;
         private FontAwesome.Sharp.IconButton btnExit;
         private System.Windows.Forms.Label label1;

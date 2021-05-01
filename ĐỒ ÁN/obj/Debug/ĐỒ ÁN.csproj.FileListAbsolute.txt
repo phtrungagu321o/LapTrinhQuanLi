@@ -524,7 +524,6 @@ D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.GUI.invoicePrintting.resources
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.GUI.ReportB.resources
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.BackUpAndRestoreData.resources
-D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.TestLogin.resources
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\bin\Debug\FontAwesome.Sharp.dll
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.GUI.progress_bar_Form.resources
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.GUI.ToolEncrytAnDecryt.resources
@@ -533,3 +532,4 @@ D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\bin\Debug\CircularProgressBar.xml
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.GUI.MainForm.resources
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.GUI.Help.resources
+D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.GUI.AccountVerification.resources

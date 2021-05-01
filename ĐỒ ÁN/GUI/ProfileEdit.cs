@@ -15,6 +15,7 @@ namespace ĐỒ_ÁN
     public partial class AccountProfile : Form
     {
         private AccountDTO loginAccount;
+        private AccountDTO loginDisplayName;
 
         public AccountDTO LoginAccount
         {
@@ -22,18 +23,29 @@ namespace ĐỒ_ÁN
             set { loginAccount = value;  }
 
         }
+
+        public AccountDTO LoginDisplayName { get => loginDisplayName; set => loginDisplayName = value; }
+
         public AccountProfile(AccountDTO acc)
         {
             InitializeComponent();
             
             loginAccount = acc;
+            loginDisplayName = acc;
             changeAccuont(loginAccount);
         }
         void changeAccuont(AccountDTO acc)
         {
             txtUser.Text = loginAccount.UserName;
             txtDisplayName.Text = loginAccount.DisPlayName;
-
+            lblAccount.Text = loginAccount.UserName;
+            lblDisplayName.Text = loginAccount.DisPlayName;
+            if (loginAccount.Type == 1)
+            {
+                lblPosition.Text = "Quản lí";
+            }
+            else
+                lblPosition.Text = "Nhân viên";
         }
         private event EventHandler <AccountEvent> updateAccount;
         public event EventHandler<AccountEvent> UpdateAccount
@@ -41,14 +53,21 @@ namespace ĐỒ_ÁN
             add { updateAccount += value; }
             remove { updateAccount -= value; }
         }
+        private event EventHandler<AccountEvent> updateDisplayName;
+        public event EventHandler<AccountEvent> UpdateDisplayName
+        {
+            add { updateDisplayName += value; }
+            remove { updateDisplayName -= value; }
+        }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            updateDisplayName += AccountProfile_updateDisplayName;
             string displayName = txtDisplayName.Text;
             string passWord = txtPassWord.Text;
             string newPass = txtNewPassWord.Text;
@@ -82,18 +101,34 @@ namespace ĐỒ_ÁN
                             {
                                 updateAccount(this, new AccountEvent(AccountDAO.Instance.GetAccountByUserName(userName)));
                             }
+                            if (updateDisplayName != null)
+                            {
+                                updateDisplayName(this, new AccountEvent(AccountDAO.Instance.GetAccountByUserName(userName)));
+                            }
                         }
                         else
                         {
                             MessageBox.Show("Vui lòng điền đúng mật khẩu");
                         }
+                        
                     }
                 }
                     
                 
             }
+            panelEditProfile.Visible = false;
+            
                 
         }
+
+        private void AccountProfile_updateDisplayName(object sender, AccountEvent e)
+        {
+            lblDisplayName.Text = e.Acc.DisPlayName;
+        }
+
+       
+
+        
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

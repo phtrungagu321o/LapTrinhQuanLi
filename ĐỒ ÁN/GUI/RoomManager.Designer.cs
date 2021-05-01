@@ -138,6 +138,7 @@ namespace ĐỒ_ÁN
             // 
             // panel9
             // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.panel9.Controls.Add(this.tabControl1);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(0, 74);
@@ -172,7 +173,7 @@ namespace ĐỒ_ÁN
             // flpNormalRoom
             // 
             this.flpNormalRoom.AutoScroll = true;
-            this.flpNormalRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.flpNormalRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.flpNormalRoom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpNormalRoom.Font = new System.Drawing.Font("UTM Neo Sans Intel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flpNormalRoom.Location = new System.Drawing.Point(3, 3);
@@ -194,7 +195,7 @@ namespace ĐỒ_ÁN
             // flpVIPRoom
             // 
             this.flpVIPRoom.AutoScroll = true;
-            this.flpVIPRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.flpVIPRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.flpVIPRoom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpVIPRoom.Location = new System.Drawing.Point(3, 3);
             this.flpVIPRoom.Name = "flpVIPRoom";
@@ -203,7 +204,7 @@ namespace ĐỒ_ÁN
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.panel5.Controls.Add(this.textBox3);
             this.panel5.Controls.Add(this.textBox2);
             this.panel5.Controls.Add(this.txtAddTime);
@@ -242,7 +243,7 @@ namespace ĐỒ_ÁN
             // txtAddTime
             // 
             this.txtAddTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAddTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtAddTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.txtAddTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAddTime.Font = new System.Drawing.Font("UTM Neo Sans Intel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddTime.ForeColor = System.Drawing.Color.Gainsboro;
@@ -270,7 +271,7 @@ namespace ĐỒ_ÁN
             // txtPriceTimeBillOld
             // 
             this.txtPriceTimeBillOld.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPriceTimeBillOld.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtPriceTimeBillOld.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.txtPriceTimeBillOld.Font = new System.Drawing.Font("UTM Neo Sans Intel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPriceTimeBillOld.ForeColor = System.Drawing.Color.Gainsboro;
             this.txtPriceTimeBillOld.Location = new System.Drawing.Point(291, 40);
@@ -283,7 +284,7 @@ namespace ĐỒ_ÁN
             // txtPriceTime
             // 
             this.txtPriceTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPriceTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtPriceTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.txtPriceTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPriceTime.Font = new System.Drawing.Font("UTM Neo Sans Intel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPriceTime.ForeColor = System.Drawing.Color.Gainsboro;
@@ -301,7 +302,7 @@ namespace ĐỒ_ÁN
             this.btnStart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.btnStart.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnStart.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnStart.Font = new System.Drawing.Font("UTM Neo Sans Intel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -340,7 +341,7 @@ namespace ĐỒ_ÁN
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.panel4.Controls.Add(this.lstvBill);
             this.panel4.Controls.Add(this.menuStrip1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
@@ -354,7 +355,7 @@ namespace ĐỒ_ÁN
             this.lstvBill.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lstvBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.lstvBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.lstvBill.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader3,
             this.columnHeader4,
@@ -468,7 +469,7 @@ namespace ĐỒ_ÁN
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.panel7.Controls.Add(this.iconButtonAddFood);
             this.panel7.Controls.Add(this.nmrCountService);
             this.panel7.Controls.Add(this.iconButtonCheckOut);
@@ -501,9 +502,9 @@ namespace ĐỒ_ÁN
             this.iconButtonAddFood.IconColor = System.Drawing.Color.Gainsboro;
             this.iconButtonAddFood.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonAddFood.IconSize = 70;
-            this.iconButtonAddFood.Location = new System.Drawing.Point(671, 13);
+            this.iconButtonAddFood.Location = new System.Drawing.Point(680, 8);
             this.iconButtonAddFood.Name = "iconButtonAddFood";
-            this.iconButtonAddFood.Size = new System.Drawing.Size(75, 57);
+            this.iconButtonAddFood.Size = new System.Drawing.Size(75, 67);
             this.iconButtonAddFood.TabIndex = 7;
             this.iconButtonAddFood.UseVisualStyleBackColor = true;
             this.iconButtonAddFood.Click += new System.EventHandler(this.iconButton1_Click_1);
@@ -511,10 +512,10 @@ namespace ĐỒ_ÁN
             // nmrCountService
             // 
             this.nmrCountService.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.nmrCountService.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.nmrCountService.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.nmrCountService.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nmrCountService.ForeColor = System.Drawing.Color.Gainsboro;
-            this.nmrCountService.Location = new System.Drawing.Point(752, 23);
+            this.nmrCountService.Location = new System.Drawing.Point(772, 29);
             this.nmrCountService.Minimum = new decimal(new int[] {
             100,
             0,
@@ -540,7 +541,7 @@ namespace ĐỒ_ÁN
             this.iconButtonCheckOut.IconColor = System.Drawing.Color.Gainsboro;
             this.iconButtonCheckOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonCheckOut.IconSize = 70;
-            this.iconButtonCheckOut.Location = new System.Drawing.Point(306, 6);
+            this.iconButtonCheckOut.Location = new System.Drawing.Point(331, 9);
             this.iconButtonCheckOut.Name = "iconButtonCheckOut";
             this.iconButtonCheckOut.Size = new System.Drawing.Size(76, 64);
             this.iconButtonCheckOut.TabIndex = 18;
@@ -550,7 +551,7 @@ namespace ĐỒ_ÁN
             // cbbService
             // 
             this.cbbService.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbbService.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.cbbService.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.cbbService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbService.Font = new System.Drawing.Font("UTM Neo Sans Intel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbService.ForeColor = System.Drawing.Color.Gainsboro;
@@ -564,7 +565,7 @@ namespace ĐỒ_ÁN
             // cbbServiceCategory
             // 
             this.cbbServiceCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbbServiceCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.cbbServiceCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.cbbServiceCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbServiceCategory.Font = new System.Drawing.Font("UTM Neo Sans Intel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbServiceCategory.ForeColor = System.Drawing.Color.Gainsboro;
@@ -589,6 +590,7 @@ namespace ĐỒ_ÁN
             // iconButtonSwitchRoom
             // 
             this.iconButtonSwitchRoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.iconButtonSwitchRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.iconButtonSwitchRoom.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.iconButtonSwitchRoom.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.iconButtonSwitchRoom.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -608,13 +610,13 @@ namespace ĐỒ_ÁN
             this.iconButtonSwitchRoom.Text = "Chuyển phòng";
             this.iconButtonSwitchRoom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButtonSwitchRoom.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButtonSwitchRoom.UseVisualStyleBackColor = true;
+            this.iconButtonSwitchRoom.UseVisualStyleBackColor = false;
             this.iconButtonSwitchRoom.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // nmrDiscount
             // 
             this.nmrDiscount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.nmrDiscount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.nmrDiscount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.nmrDiscount.Font = new System.Drawing.Font("UTM Neo Sans Intel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nmrDiscount.ForeColor = System.Drawing.Color.Gainsboro;
             this.nmrDiscount.Location = new System.Drawing.Point(170, 39);
@@ -626,10 +628,10 @@ namespace ĐỒ_ÁN
             // txtTotalPrice
             // 
             this.txtTotalPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtTotalPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtTotalPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.txtTotalPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTotalPrice.Font = new System.Drawing.Font("UTM Neo Sans Intel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtTotalPrice.ForeColor = System.Drawing.Color.Red;
             this.txtTotalPrice.Location = new System.Drawing.Point(165, 6);
             this.txtTotalPrice.Multiline = true;
             this.txtTotalPrice.Name = "txtTotalPrice";
@@ -653,7 +655,7 @@ namespace ĐỒ_ÁN
             // cbbSwitchRoom
             // 
             this.cbbSwitchRoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cbbSwitchRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.cbbSwitchRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.cbbSwitchRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbSwitchRoom.Font = new System.Drawing.Font("UTM Neo Sans Intel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbSwitchRoom.ForeColor = System.Drawing.Color.Gainsboro;

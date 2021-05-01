@@ -183,6 +183,12 @@
     <Compile Include="DTO\MenuServiceDTO.cs" />
     <Compile Include="DTO\MenuTimeDTO.cs" />
     <Compile Include="DTO\RoomDTO.cs" />
+    <Compile Include="GUI\AccountVerification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AccountVerification.Designer.cs">
+      <DependentUpon>AccountVerification.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,14 +285,11 @@
       <DependentUpon>ReportBillByRoomDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <Compile Include="TestLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TestLogin.Designer.cs">
-      <DependentUpon>TestLogin.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="BackUpData.resx">
       <DependentUpon>BackUpData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AccountVerification.resx">
+      <DependentUpon>AccountVerification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
@@ -331,9 +334,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\ReportB.rdlc" />
     <EmbeddedResource Include="Report\ReportBillForRoom.rdlc" />
-    <EmbeddedResource Include="TestLogin.resx">
-      <DependentUpon>TestLogin.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="dataSetB.xsc">
       <DependentUpon>dataSetB.xsd</DependentUpon>
     </None>
@@ -445,6 +445,7 @@
     <None Include="Resources\login.png" />
     <None Include="Resources\loginafter.png" />
     <None Include="Resources\kisspng-vector-graphics-stock-photography-illustration-log-5d0e5ca6e6aeb7.2806614415612223109449.png" />
+    <None Include="Resources\19.05.21 - Logo don-02.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

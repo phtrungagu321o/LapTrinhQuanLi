@@ -74,5 +74,10 @@ namespace ĐỒ_ÁN.GUI
                 this.Close();
             }    
         }
+
+        private void linkLabelFaceBooK_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.facebook.com/phung.mcdoin.988");
+        }
     }
 }

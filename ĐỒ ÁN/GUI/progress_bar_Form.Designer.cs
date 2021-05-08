@@ -314,6 +314,7 @@ namespace ĐỒ_ÁN.GUI
             this.Controls.Add(this.iconPictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "progress_bar_Form";
+            this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "progress_bar_Form";
             this.Load += new System.EventHandler(this.progress_bar_Form_Load);

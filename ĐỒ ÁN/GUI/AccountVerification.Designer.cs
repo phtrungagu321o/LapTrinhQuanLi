@@ -30,8 +30,8 @@ namespace ĐỒ_ÁN.GUI
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.iconButton6 = new FontAwesome.Sharp.IconButton();
+            this.iconButtonClose = new FontAwesome.Sharp.IconButton();
+            this.iconButtonMini = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
@@ -50,8 +50,8 @@ namespace ĐỒ_ÁN.GUI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.panel1.Controls.Add(this.iconButton4);
-            this.panel1.Controls.Add(this.iconButton6);
+            this.panel1.Controls.Add(this.iconButtonClose);
+            this.panel1.Controls.Add(this.iconButtonMini);
             this.panel1.Controls.Add(this.iconButton3);
             this.panel1.Controls.Add(this.iconButton2);
             this.panel1.Controls.Add(this.iconButton1);
@@ -61,39 +61,39 @@ namespace ĐỒ_ÁN.GUI
             this.panel1.Size = new System.Drawing.Size(384, 25);
             this.panel1.TabIndex = 0;
             // 
-            // iconButton4
+            // iconButtonClose
             // 
-            this.iconButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.iconButton4.FlatAppearance.BorderSize = 0;
-            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.iconButton4.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.IconSize = 15;
-            this.iconButton4.Location = new System.Drawing.Point(347, 4);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(25, 15);
-            this.iconButton4.TabIndex = 48;
-            this.iconButton4.UseVisualStyleBackColor = false;
-            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
+            this.iconButtonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButtonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.iconButtonClose.FlatAppearance.BorderSize = 0;
+            this.iconButtonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonClose.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
+            this.iconButtonClose.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonClose.IconSize = 15;
+            this.iconButtonClose.Location = new System.Drawing.Point(347, 4);
+            this.iconButtonClose.Name = "iconButtonClose";
+            this.iconButtonClose.Size = new System.Drawing.Size(25, 15);
+            this.iconButtonClose.TabIndex = 48;
+            this.iconButtonClose.UseVisualStyleBackColor = false;
+            this.iconButtonClose.Click += new System.EventHandler(this.iconButton4_Click);
             // 
-            // iconButton6
+            // iconButtonMini
             // 
-            this.iconButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.iconButton6.FlatAppearance.BorderSize = 0;
-            this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.iconButton6.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.IconSize = 15;
-            this.iconButton6.Location = new System.Drawing.Point(316, 4);
-            this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Size = new System.Drawing.Size(25, 15);
-            this.iconButton6.TabIndex = 46;
-            this.iconButton6.UseVisualStyleBackColor = false;
-            this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click);
+            this.iconButtonMini.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButtonMini.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.iconButtonMini.FlatAppearance.BorderSize = 0;
+            this.iconButtonMini.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonMini.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.iconButtonMini.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonMini.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonMini.IconSize = 15;
+            this.iconButtonMini.Location = new System.Drawing.Point(316, 4);
+            this.iconButtonMini.Name = "iconButtonMini";
+            this.iconButtonMini.Size = new System.Drawing.Size(25, 15);
+            this.iconButtonMini.TabIndex = 46;
+            this.iconButtonMini.UseVisualStyleBackColor = false;
+            this.iconButtonMini.Click += new System.EventHandler(this.iconButton6_Click);
             // 
             // iconButton3
             // 
@@ -166,7 +166,7 @@ namespace ĐỒ_ÁN.GUI
             this.txtReEnterPass.BackColor = System.Drawing.Color.White;
             this.txtReEnterPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtReEnterPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReEnterPass.Location = new System.Drawing.Point(13, 110);
+            this.txtReEnterPass.Location = new System.Drawing.Point(4, 126);
             this.txtReEnterPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtReEnterPass.Name = "txtReEnterPass";
             this.txtReEnterPass.PasswordChar = '*';
@@ -180,10 +180,10 @@ namespace ĐỒ_ÁN.GUI
             this.iconButtonVerification.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButtonVerification.IconColor = System.Drawing.Color.Black;
             this.iconButtonVerification.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonVerification.Location = new System.Drawing.Point(281, 71);
+            this.iconButtonVerification.Location = new System.Drawing.Point(272, 87);
             this.iconButtonVerification.Name = "iconButtonVerification";
             this.iconButtonVerification.Size = new System.Drawing.Size(75, 53);
-            this.iconButtonVerification.TabIndex = 47;
+            this.iconButtonVerification.TabIndex = 49;
             this.iconButtonVerification.Text = "Xác thực";
             this.iconButtonVerification.UseVisualStyleBackColor = true;
             this.iconButtonVerification.Click += new System.EventHandler(this.iconButtonVerification_Click);
@@ -196,7 +196,7 @@ namespace ĐỒ_ÁN.GUI
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(10, 88);
+            this.label1.Location = new System.Drawing.Point(1, 104);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 16);
@@ -211,7 +211,7 @@ namespace ĐỒ_ÁN.GUI
             this.txtPassWord.BackColor = System.Drawing.Color.White;
             this.txtPassWord.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassWord.Location = new System.Drawing.Point(13, 71);
+            this.txtPassWord.Location = new System.Drawing.Point(4, 87);
             this.txtPassWord.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassWord.Name = "txtPassWord";
             this.txtPassWord.PasswordChar = '*';
@@ -226,7 +226,7 @@ namespace ĐỒ_ÁN.GUI
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label3.Location = new System.Drawing.Point(13, 51);
+            this.label3.Location = new System.Drawing.Point(4, 67);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 16);
@@ -237,11 +237,11 @@ namespace ĐỒ_ÁN.GUI
             // 
             this.labeltime.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labeltime.AutoSize = true;
-            this.labeltime.Font = new System.Drawing.Font("UTM Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeltime.Font = new System.Drawing.Font("UTM Cooper Black", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labeltime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
-            this.labeltime.Location = new System.Drawing.Point(90, 21);
+            this.labeltime.Location = new System.Drawing.Point(61, 3);
             this.labeltime.Name = "labeltime";
-            this.labeltime.Size = new System.Drawing.Size(200, 28);
+            this.labeltime.Size = new System.Drawing.Size(280, 40);
             this.labeltime.TabIndex = 42;
             this.labeltime.Text = "Xác thực mật khẩu";
             this.labeltime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -257,6 +257,7 @@ namespace ĐỒ_ÁN.GUI
             // 
             // AccountVerification
             // 
+            this.AcceptButton = this.iconButtonVerification;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 214);
@@ -287,8 +288,8 @@ namespace ĐỒ_ÁN.GUI
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private FontAwesome.Sharp.IconButton iconButton6;
+        private FontAwesome.Sharp.IconButton iconButtonClose;
+        private FontAwesome.Sharp.IconButton iconButtonMini;
         private FontAwesome.Sharp.IconButton iconButtonVerification;
         private System.Windows.Forms.TextBox txtReEnterPass;
         private System.Windows.Forms.Panel panel2;

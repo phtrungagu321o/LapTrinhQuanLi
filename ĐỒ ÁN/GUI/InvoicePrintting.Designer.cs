@@ -61,7 +61,7 @@ namespace ĐỒ_ÁN.GUI
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(878, 315);
+            this.reportViewer1.Size = new System.Drawing.Size(577, 315);
             this.reportViewer1.TabIndex = 0;
             // 
             // uSPGetBillInfoByRoomBindingSource
@@ -76,7 +76,7 @@ namespace ĐỒ_ÁN.GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(878, 315);
+            this.ClientSize = new System.Drawing.Size(577, 315);
             this.Controls.Add(this.reportViewer1);
             this.Name = "invoicePrintting";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

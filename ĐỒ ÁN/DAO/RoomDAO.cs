@@ -73,6 +73,15 @@ namespace ĐỒ_ÁN.DAO
 
             return list;
         }
+        public RoomDTO GetRoomBId(int id)
+        {
+            DataTable data = DataProvider.Instance.ExcuteQuery(string.Format("select *from room where id={0}",id));
+            foreach (DataRow item in data.Rows)
+            {
+                return new RoomDTO(item);
+            }
+            return null;
+        }
         public List<RoomDTO> LoadRoomListByIDCategory(int id)
         {
             List<RoomDTO> list = new List<RoomDTO>();
@@ -87,15 +96,15 @@ namespace ĐỒ_ÁN.DAO
 
             return list;
         }
-        public bool InsertRoom(string name,int id)
+        public bool InsertRoom(string name,int id,string roominfor)
         {
-            string query = string.Format("INSERT INTO dbo.Room(	name, idRoomCategory,status)VALUES(   N'{0}', {1},N' Trống')",name,id);
+            string query = string.Format("INSERT INTO dbo.Room(	name, idRoomCategory,status,RoomInformation)VALUES(   N'{0}', {1},N' Trống',N'{2}')",name,id, roominfor);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
-        public bool UpdateRoom(string name, int id, int idRoom)
+        public bool UpdateRoom(string name, int id, int idRoom,string roominfor)
         {
-            string query = string.Format("UPDATE dbo.Room SET name=N'{0}',idRoomCategory={1} WHERE id={2}", name, id,idRoom);
+            string query = string.Format("UPDATE dbo.Room SET name=N'{0}',idRoomCategory={1},RoomInformation=N'{3}' WHERE id={2}", name, id,idRoom, roominfor);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }

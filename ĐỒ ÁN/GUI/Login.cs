@@ -11,16 +11,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
+using log4net;
 
 namespace ĐỒ_ÁN
 {
     public partial class login : Form
     {
+        ILog log = LogManager.GetLogger(typeof(login));
         public login()
         {
             InitializeComponent();
             waterWark();
         }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         void waterWark()
         {
             txtUser.Text = "Vui lòng nhập Tài Khoản";
@@ -82,10 +90,7 @@ namespace ĐỒ_ÁN
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DialogResult t;
-            t = MessageBox.Show("Bạn có muốn thoát chương trình ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (t == DialogResult.Yes)
-                Application.Exit();
+
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -109,25 +114,34 @@ namespace ĐỒ_ÁN
 
         private void btnLogin_Click_1(object sender, EventArgs e)
         {
-            string userName = txtUser.Text;
-            string passWord = txtPassWord.Text;
-            if (Login(userName, passWord))
+            try
             {
+                string userName = txtUser.Text;
+                string passWord = txtPassWord.Text;
+                if (Login(userName, passWord))
+                {
+                    log.Info("Đăng nhập thành công! user: |" + userName +"| - vào ngày:");
+                    
+                    AccountDTO loginAccount = AccountDAO.Instance.GetAccountByUserName(userName);
+                    progress_bar_Form R = new progress_bar_Form(loginAccount);
+                    this.Hide();
+                    R.UserN = txtUser.Text;
+                    R.ShowDialog();
+                    this.Show();
 
-                AccountDTO loginAccount = AccountDAO.Instance.GetAccountByUserName(userName);          
-                progress_bar_Form R = new progress_bar_Form(loginAccount);
-                this.Hide();
-                R.UserN = txtUser.Text;
-                R.ShowDialog();
-                this.Show();
-                
+                }
+                else
+                {
+                    var a = new Nudge(this);
+                    a.NudgeMe();
+                    MessageBox.Show("Sai tên tài khoản hoặc mật khẩu", "Thông báo");
+
+                }
             }
-            else
+            catch(Exception ex)
             {
-                var a = new Nudge(this);
-                a.NudgeMe();
-                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu", "Thông báo");
-
+                log.Error(ex.Message);
+      
             }
         }
 
@@ -137,6 +151,41 @@ namespace ĐỒ_ÁN
             t = MessageBox.Show("Bạn có muốn thoát chương trình ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (t == DialogResult.Yes)
                 Application.Exit();
+        }
+
+        private void iconButtonMini_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void iconButtonClose_Click(object sender, EventArgs e)
+        {
+            DialogResult t;
+            t = MessageBox.Show("Bạn có muốn thoát chương trình ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (t == DialogResult.Yes)
+                Application.Exit();
+        }
+
+        private void login_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+          
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+            log4net.Config.XmlConfigurator.Configure();
         }
     }
 }

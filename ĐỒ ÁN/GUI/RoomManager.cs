@@ -2,6 +2,7 @@
 using ĐỒ_ÁN.DTO;
 using ĐỒ_ÁN.GUI;
 using FontAwesome.Sharp;
+using log4net;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,25 +19,31 @@ namespace ĐỒ_ÁN
 {
     public partial class RoomManager : Form
     {
-        
-      
 
-        public RoomManager()
+        private string userName;
+        private Form currentEditRoom;
+        private Form currentEditRoomDock;
+        ILog log = LogManager.GetLogger(typeof(RoomManager));
+        public string UserName { get => userName; set => userName = value; }
+        private AccountDTO loginAccount;
+
+        public RoomManager(AccountDTO acc)
         {
             InitializeComponent();
-
-            
+            this.loginAccount = acc;
             LoadRoom();
             LoadServiceCategory();
             LoadComboBoxRoom(cbbSwitchRoom);
-            
             loadAdmin();
-
-
+         
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
+
+
+       
         #region Method
-        
-        
+
+
         void LoadRoom()
         {
             flpNormalRoom.Controls.Clear();
@@ -162,13 +170,11 @@ namespace ĐỒ_ÁN
             txtTimeOldTest.Text = "0";
             List<MenuPriceOldDTO> listPriceOld = MenuDAO.Instance.GetPriceOld(id);
             foreach(MenuPriceOldDTO item in listPriceOld)
-            {
-                
+            {                
                 float f = item.PriceOld1;
                 CultureInfo culture = new CultureInfo("vi-VN");
                 txtPriceTimeBillOld.Text = f.ToString("c",culture);
-                txtTimeOldTest.Text = f.ToString();
-                
+                txtTimeOldTest.Text = f.ToString();  
             }    
         }
         void TotalPrice()
@@ -209,12 +215,16 @@ namespace ĐỒ_ÁN
              
 
         }
-     
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
         #endregion
 
         #region Events
-       
+
         private void Btn_DoubleClick(object sender, EventArgs e)
         {
 
@@ -763,7 +773,7 @@ namespace ĐỒ_ÁN
             RoomDTO room = lstvBill.Tag as RoomDTO;
             if (room == null)
             {
-                MessageBox.Show("Hãy chọn bàn!!!");
+                MessageBox.Show("Hãy chọn Phòng!!!");
                 return;
             }
 
@@ -771,7 +781,8 @@ namespace ĐỒ_ÁN
             int Service = (cbbService.SelectedItem as ServiceDTO).ID;
             int countService = (int)nmrCountService.Value;
             int idRoom = (lstvBill.Tag as RoomDTO).ID;
-
+            ServiceDTO service = ServiceDAO.Instance.GetServiceById(Service);
+            RoomDTO Curentroom = RoomDAO.Instance.GetRoomBId(idRoom);
             if (idBill == -1)//không có bill nào hết ;
             {
                 BillDAO.Instance.InsertBill(room.ID);
@@ -785,6 +796,8 @@ namespace ĐỒ_ÁN
             TotalPrice();
             LoadRoom();
             ShowTimeBill(room.ID);
+
+            log.Info("Đã thêm món |" + service.Name + "| vào |" + Curentroom.Name + "| Thành công! user: |" + loginAccount.UserName+ "| - vào ngày: ");
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -811,6 +824,245 @@ namespace ĐỒ_ÁN
         private void thanhToánToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             btnCheckOut_Click(this, new EventArgs());
+        }
+
+        private void panel5_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panel7_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void tabControl1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        private void OpenInfroFormleft(Form childRoom)
+        {
+            if (currentEditRoom != null)
+                currentEditRoom.Close();
+
+            currentEditRoom = childRoom;
+            childRoom.TopLevel = false;
+            //childRoom.FormBorderStyle = FormBorderStyle.None;
+            childRoom.Dock = DockStyle.Left;
+            pnForm.Controls.Add(childRoom);
+
+            childRoom.SendToBack();
+            childRoom.Show();
+
+        }
+        private void OpenInfroFormRight(Form childRoom)
+        {
+            if (currentEditRoom != null)
+                currentEditRoom.Close();
+
+            currentEditRoom = childRoom;
+            childRoom.TopLevel = false;
+            //childRoom.FormBorderStyle = FormBorderStyle.None;
+            childRoom.Dock = DockStyle.Right;
+            pnForm.Controls.Add(childRoom);
+
+            childRoom.SendToBack();
+            childRoom.Show();
+
+        }
+        private void OpenInfroFormTop(Form childRoom)
+        {
+            if (currentEditRoom != null)
+                currentEditRoom.Close();
+
+            currentEditRoom = childRoom;
+            childRoom.TopLevel = false;
+            //childRoom.FormBorderStyle = FormBorderStyle.None;
+            childRoom.Dock = DockStyle.Top;
+            pnForm.Controls.Add(childRoom);
+
+            childRoom.SendToBack();
+            childRoom.Show();
+
+        }
+        private void OpenInfroFormBottom(Form childRoom)
+        {
+            if (currentEditRoom != null)
+                currentEditRoom.Close();
+
+            currentEditRoom = childRoom;
+            childRoom.TopLevel = false;
+            //childRoom.FormBorderStyle = FormBorderStyle.None;
+            childRoom.Dock = DockStyle.Bottom;
+            pnForm.Controls.Add(childRoom);
+
+            childRoom.SendToBack();
+            childRoom.Show();
+
+        }
+        private void OpenInfroFormFill(Form childRoom)
+        {
+            if (currentEditRoom != null)
+                currentEditRoom.Close();
+
+            currentEditRoom = childRoom;
+            childRoom.TopLevel = false;
+            //childRoom.FormBorderStyle = FormBorderStyle.None;
+            childRoom.Dock = DockStyle.Fill;
+            pnForm.Controls.Add(childRoom);
+
+            childRoom.BringToFront();
+            childRoom.Show();
+
+        }
+        private void OpenInfroFormDock(Form childRoom)
+        {
+            paneltop.Visible = true;
+            if (currentEditRoomDock != null)
+                currentEditRoomDock.Close();
+
+
+            currentEditRoomDock = childRoom;
+            childRoom.TopLevel = false;
+            childRoom.FormBorderStyle = FormBorderStyle.None;
+            childRoom.Dock = DockStyle.Fill;
+            paneltop.Controls.Add(childRoom);
+
+            childRoom.BringToFront();
+            childRoom.Show();
+
+        }
+        private void thôngTinPhòngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void mởVToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            RoomDTO room = lstvBill.Tag as RoomDTO;
+
+            if (room == null)
+            {
+                MessageBox.Show("Hãy chọn phòng", "Thông báo");
+                return;
+            }
+            int id = (lstvBill.Tag as RoomDTO).ID;
+            RoomDTO listroom = RoomDAO.Instance.GetRoomBId(id);
+            RoomInfor f = new RoomInfor(listroom);
+            OpenInfroFormleft(f);
+        }
+
+        private void mởBênPhảiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            RoomDTO room = lstvBill.Tag as RoomDTO;
+
+            if (room == null)
+            {
+                MessageBox.Show("Hãy chọn phòng", "Thông báo");
+                return;
+            }
+            int id = (lstvBill.Tag as RoomDTO).ID;
+            RoomDTO listroom = RoomDAO.Instance.GetRoomBId(id);
+            RoomInfor f = new RoomInfor(listroom);
+            OpenInfroFormRight(f);
+        }
+
+        private void mởToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RoomDTO room = lstvBill.Tag as RoomDTO;
+
+            if (room == null)
+            {
+                MessageBox.Show("Hãy chọn phòng", "Thông báo");
+                return;
+            }
+            int id = (lstvBill.Tag as RoomDTO).ID;
+            RoomDTO listroom = RoomDAO.Instance.GetRoomBId(id);
+            RoomInfor f = new RoomInfor(listroom) ;
+            f.DockFill +=new EventHandler(F_DockFill);
+            f.Dockleft += new EventHandler(F_Dockleft);
+            f.Lockking += new EventHandler(F_LocKking);
+            f.DockRight += new EventHandler(F_DockRight);
+            f.ShowDialog();
+        }
+
+        private void F_DockRight(object sender, EventArgs e)
+        {
+            mởBênPhảiToolStripMenuItem_Click(this, new EventArgs());
+        }
+
+        private void F_LocKking(object sender, EventArgs e)
+        {
+            mởLênTrênToolStripMenuItem_Click(this, new EventArgs());
+        }
+
+        private void F_Dockleft(object sender, EventArgs e)
+        {
+            mởVToolStripMenuItem_Click(this, new EventArgs());
+        }
+
+        private void F_DockFill(object sender, EventArgs e)
+        {
+            mởFillToolStripMenuItem_Click(this, new EventArgs());
+        }
+
+        private void mởFillToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RoomDTO room = lstvBill.Tag as RoomDTO;
+
+            if (room == null)
+            {
+                MessageBox.Show("Hãy chọn phòng", "Thông báo");
+                return;
+            }
+            int id = (lstvBill.Tag as RoomDTO).ID;
+            RoomDTO listroom = RoomDAO.Instance.GetRoomBId(id);
+            RoomInfor f = new RoomInfor(listroom);
+            
+            OpenInfroFormFill(f);
+        }
+
+        private void mởLênTrênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RoomDTO room = lstvBill.Tag as RoomDTO;
+
+            if (room == null)
+            {
+                MessageBox.Show("Hãy chọn phòng", "Thông báo");
+                return;
+            }
+            int id = (lstvBill.Tag as RoomDTO).ID;
+            RoomDTO listroom = RoomDAO.Instance.GetRoomBId(id);
+            RoomInfor f = new RoomInfor(listroom);
+            OpenInfroFormDock(f);
+        }
+
+        private void mởXuốngDướiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RoomDTO room = lstvBill.Tag as RoomDTO;
+
+            if (room == null)
+            {
+                MessageBox.Show("Hãy chọn phòng", "Thông báo");
+                return;
+            }
+            int id = (lstvBill.Tag as RoomDTO).ID;
+            RoomDTO listroom = RoomDAO.Instance.GetRoomBId(id);
+            RoomInfor f = new RoomInfor(listroom);
+            OpenInfroFormBottom(f);
+        }
+
+        private void unDockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (currentEditRoomDock != null)
+                currentEditRoomDock.Close();
+            paneltop.Visible = false;
         }
     }
 }

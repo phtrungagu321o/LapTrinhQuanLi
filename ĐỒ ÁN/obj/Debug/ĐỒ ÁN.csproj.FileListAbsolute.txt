@@ -507,7 +507,6 @@ D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ ÁN.csprojAssemblyReference.cache
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.Admin.resources
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.login.resources
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.AccountProfile.resources
@@ -533,3 +532,10 @@ D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.GUI.MainForm.resources
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.GUI.Help.resources
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.GUI.AccountVerification.resources
+D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\bin\Debug\MetroFramework.Design.dll
+D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\bin\Debug\MetroFramework.dll
+D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\bin\Debug\MetroFramework.Fonts.dll
+D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.GUI.RoomInfor.resources
+D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\bin\Debug\log4net.dll
+D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\bin\Debug\log4net.xml
+D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ ÁN.csprojAssemblyReference.cache

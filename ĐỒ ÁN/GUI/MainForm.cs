@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using ĐỒ_ÁN.DAO;
 using ĐỒ_ÁN.GUI;
 using System.Globalization;
+using log4net;
 
 namespace ĐỒ_ÁN.GUI
 {
@@ -23,8 +24,9 @@ namespace ĐỒ_ÁN.GUI
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildRoom;
+        private Form currentEditRoom;
         private AccountDTO loginAccount;
-       
+        ILog log = LogManager.GetLogger(typeof(MainForm));
 
         public AccountDTO LoginAccount
         {
@@ -33,7 +35,7 @@ namespace ĐỒ_ÁN.GUI
 
         }
 
-        
+     
 
         public MainForm(AccountDTO acc)
         {
@@ -209,12 +211,58 @@ namespace ĐỒ_ÁN.GUI
             childRoom.Show();
             lblChildRoom.Text = childRoom.Text;
         }
+        private void OpenInfroFormleft(Form childRoom)
+        {
+            if (currentEditRoom != null)
+                currentEditRoom.Close();
+
+            currentEditRoom = childRoom;
+            childRoom.TopLevel = false;
+            childRoom.FormBorderStyle = FormBorderStyle.None;
+            childRoom.Dock = DockStyle.Left;
+            panelDesktop.Controls.Add(childRoom);
+            
+            childRoom.BringToFront();
+            childRoom.Show();
+            
+        }
+        private void OpenEditFormRight(Form childRoom)
+        {
+            if (currentEditRoom != null)
+                currentEditRoom.Close();
+
+            currentEditRoom = childRoom;
+            childRoom.TopLevel = false;
+            childRoom.FormBorderStyle = FormBorderStyle.None;
+            childRoom.Dock = DockStyle.Right;
+            panelDesktop.Controls.Add(childRoom);
+
+            childRoom.BringToFront();
+            childRoom.Show();
+
+        }
+        private void OpenEditFormfill(Form childRoom)
+        {
+            if (currentEditRoom != null)
+                currentEditRoom.Close();
+
+            currentEditRoom = childRoom;
+            childRoom.TopLevel = false;
+            childRoom.FormBorderStyle = FormBorderStyle.None;
+            childRoom.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(childRoom);
+
+            childRoom.BringToFront();
+            childRoom.Show();
+
+        }
 
         private void iconButtonAdmin_Click(object sender, EventArgs e)
         {
             hideSubMenu();
             ActivateButton(sender, RGBColors.color1);
             Admin a = new Admin();
+            log.Info("User: |" + loginAccount.UserName + "| đã xem dữ liệu vào ngày: ");
             OpenChildForm(a);
             a.LoginAccount = loginAccount;
         }
@@ -224,8 +272,12 @@ namespace ĐỒ_ÁN.GUI
         {
             hideSubMenu();
             ActivateButton(sender, RGBColors.color2);
-            OpenChildForm(new RoomManager());
+            AccountDTO login = AccountDAO.Instance.GetAccountByUserName(loginAccount.UserName);
+            RoomManager f = new RoomManager(login);
+            OpenChildForm(f);
         }
+
+        
 
         private void iconButtonProfile_Click(object sender, EventArgs e)
         {
@@ -242,6 +294,7 @@ namespace ĐỒ_ÁN.GUI
 
         private void iconButtonEditProFile_Click(object sender, EventArgs e)
         {
+            
             ActivateChildButton(sender, RGBColors.color4);
             AccountProfile f = new AccountProfile(loginAccount);
             f.UpdateAccount += F_UpdateAccount;
@@ -258,16 +311,27 @@ namespace ĐỒ_ÁN.GUI
 
         private void iconButtonExit_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
-            if (currentChildRoom != null)
+            try
             {
-                currentChildRoom.Close();
-                reset();
+                hideSubMenu();
+                if (currentChildRoom != null)
+                {
+                    currentChildRoom.Close();
+                    reset();
+                }
+                DialogResult t;
+                t = MessageBox.Show("Bạn có muốn đăng xuất không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (t == DialogResult.Yes)
+                {
+                    log.Info("Đăng Xuất thành công! user: |" + loginAccount.UserName + "| - vào ngày:");
+                    this.Close();
+                }
             }
-            DialogResult t;
-            t = MessageBox.Show("Bạn có muốn đăng xuất không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (t == DialogResult.Yes)
-                this.Close();
+            catch ( Exception ex)
+            {
+                log.Error(ex.Message);
+            }
+
         }
 
         private void iconButtonKeyOff_Click(object sender, EventArgs e)
@@ -296,7 +360,8 @@ namespace ĐỒ_ÁN.GUI
 
         private void iconButton10_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
+           
+            
         }
 
         private void iconButton7_Click(object sender, EventArgs e)
@@ -401,6 +466,66 @@ namespace ĐỒ_ÁN.GUI
         private void panelDesktop_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(btnPhone.Text);
+            MessageBox.Show("Đã copy nội dung thành công", "Thông báo");
+        }
+
+        private void btnEmail_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(btnEmail.Text);
+            MessageBox.Show("Đã copy nội dung thành công", "Thông báo");
+        }
+
+        private void btnHome_MouseDown(object sender, MouseEventArgs e)
+        {
+           
+        }
+
+        private void fillToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void traiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void phaiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void noneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            
+        }
+
+        private void leftToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+            
+        }
+
+        private void rightToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+            
+        }
+
+        private void tráiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+          
         }
     }
 }

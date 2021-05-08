@@ -100,6 +100,18 @@
     <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+    <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
@@ -136,6 +148,7 @@
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -240,6 +253,12 @@
     <Compile Include="GUI\ReportB.Designer.cs">
       <DependentUpon>ReportB.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\RoomInfor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RoomInfor.Designer.cs">
+      <DependentUpon>RoomInfor.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ToolEncrytAndDecryt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -314,6 +333,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ReportB.resx">
       <DependentUpon>ReportB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RoomInfor.resx">
+      <DependentUpon>RoomInfor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ToolEncrytAndDecryt.resx">
       <DependentUpon>ToolEncrytAndDecryt.cs</DependentUpon>

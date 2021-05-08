@@ -27,5 +27,6 @@ namespace ĐỒ_ÁN.GUI
             this.uSP_GetListBillByDateForReportTableAdapter.Fill(this.quanLiPhongKaraokeDataSet4.USP_GetListBillByDateForReport,CheckIn,CheckOut);
             this.reportViewer1.RefreshReport();
         }
+        
     }
 }

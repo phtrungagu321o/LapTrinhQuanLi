@@ -56,17 +56,18 @@ namespace ĐỒ_ÁN.GUI
             this.iconCurrenChildRoom = new FontAwesome.Sharp.IconPictureBox();
             this.panelShadows = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.btnPhone = new System.Windows.Forms.Button();
             this.labeltime = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             this.linkLabelFaceBooK = new System.Windows.Forms.LinkLabel();
-            this.label2 = new System.Windows.Forms.Label();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnEmail = new System.Windows.Forms.Button();
+            this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tráiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelMenu.SuspendLayout();
             this.panelKeyOff.SuspendLayout();
             this.panelProfile.SuspendLayout();
@@ -75,10 +76,11 @@ namespace ĐỒ_ÁN.GUI
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrenChildRoom)).BeginInit();
             this.panelDesktop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -154,7 +156,7 @@ namespace ĐỒ_ÁN.GUI
             this.iconButtonSwitch.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.iconButtonSwitch.Size = new System.Drawing.Size(256, 60);
             this.iconButtonSwitch.TabIndex = 11;
-            this.iconButtonSwitch.Text = "Chuyển Phòng (Ctrl + D)";
+            this.iconButtonSwitch.Text = "Thanh toán (Ctrl + D)";
             this.iconButtonSwitch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButtonSwitch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButtonSwitch.UseVisualStyleBackColor = false;
@@ -179,7 +181,7 @@ namespace ĐỒ_ÁN.GUI
             this.iconButtonCheckOut.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.iconButtonCheckOut.Size = new System.Drawing.Size(256, 60);
             this.iconButtonCheckOut.TabIndex = 10;
-            this.iconButtonCheckOut.Text = "Thanh toán (Ctrl + C)";
+            this.iconButtonCheckOut.Text = "Chuyển phòng (Ctrl + C)";
             this.iconButtonCheckOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButtonCheckOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButtonCheckOut.UseVisualStyleBackColor = false;
@@ -419,6 +421,7 @@ namespace ĐỒ_ÁN.GUI
             this.btnHome.TabIndex = 0;
             this.btnHome.TabStop = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.btnHome.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnHome_MouseDown);
             // 
             // panel1
             // 
@@ -491,7 +494,7 @@ namespace ĐỒ_ÁN.GUI
             this.lblChildRoom.AutoSize = true;
             this.lblChildRoom.Font = new System.Drawing.Font("UTM Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChildRoom.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblChildRoom.Location = new System.Drawing.Point(73, 17);
+            this.lblChildRoom.Location = new System.Drawing.Point(68, 21);
             this.lblChildRoom.Name = "lblChildRoom";
             this.lblChildRoom.Size = new System.Drawing.Size(66, 28);
             this.lblChildRoom.TabIndex = 1;
@@ -505,7 +508,7 @@ namespace ĐỒ_ÁN.GUI
             this.iconCurrenChildRoom.IconColor = System.Drawing.Color.MediumPurple;
             this.iconCurrenChildRoom.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconCurrenChildRoom.IconSize = 48;
-            this.iconCurrenChildRoom.Location = new System.Drawing.Point(17, 6);
+            this.iconCurrenChildRoom.Location = new System.Drawing.Point(12, 10);
             this.iconCurrenChildRoom.Name = "iconCurrenChildRoom";
             this.iconCurrenChildRoom.Size = new System.Drawing.Size(50, 48);
             this.iconCurrenChildRoom.TabIndex = 0;
@@ -522,24 +525,42 @@ namespace ĐỒ_ÁN.GUI
             // 
             // panelDesktop
             // 
-            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(81)))));
+            this.panelDesktop.Controls.Add(this.btnPhone);
             this.panelDesktop.Controls.Add(this.labeltime);
-            this.panelDesktop.Controls.Add(this.label4);
-            this.panelDesktop.Controls.Add(this.iconPictureBox3);
             this.panelDesktop.Controls.Add(this.linkLabelFaceBooK);
-            this.panelDesktop.Controls.Add(this.label2);
             this.panelDesktop.Controls.Add(this.iconPictureBox2);
-            this.panelDesktop.Controls.Add(this.textBox2);
             this.panelDesktop.Controls.Add(this.iconPictureBox1);
             this.panelDesktop.Controls.Add(this.label1);
             this.panelDesktop.Controls.Add(this.pictureBox1);
+            this.panelDesktop.Controls.Add(this.btnEmail);
+            this.panelDesktop.Controls.Add(this.iconPictureBox3);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panelDesktop.ForeColor = System.Drawing.Color.Black;
             this.panelDesktop.Location = new System.Drawing.Point(273, 84);
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(861, 477);
             this.panelDesktop.TabIndex = 3;
             this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
+            // 
+            // btnPhone
+            // 
+            this.btnPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPhone.BackColor = System.Drawing.Color.Transparent;
+            this.btnPhone.FlatAppearance.BorderSize = 0;
+            this.btnPhone.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnPhone.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnPhone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPhone.Font = new System.Drawing.Font("UTM Neo Sans Intel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhone.ForeColor = System.Drawing.Color.White;
+            this.btnPhone.Location = new System.Drawing.Point(359, 386);
+            this.btnPhone.Name = "btnPhone";
+            this.btnPhone.Size = new System.Drawing.Size(106, 34);
+            this.btnPhone.TabIndex = 42;
+            this.btnPhone.Text = "0358113704";
+            this.btnPhone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPhone.UseVisualStyleBackColor = false;
+            this.btnPhone.Click += new System.EventHandler(this.button1_Click);
             // 
             // labeltime
             // 
@@ -554,95 +575,44 @@ namespace ĐỒ_ÁN.GUI
             this.labeltime.Text = "00/00/0000 00:00:00";
             this.labeltime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("UTM Neo Sans Intel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(350, 431);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(211, 18);
-            this.label4.TabIndex = 40;
-            this.label4.Text = "phtrung_19th1@student.agu.edu.vn";
-            // 
-            // iconPictureBox3
-            // 
-            this.iconPictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconPictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
-            this.iconPictureBox3.IconColor = System.Drawing.Color.White;
-            this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox3.IconSize = 23;
-            this.iconPictureBox3.Location = new System.Drawing.Point(320, 426);
-            this.iconPictureBox3.Name = "iconPictureBox3";
-            this.iconPictureBox3.Size = new System.Drawing.Size(24, 23);
-            this.iconPictureBox3.TabIndex = 39;
-            this.iconPictureBox3.TabStop = false;
-            // 
             // linkLabelFaceBooK
             // 
             this.linkLabelFaceBooK.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabelFaceBooK.AutoSize = true;
-            this.linkLabelFaceBooK.Font = new System.Drawing.Font("UTM Neo Sans Intel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelFaceBooK.Font = new System.Drawing.Font("UTM Neo Sans Intel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelFaceBooK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(188)))), ((int)(((byte)(173)))));
             this.linkLabelFaceBooK.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
-            this.linkLabelFaceBooK.Location = new System.Drawing.Point(350, 364);
+            this.linkLabelFaceBooK.Location = new System.Drawing.Point(359, 350);
             this.linkLabelFaceBooK.Name = "linkLabelFaceBooK";
-            this.linkLabelFaceBooK.Size = new System.Drawing.Size(267, 18);
+            this.linkLabelFaceBooK.Size = new System.Drawing.Size(279, 19);
             this.linkLabelFaceBooK.TabIndex = 34;
             this.linkLabelFaceBooK.TabStop = true;
             this.linkLabelFaceBooK.Text = "https://www.facebook.com/phung.mcdoin.988";
             this.linkLabelFaceBooK.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelFaceBooK_LinkClicked);
             // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("UTM Neo Sans Intel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(350, 399);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 18);
-            this.label2.TabIndex = 37;
-            this.label2.Text = "0358113704";
-            // 
             // iconPictureBox2
             // 
             this.iconPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Facebook;
             this.iconPictureBox2.IconColor = System.Drawing.Color.White;
             this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.IconSize = 24;
-            this.iconPictureBox2.Location = new System.Drawing.Point(320, 359);
+            this.iconPictureBox2.Location = new System.Drawing.Point(321, 348);
             this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(24, 24);
+            this.iconPictureBox2.Size = new System.Drawing.Size(32, 34);
             this.iconPictureBox2.TabIndex = 33;
             this.iconPictureBox2.TabStop = false;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(353, 416);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(85, 1);
-            this.textBox2.TabIndex = 35;
             // 
             // iconPictureBox1
             // 
             this.iconPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.PhoneSquareAlt;
             this.iconPictureBox1.IconColor = System.Drawing.Color.White;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 24;
-            this.iconPictureBox1.Location = new System.Drawing.Point(320, 394);
+            this.iconPictureBox1.Location = new System.Drawing.Point(321, 386);
             this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.iconPictureBox1.Size = new System.Drawing.Size(32, 34);
             this.iconPictureBox1.TabIndex = 36;
             this.iconPictureBox1.TabStop = false;
             // 
@@ -669,11 +639,57 @@ namespace ĐỒ_ÁN.GUI
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // btnEmail
+            // 
+            this.btnEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEmail.BackColor = System.Drawing.Color.Transparent;
+            this.btnEmail.FlatAppearance.BorderSize = 0;
+            this.btnEmail.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnEmail.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmail.Font = new System.Drawing.Font("UTM Neo Sans Intel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmail.ForeColor = System.Drawing.Color.White;
+            this.btnEmail.Location = new System.Drawing.Point(359, 426);
+            this.btnEmail.Name = "btnEmail";
+            this.btnEmail.Size = new System.Drawing.Size(236, 32);
+            this.btnEmail.TabIndex = 43;
+            this.btnEmail.Text = "phtrung_19th1@student.agu.edu.vn";
+            this.btnEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmail.UseVisualStyleBackColor = false;
+            this.btnEmail.Click += new System.EventHandler(this.btnEmail_Click);
+            // 
+            // iconPictureBox3
+            // 
+            this.iconPictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.iconPictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
+            this.iconPictureBox3.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox3.Location = new System.Drawing.Point(321, 426);
+            this.iconPictureBox3.Name = "iconPictureBox3";
+            this.iconPictureBox3.Size = new System.Drawing.Size(32, 33);
+            this.iconPictureBox3.TabIndex = 39;
+            this.iconPictureBox3.TabStop = false;
+            // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tráiToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(93, 26);
+            // 
+            // tráiToolStripMenuItem
+            // 
+            this.tráiToolStripMenuItem.Name = "tráiToolStripMenuItem";
+            this.tráiToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.tráiToolStripMenuItem.Text = "Trái";
+            this.tráiToolStripMenuItem.Click += new System.EventHandler(this.tráiToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -699,10 +715,11 @@ namespace ĐỒ_ÁN.GUI
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrenChildRoom)).EndInit();
             this.panelDesktop.ResumeLayout(false);
             this.panelDesktop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -732,12 +749,9 @@ namespace ĐỒ_ÁN.GUI
         private System.Windows.Forms.Panel panelDesktop;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label4;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
         private System.Windows.Forms.LinkLabel linkLabelFaceBooK;
-        private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
-        private System.Windows.Forms.TextBox textBox2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton2;
@@ -745,5 +759,9 @@ namespace ĐỒ_ÁN.GUI
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label labeltime;
         private System.Windows.Forms.LinkLabel llblRestoreAndBackUp;
+        private System.Windows.Forms.Button btnEmail;
+        private System.Windows.Forms.Button btnPhone;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem tráiToolStripMenuItem;
     }
 }

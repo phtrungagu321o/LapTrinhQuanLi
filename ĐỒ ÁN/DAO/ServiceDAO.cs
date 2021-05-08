@@ -17,7 +17,15 @@ namespace ĐỒ_ÁN.DAO
             private set { ServiceDAO.instance = value; }
         }
         private ServiceDAO() { }
-
+        public ServiceDTO GetServiceById(int id)
+        {
+            DataTable data = DataProvider.Instance.ExcuteQuery(string.Format("select *from Service where id={0}", id));
+            foreach (DataRow item in data.Rows)
+            {
+                return new ServiceDTO(item);
+            }
+            return null;
+        }
         public List<ServiceDTO> GetListServiceByCategory(int id)
         {
             List<ServiceDTO> list = new List<ServiceDTO>();

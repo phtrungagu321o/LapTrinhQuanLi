@@ -1,11 +1,13 @@
 ﻿using ĐỒ_ÁN.DAO;
 using ĐỒ_ÁN.DTO;
+using ĐỒ_ÁN.GUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +18,7 @@ namespace ĐỒ_ÁN
     {
         private AccountDTO loginAccount;
         private AccountDTO loginDisplayName;
-
+       
         public AccountDTO LoginAccount
         {
             get { return loginAccount; }
@@ -47,6 +49,12 @@ namespace ĐỒ_ÁN
             else
                 lblPosition.Text = "Nhân viên";
         }
+       
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         private event EventHandler <AccountEvent> updateAccount;
         public event EventHandler<AccountEvent> UpdateAccount
         {
@@ -97,6 +105,7 @@ namespace ĐỒ_ÁN
                         if (AccountDAO.Instance.UpdateAccount(userName, displayName, passWord, newPass))
                         {
                             MessageBox.Show("Cập nhập thành công");
+
                             if (updateAccount != null)
                             {
                                 updateAccount(this, new AccountEvent(AccountDAO.Instance.GetAccountByUserName(userName)));
@@ -105,6 +114,7 @@ namespace ĐỒ_ÁN
                             {
                                 updateDisplayName(this, new AccountEvent(AccountDAO.Instance.GetAccountByUserName(userName)));
                             }
+                            panelEditProfile.Visible = false;
                         }
                         else
                         {
@@ -116,7 +126,7 @@ namespace ĐỒ_ÁN
                     
                 
             }
-            panelEditProfile.Visible = false;
+            
             
                 
         }
@@ -133,6 +143,37 @@ namespace ĐỒ_ÁN
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             panelEditProfile.Visible = true;
+           
+        }
+
+        private void traiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void phảiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void trênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void duoiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
     public class AccountEvent:EventArgs

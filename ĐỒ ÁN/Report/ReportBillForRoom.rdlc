@@ -23,7 +23,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.75875cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -36,7 +36,7 @@
                             <TextRun>
                               <Value>STT</Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
+                                <FontFamily>utm neo Sans Intel</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -70,7 +70,7 @@
                             <TextRun>
                               <Value>Dịch Vụ Thêm Món</Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
+                                <FontFamily>utm neo Sans Intel</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -104,7 +104,7 @@
                             <TextRun>
                               <Value>Số lượng</Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
+                                <FontFamily>utm neo Sans Intel</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -138,7 +138,7 @@
                             <TextRun>
                               <Value>Đơn Giá</Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
+                                <FontFamily>utm neo Sans Intel</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -172,7 +172,7 @@
                             <TextRun>
                               <Value>Thành Tiền</Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
+                                <FontFamily>utm neo Sans Intel</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -198,7 +198,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.75875cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -211,7 +211,7 @@
                             <TextRun>
                               <Value>=RowNumber(nothing)</Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
+                                <FontFamily>utm neo Sans Intel</FontFamily>
                                 <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
@@ -244,7 +244,7 @@
                             <TextRun>
                               <Value>=Fields!name1.Value</Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
+                                <FontFamily>utm neo Sans Intel</FontFamily>
                                 <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
@@ -277,7 +277,7 @@
                             <TextRun>
                               <Value>=Fields!countService.Value</Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
+                                <FontFamily>utm neo Sans Intel</FontFamily>
                                 <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
@@ -310,20 +310,22 @@
                             <TextRun>
                               <Value>=Fields!price.Value</Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
+                                <FontFamily>utm neo Sans Intel</FontFamily>
                                 <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
                             <TextRun>
                               <Value xml:space="preserve"> </Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
+                                <FontFamily>utm neo Sans Intel</FontFamily>
                                 <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
                             <TextRun>
                               <Value>VNĐ</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>utm neo Sans Intel</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -354,20 +356,22 @@
                             <TextRun>
                               <Value>=Fields!Price1.Value</Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
+                                <FontFamily>utm neo Sans Intel</FontFamily>
                                 <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
                             <TextRun>
                               <Value xml:space="preserve"> </Value>
                               <Style>
-                                <FontFamily>Times New Roman</FontFamily>
+                                <FontFamily>utm neo Sans Intel</FontFamily>
                                 <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
                             <TextRun>
                               <Value>VNĐ</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>utm neo Sans Intel</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -411,9 +415,9 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSetBill</DataSetName>
-        <Top>0.3175cm</Top>
-        <Left>1.8489cm</Left>
-        <Height>1.2cm</Height>
+        <Top>0.2127cm</Top>
+        <Left>2.33807cm</Left>
+        <Height>1.5175cm</Height>
         <Width>14.19333cm</Width>
         <Style>
           <Border>
@@ -462,7 +466,7 @@
                 <TextRun>
                   <Value>HÓA ĐƠN</Value>
                   <Style>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontSize>22pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                     <TextDecoration>Underline</TextDecoration>
@@ -475,8 +479,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox12</rd:DefaultName>
-          <Top>0.30496cm</Top>
-          <Left>7.03411cm</Left>
+          <Top>0.33142cm</Top>
+          <Left>7.06057cm</Left>
           <Height>1.18208cm</Height>
           <Width>4.00812cm</Width>
           <Style>
@@ -498,7 +502,7 @@
                 <TextRun>
                   <Value>=Fields!name.Value</Value>
                   <Style>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontSize>20pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
@@ -508,8 +512,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox11</rd:DefaultName>
-          <Top>1.66343cm</Top>
-          <Left>1.80404cm</Left>
+          <Top>1.68989cm</Top>
+          <Left>1.8305cm</Left>
           <Height>1.27056cm</Height>
           <Width>4.35208cm</Width>
           <ZIndex>1</ZIndex>
@@ -533,19 +537,22 @@
                   <Value>Ngày/giờ ra: </Value>
                   <Style>
                     <FontStyle>Italic</FontStyle>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                   </Style>
                 </TextRun>
                 <TextRun>
                   <Value>=Fields!DateTimeCheckOut.Value</Value>
-                  <Style />
+                  <Style>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox13</rd:DefaultName>
-          <Top>2.36926cm</Top>
-          <Left>8.97974cm</Left>
+          <Top>2.71322cm</Top>
+          <Left>9.05911cm</Left>
           <Height>0.6cm</Height>
           <Width>6.95666cm</Width>
           <ZIndex>2</ZIndex>
@@ -569,23 +576,28 @@
                   <Value>Ngày/giờ vào:</Value>
                   <Style>
                     <FontStyle>Italic</FontStyle>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                   </Style>
                 </TextRun>
                 <TextRun>
                   <Value xml:space="preserve"> </Value>
-                  <Style />
+                  <Style>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
+                  </Style>
                 </TextRun>
                 <TextRun>
                   <Value>=Fields!DateTimeCheckIn.Value</Value>
-                  <Style />
+                  <Style>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox13</rd:DefaultName>
-          <Top>1.66343cm</Top>
-          <Left>8.97974cm</Left>
+          <Top>1.68989cm</Top>
+          <Left>9.08557cm</Left>
           <Height>0.6cm</Height>
           <Width>6.95666cm</Width>
           <ZIndex>3</ZIndex>
@@ -619,7 +631,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>3.36104cm</Height>
+      <Height>4.36646cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -633,7 +645,7 @@
                   <Value>Tổng Tiền:</Value>
                   <Style>
                     <FontStyle>Italic</FontStyle>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontSize>18pt</FontSize>
                   </Style>
                 </TextRun>
@@ -641,7 +653,7 @@
                   <Value>=Fields!totalPrice.Value</Value>
                   <Style>
                     <FontStyle>Italic</FontStyle>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontSize>18pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
@@ -650,7 +662,7 @@
                   <Value xml:space="preserve"> </Value>
                   <Style>
                     <FontStyle>Italic</FontStyle>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontSize>18pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
@@ -658,7 +670,7 @@
                 <TextRun>
                   <Value>VNĐ</Value>
                   <Style>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontSize>18pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
@@ -691,7 +703,7 @@
                 <TextRun>
                   <Value>Số giờ:</Value>
                   <Style>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
@@ -699,21 +711,21 @@
                 <TextRun>
                   <Value xml:space="preserve"> </Value>
                   <Style>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontSize>12pt</FontSize>
                   </Style>
                 </TextRun>
                 <TextRun>
                   <Value>=Fields!Time.Value</Value>
                   <Style>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontSize>12pt</FontSize>
                   </Style>
                 </TextRun>
                 <TextRun>
                   <Value xml:space="preserve"> </Value>
                   <Style>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontSize>12pt</FontSize>
                   </Style>
                 </TextRun>
@@ -723,8 +735,8 @@
           </Paragraphs>
           <rd:DefaultName>Textbox17</rd:DefaultName>
           <Top>0.17639cm</Top>
-          <Left>1.80404cm</Left>
-          <Height>0.6cm</Height>
+          <Left>1.84674cm</Left>
+          <Height>0.85549cm</Height>
           <Width>7.61132cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
@@ -746,7 +758,7 @@
                 <TextRun>
                   <Value>Chuyển phòng:</Value>
                   <Style>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
@@ -754,21 +766,21 @@
                 <TextRun>
                   <Value xml:space="preserve"> </Value>
                   <Style>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontSize>12pt</FontSize>
                   </Style>
                 </TextRun>
                 <TextRun>
                   <Value>=Fields!PRiceOldTime.Value</Value>
                   <Style>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontSize>12pt</FontSize>
                   </Style>
                 </TextRun>
                 <TextRun>
                   <Value> VNĐ</Value>
                   <Style>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontSize>12pt</FontSize>
                   </Style>
                 </TextRun>
@@ -777,9 +789,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox17</rd:DefaultName>
-          <Top>1.62306cm</Top>
+          <Top>2.02876cm</Top>
           <Left>1.80404cm</Left>
-          <Height>0.6cm</Height>
+          <Height>0.8293cm</Height>
           <Width>7.61132cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
@@ -801,7 +813,7 @@
                 <TextRun>
                   <Value>Tiền giờ:</Value>
                   <Style>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
@@ -809,21 +821,21 @@
                 <TextRun>
                   <Value xml:space="preserve"> </Value>
                   <Style>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontSize>12pt</FontSize>
                   </Style>
                 </TextRun>
                 <TextRun>
                   <Value>=Fields!TimePrice.Value</Value>
                   <Style>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontSize>12pt</FontSize>
                   </Style>
                 </TextRun>
                 <TextRun>
                   <Value> VNĐ</Value>
                   <Style>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontSize>12pt</FontSize>
                   </Style>
                 </TextRun>
@@ -832,9 +844,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox17</rd:DefaultName>
-          <Top>0.95278cm</Top>
+          <Top>1.13771cm</Top>
           <Left>1.80404cm</Left>
-          <Height>0.6cm</Height>
+          <Height>0.78521cm</Height>
           <Width>7.61132cm</Width>
           <ZIndex>3</ZIndex>
           <Style>
@@ -856,7 +868,7 @@
                 <TextRun>
                   <Value>Tổng tiền giờ:</Value>
                   <Style>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
@@ -864,21 +876,21 @@
                 <TextRun>
                   <Value xml:space="preserve"> </Value>
                   <Style>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontSize>12pt</FontSize>
                   </Style>
                 </TextRun>
                 <TextRun>
                   <Value>=Fields!TotalTimePrice.Value</Value>
                   <Style>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontSize>12pt</FontSize>
                   </Style>
                 </TextRun>
                 <TextRun>
                   <Value> VNĐ</Value>
                   <Style>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontSize>12pt</FontSize>
                   </Style>
                 </TextRun>
@@ -887,9 +899,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox17</rd:DefaultName>
-          <Top>2.36417cm</Top>
-          <Left>1.80404cm</Left>
-          <Height>0.6cm</Height>
+          <Top>3.03445cm</Top>
+          <Left>1.8305cm</Left>
+          <Height>0.78521cm</Height>
           <Width>7.61132cm</Width>
           <ZIndex>4</ZIndex>
           <Style>
@@ -911,28 +923,32 @@
                 <TextRun>
                   <Value>Giảm giá: </Value>
                   <Style>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
                 </TextRun>
                 <TextRun>
                   <Value>=Fields!DisCount.Value</Value>
-                  <Style />
+                  <Style>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
+                  </Style>
                 </TextRun>
                 <TextRun>
                   <Value> %</Value>
-                  <Style />
+                  <Style>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox26</rd:DefaultName>
-          <Top>0.55563cm</Top>
+          <Top>0.17639cm</Top>
           <Left>9.63445cm</Left>
-          <Height>0.6cm</Height>
-          <Width>3.90229cm</Width>
+          <Height>0.97924cm</Height>
+          <Width>4.39695cm</Width>
           <ZIndex>5</ZIndex>
           <Style>
             <Border>
@@ -944,18 +960,6 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Line Name="Line4">
-          <Top>2.3107cm</Top>
-          <Left>1.7632cm</Left>
-          <Height>0cm</Height>
-          <Width>3.07487cm</Width>
-          <ZIndex>6</ZIndex>
-          <Style>
-            <Border>
-              <Style>Solid</Style>
-            </Border>
-          </Style>
-        </Line>
       </ReportItems>
       <Style>
         <Border>

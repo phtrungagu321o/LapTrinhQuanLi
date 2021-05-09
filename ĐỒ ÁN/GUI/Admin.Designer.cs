@@ -122,6 +122,8 @@ namespace ĐỒ_ÁN
             this.btnAddRoomCategory = new System.Windows.Forms.Button();
             this.dgvService = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnSearchServiceCategory = new System.Windows.Forms.Button();
+            this.cbbSearchServiceCategory = new System.Windows.Forms.ComboBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.nudPrice = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
@@ -576,7 +578,7 @@ namespace ĐỒ_ÁN
             this.panel1.Location = new System.Drawing.Point(6, 160);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(350, 134);
+            this.panel1.Size = new System.Drawing.Size(350, 106);
             this.panel1.TabIndex = 8;
             // 
             // txtRoominfo
@@ -589,7 +591,7 @@ namespace ĐỒ_ÁN
             this.txtRoominfo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtRoominfo.Multiline = true;
             this.txtRoominfo.Name = "txtRoominfo";
-            this.txtRoominfo.Size = new System.Drawing.Size(202, 115);
+            this.txtRoominfo.Size = new System.Drawing.Size(202, 90);
             this.txtRoominfo.TabIndex = 1;
             // 
             // label11
@@ -1305,23 +1307,55 @@ namespace ĐỒ_ÁN
             dataGridViewCellStyle40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(69)))), ((int)(((byte)(98)))));
             dataGridViewCellStyle40.ForeColor = System.Drawing.Color.Gainsboro;
             this.dgvService.RowsDefaultCellStyle = dataGridViewCellStyle40;
-            this.dgvService.Size = new System.Drawing.Size(424, 273);
+            this.dgvService.Size = new System.Drawing.Size(408, 234);
             this.dgvService.TabIndex = 0;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(81)))));
+            this.panel5.Controls.Add(this.btnSearchServiceCategory);
+            this.panel5.Controls.Add(this.cbbSearchServiceCategory);
             this.panel5.Controls.Add(this.panel10);
             this.panel5.Controls.Add(this.panel9);
             this.panel5.Controls.Add(this.panel8);
             this.panel5.Controls.Add(this.panel7);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel5.Location = new System.Drawing.Point(543, 112);
+            this.panel5.Location = new System.Drawing.Point(527, 112);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(310, 323);
+            this.panel5.Size = new System.Drawing.Size(310, 284);
             this.panel5.TabIndex = 1;
+            // 
+            // btnSearchServiceCategory
+            // 
+            this.btnSearchServiceCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearchServiceCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
+            this.btnSearchServiceCategory.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.btnSearchServiceCategory.FlatAppearance.BorderSize = 2;
+            this.btnSearchServiceCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchServiceCategory.Font = new System.Drawing.Font("UTM Neo Sans Intel", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchServiceCategory.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnSearchServiceCategory.Location = new System.Drawing.Point(205, 192);
+            this.btnSearchServiceCategory.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearchServiceCategory.Name = "btnSearchServiceCategory";
+            this.btnSearchServiceCategory.Size = new System.Drawing.Size(96, 60);
+            this.btnSearchServiceCategory.TabIndex = 6;
+            this.btnSearchServiceCategory.Text = "Tìm kiếm theo loại";
+            this.btnSearchServiceCategory.UseVisualStyleBackColor = false;
+            this.btnSearchServiceCategory.Click += new System.EventHandler(this.btnSearchServiceCategory_Click);
+            // 
+            // cbbSearchServiceCategory
+            // 
+            this.cbbSearchServiceCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
+            this.cbbSearchServiceCategory.Font = new System.Drawing.Font("UTM Neo Sans Intel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbSearchServiceCategory.ForeColor = System.Drawing.Color.Gainsboro;
+            this.cbbSearchServiceCategory.FormattingEnabled = true;
+            this.cbbSearchServiceCategory.Location = new System.Drawing.Point(8, 208);
+            this.cbbSearchServiceCategory.Name = "cbbSearchServiceCategory";
+            this.cbbSearchServiceCategory.Size = new System.Drawing.Size(190, 30);
+            this.cbbSearchServiceCategory.TabIndex = 6;
             // 
             // panel10
             // 
@@ -1720,8 +1754,8 @@ namespace ĐỒ_ÁN
             this.metroTabControlRoom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControlRoom.Location = new System.Drawing.Point(0, 0);
             this.metroTabControlRoom.Name = "metroTabControlRoom";
-            this.metroTabControlRoom.SelectedIndex = 2;
-            this.metroTabControlRoom.Size = new System.Drawing.Size(861, 477);
+            this.metroTabControlRoom.SelectedIndex = 1;
+            this.metroTabControlRoom.Size = new System.Drawing.Size(845, 438);
             this.metroTabControlRoom.TabIndex = 2;
             this.metroTabControlRoom.UseSelectable = true;
             this.metroTabControlRoom.MouseDown += new System.Windows.Forms.MouseEventHandler(this.metroTabControlRoom_MouseDown);
@@ -1765,7 +1799,7 @@ namespace ĐỒ_ÁN
             this.metroTabPageService.HorizontalScrollbarSize = 1;
             this.metroTabPageService.Location = new System.Drawing.Point(4, 38);
             this.metroTabPageService.Name = "metroTabPageService";
-            this.metroTabPageService.Size = new System.Drawing.Size(853, 435);
+            this.metroTabPageService.Size = new System.Drawing.Size(837, 396);
             this.metroTabPageService.TabIndex = 1;
             this.metroTabPageService.Text = "Dịch Vụ";
             this.metroTabPageService.VerticalScrollbarBarColor = true;
@@ -1784,7 +1818,7 @@ namespace ĐỒ_ÁN
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(853, 112);
+            this.panel4.Size = new System.Drawing.Size(837, 112);
             this.panel4.TabIndex = 1;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
@@ -1793,7 +1827,7 @@ namespace ĐỒ_ÁN
             this.panel6.Controls.Add(this.txtSearchServiceName);
             this.panel6.Controls.Add(this.btnSearchFood);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(543, 0);
+            this.panel6.Location = new System.Drawing.Point(527, 0);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(310, 112);
@@ -1806,10 +1840,11 @@ namespace ĐỒ_ÁN
             this.txtSearchServiceName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
             this.txtSearchServiceName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearchServiceName.Font = new System.Drawing.Font("UTM Neo Sans Intel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchServiceName.Location = new System.Drawing.Point(14, 44);
+            this.txtSearchServiceName.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txtSearchServiceName.Location = new System.Drawing.Point(8, 40);
             this.txtSearchServiceName.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchServiceName.Name = "txtSearchServiceName";
-            this.txtSearchServiceName.Size = new System.Drawing.Size(179, 26);
+            this.txtSearchServiceName.Size = new System.Drawing.Size(189, 26);
             this.txtSearchServiceName.TabIndex = 5;
             this.txtSearchServiceName.TextChanged += new System.EventHandler(this.txtSearchServiceName_TextChanged);
             // 
@@ -1821,14 +1856,14 @@ namespace ĐỒ_ÁN
             this.btnSearchFood.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
             this.btnSearchFood.FlatAppearance.BorderSize = 2;
             this.btnSearchFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchFood.Font = new System.Drawing.Font("UTM Neo Sans Intel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchFood.Font = new System.Drawing.Font("UTM Neo Sans Intel", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchFood.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnSearchFood.Location = new System.Drawing.Point(201, 28);
+            this.btnSearchFood.Location = new System.Drawing.Point(205, 21);
             this.btnSearchFood.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearchFood.Name = "btnSearchFood";
-            this.btnSearchFood.Size = new System.Drawing.Size(100, 50);
+            this.btnSearchFood.Size = new System.Drawing.Size(96, 60);
             this.btnSearchFood.TabIndex = 4;
-            this.btnSearchFood.Text = "Tìm Kiếm";
+            this.btnSearchFood.Text = "Tìm kiếm theo tên";
             this.btnSearchFood.UseVisualStyleBackColor = false;
             this.btnSearchFood.Click += new System.EventHandler(this.btnSearchFood_Click);
             // 
@@ -1841,7 +1876,7 @@ namespace ĐỒ_ÁN
             this.btnShowFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShowFood.Font = new System.Drawing.Font("UTM Neo Sans Intel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowFood.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnShowFood.Location = new System.Drawing.Point(358, 24);
+            this.btnShowFood.Location = new System.Drawing.Point(350, 24);
             this.btnShowFood.Margin = new System.Windows.Forms.Padding(4);
             this.btnShowFood.Name = "btnShowFood";
             this.btnShowFood.Size = new System.Drawing.Size(100, 50);
@@ -1859,7 +1894,7 @@ namespace ĐỒ_ÁN
             this.btnUpdateFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateFood.Font = new System.Drawing.Font("UTM Neo Sans Intel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateFood.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnUpdateFood.Location = new System.Drawing.Point(250, 24);
+            this.btnUpdateFood.Location = new System.Drawing.Point(242, 24);
             this.btnUpdateFood.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdateFood.Name = "btnUpdateFood";
             this.btnUpdateFood.Size = new System.Drawing.Size(100, 50);
@@ -1877,7 +1912,7 @@ namespace ĐỒ_ÁN
             this.btnDeleteFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteFood.Font = new System.Drawing.Font("UTM Neo Sans Intel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteFood.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDeleteFood.Location = new System.Drawing.Point(142, 24);
+            this.btnDeleteFood.Location = new System.Drawing.Point(134, 24);
             this.btnDeleteFood.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteFood.Name = "btnDeleteFood";
             this.btnDeleteFood.Size = new System.Drawing.Size(100, 50);
@@ -1895,7 +1930,7 @@ namespace ĐỒ_ÁN
             this.btnAddFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddFood.Font = new System.Drawing.Font("UTM Neo Sans Intel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddFood.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnAddFood.Location = new System.Drawing.Point(34, 24);
+            this.btnAddFood.Location = new System.Drawing.Point(26, 24);
             this.btnAddFood.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddFood.Name = "btnAddFood";
             this.btnAddFood.Size = new System.Drawing.Size(100, 50);
@@ -1911,7 +1946,7 @@ namespace ĐỒ_ÁN
             this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel17.Location = new System.Drawing.Point(0, 0);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(853, 435);
+            this.panel17.Size = new System.Drawing.Size(837, 396);
             this.panel17.TabIndex = 2;
             this.panel17.Paint += new System.Windows.Forms.PaintEventHandler(this.panel17_Paint);
             // 
@@ -2057,7 +2092,7 @@ namespace ĐỒ_ÁN
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.ClientSize = new System.Drawing.Size(861, 477);
+            this.ClientSize = new System.Drawing.Size(845, 438);
             this.Controls.Add(this.metroTabControlRoom);
             this.Font = new System.Drawing.Font("UTM Neo Sans Intel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -2262,5 +2297,7 @@ namespace ĐỒ_ÁN
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtRoominfo;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox cbbSearchServiceCategory;
+        private System.Windows.Forms.Button btnSearchServiceCategory;
     }
 }

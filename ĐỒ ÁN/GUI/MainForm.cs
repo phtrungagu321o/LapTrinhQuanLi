@@ -527,5 +527,11 @@ namespace ĐỒ_ÁN.GUI
         {
           
         }
+
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            statistical f = new statistical();
+            f.ShowDialog();
+        }
     }
 }

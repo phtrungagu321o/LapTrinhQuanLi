@@ -186,7 +186,7 @@ namespace ĐỒ_ÁN.GUI
             // contextMenuStrip2
             // 
             this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(181, 26);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
             // RoomInfor
             // 

@@ -33,7 +33,7 @@ namespace ĐỒ_ÁN.GUI
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.uSPGetBillInfoByRoomBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.quanLiPhongKaraokeDataSet3 = new ĐỒ_ÁN.QuanLiPhongKaraokeDataSet3();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.reportViewerInvoice = new Microsoft.Reporting.WinForms.ReportViewer();
             this.uSPGetBillInfoByRoomBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uSP_GetBillInfoByRoomTableAdapter1 = new ĐỒ_ÁN.QuanLiPhongKaraokeDataSet3TableAdapters.USP_GetBillInfoByRoomTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.uSPGetBillInfoByRoomBindingSource1)).BeginInit();
@@ -51,18 +51,18 @@ namespace ĐỒ_ÁN.GUI
             this.quanLiPhongKaraokeDataSet3.DataSetName = "QuanLiPhongKaraokeDataSet3";
             this.quanLiPhongKaraokeDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // reportViewer1
+            // reportViewerInvoice
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewerInvoice.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSetBill";
             reportDataSource1.Value = this.uSPGetBillInfoByRoomBindingSource1;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ĐỒ_ÁN.Report.ReportBillForRoom.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(577, 315);
-            this.reportViewer1.TabIndex = 0;
+            this.reportViewerInvoice.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewerInvoice.LocalReport.ReportEmbeddedResource = "ĐỒ_ÁN.Report.ReportBillForRoom.rdlc";
+            this.reportViewerInvoice.Location = new System.Drawing.Point(0, 0);
+            this.reportViewerInvoice.Name = "reportViewerInvoice";
+            this.reportViewerInvoice.ServerReport.BearerToken = null;
+            this.reportViewerInvoice.Size = new System.Drawing.Size(577, 315);
+            this.reportViewerInvoice.TabIndex = 0;
             // 
             // uSPGetBillInfoByRoomBindingSource
             // 
@@ -77,7 +77,7 @@ namespace ĐỒ_ÁN.GUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(577, 315);
-            this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.reportViewerInvoice);
             this.Name = "invoicePrintting";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "In_Hóa_Đơn";
@@ -91,7 +91,7 @@ namespace ĐỒ_ÁN.GUI
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewerInvoice;
         private System.Windows.Forms.BindingSource uSPGetBillInfoByRoomBindingSource;
         private System.Windows.Forms.BindingSource uSPGetBillInfoByRoomBindingSource1;
         private QuanLiPhongKaraokeDataSet3 quanLiPhongKaraokeDataSet3;

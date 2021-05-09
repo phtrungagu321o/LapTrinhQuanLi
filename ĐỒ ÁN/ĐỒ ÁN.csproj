@@ -181,6 +181,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dataSetB.xsd</DependentUpon>
     </Compile>
+    <Compile Include="datasetInfoRoom.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>datasetInfoRoom.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASETReportService.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DATASETReportService.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBSearchForCBB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBSearchForCBB.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DTB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -190,6 +205,7 @@
     <Compile Include="DTO\BillDTO.cs" />
     <Compile Include="DTO\BillInfoDTO.cs" />
     <Compile Include="DTO\MenuPriceOldDTO.cs" />
+    <Compile Include="DTO\MenuServicebyCategoryDTO.cs" />
     <Compile Include="DTO\RoomCategoryDTO.cs" />
     <Compile Include="DTO\ServiceCategoryDTO.cs" />
     <Compile Include="DTO\ServiceDTO.cs" />
@@ -259,6 +275,12 @@
     <Compile Include="GUI\RoomInfor.Designer.cs">
       <DependentUpon>RoomInfor.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\statistical.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\statistical.Designer.cs">
+      <DependentUpon>statistical.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ToolEncrytAndDecryt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -298,6 +320,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLiPhongKaraokeDataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QuanLiPhongKaraokeDataSetInfoRoom.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiPhongKaraokeDataSetInfoRoom.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ReportBillByRoomDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -334,8 +361,13 @@
     <EmbeddedResource Include="GUI\ReportB.resx">
       <DependentUpon>ReportB.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportRoomInFo.rdlc" />
+    <EmbeddedResource Include="Report\ReportService.rdlc" />
     <EmbeddedResource Include="GUI\RoomInfor.resx">
       <DependentUpon>RoomInfor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\statistical.resx">
+      <DependentUpon>statistical.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ToolEncrytAndDecryt.resx">
       <DependentUpon>ToolEncrytAndDecryt.cs</DependentUpon>
@@ -366,6 +398,39 @@
     </None>
     <None Include="dataSetB.xss">
       <DependentUpon>dataSetB.xsd</DependentUpon>
+    </None>
+    <None Include="datasetInfoRoom.xsc">
+      <DependentUpon>datasetInfoRoom.xsd</DependentUpon>
+    </None>
+    <None Include="datasetInfoRoom.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>datasetInfoRoom.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datasetInfoRoom.xss">
+      <DependentUpon>datasetInfoRoom.xsd</DependentUpon>
+    </None>
+    <None Include="DATASETReportService.xsc">
+      <DependentUpon>DATASETReportService.xsd</DependentUpon>
+    </None>
+    <None Include="DATASETReportService.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DATASETReportService.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASETReportService.xss">
+      <DependentUpon>DATASETReportService.xsd</DependentUpon>
+    </None>
+    <None Include="DBSearchForCBB.xsc">
+      <DependentUpon>DBSearchForCBB.xsd</DependentUpon>
+    </None>
+    <None Include="DBSearchForCBB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBSearchForCBB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBSearchForCBB.xss">
+      <DependentUpon>DBSearchForCBB.xsd</DependentUpon>
     </None>
     <None Include="DTB.xsc">
       <DependentUpon>DTB.xsd</DependentUpon>
@@ -442,6 +507,17 @@
     </None>
     <None Include="QuanLiPhongKaraokeDataSet4.xss">
       <DependentUpon>QuanLiPhongKaraokeDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiPhongKaraokeDataSetInfoRoom.xsc">
+      <DependentUpon>QuanLiPhongKaraokeDataSetInfoRoom.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiPhongKaraokeDataSetInfoRoom.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiPhongKaraokeDataSetInfoRoom.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiPhongKaraokeDataSetInfoRoom.xss">
+      <DependentUpon>QuanLiPhongKaraokeDataSetInfoRoom.xsd</DependentUpon>
     </None>
     <None Include="ReportBillByRoomDataSet.xsc">
       <DependentUpon>ReportBillByRoomDataSet.xsd</DependentUpon>

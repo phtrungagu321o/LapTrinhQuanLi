@@ -38,26 +38,38 @@ namespace ĐỒ_ÁN.DAO
             }    
             return list;
         }
-        public List<ServiceDTO>GetlistService()
+        public List<MenuServicebyCategoryDTO> GetlistService()
         {
-            List<ServiceDTO> list = new List<ServiceDTO>();
-            string query = "SELECT *FROM dbo.Service ";
+            List<MenuServicebyCategoryDTO> list = new List<MenuServicebyCategoryDTO>();
+            string query = "SELECT s.id,s.name,sc.name as NameCategory,sc.id as idCategory,s.price FROM dbo.Service as s, ServiceCategory as sc where s.idServiceCategory=sc.id ";
             DataTable data = DataProvider.Instance.ExcuteQuery(query);
             foreach (DataRow item in data.Rows)
             {
-                ServiceDTO food = new ServiceDTO(item);
+                MenuServicebyCategoryDTO food = new MenuServicebyCategoryDTO(item);
                 list.Add(food);
             }
             return list;
         }
-        public List<ServiceDTO> SearchServiceByName(string name)
+        public List<MenuServicebyCategoryDTO> SearchServiceByName(string name)
         {
-            List<ServiceDTO> list = new List<ServiceDTO>();
-            string query = string.Format("SELECT *FROM dbo.Service WHERE dbo.fuConvertToUnsign2(name) LIKE N'%' +dbo.fuConvertToUnsign2(N'{0}')+'%'", name) ;
+            List<MenuServicebyCategoryDTO> list = new List<MenuServicebyCategoryDTO>();
+            string query = string.Format("SELECT s.id,s.name,sc.name as NameCategory,sc.id as idCategory,s.price FROM dbo.Service as s, ServiceCategory as sc where s.idServiceCategory=sc.id and dbo.fuConvertToUnsign2(s.name) LIKE N'%' +dbo.fuConvertToUnsign2(N'{0}')+'%'", name) ;
             DataTable data = DataProvider.Instance.ExcuteQuery(query);
             foreach (DataRow item in data.Rows)
             {
-                ServiceDTO food = new ServiceDTO(item);
+                MenuServicebyCategoryDTO food = new MenuServicebyCategoryDTO(item);
+                list.Add(food);
+            }
+            return list;
+        }
+        public List<MenuServicebyCategoryDTO> SearchServiceByCategory(string name)
+        {
+            List<MenuServicebyCategoryDTO> list = new List<MenuServicebyCategoryDTO>();
+            string query = string.Format("SELECT s.id,s.name,sc.name as NameCategory,sc.id as idCategory,s.price FROM dbo.Service as s, ServiceCategory as sc where s.idServiceCategory=sc.id and dbo.fuConvertToUnsign2(sc.name) LIKE N'%' +dbo.fuConvertToUnsign2(N'{0}')+'%'", name);
+            DataTable data = DataProvider.Instance.ExcuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                MenuServicebyCategoryDTO food = new MenuServicebyCategoryDTO(item);
                 list.Add(food);
             }
             return list;

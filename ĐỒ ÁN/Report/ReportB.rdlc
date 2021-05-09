@@ -29,6 +29,9 @@
               <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
+              <Width>2.5cm</Width>
+            </TablixColumn>
+            <TablixColumn>
               <Width>3.10723cm</Width>
             </TablixColumn>
             <TablixColumn>
@@ -39,6 +42,9 @@
             </TablixColumn>
             <TablixColumn>
               <Width>4.14042cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
@@ -72,6 +78,40 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox29</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>name</Value>
+                              <Style>
+                                <FontFamily>times New Roman</FontFamily>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox2</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -325,6 +365,40 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
+                    <Textbox Name="Textbox4">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Service</Value>
+                              <Style>
+                                <FontFamily>times New Roman</FontFamily>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox4</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
                     <Textbox Name="Textbox18">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -413,6 +487,36 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox30</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="name1">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!name.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>name1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -650,6 +754,36 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
+                    <Textbox Name="Service1">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Service.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Service1</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
                     <Textbox Name="DisCount">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -732,6 +866,8 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
+            <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -748,7 +884,7 @@
         <Top>0.54294cm</Top>
         <Left>1.14576cm</Left>
         <Height>1.50234cm</Height>
-        <Width>29.12619cm</Width>
+        <Width>34.12619cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -770,7 +906,7 @@
     <Height>0.95274in</Height>
     <Style />
   </Body>
-  <Width>12.47017in</Width>
+  <Width>13.88659in</Width>
   <Page>
     <PageHeader>
       <Height>4.4812cm</Height>
@@ -786,7 +922,7 @@
                 <TextRun>
                   <Value>ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH</Value>
                   <Style>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Normal</FontWeight>
                   </Style>
@@ -801,7 +937,7 @@
                 <TextRun>
                   <Value>TRƯỜNG ĐẠI HỌC AN GIANG</Value>
                   <Style>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                     <TextDecoration>Underline</TextDecoration>
@@ -814,9 +950,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox10</rd:DefaultName>
-          <Top>0.87285cm</Top>
+          <Top>0.55535cm</Top>
           <Left>6.57048cm</Left>
-          <Height>1.18208cm</Height>
+          <Height>1.49958cm</Height>
           <Width>9.49729cm</Width>
           <Style>
             <Border>
@@ -837,7 +973,7 @@
                 <TextRun>
                   <Value> CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</Value>
                   <Style>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontWeight>Bold</FontWeight>
                   </Style>
                 </TextRun>
@@ -851,7 +987,7 @@
                 <TextRun>
                   <Value>Độc lập - Tự do - Hạnh Phúc</Value>
                   <Style>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontWeight>Bold</FontWeight>
                     <TextDecoration>Underline</TextDecoration>
                   </Style>
@@ -863,9 +999,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox11</rd:DefaultName>
-          <Top>0.87285cm</Top>
+          <Top>0.55535cm</Top>
           <Left>17.07049cm</Left>
-          <Height>1.18208cm</Height>
+          <Height>1.49958cm</Height>
           <Width>8.07606cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
@@ -887,7 +1023,7 @@
                 <TextRun>
                   <Value>DANH SÁCH HÓA ĐƠN THEO NGÀY</Value>
                   <Style>
-                    <FontFamily>TImes New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontSize>18pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
@@ -902,7 +1038,7 @@
                 <TextRun>
                   <Value />
                   <Style>
-                    <FontFamily>TImes New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontSize>18pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
@@ -917,7 +1053,7 @@
                 <TextRun>
                   <Value />
                   <Style>
-                    <FontFamily>TImes New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                     <FontSize>18pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
@@ -927,9 +1063,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox12</rd:DefaultName>
-          <Top>2.47799cm</Top>
+          <Top>2.16049cm</Top>
           <Left>6.57048cm</Left>
-          <Height>0.78521cm</Height>
+          <Height>1.10271cm</Height>
           <Width>17.74974cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
@@ -952,14 +1088,14 @@
                   <Value>Từ ngày: </Value>
                   <Style>
                     <FontStyle>Italic</FontStyle>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                   </Style>
                 </TextRun>
                 <TextRun>
                   <Value>=Fields!Column1.Value</Value>
                   <Style>
                     <FontStyle>Italic</FontStyle>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -967,9 +1103,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox23</rd:DefaultName>
-          <Top>3.58924cm</Top>
+          <Top>3.27174cm</Top>
           <Left>9.43629cm</Left>
-          <Height>0.6cm</Height>
+          <Height>0.9175cm</Height>
           <Width>5.73802cm</Width>
           <ZIndex>3</ZIndex>
           <Style>
@@ -992,14 +1128,14 @@
                   <Value>Đến ngày:  </Value>
                   <Style>
                     <FontStyle>Italic</FontStyle>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                   </Style>
                 </TextRun>
                 <TextRun>
                   <Value>=Fields!Column2.Value</Value>
                   <Style>
                     <FontStyle>Italic</FontStyle>
-                    <FontFamily>times New Roman</FontFamily>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -1007,11 +1143,49 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox23</rd:DefaultName>
-          <Top>3.58924cm</Top>
+          <Top>3.27174cm</Top>
           <Left>16.12846cm</Left>
-          <Height>0.6cm</Height>
+          <Height>0.9175cm</Height>
           <Width>5.78083cm</Width>
           <ZIndex>4</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox1">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Tìm kiếm theo: </Value>
+                  <Style>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>=Fields!servicename.Value</Value>
+                  <Style>
+                    <FontFamily>utm neo Sans Intel</FontFamily>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox1</rd:DefaultName>
+          <Top>3.58924cm</Top>
+          <Left>0.51076cm</Left>
+          <Height>0.6cm</Height>
+          <Width>6.20417cm</Width>
+          <ZIndex>5</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1055,7 +1229,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox15</rd:DefaultName>
-          <Top>0.14111cm</Top>
+          <Top>0.14109cm</Top>
           <Left>17.71596cm</Left>
           <Height>0.81167cm</Height>
           <Width>7.40341cm</Width>
@@ -1086,11 +1260,41 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox16</rd:DefaultName>
-          <Top>1.86063cm</Top>
+          <Top>1.86061cm</Top>
           <Left>19.15265cm</Left>
           <Height>0.6cm</Height>
           <Width>4.53729cm</Width>
           <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox6">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Tổng tiền: </Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox6</rd:DefaultName>
+          <Top>0.35276cm</Top>
+          <Left>1.14576cm</Left>
+          <Height>0.6cm</Height>
+          <Width>5cm</Width>
+          <ZIndex>2</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1110,10 +1314,10 @@
     </PageFooter>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
-    <LeftMargin>2cm</LeftMargin>
-    <RightMargin>2cm</RightMargin>
-    <TopMargin>2cm</TopMargin>
-    <BottomMargin>2cm</BottomMargin>
+    <LeftMargin>1.27cm</LeftMargin>
+    <RightMargin>0.635cm</RightMargin>
+    <TopMargin>1.27cm</TopMargin>
+    <BottomMargin>0.635cm</BottomMargin>
     <ColumnSpacing>0.13cm</ColumnSpacing>
     <Style />
   </Page>
@@ -1134,6 +1338,10 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
+        <Field Name="servicename">
+          <DataField>servicename</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="Column1">
           <DataField>Column1</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
@@ -1184,8 +1392,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>dataSetB</rd:DataSetName>
-        <rd:SchemaPath>D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\dataSetB.xsd</rd:SchemaPath>
+        <rd:DataSetName>DBSearchForCBB</rd:DataSetName>
+        <rd:SchemaPath>D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\DBSearchForCBB.xsd</rd:SchemaPath>
         <rd:TableName>USP_GetListBillByDateForReport</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

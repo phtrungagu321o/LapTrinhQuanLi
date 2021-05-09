@@ -23,7 +23,7 @@ namespace ĐỒ_ÁN.GUI
         private void invoicePrintting_Load(object sender, EventArgs e)
         {
             this.uSP_GetBillInfoByRoomTableAdapter1.Fill(this.quanLiPhongKaraokeDataSet3.USP_GetBillInfoByRoom, IDBill);
-            this.reportViewer1.RefreshReport();
+            this.reportViewerInvoice.RefreshReport();
         }
     }
 }

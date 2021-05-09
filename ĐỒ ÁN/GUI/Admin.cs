@@ -105,13 +105,22 @@ namespace ĐỒ_ÁN
         {
             LoadCategoryIntoComboBox(cbbServiceCategory);
             loadRoomcategoryIntoCBB(cbbRoomcategory);
+            LoadCategoryIntoComboBox(cbbSearchServiceCategory);
         }
 
-        List<ServiceDTO> SearchNameService(string name)
+        List<MenuServicebyCategoryDTO> SearchNameService(string name)
         {
-            List<ServiceDTO> listService = ServiceDAO.Instance.SearchServiceByName(name);
+            List<MenuServicebyCategoryDTO> listService = ServiceDAO.Instance.SearchServiceByName(name);
 
          
+            return listService;
+
+        }
+        List<MenuServicebyCategoryDTO> SearchNameServiceBycategory(string name)
+        {
+            List<MenuServicebyCategoryDTO> listService = ServiceDAO.Instance.SearchServiceByCategory(name);
+
+
             return listService;
 
         }
@@ -187,6 +196,7 @@ namespace ĐỒ_ÁN
             cb.DataSource = RoomCategoryDAO.Instance.ListRoomCategory();
             cb.DisplayMember = "NameRoomCategory";
         }
+      
 
         private void tp_Click(object sender, EventArgs e)
         {
@@ -217,9 +227,9 @@ namespace ĐỒ_ÁN
         {
             try
             {
-                if (dgvService.SelectedCells.Count > 0 && dgvService.SelectedCells[0].OwningRow.Cells["idServiceCategory"].Value!=null)
+                if (dgvService.SelectedCells.Count > 0 && dgvService.SelectedCells[0].OwningRow.Cells["idCategory"].Value!=null)
                 {
-                    int id = (int)dgvService.SelectedCells[0].OwningRow.Cells["idServiceCategory"].Value;//chọn ô đầu tiên trong danh sach category sau đó lấy cái dòng chưa ô đã chọn
+                    int id = (int)dgvService.SelectedCells[0].OwningRow.Cells["idCategory"].Value;//chọn ô đầu tiên trong danh sach category sau đó lấy cái dòng chưa ô đã chọn
 
 
                     ServiceCategoryDTO Servicecategory = ServiceCategoryDAO.Instance.GetCategory(id);
@@ -391,9 +401,9 @@ namespace ĐỒ_ÁN
         {
             string name = txtServiceName.Text;
             int categoryID = (cbbServiceCategory.SelectedItem as ServiceCategoryDTO).ID;
-            if (dgvService.SelectedCells.Count > 0 && dgvService.SelectedCells[0].OwningRow.Cells["idServiceCategory"].Value != null)
+            if (dgvService.SelectedCells.Count > 0 && dgvService.SelectedCells[0].OwningRow.Cells["idCategory"].Value != null)
             {
-                int IDC = (int)dgvService.SelectedCells[0].OwningRow.Cells["idServiceCategory"].Value;
+                int IDC = (int)dgvService.SelectedCells[0].OwningRow.Cells["idCategory"].Value;
             }
             string CategoryService = cbbServiceCategory.Text;
             float price = (float)nudPrice.Value;
@@ -411,9 +421,9 @@ namespace ĐỒ_ÁN
                 {
                     log.Info("Đã Sửa thông tin |" + listService.Name + "| (" + "Tên dịch vụ: |" + listService.Name + "| -> |" + name + "| ) Thành công! user: |" + loginAccount.UserName + "| -  vào ngày:");
                 }
-                if (dgvService.SelectedCells.Count > 0 && dgvService.SelectedCells[0].OwningRow.Cells["idServiceCategory"].Value != null)
+                if (dgvService.SelectedCells.Count > 0 && dgvService.SelectedCells[0].OwningRow.Cells["idCategory"].Value != null)
                 {
-                    int IDC = (int)dgvService.SelectedCells[0].OwningRow.Cells["idServiceCategory"].Value;
+                    int IDC = (int)dgvService.SelectedCells[0].OwningRow.Cells["idCategory"].Value;
 
                     ServiceCategoryDTO ListSC = ServiceCategoryDAO.Instance.GetCategory(IDC);
 
@@ -991,6 +1001,11 @@ namespace ĐỒ_ÁN
         private void panel17_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnSearchServiceCategory_Click(object sender, EventArgs e)
+        {
+            Servicelist.DataSource = SearchNameServiceBycategory(cbbSearchServiceCategory.Text);
         }
     }
 }

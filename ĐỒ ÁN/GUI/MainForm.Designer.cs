@@ -47,6 +47,7 @@ namespace ĐỒ_ÁN.GUI
             this.iconButtonAdmin = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.llblRestoreAndBackUp = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
@@ -391,6 +392,7 @@ namespace ĐỒ_ÁN.GUI
             // panelLogo
             // 
             this.panelLogo.Controls.Add(this.llblRestoreAndBackUp);
+            this.panelLogo.Controls.Add(this.linkLabel1);
             this.panelLogo.Controls.Add(this.btnHome);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
@@ -403,7 +405,7 @@ namespace ĐỒ_ÁN.GUI
             this.llblRestoreAndBackUp.AutoSize = true;
             this.llblRestoreAndBackUp.Font = new System.Drawing.Font("UTM Neo Sans Intel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.llblRestoreAndBackUp.LinkColor = System.Drawing.Color.Gainsboro;
-            this.llblRestoreAndBackUp.Location = new System.Drawing.Point(69, 121);
+            this.llblRestoreAndBackUp.Location = new System.Drawing.Point(33, 121);
             this.llblRestoreAndBackUp.Name = "llblRestoreAndBackUp";
             this.llblRestoreAndBackUp.Size = new System.Drawing.Size(113, 18);
             this.llblRestoreAndBackUp.TabIndex = 1;
@@ -411,12 +413,25 @@ namespace ĐỒ_ÁN.GUI
             this.llblRestoreAndBackUp.Text = "Phục hồi và sao lưu";
             this.llblRestoreAndBackUp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("UTM Neo Sans Intel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.Gainsboro;
+            this.linkLabel1.Location = new System.Drawing.Point(152, 121);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(59, 18);
+            this.linkLabel1.TabIndex = 2;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Thống kê";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked_1);
+            // 
             // btnHome
             // 
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.Location = new System.Drawing.Point(12, 12);
+            this.btnHome.Location = new System.Drawing.Point(12, 21);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(229, 106);
+            this.btnHome.Size = new System.Drawing.Size(229, 97);
             this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnHome.TabIndex = 0;
             this.btnHome.TabStop = false;
@@ -763,5 +778,6 @@ namespace ĐỒ_ÁN.GUI
         private System.Windows.Forms.Button btnPhone;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem tráiToolStripMenuItem;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

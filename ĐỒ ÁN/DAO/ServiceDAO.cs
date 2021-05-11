@@ -50,6 +50,18 @@ namespace ĐỒ_ÁN.DAO
             }
             return list;
         }
+        public List<MenuServicebyCategoryDTO> GetlistSearchService(string query)
+        {
+            List<MenuServicebyCategoryDTO> list = new List<MenuServicebyCategoryDTO>();
+
+            DataTable data = DataProvider.Instance.ExcuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                MenuServicebyCategoryDTO food = new MenuServicebyCategoryDTO(item);
+                list.Add(food);
+            }
+            return list;
+        }
         public List<MenuServicebyCategoryDTO> SearchServiceByName(string name)
         {
             List<MenuServicebyCategoryDTO> list = new List<MenuServicebyCategoryDTO>();
@@ -62,6 +74,7 @@ namespace ĐỒ_ÁN.DAO
             }
             return list;
         }
+        
         public List<MenuServicebyCategoryDTO> SearchServiceByCategory(string name)
         {
             List<MenuServicebyCategoryDTO> list = new List<MenuServicebyCategoryDTO>();

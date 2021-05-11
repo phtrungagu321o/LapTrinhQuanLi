@@ -171,6 +171,7 @@
     </Compile>
     <Compile Include="DAO\BillDAO.cs" />
     <Compile Include="DAO\BillInfoDAO.cs" />
+    <Compile Include="DAO\ConditionsBuildsDAO.cs" />
     <Compile Include="DAO\RoomCategoryDAO.cs" />
     <Compile Include="DAO\ServiceCategoryDAO.cs" />
     <Compile Include="DAO\ServiceDAO.cs" />
@@ -204,6 +205,7 @@
     <Compile Include="DTO\AccountDTO.cs" />
     <Compile Include="DTO\BillDTO.cs" />
     <Compile Include="DTO\BillInfoDTO.cs" />
+    <Compile Include="DTO\ConditionsBuild.cs" />
     <Compile Include="DTO\MenuPriceOldDTO.cs" />
     <Compile Include="DTO\MenuServicebyCategoryDTO.cs" />
     <Compile Include="DTO\RoomCategoryDTO.cs" />
@@ -227,6 +229,12 @@
     <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\RoomDAO.cs" />
+    <Compile Include="GUI\AdvancedSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AdvancedSearch.Designer.cs">
+      <DependentUpon>AdvancedSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Help.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -339,6 +347,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AdvancedSearch.resx">
+      <DependentUpon>AdvancedSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Help.resx">
       <DependentUpon>Help.cs</DependentUpon>

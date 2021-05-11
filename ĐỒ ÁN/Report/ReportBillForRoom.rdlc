@@ -437,8 +437,9 @@
       </Line>
       <Line Name="Line2">
         <Top>1.87131cm</Top>
+        <Left>1.80404cm</Left>
         <Height>0cm</Height>
-        <Width>17.51841cm</Width>
+        <Width>15.71437cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -450,7 +451,7 @@
     <Height>0.73674in</Height>
     <Style />
   </Body>
-  <Width>8.09709in</Width>
+  <Width>7.05542in</Width>
   <Page>
     <PageHeader>
       <Height>3.79236cm</Height>
@@ -479,8 +480,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox12</rd:DefaultName>
-          <Top>0.33142cm</Top>
-          <Left>7.06057cm</Left>
+          <Left>7.52328cm</Left>
           <Height>1.18208cm</Height>
           <Width>4.00812cm</Width>
           <Style>
@@ -553,7 +553,7 @@
           <rd:DefaultName>Textbox13</rd:DefaultName>
           <Top>2.71322cm</Top>
           <Left>9.05911cm</Left>
-          <Height>0.6cm</Height>
+          <Height>0.73229cm</Height>
           <Width>6.95666cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
@@ -615,7 +615,7 @@
           <Top>3.79236cm</Top>
           <Left>1.80404cm</Left>
           <Height>0cm</Height>
-          <Width>14.23819cm</Width>
+          <Width>15.71437cm</Width>
           <ZIndex>4</ZIndex>
           <Style>
             <Border>
@@ -631,7 +631,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>4.36646cm</Height>
+      <Height>4.39292cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -967,12 +967,12 @@
         </Border>
       </Style>
     </PageFooter>
-    <PageHeight>29.7cm</PageHeight>
-    <PageWidth>21cm</PageWidth>
-    <LeftMargin>2cm</LeftMargin>
-    <RightMargin>2cm</RightMargin>
-    <TopMargin>2cm</TopMargin>
-    <BottomMargin>2cm</BottomMargin>
+    <PageHeight>7.5cm</PageHeight>
+    <PageWidth>5.5cm</PageWidth>
+    <LeftMargin>1.27cm</LeftMargin>
+    <RightMargin>0.635cm</RightMargin>
+    <TopMargin>0.635cm</TopMargin>
+    <BottomMargin>0.635cm</BottomMargin>
     <ColumnSpacing>0.13cm</ColumnSpacing>
     <Style />
   </Page>

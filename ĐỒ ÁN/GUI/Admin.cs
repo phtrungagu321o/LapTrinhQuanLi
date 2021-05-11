@@ -557,7 +557,8 @@ namespace ĐỒ_ÁN
             if(txtSearchServiceName.Text=="")
             {
                 MessageBox.Show("Vui Lòng Nhập Thông Tin Cần Tìm", "Thông báo");
-            }
+                return;
+            } 
 
            Servicelist.DataSource=SearchNameService(txtSearchServiceName.Text);
         }
@@ -1006,6 +1007,12 @@ namespace ĐỒ_ÁN
         private void btnSearchServiceCategory_Click(object sender, EventArgs e)
         {
             Servicelist.DataSource = SearchNameServiceBycategory(cbbSearchServiceCategory.Text);
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AdvancedSearch f = new AdvancedSearch();
+            f.ShowDialog();
         }
     }
 }

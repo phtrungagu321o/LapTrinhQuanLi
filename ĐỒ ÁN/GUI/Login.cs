@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using log4net;
+using System.Data.SqlClient;
 
 namespace ĐỒ_ÁN
 {
@@ -114,35 +115,48 @@ namespace ĐỒ_ÁN
 
         private void btnLogin_Click_1(object sender, EventArgs e)
         {
+            SqlConnection sqlconn = new SqlConnection(ĐỒ_ÁN.Properties.Settings.Default.ConnectionStr);
             try
             {
-                string userName = txtUser.Text;
-                string passWord = txtPassWord.Text;
-                if (Login(userName, passWord))
+                sqlconn.Open();
+                sqlconn.Close();
+                try
                 {
-                    log.Info("Đăng nhập thành công! user: |" + userName +"| - vào ngày:");
-                    
-                    AccountDTO loginAccount = AccountDAO.Instance.GetAccountByUserName(userName);
-                    progress_bar_Form R = new progress_bar_Form(loginAccount);
-                    this.Hide();
-                    R.UserN = txtUser.Text;
-                    R.ShowDialog();
-                    this.Show();
+                    string userName = txtUser.Text;
+                    string passWord = txtPassWord.Text;
+                    if (Login(userName, passWord))
+                    {
+                        log.Info("Đăng nhập thành công! user: |" + userName + "| - vào ngày:");
+
+                        AccountDTO loginAccount = AccountDAO.Instance.GetAccountByUserName(userName);
+                        progress_bar_Form R = new progress_bar_Form(loginAccount);
+                        this.Hide();
+                        R.UserN = txtUser.Text;
+                        R.ShowDialog();
+                        this.Show();
+
+                    }
+                    else
+                    {
+                        var a = new Nudge(this);
+                        a.NudgeMe();
+                        MessageBox.Show("Sai tên tài khoản hoặc mật khẩu", "Thông báo");
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    log.Error(ex.Message);
 
                 }
-                else
-                {
-                    var a = new Nudge(this);
-                    a.NudgeMe();
-                    MessageBox.Show("Sai tên tài khoản hoặc mật khẩu", "Thông báo");
 
-                }
             }
-            catch(Exception ex)
+            catch (Exception)
             {
-                log.Error(ex.Message);
-      
+                Connection f = new Connection();
+                f.Show();
             }
+           
         }
 
         private void btnExit_Click(object sender, EventArgs e)

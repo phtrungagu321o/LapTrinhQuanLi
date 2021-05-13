@@ -22,9 +22,10 @@ namespace ĐỒ_ÁN.DAO
         }
         private DataProvider() { }
 
-        private string connectionSTR = ConfigurationManager.ConnectionStrings["QL_Karaoke"].ConnectionString;
+        // private string connectionSTR = ConfigurationManager.ConnectionStrings["QUAN_Li_KARAOKE"].ConnectionString;
+        private string connectionSTR = ĐỒ_ÁN.Properties.Settings.Default.ConnectionStr;
 
-        
+
         public DataTable ExcuteQuery(String query, object[] parameter = null)
         {
             DataTable data = new DataTable();

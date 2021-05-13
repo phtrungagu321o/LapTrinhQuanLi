@@ -32,12 +32,12 @@ namespace ĐỒ_ÁN
             this.ac = new System.Windows.Forms.GroupBox();
             this.btnbackUp = new System.Windows.Forms.Button();
             this.btnBrowse1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBackup = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnReStore = new System.Windows.Forms.Button();
             this.btnBrowse2 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtRestore = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.rdBackup = new System.Windows.Forms.RadioButton();
             this.rbRestore = new System.Windows.Forms.RadioButton();
@@ -50,7 +50,7 @@ namespace ĐỒ_ÁN
             this.ac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ac.Controls.Add(this.btnbackUp);
             this.ac.Controls.Add(this.btnBrowse1);
-            this.ac.Controls.Add(this.textBox1);
+            this.ac.Controls.Add(this.txtBackup);
             this.ac.Controls.Add(this.label1);
             this.ac.Font = new System.Drawing.Font("UTM Neo Sans Intel", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ac.ForeColor = System.Drawing.Color.Gainsboro;
@@ -92,17 +92,17 @@ namespace ĐỒ_ÁN
             this.btnBrowse1.UseVisualStyleBackColor = true;
             this.btnBrowse1.Click += new System.EventHandler(this.btnBrowse1_Click);
             // 
-            // textBox1
+            // txtBackup
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtBackup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(110, 52);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(388, 30);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtBackup.Location = new System.Drawing.Point(110, 52);
+            this.txtBackup.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBackup.Multiline = true;
+            this.txtBackup.Name = "txtBackup";
+            this.txtBackup.Size = new System.Drawing.Size(388, 30);
+            this.txtBackup.TabIndex = 1;
+            this.txtBackup.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -120,7 +120,7 @@ namespace ĐỒ_ÁN
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.btnReStore);
             this.groupBox1.Controls.Add(this.btnBrowse2);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtRestore);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("UTM Neo Sans Intel", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Gainsboro;
@@ -162,17 +162,17 @@ namespace ĐỒ_ÁN
             this.btnBrowse2.UseVisualStyleBackColor = true;
             this.btnBrowse2.Click += new System.EventHandler(this.btnBrowse2_Click);
             // 
-            // textBox2
+            // txtRestore
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtRestore.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(110, 56);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(388, 30);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtRestore.Location = new System.Drawing.Point(110, 56);
+            this.txtRestore.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRestore.Multiline = true;
+            this.txtRestore.Name = "txtRestore";
+            this.txtRestore.Size = new System.Drawing.Size(388, 30);
+            this.txtRestore.TabIndex = 1;
+            this.txtRestore.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label2
             // 
@@ -244,12 +244,12 @@ namespace ĐỒ_ÁN
         private System.Windows.Forms.GroupBox ac;
         private System.Windows.Forms.Button btnbackUp;
         private System.Windows.Forms.Button btnBrowse1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBackup;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnReStore;
         private System.Windows.Forms.Button btnBrowse2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtRestore;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RadioButton rdBackup;
         private System.Windows.Forms.RadioButton rbRestore;

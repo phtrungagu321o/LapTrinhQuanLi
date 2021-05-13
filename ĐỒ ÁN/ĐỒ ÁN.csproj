@@ -205,9 +205,11 @@
     <Compile Include="DTO\AccountDTO.cs" />
     <Compile Include="DTO\BillDTO.cs" />
     <Compile Include="DTO\BillInfoDTO.cs" />
-    <Compile Include="DTO\ConditionsBuild.cs" />
+    <Compile Include="DTO\ConditionsBuildDTO.cs" />
     <Compile Include="DTO\MenuPriceOldDTO.cs" />
     <Compile Include="DTO\MenuServicebyCategoryDTO.cs" />
+    <Compile Include="DTO\PositionDTO.cs" />
+    <Compile Include="DTO\PositionOfAccountDTOcs.cs" />
     <Compile Include="DTO\RoomCategoryDTO.cs" />
     <Compile Include="DTO\ServiceCategoryDTO.cs" />
     <Compile Include="DTO\ServiceDTO.cs" />
@@ -234,6 +236,12 @@
     </Compile>
     <Compile Include="GUI\AdvancedSearch.Designer.cs">
       <DependentUpon>AdvancedSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Connection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Connection.Designer.cs">
+      <DependentUpon>Connection.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Help.cs">
       <SubType>Form</SubType>
@@ -350,6 +358,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\AdvancedSearch.resx">
       <DependentUpon>AdvancedSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Connection.resx">
+      <DependentUpon>Connection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Help.resx">
       <DependentUpon>Help.cs</DependentUpon>
@@ -555,6 +566,7 @@
     <None Include="Resources\loginafter.png" />
     <None Include="Resources\kisspng-vector-graphics-stock-photography-illustration-log-5d0e5ca6e6aeb7.2806614415612223109449.png" />
     <None Include="Resources\19.05.21 - Logo don-02.png" />
+    <None Include="Resources\AnhLogo.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

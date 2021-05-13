@@ -14,13 +14,18 @@ namespace ĐỒ_ÁN.GUI
 {
     public partial class AdvancedSearch : Form
     {
+        private string query;
+      
         public AdvancedSearch()
         {
             InitializeComponent();
-           
+            
         }
-        List<ConditionsBuild> listConditions = new List<ConditionsBuild>();
-       void loadSearchAdvanced(string query)
+        List<ConditionsBuildDTO> listConditions = new List<ConditionsBuildDTO>();
+
+        public string Query { get => query; set => query = value; }
+
+        void loadSearchAdvanced(string query)
         {
             this.dgvSearchAdvanced.DataSource = ServiceDAO.Instance.GetlistSearchService(query);
         }
@@ -33,7 +38,7 @@ namespace ĐỒ_ÁN.GUI
             string operation = cbbOperator.Text;
             string inputsearching = txtInputSearchString.Text;
             
-            foreach (ConditionsBuild item in listConditions)
+            foreach (ConditionsBuildDTO item in listConditions)
             {
                 
                  result += item.Condition(item.orAnd, item.Field, item.Operator, item.InputSearching);
@@ -42,12 +47,15 @@ namespace ĐỒ_ÁN.GUI
             MessageBox.Show("" + result);
             loadSearchAdvanced(result);
             btnRemoveCondition.Enabled = false;
+            Query = result;
+           
         }
+       
 
         private void AdvancedSearch_Load(object sender, EventArgs e)
         {
 
-            var listQueryBinding = new BindingList<ConditionsBuild>(listConditions);
+            var listQueryBinding = new BindingList<ConditionsBuildDTO>(listConditions);
             this.dgvSearchAdvanced.DataSource = listQueryBinding;
         }
 
@@ -63,10 +71,10 @@ namespace ĐỒ_ÁN.GUI
                 MessageBox.Show("Vui lòng điền vào chỗ còn trống");
                 return;
             }    
-            ConditionsBuild AddCondition = new ConditionsBuild(orAnd, field, operation, inputsearching);
+            ConditionsBuildDTO AddCondition = new ConditionsBuildDTO(orAnd, field, operation, inputsearching);
             listConditions.Add(AddCondition);
 
-            var listQueryBinding = new BindingList<ConditionsBuild>(listConditions);
+            var listQueryBinding = new BindingList<ConditionsBuildDTO>(listConditions);
             this.dgvSearchAdvanced.DataSource = listQueryBinding;
 
             AdvancedSearch_Load(sender, e);

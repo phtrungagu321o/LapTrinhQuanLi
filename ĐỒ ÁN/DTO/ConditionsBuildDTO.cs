@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ĐỒ_ÁN.DTO
 {
-    public class ConditionsBuild
+    public class ConditionsBuildDTO
     {
-        public ConditionsBuild(string _orAND, string _Field, string _operator, string _inputsearching)
+        public ConditionsBuildDTO(string _orAND, string _Field, string _operator, string _inputsearching)
         {
             this.orAnd = _orAND;
             this.Field = _Field;

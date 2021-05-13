@@ -109,7 +109,7 @@ namespace ĐỒ_ÁN.DAO
 
         public DataTable GetlistAccount()
         {
-            return DataProvider.Instance.ExcuteQuery("SELECT UserName,Displayname,type FROM dbo.Account");
+            return DataProvider.Instance.ExcuteQuery("select a.UserName,a.Displayname,a.type,p.NamePosition from Account a, PositionType p where a.type=p.id");
         }
         public AccountDTO GetAccountByUserName(string username)
         {
@@ -131,6 +131,27 @@ namespace ĐỒ_ÁN.DAO
                 list.Add(account);
             }
             return list;
+        }
+        public List<PositionDTO> GetListPosition()
+        {
+            List<PositionDTO> ListCategory = new List<PositionDTO>();
+            string query = "select *from PositionType";
+            DataTable data = DataProvider.Instance.ExcuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                PositionDTO FoodCategory = new PositionDTO(item);
+                ListCategory.Add(FoodCategory);
+            }
+            return ListCategory;
+        }
+        public PositionDTO GetPositionByID(int id)
+        {
+            DataTable data = DataProvider.Instance.ExcuteQuery("select *from PositionType where id="+id+" ");
+            foreach (DataRow item in data.Rows)
+            {
+                return new PositionDTO(item);
+            }
+            return null;
         }
         public bool InsertAccount(string username,string displayname,int type)
         {

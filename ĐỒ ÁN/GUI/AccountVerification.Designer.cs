@@ -166,7 +166,7 @@ namespace ĐỒ_ÁN.GUI
             this.txtReEnterPass.BackColor = System.Drawing.Color.White;
             this.txtReEnterPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtReEnterPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReEnterPass.Location = new System.Drawing.Point(4, 126);
+            this.txtReEnterPass.Location = new System.Drawing.Point(31, 124);
             this.txtReEnterPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtReEnterPass.Name = "txtReEnterPass";
             this.txtReEnterPass.PasswordChar = '*';
@@ -175,8 +175,10 @@ namespace ĐỒ_ÁN.GUI
             // 
             // iconButtonVerification
             // 
+            this.iconButtonVerification.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.iconButtonVerification.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButtonVerification.Font = new System.Drawing.Font("UTM Cooper Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButtonVerification.ForeColor = System.Drawing.Color.Black;
+            this.iconButtonVerification.ForeColor = System.Drawing.Color.Gainsboro;
             this.iconButtonVerification.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButtonVerification.IconColor = System.Drawing.Color.Black;
             this.iconButtonVerification.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -196,7 +198,7 @@ namespace ĐỒ_ÁN.GUI
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(1, 104);
+            this.label1.Location = new System.Drawing.Point(28, 102);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 16);
@@ -211,7 +213,7 @@ namespace ĐỒ_ÁN.GUI
             this.txtPassWord.BackColor = System.Drawing.Color.White;
             this.txtPassWord.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassWord.Location = new System.Drawing.Point(4, 87);
+            this.txtPassWord.Location = new System.Drawing.Point(31, 85);
             this.txtPassWord.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassWord.Name = "txtPassWord";
             this.txtPassWord.PasswordChar = '*';
@@ -226,7 +228,7 @@ namespace ĐỒ_ÁN.GUI
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label3.Location = new System.Drawing.Point(4, 67);
+            this.label3.Location = new System.Drawing.Point(31, 65);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 16);
@@ -238,7 +240,7 @@ namespace ĐỒ_ÁN.GUI
             this.labeltime.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labeltime.AutoSize = true;
             this.labeltime.Font = new System.Drawing.Font("UTM Cooper Black", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labeltime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
+            this.labeltime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.labeltime.Location = new System.Drawing.Point(61, 3);
             this.labeltime.Name = "labeltime";
             this.labeltime.Size = new System.Drawing.Size(280, 40);

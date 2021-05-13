@@ -31,6 +31,8 @@ namespace ĐỒ_ÁN.GUI
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.uSPGetListBillByDateForReportBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetB = new ĐỒ_ÁN.dataSetB();
             this.uSPGetListBillByDateForReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dBSearchForCBBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dBSearchForCBB = new ĐỒ_ÁN.DBSearchForCBB();
@@ -38,16 +40,33 @@ namespace ĐỒ_ÁN.GUI
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.cbbSearchService = new System.Windows.Forms.ComboBox();
-            this.uSP_GetListBillByDateForReportTableAdapter1 = new ĐỒ_ÁN.DBSearchForCBBTableAdapters.USP_GetListBillByDateForReportTableAdapter();
             this.uSPGetListBillByDateForReportBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dBSearchForCBBBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.uSP_GetListBillByDateForReportTableAdapter1 = new ĐỒ_ÁN.DBSearchForCBBTableAdapters.USP_GetListBillByDateForReportTableAdapter();
+            this.uSP_GetListBillByDateForReportTableAdapter = new ĐỒ_ÁN.dataSetBTableAdapters.USP_GetListBillByDateForReportTableAdapter();
+            this.uSPGetListBillByDateForReportBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.uSPGetListBillByDateForReportBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.uSPGetListBillByDateForReportBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSPGetListBillByDateForReportBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBSearchForCBBBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBSearchForCBB)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uSPGetListBillByDateForReportBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBSearchForCBBBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSPGetListBillByDateForReportBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSPGetListBillByDateForReportBindingSource4)).BeginInit();
             this.SuspendLayout();
+            // 
+            // uSPGetListBillByDateForReportBindingSource1
+            // 
+            this.uSPGetListBillByDateForReportBindingSource1.DataMember = "USP_GetListBillByDateForReport";
+            this.uSPGetListBillByDateForReportBindingSource1.DataSource = this.dataSetB;
+            // 
+            // dataSetB
+            // 
+            this.dataSetB.DataSetName = "dataSetB";
+            this.dataSetB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // uSPGetListBillByDateForReportBindingSource
             // 
@@ -68,13 +87,13 @@ namespace ĐỒ_ÁN.GUI
             // 
             this.reportViewerBill.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSetB";
-            reportDataSource1.Value = this.uSPGetListBillByDateForReportBindingSource;
+            reportDataSource1.Value = this.uSPGetListBillByDateForReportBindingSource4;
             this.reportViewerBill.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewerBill.LocalReport.ReportEmbeddedResource = "ĐỒ_ÁN.Report.ReportB.rdlc";
             this.reportViewerBill.Location = new System.Drawing.Point(0, 100);
             this.reportViewerBill.Name = "reportViewerBill";
             this.reportViewerBill.ServerReport.BearerToken = null;
-            this.reportViewerBill.Size = new System.Drawing.Size(1096, 350);
+            this.reportViewerBill.Size = new System.Drawing.Size(829, 293);
             this.reportViewerBill.TabIndex = 0;
             // 
             // panel1
@@ -84,7 +103,7 @@ namespace ĐỒ_ÁN.GUI
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1096, 100);
+            this.panel1.Size = new System.Drawing.Size(829, 100);
             this.panel1.TabIndex = 1;
             // 
             // button1
@@ -109,22 +128,40 @@ namespace ĐỒ_ÁN.GUI
             // 
             this.uSP_GetListBillByDateForReportTableAdapter1.ClearBeforeFill = true;
             // 
+            // uSP_GetListBillByDateForReportTableAdapter
+            // 
+            this.uSP_GetListBillByDateForReportTableAdapter.ClearBeforeFill = true;
+            // 
+            // uSPGetListBillByDateForReportBindingSource3
+            // 
+            this.uSPGetListBillByDateForReportBindingSource3.DataMember = "USP_GetListBillByDateForReport";
+            this.uSPGetListBillByDateForReportBindingSource3.DataSource = this.dBSearchForCBB;
+            // 
+            // uSPGetListBillByDateForReportBindingSource4
+            // 
+            this.uSPGetListBillByDateForReportBindingSource4.DataMember = "USP_GetListBillByDateForReport";
+            this.uSPGetListBillByDateForReportBindingSource4.DataSource = this.dBSearchForCBB;
+            // 
             // ReportB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1096, 450);
+            this.ClientSize = new System.Drawing.Size(829, 393);
             this.Controls.Add(this.reportViewerBill);
             this.Controls.Add(this.panel1);
             this.Name = "ReportB";
             this.Text = "ReportB";
             this.Load += new System.EventHandler(this.ReportB_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.uSPGetListBillByDateForReportBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSPGetListBillByDateForReportBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBSearchForCBBBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBSearchForCBB)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.uSPGetListBillByDateForReportBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBSearchForCBBBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSPGetListBillByDateForReportBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSPGetListBillByDateForReportBindingSource4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -141,5 +178,10 @@ namespace ĐỒ_ÁN.GUI
         private System.Windows.Forms.BindingSource uSPGetListBillByDateForReportBindingSource;
         private System.Windows.Forms.BindingSource dBSearchForCBBBindingSource;
         private DBSearchForCBB dBSearchForCBB;
+        private System.Windows.Forms.BindingSource uSPGetListBillByDateForReportBindingSource1;
+        private dataSetB dataSetB;
+        private dataSetBTableAdapters.USP_GetListBillByDateForReportTableAdapter uSP_GetListBillByDateForReportTableAdapter;
+        private System.Windows.Forms.BindingSource uSPGetListBillByDateForReportBindingSource3;
+        private System.Windows.Forms.BindingSource uSPGetListBillByDateForReportBindingSource4;
     }
 }

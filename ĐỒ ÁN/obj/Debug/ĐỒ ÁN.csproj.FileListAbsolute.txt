@@ -539,5 +539,6 @@ D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\bin\Debug\log4net.dll
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\bin\Debug\log4net.xml
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.GUI.statistical.resources
-D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ ÁN.csprojAssemblyReference.cache
 D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.GUI.AdvancedSearch.resources
+D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ_ÁN.GUI.Connection.resources
+D:\ĐỒ ÁN Lập trình quản lí\Quản lí phòng karaoke\Project\ĐỒ ÁN\obj\Debug\ĐỒ ÁN.csprojAssemblyReference.cache

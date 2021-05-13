@@ -42,7 +42,7 @@ namespace ĐỒ_ÁN.GUI
             InitializeComponent();
             customizeDesigning();
             this.loginAccount = acc;
-            ChangeAccount(loginAccount.Type);
+            ChangeAccount();
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
@@ -53,9 +53,17 @@ namespace ĐỒ_ÁN.GUI
             
             
         }
-       void ChangeAccount(int type)
+       void ChangeAccount()
         {
-            iconButtonAdmin.Enabled = type == 1;
+            switch(loginAccount.Type)
+            {
+                case 1:
+                     iconButtonAdmin.Enabled = false;
+                    break;
+                default:
+                    break;
+            }    
+           
 
             iconButtonProfile.Text += "\n (" + loginAccount.DisPlayName + ")";
         }
@@ -261,7 +269,8 @@ namespace ĐỒ_ÁN.GUI
         {
             hideSubMenu();
             ActivateButton(sender, RGBColors.color1);
-            Admin a = new Admin();
+            AccountDTO login = AccountDAO.Instance.GetAccountByUserName(loginAccount.UserName);
+            Admin a = new Admin(login);
             log.Info("User: |" + loginAccount.UserName + "| đã xem dữ liệu vào ngày: ");
             OpenChildForm(a);
             a.LoginAccount = loginAccount;
@@ -440,12 +449,12 @@ namespace ĐỒ_ÁN.GUI
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             
-                if (loginAccount.Type == 0)
+                if (loginAccount.Type == 1)
                 {
                     MessageBox.Show("Admin mới có thể sử dụng quyền hạn này!", "Thông báo");
+                        return;
                 }
-                else
-                {
+               
                     ActivateLinkLable(sender, RGBColors.color1);
                     hideSubMenu();
                     AccountDTO account = AccountDAO.Instance.GetAccountByUserName(loginAccount.UserName);
@@ -454,11 +463,12 @@ namespace ĐỒ_ÁN.GUI
 
                 if (f.TestVerification == 1)
                 {
-                    BackUpAndRestoreData fB = new BackUpAndRestoreData();
+                    AccountDTO login = AccountDAO.Instance.GetAccountByUserName(loginAccount.UserName);
+                    BackUpAndRestoreData fB = new BackUpAndRestoreData(login);
                     OpenChildForm(fB);
                 }
                     
-                }
+                
          
             
         }

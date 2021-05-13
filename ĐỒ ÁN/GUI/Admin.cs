@@ -27,10 +27,10 @@ namespace ĐỒ_ÁN
 
         public AccountDTO LoginAccount { get => loginAccount; set => loginAccount = value; }
 
-        public Admin()
+        public Admin(AccountDTO acc)
         {
             InitializeComponent();
-
+            this.loginAccount = acc;
             dgvService.DataSource = Servicelist;
             dgvRoom.DataSource = RoomList;
             dgvServiceCategory.DataSource = ServiceCategoryList;
@@ -38,9 +38,11 @@ namespace ĐỒ_ÁN
             dgvAccount.DataSource = AccountList;
           
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            customizeDesigning();
             LoadLitsBillByDate(dtpFromTime.Value, dtpToTime.Value);
             loadlist();
             AddBinding();
+            LoadServiceCategory();
             LoadCategory();
 
             LoadWaterMark();
@@ -68,7 +70,7 @@ namespace ĐỒ_ÁN
             if (txtSearchServiceName.Text == "Vui lòng nhập tên dịch vụ cần tìm")
             {
                 txtSearchServiceName.Text = "";
-                txtSearchServiceName.ForeColor = Color.Black;
+                txtSearchServiceName.ForeColor = Color.Gainsboro;
                 txtSearchServiceName.Font = new Font(txtSearchServiceName.Font.Name, txtSearchServiceName.Font.Size, FontStyle.Bold);
             }
         }
@@ -106,6 +108,10 @@ namespace ĐỒ_ÁN
             LoadCategoryIntoComboBox(cbbServiceCategory);
             loadRoomcategoryIntoCBB(cbbRoomcategory);
             LoadCategoryIntoComboBox(cbbSearchServiceCategory);
+            loadPositionIntoCBB(cbbPosition);
+
+
+
         }
 
         List<MenuServicebyCategoryDTO> SearchNameService(string name)
@@ -119,6 +125,14 @@ namespace ĐỒ_ÁN
         List<MenuServicebyCategoryDTO> SearchNameServiceBycategory(string name)
         {
             List<MenuServicebyCategoryDTO> listService = ServiceDAO.Instance.SearchServiceByCategory(name);
+
+
+            return listService;
+
+        }
+        List<MenuServicebyCategoryDTO> SearchNameServiceBycategoryAndName(string nameS,string nameSC)
+        {
+            List<MenuServicebyCategoryDTO> listService = ServiceDAO.Instance.SearchServiceByNameAndCategory(nameS, nameSC);
 
 
             return listService;
@@ -154,7 +168,13 @@ namespace ĐỒ_ÁN
         }
         void LoadListAccount()
         {
-            AccountList.DataSource = AccountDAO.Instance.GetlistAccount();
+           
+                AccountList.DataSource = AccountDAO.Instance.GetlistAccount();
+            
+        }
+        void loadSearchAdvanced(string query)
+        {
+            Servicelist.DataSource = ServiceDAO.Instance.GetlistSearchService(query);
         }
         void AddAccountBinding()
         {
@@ -196,7 +216,24 @@ namespace ĐỒ_ÁN
             cb.DataSource = RoomCategoryDAO.Instance.ListRoomCategory();
             cb.DisplayMember = "NameRoomCategory";
         }
-      
+        void loadPositionIntoCBB(ComboBox cb)
+        {
+            cb.DataSource = AccountDAO.Instance.GetListPosition();
+            cb.DisplayMember = "NamePosition";
+        }
+        void LoadServiceCategory()
+        {
+            List<ServiceCategoryDTO> listCategory = ServiceCategoryDAO.Instance.GetListCategory();
+            cbbSearchSC.DataSource = listCategory;
+            cbbSearchSC.DisplayMember = "name";
+        }
+        void LoadServiceListByCategoryID(int id)
+        {
+            List<ServiceDTO> listFood = ServiceDAO.Instance.GetListServiceByCategory(id);
+            cbbSearchS.DataSource = listFood;
+            cbbSearchS.DisplayMember = "name";
+        }
+
 
         private void tp_Click(object sender, EventArgs e)
         {
@@ -283,6 +320,11 @@ namespace ĐỒ_ÁN
         }
         private void btnAddServiceCategory_Click(object sender, EventArgs e)
         {
+            if (loginAccount.Type == 3)
+            {
+                MessageBox.Show("Bạn không có quyền thay đổi dữ liệu!", "Thông báo");
+                return;
+            }
             string name = txtNameServiceCategory.Text;
             DialogResult t;
             t = MessageBox.Show(string.Format("Bạn có muốn Thêm Loại {0} không ?", name), "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -307,6 +349,11 @@ namespace ĐỒ_ÁN
         }
         private void btnDeleteServicecategory_Click(object sender, EventArgs e)
         {
+            if (loginAccount.Type == 3)
+            {
+                MessageBox.Show("Bạn không có quyền thay đổi dữ liệu!", "Thông báo");
+                return;
+            }
             string name = txtNameServiceCategory.Text;
             int id = Convert.ToInt32(txtIDServiceCategory.Text);
             if (id == 24)
@@ -338,6 +385,11 @@ namespace ĐỒ_ÁN
         }
         private void btnUpdateServiceCategory_Click(object sender, EventArgs e)
         {
+            if (loginAccount.Type == 3)
+            {
+                MessageBox.Show("Bạn không có quyền thay đổi dữ liệu!", "Thông báo");
+                return;
+            }
             string name = txtNameServiceCategory.Text;
             int id = Convert.ToInt32(txtIDServiceCategory.Text);
             if (id == 24)
@@ -375,6 +427,11 @@ namespace ĐỒ_ÁN
 
         private void btnAddFood_Click(object sender, EventArgs e)
         {
+            if(loginAccount.Type==3)
+            {
+                MessageBox.Show("Bạn không có quyền thay đổi dữ liệu!","Thông báo");
+                return;
+            }    
             string name = txtServiceName.Text;
             int categoryID = (cbbServiceCategory.SelectedItem as ServiceCategoryDTO).ID;
             float price = (float)nudPrice.Value;
@@ -399,6 +456,11 @@ namespace ĐỒ_ÁN
 
         private void btnUpdateFood_Click(object sender, EventArgs e)
         {
+            if (loginAccount.Type == 3)
+            {
+                MessageBox.Show("Bạn không có quyền thay đổi dữ liệu!", "Thông báo");
+                return;
+            }
             string name = txtServiceName.Text;
             int categoryID = (cbbServiceCategory.SelectedItem as ServiceCategoryDTO).ID;
             if (dgvService.SelectedCells.Count > 0 && dgvService.SelectedCells[0].OwningRow.Cells["idCategory"].Value != null)
@@ -454,6 +516,11 @@ namespace ĐỒ_ÁN
 
         private void btnDeleteFood_Click(object sender, EventArgs e)
         {
+            if (loginAccount.Type == 3)
+            {
+                MessageBox.Show("Bạn không có quyền thay đổi dữ liệu!", "Thông báo");
+                return;
+            }
             int id = Convert.ToInt32(txtServiceID.Text);
             string name = txtServiceName.Text;
             if (id == 50)
@@ -476,7 +543,7 @@ namespace ĐỒ_ÁN
                 }
             }
         }
-
+        
         private event EventHandler insertService;
         public event EventHandler InsertService
         {
@@ -570,6 +637,11 @@ namespace ĐỒ_ÁN
 
         private void btnAddRoom_Click(object sender, EventArgs e)
         {
+            if (loginAccount.Type == 2)
+            {
+                MessageBox.Show("Bạn không có quyền thay đổi dữ liệu!", "Thông báo");
+                return;
+            }
             try
             {
                 string name = txtRoomName.Text;
@@ -602,6 +674,11 @@ namespace ĐỒ_ÁN
 
         private void btnDeleteRoom_Click(object sender, EventArgs e)
         {
+            if (loginAccount.Type == 2)
+            {
+                MessageBox.Show("Bạn không có quyền thay đổi dữ liệu!", "Thông báo");
+                return;
+            }
             try
             {
                 int id = Convert.ToInt32(txtRoomID.Text);
@@ -634,6 +711,11 @@ namespace ĐỒ_ÁN
 
         private void btnUpdateRoom_Click(object sender, EventArgs e)
         {
+            if (loginAccount.Type == 2)
+            {
+                MessageBox.Show("Bạn không có quyền thay đổi dữ liệu!", "Thông báo");
+                return;
+            }
             try
             {
                 string name = txtRoomName.Text;
@@ -689,6 +771,11 @@ namespace ĐỒ_ÁN
 
         private void btnAddRoomCategory_Click(object sender, EventArgs e)
         {
+            if (loginAccount.Type == 2)
+            {
+                MessageBox.Show("Bạn không có quyền thay đổi dữ liệu!", "Thông báo");
+                return;
+            }
             int id = Convert.ToInt32(txtIDRoomCategory.Text);
             string name = txtNameRoomCategory.Text;
             float price = (float)nudTime.Value;
@@ -717,6 +804,11 @@ namespace ĐỒ_ÁN
 
         private void btnUpdateRoomCategory_Click(object sender, EventArgs e)
         {
+            if (loginAccount.Type == 2)
+            {
+                MessageBox.Show("Bạn không có quyền thay đổi dữ liệu!", "Thông báo");
+                return;
+            }
             int id = Convert.ToInt32(txtIDRoomCategory.Text);
             string name = txtNameRoomCategory.Text;
             float price = (float)nudTime.Value;
@@ -753,6 +845,11 @@ namespace ĐỒ_ÁN
 
         private void btnDeleteRoomCategory_Click(object sender, EventArgs e)
         {
+            if (loginAccount.Type == 2)
+            {
+                MessageBox.Show("Bạn không có quyền thay đổi dữ liệu!", "Thông báo");
+                return;
+            }
             int id = Convert.ToInt32(txtIDRoomCategory.Text);
             string name = txtNameRoomCategory.Text;
             float price = (float)nudTime.Value;
@@ -784,111 +881,168 @@ namespace ĐỒ_ÁN
 
         private void btnAddAccount_Click(object sender, EventArgs e)
         {
-            string user=txtAccountUser.Text;
-            string displayname = txtAccountDislayName.Text;
-            int type =(int)nmrAccountType.Value;
-            DialogResult t;
-            t = MessageBox.Show(string.Format("Bạn có muốn Thêm tài khoản {0} không ?", user), "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (t == DialogResult.Yes)
+            if (loginAccount.Type == 4)
             {
-                List<AccountDTO> list = AccountDAO.Instance.GetAccount();
-                foreach (AccountDTO item in list)
+                string user = txtAccountUser.Text;
+                string displayname = txtAccountDislayName.Text;
+                int id = (cbbPosition.SelectedItem as PositionDTO).ID;
+                // int type =(int)nmrAccountType.Value;
+                DialogResult t;
+                t = MessageBox.Show(string.Format("Bạn có muốn Thêm tài khoản {0} không ?", user), "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (t == DialogResult.Yes)
                 {
-                    if (user == item.UserName)
+                    List<AccountDTO> list = AccountDAO.Instance.GetAccount();
+                    foreach (AccountDTO item in list)
                     {
-                        MessageBox.Show("Tài khoản đã tồn tại");
-                        return;
+                        if (user == item.UserName)
+                        {
+                            MessageBox.Show("Tài khoản đã tồn tại");
+                            return;
+                        }
+                    }
+                    if (AccountDAO.Instance.InsertAccount(user, displayname, id))
+                    {
+                        MessageBox.Show("Thêm Tài Khoản thành công");
+                        LoadListAccount();
+                        log.Info("Đã Thêm thông tin tài khoản: |" + user + "| thành công! user: |" + loginAccount.UserName + "| - vào ngày:");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm Tài Khoản thất bại");
                     }
                 }
-                if (AccountDAO.Instance.InsertAccount(user, displayname, type))
-                {
-                    MessageBox.Show("Thêm Tài Khoản thành công");
-                    LoadListAccount();
-                    log.Info("Đã Thêm thông tin tài khoản: |" + user + "| thành công! user: |" + loginAccount.UserName + "| - vào ngày:");
-                }
-                else
-                {
-                    MessageBox.Show("Thêm Tài Khoản thất bại");
-                }
+            }
+            else
+            {
+                
+                    MessageBox.Show("Bạn không có quyền thay đổi dữ liệu!", "Thông báo");
+                    return;
+                
             }
         }
 
         private void btnDeleteAccount_Click(object sender, EventArgs e)
         {
-            string user = txtAccountUser.Text;
-            DialogResult t;
-            t = MessageBox.Show(string.Format("Bạn có muốn Xóa tài khoản {0} không ?", user), "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (t == DialogResult.Yes)
+            if (loginAccount.Type == 4)
             {
-                if (LoginAccount.UserName.Equals(user))
+                string user = txtAccountUser.Text;
+                DialogResult t;
+                t = MessageBox.Show(string.Format("Bạn có muốn Xóa tài khoản {0} không ?", user), "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (t == DialogResult.Yes)
                 {
-                    MessageBox.Show("Tài Khoản đang chạy");
-                    return;
+                    if (LoginAccount.UserName.Equals(user))
+                    {
+                        MessageBox.Show("Tài Khoản đang chạy");
+                        return;
+                    }
+                    if (AccountDAO.Instance.DeleteAccount(user))
+                    {
+                        MessageBox.Show("Xóa Tài Khoản thành công");
+                        LoadListAccount();
+                        log.Info("Đã Xóa thông tin tài khoản: |" + user + "| thành công! user: |" + loginAccount.UserName + "| - ngày:");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa Tài Khoản thất bại");
+                    }
                 }
-                if (AccountDAO.Instance.DeleteAccount(user))
-                {
-                    MessageBox.Show("Xóa Tài Khoản thành công");
-                    LoadListAccount();
-                    log.Info("Đã Xóa thông tin tài khoản: |" + user + "| thành công! user: |" + loginAccount.UserName + "| - ngày:");
-                }
-                else
-                {
-                    MessageBox.Show("Xóa Tài Khoản thất bại");
-                }
+            }
+            else
+            {
+
+                MessageBox.Show("Bạn không có quyền thay đổi dữ liệu!", "Thông báo");
+                return;
+
             }
         }
 
         private void btnUpdateAccount_Click(object sender, EventArgs e)
         {
-            string user = txtAccountUser.Text;
-            string displayname = txtAccountDislayName.Text;
-            int type = (int)nmrAccountType.Value;
-            DialogResult t;
-            t = MessageBox.Show(string.Format("Bạn có muốn Sửa Tài Khoản này không ?"), "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (t == DialogResult.Yes)
+            if (loginAccount.Type == 4)
             {
-                AccountDTO listAccount = AccountDAO.Instance.GetAccountByUserName(user);
-                if (!user.Equals(listAccount.UserName))
+                string user = txtAccountUser.Text;
+                string displayname = txtAccountDislayName.Text;
+                int id = (cbbPosition.SelectedItem as PositionDTO).ID;
+                string position = cbbPosition.Text;
+                // int type = (int)nmrAccountType.Value;
+                DialogResult t;
+                t = MessageBox.Show(string.Format("Bạn có muốn Sửa thông tin Tài Khoản này không ?"), "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (t == DialogResult.Yes)
                 {
-                    log.Info("Đã Sửa thông tin |" + listAccount.UserName + "| (" + "Tên Tài khoản: |" + listAccount.UserName + "| -> |" + user + "| ) Thành công! user: |" + loginAccount.UserName + "| -  vào ngày:");
-                }
-                if (!displayname.Equals(listAccount.DisPlayName))
-                {
-                    log.Info("Đã Sửa thông tin |" + listAccount.UserName + "| (" + "Tên hiển thị: |" + listAccount.DisPlayName + "| -> |" + displayname + " ) Thành công! user: |" + loginAccount.UserName + "| - vào ngày:");
-                }
-                if (!type.Equals(listAccount.Type))
-                {
-                    log.Info("Đã Sửa thông tin |" + listAccount.UserName + "| (" + "Chức vụ: |" + listAccount.Type + "| -> |" + type + "| ) Thành công! user: |" + loginAccount.UserName + "| - vào ngày:");
-                }
-                if (AccountDAO.Instance.UpdateAccount(user, displayname, type))
-                {
-                    MessageBox.Show("Cập nhập Tài Khoản thành công");
-                    LoadListAccount();
+                    if (dgvAccount.SelectedCells.Count > 0 && dgvAccount.SelectedCells[0].OwningRow.Cells["UserName"].Value != null)
+                    {
+                        string userN = dgvAccount.SelectedCells[0].OwningRow.Cells["UserName"].Value.ToString();
+                        if (!user.Equals(userN))
+                        {
+                            MessageBox.Show("Không được sửa tài khoản!!", "Thông báo");
+                            return;
+                        }
+                        {
 
-                }
-                else
-                {
-                    MessageBox.Show("Không được sửa tài khoản");
+                        }
+                        if (dgvAccount.SelectedCells.Count > 0 && dgvAccount.SelectedCells[0].OwningRow.Cells["NamePosition"].Value != null)
+                        {
+                            string PositionN = dgvAccount.SelectedCells[0].OwningRow.Cells["NamePosition"].Value.ToString();
+                            AccountDTO listAccount = AccountDAO.Instance.GetAccountByUserName(user);
+
+
+                            if (!displayname.Equals(listAccount.DisPlayName))
+                            {
+                                log.Info("Đã Sửa thông tin |" + listAccount.UserName + "| (" + "Tên hiển thị: |" + listAccount.DisPlayName + "| -> |" + displayname + " ) Thành công! user: |" + loginAccount.UserName + "| - vào ngày:");
+                            }
+                            if (!id.Equals(listAccount.Type))
+                            {
+                                log.Info("Đã Sửa thông tin |" + listAccount.UserName + "| (" + "Chức vụ: |" + PositionN + "| -> |" + position + "| ) Thành công! user: |" + loginAccount.UserName + "| - vào ngày:");
+                            }
+                            if (AccountDAO.Instance.UpdateAccount(user, displayname, id))
+                            {
+                                MessageBox.Show("Cập nhập Tài Khoản thành công");
+                                LoadListAccount();
+
+                            }
+                            else
+                            {
+                                MessageBox.Show("Không được sửa tài khoản");
+                            }
+                        }
+                    }
                 }
             }
-        }
+            else
+            {
+
+                MessageBox.Show("Bạn không có quyền thay đổi dữ liệu!", "Thông báo");
+                return;
+
+            }
+            }
 
         private void btnResetPassWord_Click(object sender, EventArgs e)
         {
-            string user = txtAccountUser.Text;
-            DialogResult t;
-            t = MessageBox.Show(string.Format("Bạn có muốn đặt lại mặt khẩu cho tài khoản {0} không ?", user), "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (t == DialogResult.Yes)
+            if (loginAccount.Type == 4)
             {
-                if (AccountDAO.Instance.ResetPassWord(user))
+                string user = txtAccountUser.Text;
+                DialogResult t;
+                t = MessageBox.Show(string.Format("Bạn có muốn đặt lại mặt khẩu cho tài khoản {0} không ?", user), "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (t == DialogResult.Yes)
                 {
-                    MessageBox.Show("Đặt lại mật khẩu thành công");
-                    log.Info("Đã đặt lại mật khẩu cho user: |" + user + "| thành công! user: |" + loginAccount.UserName + "| - ngày:");
+                    if (AccountDAO.Instance.ResetPassWord(user))
+                    {
+                        MessageBox.Show("Đặt lại mật khẩu thành công");
+                        log.Info("Đã đặt lại mật khẩu cho user: |" + user + "| thành công! user: |" + loginAccount.UserName + "| - ngày:");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Đặt lại mật khẩu thất bại");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Đặt lại mật khẩu thất bại");
-                }
+            }
+            else
+            {
+
+                MessageBox.Show("Bạn không có quyền thay đổi dữ liệu!", "Thông báo");
+                return;
+
             }
         }
 
@@ -1011,8 +1165,135 @@ namespace ĐỒ_ÁN
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            if (loginAccount.Type == 3)
+            {
+                MessageBox.Show("Quyền đăng nhập của bạn không hỗ trợ tính năng này!", "Thông báo");
+                return;
+            }
+            string query = "";
+           
             AdvancedSearch f = new AdvancedSearch();
+            
             f.ShowDialog();
+            if (f.Query == null)
+                return;
+            query = f.Query;
+            // f.UpdateLoadDGV += F_UpdateLoadDGV;
+            this.loadSearchAdvanced(query);
+            
+        }
+
+        private void F_UpdateLoadDGV(object sender, EventArgs e)
+        {
+            
+           
+        }
+
+        private void cbbSearchSC_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int id = 0;
+            ComboBox cb = sender as ComboBox;
+
+            if (cb.SelectedItem == null)
+                return;
+
+            ServiceCategoryDTO selected = cb.SelectedItem as ServiceCategoryDTO;
+            id = selected.ID;
+
+            LoadServiceListByCategoryID(id);
+        }
+
+        private void btnSearchByCategoryAndName_Click(object sender, EventArgs e)
+        {
+            Servicelist.DataSource = SearchNameServiceBycategoryAndName(cbbSearchS.Text,cbbSearchSC.Text);
+        }
+        private void customizeDesigning()
+        {
+            pnSearchCategory.Visible = false;
+            pnSearchName.Visible = false;
+            pnSearchNameAndCateogry.Visible = false;
+        }
+
+        private void hideSubMenu()
+        {
+            if (pnSearchName.Visible == true)
+            {
+                pnSearchCategory.Visible = false;
+                pnSearchNameAndCateogry.Visible = false;
+            }
+            if (pnSearchCategory.Visible == true)
+            {
+                pnSearchName.Visible = false;
+                pnSearchNameAndCateogry.Visible = false;
+            }
+            if (pnSearchNameAndCateogry.Visible == true)
+            {
+                pnSearchName.Visible = false;
+                pnSearchCategory.Visible = false;
+            }
+        }
+        private void showSubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                hideSubMenu();
+                subMenu.Visible = true;
+            }
+            else
+            {
+                subMenu.Visible = false;
+            }
+        }
+        private void iconButtonSearchName_Click(object sender, EventArgs e)
+        {
+            showSubMenu(pnSearchName);
+        }
+
+        private void iconButtonSearchCategory_Click(object sender, EventArgs e)
+        {
+            showSubMenu(pnSearchCategory);
+        }
+
+        private void iconButtonSearchNameAndCategory_Click(object sender, EventArgs e)
+        {
+            showSubMenu(pnSearchNameAndCateogry);
+        }
+
+        private void metroTabControlRoom_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+         
+        }
+
+        private void txtAccountUser_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvAccount.SelectedCells.Count > 0 && dgvAccount.SelectedCells[0].OwningRow.Cells["Type"].Value != null)
+                {
+                    int id = (int)dgvAccount.SelectedCells[0].OwningRow.Cells["Type"].Value;//chọn ô đầu tiên trong danh sach category sau đó lấy cái dòng chưa ô đã chọn
+
+
+                    PositionDTO Position = AccountDAO.Instance.GetPositionByID(id);
+                    cbbPosition.SelectedItem = Position;
+                    int index = -1;
+                    int i = 0;
+                    foreach (PositionDTO item in cbbPosition.Items)
+                    {
+                        if (item.ID == Position.ID)
+                        {
+                            index = i;
+                            break;
+                        }
+                        i++;
+                    }
+                    cbbPosition.SelectedIndex = index;
+                }
+
+            }
+            catch
+            {
+
+            }
         }
     }
 }

@@ -74,7 +74,19 @@ namespace ĐỒ_ÁN.DAO
             }
             return list;
         }
-        
+        public List<MenuServicebyCategoryDTO> SearchServiceByNameAndCategory(string nameS,string nameSC)
+        {
+            List<MenuServicebyCategoryDTO> list = new List<MenuServicebyCategoryDTO>();
+            string query = string.Format("SELECT s.id,s.name,sc.name as NameCategory,sc.id as idCategory,s.price FROM dbo.Service as s, ServiceCategory as sc where s.idServiceCategory=sc.id and dbo.fuConvertToUnsign2(s.name) LIKE N'%' +dbo.fuConvertToUnsign2(N'{0}')+'%' AND dbo.fuConvertToUnsign2(sc.name) LIKE N'%' +dbo.fuConvertToUnsign2(N'{1}')+'%'", nameS,nameSC);
+            DataTable data = DataProvider.Instance.ExcuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                MenuServicebyCategoryDTO food = new MenuServicebyCategoryDTO(item);
+                list.Add(food);
+            }
+            return list;
+        }
+
         public List<MenuServicebyCategoryDTO> SearchServiceByCategory(string name)
         {
             List<MenuServicebyCategoryDTO> list = new List<MenuServicebyCategoryDTO>();

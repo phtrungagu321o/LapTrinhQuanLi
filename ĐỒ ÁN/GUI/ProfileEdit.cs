@@ -42,12 +42,21 @@ namespace ĐỒ_ÁN
             txtDisplayName.Text = loginAccount.DisPlayName;
             lblAccount.Text = loginAccount.UserName;
             lblDisplayName.Text = loginAccount.DisPlayName;
-            if (loginAccount.Type == 1)
+            switch (loginAccount.Type)
             {
-                lblPosition.Text = "Quản lí";
+                case 2:
+                    lblPosition.Text = "Quản lí dịch vụ";
+                    break;
+                case 3:
+                    lblPosition.Text = "Quản lí Phòng";
+                    break;
+                case 4:
+                    lblPosition.Text = "Tổng Quản lí";
+                    break;
+                default:
+                    lblPosition.Text = "Nhân viên";
+                    break;
             }
-            else
-                lblPosition.Text = "Nhân viên";
         }
        
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]

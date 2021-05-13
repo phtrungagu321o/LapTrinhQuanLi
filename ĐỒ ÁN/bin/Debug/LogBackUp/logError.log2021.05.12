@@ -1,0 +1,7 @@
+ 2021-05-12 12:18:43,475 ERROR ĐỒ_ÁN.login - Column named UserName cannot be found.
+Parameter name: columnName 
+ 2021-05-12 12:52:32,354 ERROR ĐỒ_ÁN.login - Parameter is not valid. 
+ 2021-05-12 13:23:40,825 ERROR ĐỒ_ÁN.login - Cannot bind to the property or column Type on the DataSource.
+Parameter name: dataMember 
+ 2021-05-12 13:33:07,915 ERROR ĐỒ_ÁN.login - Cannot bind to the property or column Type on the DataSource.
+Parameter name: dataMember 

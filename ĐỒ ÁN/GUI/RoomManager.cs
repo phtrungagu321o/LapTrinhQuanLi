@@ -26,11 +26,14 @@ namespace ĐỒ_ÁN
         ILog log = LogManager.GetLogger(typeof(RoomManager));
         public string UserName { get => userName; set => userName = value; }
         private AccountDTO loginAccount;
+        public AccountDTO LoginAccount { get => loginAccount; set => loginAccount = value; }
+
+      
 
         public RoomManager(AccountDTO acc)
         {
             InitializeComponent();
-            this.loginAccount = acc;
+            this.LoginAccount = acc;
             LoadRoom();
             LoadServiceCategory();
             LoadComboBoxRoom(cbbSwitchRoom);
@@ -254,7 +257,8 @@ namespace ĐỒ_ÁN
         }
         void loadAdmin()
         {
-            Admin a = new Admin();
+            AccountDTO login = AccountDAO.Instance.GetAccountByUserName(loginAccount.UserName);
+            Admin a = new Admin(login);
            /* a.loginAccount = LoginAccount;*/
             a.InsertService += A_InsertService;
             a.UpdateService += A_UpdateService;
@@ -635,7 +639,8 @@ namespace ĐỒ_ÁN
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            Admin a = new Admin();
+            AccountDTO login = AccountDAO.Instance.GetAccountByUserName(loginAccount.UserName);
+            Admin a = new Admin(login);
            /* a.loginAccount = LoginAccount;*/
             a.InsertService += A_InsertService;
             a.UpdateService += A_UpdateService;
@@ -797,7 +802,7 @@ namespace ĐỒ_ÁN
             LoadRoom();
             ShowTimeBill(room.ID);
 
-            log.Info("Đã thêm món |" + service.Name + "| vào |" + Curentroom.Name + "| Thành công! user: |" + loginAccount.UserName+ "| - vào ngày: ");
+            log.Info("Đã thêm món |" + service.Name + "| vào |" + Curentroom.Name + "| Thành công! user: |" + LoginAccount.UserName+ "| - vào ngày: ");
         }
 
         private void timer1_Tick(object sender, EventArgs e)

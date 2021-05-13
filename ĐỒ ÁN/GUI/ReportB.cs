@@ -13,6 +13,8 @@ namespace ĐỒ_ÁN.GUI
 {
     public partial class ReportB : Form
     {
+    
+        
         private DateTime checkIn;
         private DateTime checkOut;
         public ReportB()
@@ -28,8 +30,10 @@ namespace ĐỒ_ÁN.GUI
             cb.DataSource = ServiceDAO.Instance.GetlistService();
             cb.DisplayMember = "name";
         }
+       
         private void ReportB_Load(object sender, EventArgs e)
         {
+           
             this.uSP_GetListBillByDateForReportTableAdapter1.Fill(this.dBSearchForCBB.USP_GetListBillByDateForReport,CheckIn,CheckOut," ");
             this.reportViewerBill.RefreshReport();
         }

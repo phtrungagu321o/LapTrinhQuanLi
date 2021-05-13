@@ -30,33 +30,53 @@ namespace ĐỒ_ÁN.GUI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dATASETReportService = new ĐỒ_ÁN.DATASETReportService();
+            this.uSPGetRoomByDateAndIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.datasetInfoRoom = new ĐỒ_ÁN.datasetInfoRoom();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.mtpStatisticalMD = new MetroFramework.Controls.MetroTabPage();
             this.reportViewerService = new Microsoft.Reporting.WinForms.ReportViewer();
             this.mtpStatisticalGroup = new MetroFramework.Controls.MetroTabPage();
             this.reportViewerRoom = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSearchService = new FontAwesome.Sharp.IconButton();
-            this.dATASETReportService = new ĐỒ_ÁN.DATASETReportService();
-            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataTable1TableAdapter = new ĐỒ_ÁN.DATASETReportServiceTableAdapters.DataTable1TableAdapter();
-            this.metroDateTimeFormRoom = new MetroFramework.Controls.MetroDateTime();
-            this.metroDateTimeToRoom = new MetroFramework.Controls.MetroDateTime();
             this.cbbSearchRoom = new MetroFramework.Controls.MetroComboBox();
-            this.datasetInfoRoom = new ĐỒ_ÁN.datasetInfoRoom();
-            this.uSPGetRoomByDateAndIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.metroDateTimeToRoom = new MetroFramework.Controls.MetroDateTime();
+            this.metroDateTimeFormRoom = new MetroFramework.Controls.MetroDateTime();
+            this.btnSearchService = new FontAwesome.Sharp.IconButton();
+            this.dataTable1TableAdapter = new ĐỒ_ÁN.DATASETReportServiceTableAdapters.DataTable1TableAdapter();
             this.uSP_GetRoomByDateAndIDTableAdapter = new ĐỒ_ÁN.datasetInfoRoomTableAdapters.USP_GetRoomByDateAndIDTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dATASETReportService)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSPGetRoomByDateAndIDBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datasetInfoRoom)).BeginInit();
             this.metroTabControl1.SuspendLayout();
             this.mtpStatisticalMD.SuspendLayout();
             this.mtpStatisticalGroup.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dATASETReportService)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datasetInfoRoom)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uSPGetRoomByDateAndIDBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dataTable1BindingSource
+            // 
+            this.dataTable1BindingSource.DataMember = "DataTable1";
+            this.dataTable1BindingSource.DataSource = this.dATASETReportService;
+            // 
+            // dATASETReportService
+            // 
+            this.dATASETReportService.DataSetName = "DATASETReportService";
+            this.dATASETReportService.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // uSPGetRoomByDateAndIDBindingSource
+            // 
+            this.uSPGetRoomByDateAndIDBindingSource.DataMember = "USP_GetRoomByDateAndID";
+            this.uSPGetRoomByDateAndIDBindingSource.DataSource = this.datasetInfoRoom;
+            // 
+            // datasetInfoRoom
+            // 
+            this.datasetInfoRoom.DataSetName = "datasetInfoRoom";
+            this.datasetInfoRoom.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // metroTabControl1
             // 
@@ -88,9 +108,9 @@ namespace ĐỒ_ÁN.GUI
             // reportViewerService
             // 
             this.reportViewerService.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource5.Name = "DataSetService";
-            reportDataSource5.Value = this.dataTable1BindingSource;
-            this.reportViewerService.LocalReport.DataSources.Add(reportDataSource5);
+            reportDataSource1.Name = "DataSetService";
+            reportDataSource1.Value = this.dataTable1BindingSource;
+            this.reportViewerService.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewerService.LocalReport.ReportEmbeddedResource = "ĐỒ_ÁN.Report.ReportService.rdlc";
             this.reportViewerService.Location = new System.Drawing.Point(0, 0);
             this.reportViewerService.Name = "reportViewerService";
@@ -117,9 +137,9 @@ namespace ĐỒ_ÁN.GUI
             // reportViewerRoom
             // 
             this.reportViewerRoom.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource4.Name = "DataSetInfoRoom";
-            reportDataSource4.Value = this.uSPGetRoomByDateAndIDBindingSource;
-            this.reportViewerRoom.LocalReport.DataSources.Add(reportDataSource4);
+            reportDataSource2.Name = "DataSetInfoRoom";
+            reportDataSource2.Value = this.uSPGetRoomByDateAndIDBindingSource;
+            this.reportViewerRoom.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewerRoom.LocalReport.ReportEmbeddedResource = "ĐỒ_ÁN.Report.ReportRoomInFo.rdlc";
             this.reportViewerRoom.Location = new System.Drawing.Point(0, 73);
             this.reportViewerRoom.Name = "reportViewerRoom";
@@ -139,8 +159,38 @@ namespace ĐỒ_ÁN.GUI
             this.panel1.Size = new System.Drawing.Size(837, 73);
             this.panel1.TabIndex = 3;
             // 
+            // cbbSearchRoom
+            // 
+            this.cbbSearchRoom.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbbSearchRoom.FormattingEnabled = true;
+            this.cbbSearchRoom.ItemHeight = 23;
+            this.cbbSearchRoom.Location = new System.Drawing.Point(322, 21);
+            this.cbbSearchRoom.Name = "cbbSearchRoom";
+            this.cbbSearchRoom.Size = new System.Drawing.Size(164, 29);
+            this.cbbSearchRoom.TabIndex = 5;
+            this.cbbSearchRoom.UseSelectable = true;
+            // 
+            // metroDateTimeToRoom
+            // 
+            this.metroDateTimeToRoom.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.metroDateTimeToRoom.Location = new System.Drawing.Point(616, 21);
+            this.metroDateTimeToRoom.MinimumSize = new System.Drawing.Size(0, 29);
+            this.metroDateTimeToRoom.Name = "metroDateTimeToRoom";
+            this.metroDateTimeToRoom.Size = new System.Drawing.Size(200, 29);
+            this.metroDateTimeToRoom.TabIndex = 4;
+            // 
+            // metroDateTimeFormRoom
+            // 
+            this.metroDateTimeFormRoom.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.metroDateTimeFormRoom.Location = new System.Drawing.Point(28, 21);
+            this.metroDateTimeFormRoom.MinimumSize = new System.Drawing.Size(0, 29);
+            this.metroDateTimeFormRoom.Name = "metroDateTimeFormRoom";
+            this.metroDateTimeFormRoom.Size = new System.Drawing.Size(200, 29);
+            this.metroDateTimeFormRoom.TabIndex = 3;
+            // 
             // btnSearchService
             // 
+            this.btnSearchService.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSearchService.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnSearchService.IconColor = System.Drawing.Color.Black;
             this.btnSearchService.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -152,55 +202,9 @@ namespace ĐỒ_ÁN.GUI
             this.btnSearchService.UseVisualStyleBackColor = true;
             this.btnSearchService.Click += new System.EventHandler(this.btnSearchService_Click);
             // 
-            // dATASETReportService
-            // 
-            this.dATASETReportService.DataSetName = "DATASETReportService";
-            this.dATASETReportService.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataTable1BindingSource
-            // 
-            this.dataTable1BindingSource.DataMember = "DataTable1";
-            this.dataTable1BindingSource.DataSource = this.dATASETReportService;
-            // 
             // dataTable1TableAdapter
             // 
             this.dataTable1TableAdapter.ClearBeforeFill = true;
-            // 
-            // metroDateTimeFormRoom
-            // 
-            this.metroDateTimeFormRoom.Location = new System.Drawing.Point(28, 21);
-            this.metroDateTimeFormRoom.MinimumSize = new System.Drawing.Size(0, 29);
-            this.metroDateTimeFormRoom.Name = "metroDateTimeFormRoom";
-            this.metroDateTimeFormRoom.Size = new System.Drawing.Size(200, 29);
-            this.metroDateTimeFormRoom.TabIndex = 3;
-            // 
-            // metroDateTimeToRoom
-            // 
-            this.metroDateTimeToRoom.Location = new System.Drawing.Point(616, 21);
-            this.metroDateTimeToRoom.MinimumSize = new System.Drawing.Size(0, 29);
-            this.metroDateTimeToRoom.Name = "metroDateTimeToRoom";
-            this.metroDateTimeToRoom.Size = new System.Drawing.Size(200, 29);
-            this.metroDateTimeToRoom.TabIndex = 4;
-            // 
-            // cbbSearchRoom
-            // 
-            this.cbbSearchRoom.FormattingEnabled = true;
-            this.cbbSearchRoom.ItemHeight = 23;
-            this.cbbSearchRoom.Location = new System.Drawing.Point(322, 21);
-            this.cbbSearchRoom.Name = "cbbSearchRoom";
-            this.cbbSearchRoom.Size = new System.Drawing.Size(164, 29);
-            this.cbbSearchRoom.TabIndex = 5;
-            this.cbbSearchRoom.UseSelectable = true;
-            // 
-            // datasetInfoRoom
-            // 
-            this.datasetInfoRoom.DataSetName = "datasetInfoRoom";
-            this.datasetInfoRoom.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // uSPGetRoomByDateAndIDBindingSource
-            // 
-            this.uSPGetRoomByDateAndIDBindingSource.DataMember = "USP_GetRoomByDateAndID";
-            this.uSPGetRoomByDateAndIDBindingSource.DataSource = this.datasetInfoRoom;
             // 
             // uSP_GetRoomByDateAndIDTableAdapter
             // 
@@ -212,18 +216,18 @@ namespace ĐỒ_ÁN.GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(845, 438);
             this.Controls.Add(this.metroTabControl1);
-            this.MaximumSize = new System.Drawing.Size(861, 477);
+            this.MinimumSize = new System.Drawing.Size(861, 477);
             this.Name = "statistical";
             this.Text = "statistical";
             this.Load += new System.EventHandler(this.statistical_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dATASETReportService)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSPGetRoomByDateAndIDBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datasetInfoRoom)).EndInit();
             this.metroTabControl1.ResumeLayout(false);
             this.mtpStatisticalMD.ResumeLayout(false);
             this.mtpStatisticalGroup.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dATASETReportService)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datasetInfoRoom)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uSPGetRoomByDateAndIDBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

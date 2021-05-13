@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ĐỒ_ÁN.DTO;
+using log4net;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,10 +15,13 @@ namespace ĐỒ_ÁN
 {
     public partial class BackUpAndRestoreData : Form
     {
-        SqlConnection con = new SqlConnection(ĐỒ_ÁN.Properties.Settings.Default.QuanLiPhongKaraokeConnectionString);
-        public BackUpAndRestoreData()
+        private AccountDTO LoginAccount;
+        ILog log = LogManager.GetLogger(typeof(BackUpAndRestoreData));
+        SqlConnection con = new SqlConnection(ĐỒ_ÁN.Properties.Settings.Default.ConnectionStr);
+        public BackUpAndRestoreData(AccountDTO acc)
         {
             InitializeComponent();
+            this.LoginAccount = acc;
             rdBackup.Checked = true;
             if (rdBackup.Checked == true)
             {
@@ -35,7 +40,7 @@ namespace ĐỒ_ÁN
             FolderBrowserDialog dlg = new FolderBrowserDialog();
             if (dlg.ShowDialog() == DialogResult.OK)
             {
-                textBox1.Text = dlg.SelectedPath;
+                txtBackup.Text = dlg.SelectedPath;
 
             }
         }
@@ -49,13 +54,13 @@ namespace ĐỒ_ÁN
                 string database = con.Database.ToString();
                 try
                 {
-                    if (textBox1.Text == string.Empty)
+                    if (txtBackup.Text == string.Empty)
                     {
                         MessageBox.Show("Vui lòng điền vị trí của file backup!!");
                     }
                     else
                     {
-                        string cmd = "BACKUP DATABASE [" + database + "] TO DISK='" + textBox1.Text + "\\" + "database_được_lưu_vào _ngày_giờ " + "_" + DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss") + ".bak'";
+                        string cmd = "BACKUP DATABASE [" + database + "] TO DISK='" + txtBackup.Text + "\\" + "database_được_lưu_vào _ngày_giờ " + "_" + DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss") + ".bak'";
 
                         using (SqlCommand command = new SqlCommand(cmd, con))
                         {
@@ -66,7 +71,7 @@ namespace ĐỒ_ÁN
                             command.ExecuteNonQuery();
                             con.Close();
                             MessageBox.Show("Dữ liệu của bạn đã được sao lưu thành công");
-
+                            log.Info("Đã sao lưu dữ liệu thành công! User: |" + LoginAccount.UserName + "| - vào ngày: ");
                         }
                     }
 
@@ -85,7 +90,7 @@ namespace ĐỒ_ÁN
             dlg.Title = "Database restore";
             if (dlg.ShowDialog() == DialogResult.OK)
             {
-                textBox2.Text = dlg.FileName;
+                txtRestore.Text = dlg.FileName;
 
             }
         }
@@ -107,7 +112,7 @@ namespace ĐỒ_ÁN
                     SqlCommand bu2 = new SqlCommand(sqlStmt2, con);
                     bu2.ExecuteNonQuery();
 
-                    string sqlStmt3 = "USE MASTER RESTORE DATABASE [" + database + "] FROM DISK='" + textBox2.Text + "'WITH REPLACE;";
+                    string sqlStmt3 = "USE MASTER RESTORE DATABASE [" + database + "] FROM DISK='" + txtRestore.Text + "'WITH REPLACE;";
                     SqlCommand bu3 = new SqlCommand(sqlStmt3, con);
                     bu3.ExecuteNonQuery();
 
@@ -116,6 +121,7 @@ namespace ĐỒ_ÁN
                     bu4.ExecuteNonQuery();
 
                     MessageBox.Show("Dữ liệu của bạn đã được khôi phục thành công");
+                    log.Info("Đã khôi phục dữ liệu thành công! User: |" + LoginAccount.UserName + "| - vào ngày: ");
                     con.Close();
 
 
@@ -130,7 +136,7 @@ namespace ĐỒ_ÁN
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (textBox1.Text == "")
+            if (txtBackup.Text == "")
                 btnbackUp.Enabled = false;
             else
                 btnbackUp.Enabled = true;
@@ -138,7 +144,7 @@ namespace ĐỒ_ÁN
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            if (textBox2.Text == "")
+            if (txtRestore.Text == "")
                 btnReStore.Enabled = false;
             else
                 btnReStore.Enabled = true;

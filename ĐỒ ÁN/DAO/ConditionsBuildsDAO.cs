@@ -17,10 +17,10 @@ namespace ĐỒ_ÁN.DAO
              }
         private ConditionsBuildsDAO() { }
 
-        public List<ConditionsBuild> LoadString(string orAnd,string Field,string opera,string inputsearching)
+        public List<ConditionsBuildDTO> LoadString(string orAnd,string Field,string opera,string inputsearching)
         {
-            List<ConditionsBuild> list = new List<ConditionsBuild>();
-            ConditionsBuild AddConditionnew = new ConditionsBuild(orAnd, Field, opera, inputsearching);
+            List<ConditionsBuildDTO> list = new List<ConditionsBuildDTO>();
+            ConditionsBuildDTO AddConditionnew = new ConditionsBuildDTO(orAnd, Field, opera, inputsearching);
             list.Add(AddConditionnew);
             return list;
 

@@ -1723,7 +1723,7 @@ SELECT id, name, idServiceCategory, price FROM Service WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ĐỒ_ÁN.Properties.Settings.Default.QuanLiPhongKaraokeConnectionString;
+            this._connection.ConnectionString = global::ĐỒ_ÁN.Properties.Settings.Default.ConnectionStr;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2049,7 +2049,7 @@ SELECT id, name, idServiceCategory, price FROM Service WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ĐỒ_ÁN.Properties.Settings.Default.QuanLiPhongKaraokeConnectionString;
+            this._connection.ConnectionString = global::ĐỒ_ÁN.Properties.Settings.Default.ConnectionStr;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2346,7 +2346,7 @@ SELECT id, name, idServiceCategory, price FROM Service WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ĐỒ_ÁN.Properties.Settings.Default.QuanLiPhongKaraokeConnectionString;
+            this._connection.ConnectionString = global::ĐỒ_ÁN.Properties.Settings.Default.ConnectionStr;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

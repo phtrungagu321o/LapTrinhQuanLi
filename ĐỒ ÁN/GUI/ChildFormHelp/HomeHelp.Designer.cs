@@ -30,7 +30,9 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -44,6 +46,19 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             this.label1.Size = new System.Drawing.Size(95, 40);
             this.label1.TabIndex = 1;
             this.label1.Text = "Home";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::ĐỒ_ÁN.Properties.Resources.home1;
+            this.pictureBox1.Location = new System.Drawing.Point(93, 52);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(634, 300);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // iconButton1
             // 
@@ -68,11 +83,13 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(81)))));
             this.ClientSize = new System.Drawing.Size(805, 375);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.label1);
             this.MinimumSize = new System.Drawing.Size(821, 414);
             this.Name = "HomeHelp";
             this.Text = "HomeHelp";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -82,5 +99,6 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
 
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

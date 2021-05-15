@@ -67,8 +67,9 @@ namespace ĐỒ_ÁN
             // 
             this.btnbackUp.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnbackUp.Enabled = false;
+            this.btnbackUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnbackUp.Font = new System.Drawing.Font("UTM Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbackUp.ForeColor = System.Drawing.Color.DimGray;
+            this.btnbackUp.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnbackUp.Location = new System.Drawing.Point(528, 90);
             this.btnbackUp.Margin = new System.Windows.Forms.Padding(4);
             this.btnbackUp.Name = "btnbackUp";
@@ -81,8 +82,9 @@ namespace ĐỒ_ÁN
             // btnBrowse1
             // 
             this.btnBrowse1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnBrowse1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBrowse1.Font = new System.Drawing.Font("UTM Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBrowse1.ForeColor = System.Drawing.Color.DimGray;
+            this.btnBrowse1.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnBrowse1.Location = new System.Drawing.Point(528, 52);
             this.btnBrowse1.Margin = new System.Windows.Forms.Padding(4);
             this.btnBrowse1.Name = "btnBrowse1";
@@ -96,6 +98,7 @@ namespace ĐỒ_ÁN
             // 
             this.txtBackup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBackup.Font = new System.Drawing.Font("UTM Neo Sans Intel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBackup.Location = new System.Drawing.Point(110, 52);
             this.txtBackup.Margin = new System.Windows.Forms.Padding(4);
             this.txtBackup.Multiline = true;
@@ -137,8 +140,9 @@ namespace ĐỒ_ÁN
             // 
             this.btnReStore.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnReStore.Enabled = false;
+            this.btnReStore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReStore.Font = new System.Drawing.Font("UTM Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReStore.ForeColor = System.Drawing.Color.DimGray;
+            this.btnReStore.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnReStore.Location = new System.Drawing.Point(528, 93);
             this.btnReStore.Margin = new System.Windows.Forms.Padding(4);
             this.btnReStore.Name = "btnReStore";
@@ -151,8 +155,9 @@ namespace ĐỒ_ÁN
             // btnBrowse2
             // 
             this.btnBrowse2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnBrowse2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBrowse2.Font = new System.Drawing.Font("UTM Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBrowse2.ForeColor = System.Drawing.Color.DimGray;
+            this.btnBrowse2.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnBrowse2.Location = new System.Drawing.Point(528, 55);
             this.btnBrowse2.Margin = new System.Windows.Forms.Padding(4);
             this.btnBrowse2.Name = "btnBrowse2";
@@ -166,6 +171,7 @@ namespace ĐỒ_ÁN
             // 
             this.txtRestore.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtRestore.Font = new System.Drawing.Font("UTM Neo Sans Intel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRestore.Location = new System.Drawing.Point(110, 56);
             this.txtRestore.Margin = new System.Windows.Forms.Padding(4);
             this.txtRestore.Multiline = true;
@@ -224,6 +230,7 @@ namespace ĐỒ_ÁN
             this.Controls.Add(this.ac);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(861, 477);

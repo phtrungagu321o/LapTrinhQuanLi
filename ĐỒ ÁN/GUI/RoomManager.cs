@@ -55,12 +55,15 @@ namespace ĐỒ_ÁN
             foreach(RoomDTO item in RoomList)
             {
                 IconButton btn = new IconButton() {Width=RoomDAO.RoomWidth,Height=RoomDAO.RoomHeight };
-                btn.Text = item.Name + "\n" + item.Status;
-                btn.IconChar = IconChar.Tablet;
+                btn.Text = item.Name + "\n\n" + item.Status;
+                btn.IconChar = IconChar.Table;
+                btn.IconSize = 80;
                 btn.TextAlign = ContentAlignment.MiddleCenter;
                 btn.TextImageRelation = TextImageRelation.ImageAboveText;
                 btn.ImageAlign = ContentAlignment.MiddleCenter;
                 btn.ForeColor= Color.Gainsboro;
+                btn.Font = new Font(btn.Font.Name, btn.Font.Size, FontStyle.Bold);
+                
                 btn.Click += Btn_Click;
              
                 btn.Tag = item;
@@ -73,6 +76,7 @@ namespace ĐỒ_ÁN
                         break;
                     default:
                         btn.IconColor = Color.LightCoral;
+                        btn.ForeColor = Color.LightCoral;
                         break;
                 }    
                 

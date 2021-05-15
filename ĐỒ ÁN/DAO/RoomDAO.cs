@@ -19,8 +19,8 @@ namespace ĐỒ_ÁN.DAO
 
         }
         private RoomDAO() { } 
-        public static int RoomWidth = 90;
-        public static int RoomHeight = 90;
+        public static int RoomWidth = 135;
+        public static int RoomHeight = 135;
 
 
         public void SwitchRoom(int id1,int id2)

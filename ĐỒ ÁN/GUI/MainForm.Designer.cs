@@ -31,56 +31,56 @@ namespace ĐỒ_ÁN.GUI
         {
             this.components = new System.ComponentModel.Container();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.panelKeyOff = new System.Windows.Forms.Panel();
-            this.panelProfile = new System.Windows.Forms.Panel();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.llblRestoreAndBackUp = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblChildRoom = new System.Windows.Forms.Label();
-            this.panelShadows = new System.Windows.Forms.Panel();
-            this.panelDesktop = new System.Windows.Forms.Panel();
-            this.btnPhone = new System.Windows.Forms.Button();
-            this.labeltime = new System.Windows.Forms.Label();
-            this.linkLabelFaceBooK = new System.Windows.Forms.LinkLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnEmail = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tráiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconCurrenChildRoom = new FontAwesome.Sharp.IconPictureBox();
             this.iconButtonHelp = new FontAwesome.Sharp.IconButton();
+            this.panelKeyOff = new System.Windows.Forms.Panel();
             this.iconButtonSwitch = new FontAwesome.Sharp.IconButton();
             this.iconButtonCheckOut = new FontAwesome.Sharp.IconButton();
             this.iconButtonStart = new FontAwesome.Sharp.IconButton();
             this.iconButtonAddFood = new FontAwesome.Sharp.IconButton();
             this.iconButtonshortcutkey = new FontAwesome.Sharp.IconButton();
+            this.panelProfile = new System.Windows.Forms.Panel();
             this.iconButtonExit = new FontAwesome.Sharp.IconButton();
             this.iconButtonEditProFile = new FontAwesome.Sharp.IconButton();
             this.iconButtonProfile = new FontAwesome.Sharp.IconButton();
             this.iconButtonRoomManager = new FontAwesome.Sharp.IconButton();
             this.iconButtonAdmin = new FontAwesome.Sharp.IconButton();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.llblRestoreAndBackUp = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnHome = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.lblChildRoom = new System.Windows.Forms.Label();
+            this.iconCurrenChildRoom = new FontAwesome.Sharp.IconPictureBox();
+            this.panelShadows = new System.Windows.Forms.Panel();
+            this.panelDesktop = new System.Windows.Forms.Panel();
+            this.btnPhone = new System.Windows.Forms.Button();
+            this.labeltime = new System.Windows.Forms.Label();
+            this.linkLabelFaceBooK = new System.Windows.Forms.LinkLabel();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnEmail = new System.Windows.Forms.Button();
+            this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tráiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelMenu.SuspendLayout();
             this.panelKeyOff.SuspendLayout();
             this.panelProfile.SuspendLayout();
             this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCurrenChildRoom)).BeginInit();
             this.panelDesktop.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconCurrenChildRoom)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -100,335 +100,6 @@ namespace ĐỒ_ÁN.GUI
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(273, 561);
             this.panelMenu.TabIndex = 0;
-            // 
-            // panelKeyOff
-            // 
-            this.panelKeyOff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.panelKeyOff.Controls.Add(this.iconButtonSwitch);
-            this.panelKeyOff.Controls.Add(this.iconButtonCheckOut);
-            this.panelKeyOff.Controls.Add(this.iconButtonStart);
-            this.panelKeyOff.Controls.Add(this.iconButtonAddFood);
-            this.panelKeyOff.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelKeyOff.Location = new System.Drawing.Point(0, 510);
-            this.panelKeyOff.Name = "panelKeyOff";
-            this.panelKeyOff.Size = new System.Drawing.Size(256, 258);
-            this.panelKeyOff.TabIndex = 6;
-            // 
-            // panelProfile
-            // 
-            this.panelProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.panelProfile.Controls.Add(this.iconButtonExit);
-            this.panelProfile.Controls.Add(this.iconButtonEditProFile);
-            this.panelProfile.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelProfile.Location = new System.Drawing.Point(0, 320);
-            this.panelProfile.Name = "panelProfile";
-            this.panelProfile.Size = new System.Drawing.Size(256, 130);
-            this.panelProfile.TabIndex = 4;
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.Controls.Add(this.llblRestoreAndBackUp);
-            this.panelLogo.Controls.Add(this.linkLabel1);
-            this.panelLogo.Controls.Add(this.btnHome);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(256, 140);
-            this.panelLogo.TabIndex = 0;
-            // 
-            // llblRestoreAndBackUp
-            // 
-            this.llblRestoreAndBackUp.AutoSize = true;
-            this.llblRestoreAndBackUp.Font = new System.Drawing.Font("UTM Neo Sans Intel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llblRestoreAndBackUp.LinkColor = System.Drawing.Color.Gainsboro;
-            this.llblRestoreAndBackUp.Location = new System.Drawing.Point(33, 116);
-            this.llblRestoreAndBackUp.Name = "llblRestoreAndBackUp";
-            this.llblRestoreAndBackUp.Size = new System.Drawing.Size(113, 18);
-            this.llblRestoreAndBackUp.TabIndex = 1;
-            this.llblRestoreAndBackUp.TabStop = true;
-            this.llblRestoreAndBackUp.Text = "Phục hồi và sao lưu";
-            this.llblRestoreAndBackUp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("UTM Neo Sans Intel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.Gainsboro;
-            this.linkLabel1.Location = new System.Drawing.Point(152, 116);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(59, 18);
-            this.linkLabel1.TabIndex = 2;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Thống kê";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked_1);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.panel1.Controls.Add(this.iconButton3);
-            this.panel1.Controls.Add(this.iconButton2);
-            this.panel1.Controls.Add(this.iconButton1);
-            this.panel1.Controls.Add(this.lblChildRoom);
-            this.panel1.Controls.Add(this.iconCurrenChildRoom);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(273, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(861, 75);
-            this.panel1.TabIndex = 1;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            // 
-            // lblChildRoom
-            // 
-            this.lblChildRoom.AutoSize = true;
-            this.lblChildRoom.Font = new System.Drawing.Font("UTM Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChildRoom.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblChildRoom.Location = new System.Drawing.Point(68, 21);
-            this.lblChildRoom.Name = "lblChildRoom";
-            this.lblChildRoom.Size = new System.Drawing.Size(66, 28);
-            this.lblChildRoom.TabIndex = 1;
-            this.lblChildRoom.Text = "Home";
-            // 
-            // panelShadows
-            // 
-            this.panelShadows.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
-            this.panelShadows.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelShadows.Location = new System.Drawing.Point(273, 75);
-            this.panelShadows.Name = "panelShadows";
-            this.panelShadows.Size = new System.Drawing.Size(861, 9);
-            this.panelShadows.TabIndex = 2;
-            // 
-            // panelDesktop
-            // 
-            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(81)))));
-            this.panelDesktop.Controls.Add(this.btnPhone);
-            this.panelDesktop.Controls.Add(this.labeltime);
-            this.panelDesktop.Controls.Add(this.linkLabelFaceBooK);
-            this.panelDesktop.Controls.Add(this.iconPictureBox2);
-            this.panelDesktop.Controls.Add(this.iconPictureBox1);
-            this.panelDesktop.Controls.Add(this.label1);
-            this.panelDesktop.Controls.Add(this.pictureBox1);
-            this.panelDesktop.Controls.Add(this.btnEmail);
-            this.panelDesktop.Controls.Add(this.iconPictureBox3);
-            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.ForeColor = System.Drawing.Color.Black;
-            this.panelDesktop.Location = new System.Drawing.Point(273, 84);
-            this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(861, 477);
-            this.panelDesktop.TabIndex = 3;
-            this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
-            // 
-            // btnPhone
-            // 
-            this.btnPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPhone.BackColor = System.Drawing.Color.Transparent;
-            this.btnPhone.FlatAppearance.BorderSize = 0;
-            this.btnPhone.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btnPhone.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btnPhone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPhone.Font = new System.Drawing.Font("UTM Neo Sans Intel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPhone.ForeColor = System.Drawing.Color.White;
-            this.btnPhone.Location = new System.Drawing.Point(359, 386);
-            this.btnPhone.Name = "btnPhone";
-            this.btnPhone.Size = new System.Drawing.Size(106, 34);
-            this.btnPhone.TabIndex = 42;
-            this.btnPhone.Text = "0358113704";
-            this.btnPhone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPhone.UseVisualStyleBackColor = false;
-            this.btnPhone.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // labeltime
-            // 
-            this.labeltime.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labeltime.AutoSize = true;
-            this.labeltime.Font = new System.Drawing.Font("UTM Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labeltime.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labeltime.Location = new System.Drawing.Point(373, 296);
-            this.labeltime.Name = "labeltime";
-            this.labeltime.Size = new System.Drawing.Size(202, 28);
-            this.labeltime.TabIndex = 41;
-            this.labeltime.Text = "00/00/0000 00:00:00";
-            this.labeltime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // linkLabelFaceBooK
-            // 
-            this.linkLabelFaceBooK.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.linkLabelFaceBooK.AutoSize = true;
-            this.linkLabelFaceBooK.Font = new System.Drawing.Font("UTM Neo Sans Intel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelFaceBooK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(188)))), ((int)(((byte)(173)))));
-            this.linkLabelFaceBooK.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
-            this.linkLabelFaceBooK.Location = new System.Drawing.Point(359, 350);
-            this.linkLabelFaceBooK.Name = "linkLabelFaceBooK";
-            this.linkLabelFaceBooK.Size = new System.Drawing.Size(279, 19);
-            this.linkLabelFaceBooK.TabIndex = 34;
-            this.linkLabelFaceBooK.TabStop = true;
-            this.linkLabelFaceBooK.Text = "https://www.facebook.com/phung.mcdoin.988";
-            this.linkLabelFaceBooK.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelFaceBooK_LinkClicked);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("UTM Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(188)))), ((int)(((byte)(173)))));
-            this.label1.Location = new System.Drawing.Point(191, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(564, 40);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "PHẦN MỀM QUẢN LÍ QUÁN KARAOKE";
-            // 
-            // btnEmail
-            // 
-            this.btnEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEmail.BackColor = System.Drawing.Color.Transparent;
-            this.btnEmail.FlatAppearance.BorderSize = 0;
-            this.btnEmail.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btnEmail.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btnEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmail.Font = new System.Drawing.Font("UTM Neo Sans Intel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmail.ForeColor = System.Drawing.Color.White;
-            this.btnEmail.Location = new System.Drawing.Point(359, 426);
-            this.btnEmail.Name = "btnEmail";
-            this.btnEmail.Size = new System.Drawing.Size(236, 32);
-            this.btnEmail.TabIndex = 43;
-            this.btnEmail.Text = "phtrung_19th1@student.agu.edu.vn";
-            this.btnEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmail.UseVisualStyleBackColor = false;
-            this.btnEmail.Click += new System.EventHandler(this.btnEmail_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tráiToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(93, 26);
-            // 
-            // tráiToolStripMenuItem
-            // 
-            this.tráiToolStripMenuItem.Name = "tráiToolStripMenuItem";
-            this.tráiToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
-            this.tráiToolStripMenuItem.Text = "Trái";
-            this.tráiToolStripMenuItem.Click += new System.EventHandler(this.tráiToolStripMenuItem_Click);
-            // 
-            // iconPictureBox2
-            // 
-            this.iconPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Facebook;
-            this.iconPictureBox2.IconColor = System.Drawing.Color.White;
-            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.Location = new System.Drawing.Point(321, 348);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(32, 34);
-            this.iconPictureBox2.TabIndex = 33;
-            this.iconPictureBox2.TabStop = false;
-            // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.PhoneSquareAlt;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.White;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.Location = new System.Drawing.Point(321, 386);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(32, 34);
-            this.iconPictureBox1.TabIndex = 36;
-            this.iconPictureBox1.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::ĐỒ_ÁN.Properties.Resources.AnhLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(276, 69);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(384, 218);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // iconPictureBox3
-            // 
-            this.iconPictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconPictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
-            this.iconPictureBox3.IconColor = System.Drawing.Color.White;
-            this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox3.Location = new System.Drawing.Point(321, 426);
-            this.iconPictureBox3.Name = "iconPictureBox3";
-            this.iconPictureBox3.Size = new System.Drawing.Size(32, 33);
-            this.iconPictureBox3.TabIndex = 39;
-            this.iconPictureBox3.TabStop = false;
-            // 
-            // iconButton3
-            // 
-            this.iconButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.iconButton3.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 15;
-            this.iconButton3.Location = new System.Drawing.Point(833, 3);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(25, 15);
-            this.iconButton3.TabIndex = 4;
-            this.iconButton3.UseVisualStyleBackColor = false;
-            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
-            this.iconButton2.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 15;
-            this.iconButton2.Location = new System.Drawing.Point(802, 3);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(25, 15);
-            this.iconButton2.TabIndex = 3;
-            this.iconButton2.UseVisualStyleBackColor = false;
-            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.iconButton1.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 15;
-            this.iconButton1.Location = new System.Drawing.Point(771, 3);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(25, 15);
-            this.iconButton1.TabIndex = 2;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
-            // 
-            // iconCurrenChildRoom
-            // 
-            this.iconCurrenChildRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.iconCurrenChildRoom.ForeColor = System.Drawing.Color.MediumPurple;
-            this.iconCurrenChildRoom.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconCurrenChildRoom.IconColor = System.Drawing.Color.MediumPurple;
-            this.iconCurrenChildRoom.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconCurrenChildRoom.IconSize = 48;
-            this.iconCurrenChildRoom.Location = new System.Drawing.Point(12, 10);
-            this.iconCurrenChildRoom.Name = "iconCurrenChildRoom";
-            this.iconCurrenChildRoom.Size = new System.Drawing.Size(50, 48);
-            this.iconCurrenChildRoom.TabIndex = 0;
-            this.iconCurrenChildRoom.TabStop = false;
             // 
             // iconButtonHelp
             // 
@@ -452,6 +123,19 @@ namespace ĐỒ_ÁN.GUI
             this.iconButtonHelp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButtonHelp.UseVisualStyleBackColor = true;
             this.iconButtonHelp.Click += new System.EventHandler(this.iconButton7_Click);
+            // 
+            // panelKeyOff
+            // 
+            this.panelKeyOff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.panelKeyOff.Controls.Add(this.iconButtonSwitch);
+            this.panelKeyOff.Controls.Add(this.iconButtonCheckOut);
+            this.panelKeyOff.Controls.Add(this.iconButtonStart);
+            this.panelKeyOff.Controls.Add(this.iconButtonAddFood);
+            this.panelKeyOff.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelKeyOff.Location = new System.Drawing.Point(0, 510);
+            this.panelKeyOff.Name = "panelKeyOff";
+            this.panelKeyOff.Size = new System.Drawing.Size(256, 258);
+            this.panelKeyOff.TabIndex = 6;
             // 
             // iconButtonSwitch
             // 
@@ -576,6 +260,17 @@ namespace ĐỒ_ÁN.GUI
             this.iconButtonshortcutkey.UseVisualStyleBackColor = true;
             this.iconButtonshortcutkey.Click += new System.EventHandler(this.iconButtonKeyOff_Click);
             // 
+            // panelProfile
+            // 
+            this.panelProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.panelProfile.Controls.Add(this.iconButtonExit);
+            this.panelProfile.Controls.Add(this.iconButtonEditProFile);
+            this.panelProfile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelProfile.Location = new System.Drawing.Point(0, 320);
+            this.panelProfile.Name = "panelProfile";
+            this.panelProfile.Size = new System.Drawing.Size(256, 130);
+            this.panelProfile.TabIndex = 4;
+            // 
             // iconButtonExit
             // 
             this.iconButtonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
@@ -693,6 +388,43 @@ namespace ĐỒ_ÁN.GUI
             this.iconButtonAdmin.UseVisualStyleBackColor = true;
             this.iconButtonAdmin.Click += new System.EventHandler(this.iconButtonAdmin_Click);
             // 
+            // panelLogo
+            // 
+            this.panelLogo.Controls.Add(this.llblRestoreAndBackUp);
+            this.panelLogo.Controls.Add(this.linkLabel1);
+            this.panelLogo.Controls.Add(this.btnHome);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(256, 140);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // llblRestoreAndBackUp
+            // 
+            this.llblRestoreAndBackUp.AutoSize = true;
+            this.llblRestoreAndBackUp.Font = new System.Drawing.Font("UTM Neo Sans Intel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llblRestoreAndBackUp.LinkColor = System.Drawing.Color.Gainsboro;
+            this.llblRestoreAndBackUp.Location = new System.Drawing.Point(33, 116);
+            this.llblRestoreAndBackUp.Name = "llblRestoreAndBackUp";
+            this.llblRestoreAndBackUp.Size = new System.Drawing.Size(113, 18);
+            this.llblRestoreAndBackUp.TabIndex = 1;
+            this.llblRestoreAndBackUp.TabStop = true;
+            this.llblRestoreAndBackUp.Text = "Phục hồi và sao lưu";
+            this.llblRestoreAndBackUp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("UTM Neo Sans Intel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.Gainsboro;
+            this.linkLabel1.Location = new System.Drawing.Point(152, 116);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(59, 18);
+            this.linkLabel1.TabIndex = 2;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Thống kê";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked_1);
+            // 
             // btnHome
             // 
             this.btnHome.Image = global::ĐỒ_ÁN.Properties.Resources.AnhLogo;
@@ -704,6 +436,274 @@ namespace ĐỒ_ÁN.GUI
             this.btnHome.TabStop = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             this.btnHome.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnHome_MouseDown);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.panel1.Controls.Add(this.iconButton3);
+            this.panel1.Controls.Add(this.iconButton2);
+            this.panel1.Controls.Add(this.iconButton1);
+            this.panel1.Controls.Add(this.lblChildRoom);
+            this.panel1.Controls.Add(this.iconCurrenChildRoom);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(273, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(861, 75);
+            this.panel1.TabIndex = 1;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // iconButton3
+            // 
+            this.iconButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.iconButton3.FlatAppearance.BorderSize = 0;
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
+            this.iconButton3.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 15;
+            this.iconButton3.Location = new System.Drawing.Point(833, 3);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(25, 15);
+            this.iconButton3.TabIndex = 4;
+            this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
+            this.iconButton2.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 15;
+            this.iconButton2.Location = new System.Drawing.Point(802, 3);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(25, 15);
+            this.iconButton2.TabIndex = 3;
+            this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.iconButton1.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 15;
+            this.iconButton1.Location = new System.Drawing.Point(771, 3);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(25, 15);
+            this.iconButton1.TabIndex = 2;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // lblChildRoom
+            // 
+            this.lblChildRoom.AutoSize = true;
+            this.lblChildRoom.Font = new System.Drawing.Font("UTM Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChildRoom.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblChildRoom.Location = new System.Drawing.Point(68, 21);
+            this.lblChildRoom.Name = "lblChildRoom";
+            this.lblChildRoom.Size = new System.Drawing.Size(66, 28);
+            this.lblChildRoom.TabIndex = 1;
+            this.lblChildRoom.Text = "Home";
+            // 
+            // iconCurrenChildRoom
+            // 
+            this.iconCurrenChildRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.iconCurrenChildRoom.ForeColor = System.Drawing.Color.MediumPurple;
+            this.iconCurrenChildRoom.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.iconCurrenChildRoom.IconColor = System.Drawing.Color.MediumPurple;
+            this.iconCurrenChildRoom.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconCurrenChildRoom.IconSize = 48;
+            this.iconCurrenChildRoom.Location = new System.Drawing.Point(12, 10);
+            this.iconCurrenChildRoom.Name = "iconCurrenChildRoom";
+            this.iconCurrenChildRoom.Size = new System.Drawing.Size(50, 48);
+            this.iconCurrenChildRoom.TabIndex = 0;
+            this.iconCurrenChildRoom.TabStop = false;
+            // 
+            // panelShadows
+            // 
+            this.panelShadows.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
+            this.panelShadows.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelShadows.Location = new System.Drawing.Point(273, 75);
+            this.panelShadows.Name = "panelShadows";
+            this.panelShadows.Size = new System.Drawing.Size(861, 9);
+            this.panelShadows.TabIndex = 2;
+            // 
+            // panelDesktop
+            // 
+            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(81)))));
+            this.panelDesktop.Controls.Add(this.btnPhone);
+            this.panelDesktop.Controls.Add(this.labeltime);
+            this.panelDesktop.Controls.Add(this.linkLabelFaceBooK);
+            this.panelDesktop.Controls.Add(this.iconPictureBox2);
+            this.panelDesktop.Controls.Add(this.iconPictureBox1);
+            this.panelDesktop.Controls.Add(this.label1);
+            this.panelDesktop.Controls.Add(this.pictureBox1);
+            this.panelDesktop.Controls.Add(this.btnEmail);
+            this.panelDesktop.Controls.Add(this.iconPictureBox3);
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.ForeColor = System.Drawing.Color.Black;
+            this.panelDesktop.Location = new System.Drawing.Point(273, 84);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(861, 477);
+            this.panelDesktop.TabIndex = 3;
+            this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
+            // 
+            // btnPhone
+            // 
+            this.btnPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPhone.BackColor = System.Drawing.Color.Transparent;
+            this.btnPhone.FlatAppearance.BorderSize = 0;
+            this.btnPhone.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnPhone.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnPhone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPhone.Font = new System.Drawing.Font("UTM Neo Sans Intel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhone.ForeColor = System.Drawing.Color.White;
+            this.btnPhone.Location = new System.Drawing.Point(359, 386);
+            this.btnPhone.Name = "btnPhone";
+            this.btnPhone.Size = new System.Drawing.Size(106, 34);
+            this.btnPhone.TabIndex = 42;
+            this.btnPhone.Text = "0358113704";
+            this.btnPhone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPhone.UseVisualStyleBackColor = false;
+            this.btnPhone.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // labeltime
+            // 
+            this.labeltime.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labeltime.AutoSize = true;
+            this.labeltime.Font = new System.Drawing.Font("UTM Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeltime.ForeColor = System.Drawing.Color.Gainsboro;
+            this.labeltime.Location = new System.Drawing.Point(373, 296);
+            this.labeltime.Name = "labeltime";
+            this.labeltime.Size = new System.Drawing.Size(202, 28);
+            this.labeltime.TabIndex = 41;
+            this.labeltime.Text = "00/00/0000 00:00:00";
+            this.labeltime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // linkLabelFaceBooK
+            // 
+            this.linkLabelFaceBooK.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.linkLabelFaceBooK.AutoSize = true;
+            this.linkLabelFaceBooK.Font = new System.Drawing.Font("UTM Neo Sans Intel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelFaceBooK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(188)))), ((int)(((byte)(173)))));
+            this.linkLabelFaceBooK.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
+            this.linkLabelFaceBooK.Location = new System.Drawing.Point(359, 350);
+            this.linkLabelFaceBooK.Name = "linkLabelFaceBooK";
+            this.linkLabelFaceBooK.Size = new System.Drawing.Size(279, 19);
+            this.linkLabelFaceBooK.TabIndex = 34;
+            this.linkLabelFaceBooK.TabStop = true;
+            this.linkLabelFaceBooK.Text = "https://www.facebook.com/phung.mcdoin.988";
+            this.linkLabelFaceBooK.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelFaceBooK_LinkClicked);
+            // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Facebook;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox2.Location = new System.Drawing.Point(321, 348);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(32, 34);
+            this.iconPictureBox2.TabIndex = 33;
+            this.iconPictureBox2.TabStop = false;
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.PhoneSquareAlt;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.Location = new System.Drawing.Point(321, 386);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(32, 34);
+            this.iconPictureBox1.TabIndex = 36;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("UTM Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(188)))), ((int)(((byte)(173)))));
+            this.label1.Location = new System.Drawing.Point(191, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(564, 40);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "PHẦN MỀM QUẢN LÍ QUÁN KARAOKE";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::ĐỒ_ÁN.Properties.Resources.AnhLogo;
+            this.pictureBox1.Location = new System.Drawing.Point(276, 69);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(384, 218);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnEmail
+            // 
+            this.btnEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEmail.BackColor = System.Drawing.Color.Transparent;
+            this.btnEmail.FlatAppearance.BorderSize = 0;
+            this.btnEmail.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnEmail.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmail.Font = new System.Drawing.Font("UTM Neo Sans Intel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmail.ForeColor = System.Drawing.Color.White;
+            this.btnEmail.Location = new System.Drawing.Point(359, 426);
+            this.btnEmail.Name = "btnEmail";
+            this.btnEmail.Size = new System.Drawing.Size(236, 32);
+            this.btnEmail.TabIndex = 43;
+            this.btnEmail.Text = "phtrung_19th1@student.agu.edu.vn";
+            this.btnEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmail.UseVisualStyleBackColor = false;
+            this.btnEmail.Click += new System.EventHandler(this.btnEmail_Click);
+            // 
+            // iconPictureBox3
+            // 
+            this.iconPictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.iconPictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
+            this.iconPictureBox3.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox3.Location = new System.Drawing.Point(321, 426);
+            this.iconPictureBox3.Name = "iconPictureBox3";
+            this.iconPictureBox3.Size = new System.Drawing.Size(32, 33);
+            this.iconPictureBox3.TabIndex = 39;
+            this.iconPictureBox3.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tráiToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(93, 26);
+            // 
+            // tráiToolStripMenuItem
+            // 
+            this.tráiToolStripMenuItem.Name = "tráiToolStripMenuItem";
+            this.tráiToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.tráiToolStripMenuItem.Text = "Trái";
+            this.tráiToolStripMenuItem.Click += new System.EventHandler(this.tráiToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -723,17 +723,17 @@ namespace ĐỒ_ÁN.GUI
             this.panelProfile.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCurrenChildRoom)).EndInit();
             this.panelDesktop.ResumeLayout(false);
             this.panelDesktop.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconCurrenChildRoom)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

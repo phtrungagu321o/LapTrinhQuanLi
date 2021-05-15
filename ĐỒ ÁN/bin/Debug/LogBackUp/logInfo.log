@@ -1,61 +1,16 @@
-- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-13 09:07:58,618 - INFO -  ĐỒ_ÁN.login ------ 
-- User: |trung| đã xem dữ liệu vào ngày:  2021-05-13 09:11:33,366 - INFO -  ĐỒ_ÁN.GUI.MainForm ------ 
-- User: |trung| đã xem dữ liệu vào ngày:  2021-05-13 09:14:27,593 - INFO -  ĐỒ_ÁN.GUI.MainForm ------ 
-- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-13 09:45:08,382 - INFO -  ĐỒ_ÁN.login ------ 
-- Đã sao lưu dữ liệu thành công! User: |trung| - vào ngày:  2021-05-13 09:46:42,138 - INFO -  ĐỒ_ÁN.BackUpAndRestoreData ------ 
-- User: |trung| đã xem dữ liệu vào ngày:  2021-05-13 09:46:44,534 - INFO -  ĐỒ_ÁN.GUI.MainForm ------ 
-- Đã Xóa thông tin |Phòng 108| thành công! user: |trung| - ngày: 2021-05-13 09:46:49,367 - INFO -  ĐỒ_ÁN.Admin ------ 
-- Đã Xóa thông tin |Phòng 107| thành công! user: |trung| - ngày: 2021-05-13 09:46:52,845 - INFO -  ĐỒ_ÁN.Admin ------ 
-- Đã khôi phục dữ liệu thành công! User: |trung| - vào ngày:  2021-05-13 09:47:20,137 - INFO -  ĐỒ_ÁN.BackUpAndRestoreData ------ 
-- User: |trung| đã xem dữ liệu vào ngày:  2021-05-13 09:47:35,074 - INFO -  ĐỒ_ÁN.GUI.MainForm ------ 
-- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-13 09:55:00,630 - INFO -  ĐỒ_ÁN.login ------ 
-- User: |trung| đã xem dữ liệu vào ngày:  2021-05-13 09:55:51,575 - INFO -  ĐỒ_ÁN.GUI.MainForm ------ 
-- Đã Xóa thông tin |Mực xào chua ngọt| thành công! user: |trung| - ngày: 2021-05-13 09:56:00,854 - INFO -  ĐỒ_ÁN.Admin ------ 
-- Đã Thêm thông tin tên dịch vụ: |Mực xào cà chưa | thành công! user: |trung| - vào ngày: 2021-05-13 09:56:27,252 - INFO -  ĐỒ_ÁN.Admin ------ 
-- User: |trung| đã xem dữ liệu vào ngày:  2021-05-13 09:56:49,187 - INFO -  ĐỒ_ÁN.GUI.MainForm ------ 
-- Đã Xóa thông tin |Phòng 108| thành công! user: |trung| - ngày: 2021-05-13 09:56:54,538 - INFO -  ĐỒ_ÁN.Admin ------ 
-- Đã sao lưu dữ liệu thành công! User: |trung| - vào ngày:  2021-05-13 09:57:42,020 - INFO -  ĐỒ_ÁN.BackUpAndRestoreData ------ 
-- User: |trung| đã xem dữ liệu vào ngày:  2021-05-13 09:57:43,218 - INFO -  ĐỒ_ÁN.GUI.MainForm ------ 
-- Đã Xóa thông tin |Phòng 107| thành công! user: |trung| - ngày: 2021-05-13 09:57:48,700 - INFO -  ĐỒ_ÁN.Admin ------ 
-- Đã Xóa thông tin |Phòng 106| thành công! user: |trung| - ngày: 2021-05-13 09:57:51,344 - INFO -  ĐỒ_ÁN.Admin ------ 
-- Đã khôi phục dữ liệu thành công! User: |trung| - vào ngày:  2021-05-13 09:58:09,727 - INFO -  ĐỒ_ÁN.BackUpAndRestoreData ------ 
-- User: |trung| đã xem dữ liệu vào ngày:  2021-05-13 09:58:10,632 - INFO -  ĐỒ_ÁN.GUI.MainForm ------ 
-- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-13 10:20:24,293 - INFO -  ĐỒ_ÁN.login ------ 
-- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-13 11:52:12,242 - INFO -  ĐỒ_ÁN.login ------ 
-- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-13 11:55:08,508 - INFO -  ĐỒ_ÁN.login ------ 
-- User: |trung| đã xem dữ liệu vào ngày:  2021-05-13 11:55:41,000 - INFO -  ĐỒ_ÁN.GUI.MainForm ------ 
-- User: |trung| đã xem dữ liệu vào ngày:  2021-05-13 11:55:45,676 - INFO -  ĐỒ_ÁN.GUI.MainForm ------ 
-- Đã Xóa thông tin |Phòng 107| thành công! user: |trung| - ngày: 2021-05-13 11:56:07,518 - INFO -  ĐỒ_ÁN.Admin ------ 
-- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-13 11:56:42,774 - INFO -  ĐỒ_ÁN.login ------ 
-- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-13 11:57:30,160 - INFO -  ĐỒ_ÁN.login ------ 
-- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-13 13:12:13,153 - INFO -  ĐỒ_ÁN.login ------ 
-- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-13 13:19:34,960 - INFO -  ĐỒ_ÁN.login ------ 
-- User: |trung| đã xem dữ liệu vào ngày:  2021-05-13 13:20:52,729 - INFO -  ĐỒ_ÁN.GUI.MainForm ------ 
-- User: |trung| đã xem dữ liệu vào ngày:  2021-05-13 13:21:26,482 - INFO -  ĐỒ_ÁN.GUI.MainForm ------ 
-- Đã sao lưu dữ liệu thành công! User: |trung| - vào ngày:  2021-05-13 13:22:28,109 - INFO -  ĐỒ_ÁN.BackUpAndRestoreData ------ 
-- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-13 13:31:13,167 - INFO -  ĐỒ_ÁN.login ------ 
-- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-13 13:36:57,002 - INFO -  ĐỒ_ÁN.login ------ 
-- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-13 13:51:05,694 - INFO -  ĐỒ_ÁN.login ------ 
-- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-13 16:17:01,151 - INFO -  ĐỒ_ÁN.login ------ 
-- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-13 16:21:57,441 - INFO -  ĐỒ_ÁN.login ------ 
-- Đã sao lưu dữ liệu thành công! User: |trung| - vào ngày:  2021-05-13 16:23:47,889 - INFO -  ĐỒ_ÁN.BackUpAndRestoreData ------ 
-- User: |trung| đã xem dữ liệu vào ngày:  2021-05-13 16:24:13,381 - INFO -  ĐỒ_ÁN.GUI.MainForm ------ 
-- Đã đặt lại mật khẩu cho user: |trungagu| thành công! user: |trung| - ngày: 2021-05-13 16:24:19,528 - INFO -  ĐỒ_ÁN.Admin ------ 
-- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-13 19:32:35,784 - INFO -  ĐỒ_ÁN.login ------ 
-- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-13 19:40:03,035 - INFO -  ĐỒ_ÁN.login ------ 
-- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-13 19:41:21,214 - INFO -  ĐỒ_ÁN.login ------ 
-- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-13 19:49:19,436 - INFO -  ĐỒ_ÁN.login ------ 
-- User: |trung| đã xem dữ liệu vào ngày:  2021-05-13 19:50:16,286 - INFO -  ĐỒ_ÁN.GUI.MainForm ------ 
-- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-13 19:54:26,387 - INFO -  ĐỒ_ÁN.login ------ 
-- User: |trung| đã xem dữ liệu vào ngày:  2021-05-13 19:55:20,284 - INFO -  ĐỒ_ÁN.GUI.MainForm ------ 
-- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-13 21:37:22,915 - INFO -  ĐỒ_ÁN.login ------ 
-- User: |trung| đã xem dữ liệu vào ngày:  2021-05-13 21:37:57,232 - INFO -  ĐỒ_ÁN.GUI.MainForm ------ 
-- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-13 21:43:06,986 - INFO -  ĐỒ_ÁN.login ------ 
-- User: |trung| đã xem dữ liệu vào ngày:  2021-05-13 21:44:29,761 - INFO -  ĐỒ_ÁN.GUI.MainForm ------ 
-- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-13 21:51:16,039 - INFO -  ĐỒ_ÁN.login ------ 
-- User: |trung| đã xem dữ liệu vào ngày:  2021-05-13 21:51:50,465 - INFO -  ĐỒ_ÁN.GUI.MainForm ------ 
-- User: |trung| đã xem dữ liệu vào ngày:  2021-05-13 21:52:34,580 - INFO -  ĐỒ_ÁN.GUI.MainForm ------ 
-- User: |trung| đã xem dữ liệu vào ngày:  2021-05-13 21:52:53,889 - INFO -  ĐỒ_ÁN.GUI.MainForm ------ 
-- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-13 21:54:27,125 - INFO -  ĐỒ_ÁN.login ------ 
-- User: |trung| đã xem dữ liệu vào ngày:  2021-05-13 21:55:23,726 - INFO -  ĐỒ_ÁN.GUI.MainForm ------ 
-- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-13 21:58:22,371 - INFO -  ĐỒ_ÁN.login ------ 
+- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-15 08:38:35,636 - INFO -  ĐỒ_ÁN.login ------ 
+- User: |trung| đã xem dữ liệu vào ngày:  2021-05-15 08:39:19,294 - INFO -  ĐỒ_ÁN.GUI.MainForm ------ 
+- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-15 09:11:43,855 - INFO -  ĐỒ_ÁN.login ------ 
+- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-15 09:20:44,438 - INFO -  ĐỒ_ÁN.login ------ 
+- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-15 10:37:44,658 - INFO -  ĐỒ_ÁN.login ------ 
+- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-15 10:44:20,026 - INFO -  ĐỒ_ÁN.login ------ 
+- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-15 10:50:02,742 - INFO -  ĐỒ_ÁN.login ------ 
+- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-15 10:53:14,932 - INFO -  ĐỒ_ÁN.login ------ 
+- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-15 10:56:01,896 - INFO -  ĐỒ_ÁN.login ------ 
+- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-15 10:59:52,240 - INFO -  ĐỒ_ÁN.login ------ 
+- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-15 11:01:19,952 - INFO -  ĐỒ_ÁN.login ------ 
+- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-15 11:04:13,339 - INFO -  ĐỒ_ÁN.login ------ 
+- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-15 11:06:08,764 - INFO -  ĐỒ_ÁN.login ------ 
+- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-15 11:08:14,144 - INFO -  ĐỒ_ÁN.login ------ 
+- Đăng nhập thành công! user: |trung| - vào ngày: 2021-05-15 11:11:54,113 - INFO -  ĐỒ_ÁN.login ------ 
+- User: |trung| đã xem dữ liệu vào ngày:  2021-05-15 11:13:41,267 - INFO -  ĐỒ_ÁN.GUI.MainForm ------ 

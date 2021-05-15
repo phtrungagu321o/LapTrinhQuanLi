@@ -218,6 +218,7 @@ namespace ĐỒ_ÁN.GUI
             this.Controls.Add(this.metroTabControl1);
             this.MinimumSize = new System.Drawing.Size(861, 477);
             this.Name = "statistical";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "statistical";
             this.Load += new System.EventHandler(this.statistical_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();

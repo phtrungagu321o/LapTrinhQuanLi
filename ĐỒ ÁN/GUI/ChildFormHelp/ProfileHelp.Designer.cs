@@ -31,14 +31,14 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.iconButtonClose = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,6 +58,9 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.pictureBox2);
@@ -71,41 +74,28 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             this.panel1.Size = new System.Drawing.Size(693, 311);
             this.panel1.TabIndex = 3;
             // 
-            // label2
+            // label6
             // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 20);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Thông tin hiển thị:";
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label6.Location = new System.Drawing.Point(0, 780);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(372, 20);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "- Nhấn nút |Cập nhập| để hoàn tất quá trình sửa đổi";
             // 
-            // label3
+            // pictureBox2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label3.Location = new System.Drawing.Point(0, 370);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 20);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Sửa đổi thông tin:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label4.Location = new System.Drawing.Point(0, 390);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(471, 20);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "- Muốn đổi thông tin phải nhập đúng mật khẩu người dùng hiện tại";
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox2.Image = global::ĐỒ_ÁN.Properties.Resources._2;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 430);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(676, 350);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
             // 
             // label5
             // 
@@ -119,16 +109,29 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             this.label5.TabIndex = 10;
             this.label5.Text = "- Trong trường hợp muốn đổi mật khẩu người dùng thì phải điền đúng mật khẩu cũ ";
             // 
-            // pictureBox2
+            // label4
             // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox2.Image = global::ĐỒ_ÁN.Properties.Resources._2;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 430);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(676, 350);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label4.Location = new System.Drawing.Point(0, 390);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(471, 20);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "- Muốn đổi thông tin phải nhập đúng mật khẩu người dùng hiện tại";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label3.Location = new System.Drawing.Point(0, 370);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(133, 20);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Sửa đổi thông tin:";
             // 
             // pictureBox1
             // 
@@ -141,34 +144,34 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // iconButton1
+            // label2
             // 
-            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("UTM Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(739, 9);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(34, 26);
-            this.iconButton1.TabIndex = 2;
-            this.iconButton1.Text = "X";
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(134, 20);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Thông tin hiển thị:";
             // 
-            // label6
+            // iconButtonClose
             // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label6.Location = new System.Drawing.Point(0, 780);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(372, 20);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "- Nhấn nút |Cập nhập| để hoàn tất quá trình sửa đổi";
+            this.iconButtonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButtonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonClose.Font = new System.Drawing.Font("UTM Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonClose.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonClose.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButtonClose.IconColor = System.Drawing.Color.Black;
+            this.iconButtonClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonClose.Location = new System.Drawing.Point(739, 9);
+            this.iconButtonClose.Name = "iconButtonClose";
+            this.iconButtonClose.Size = new System.Drawing.Size(34, 26);
+            this.iconButtonClose.TabIndex = 2;
+            this.iconButtonClose.Text = "X";
+            this.iconButtonClose.UseVisualStyleBackColor = true;
+            this.iconButtonClose.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // ProfileHelp
             // 
@@ -177,7 +180,7 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(81)))));
             this.ClientSize = new System.Drawing.Size(805, 375);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.iconButton1);
+            this.Controls.Add(this.iconButtonClose);
             this.Controls.Add(this.label1);
             this.MinimumSize = new System.Drawing.Size(821, 414);
             this.Name = "ProfileHelp";
@@ -194,7 +197,7 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconButtonClose;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;

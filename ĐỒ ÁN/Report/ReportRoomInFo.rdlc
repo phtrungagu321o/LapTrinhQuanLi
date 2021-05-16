@@ -281,6 +281,12 @@
                                 <FontFamily>utm neo Sans Intel</FontFamily>
                               </Style>
                             </TextRun>
+                            <TextRun>
+                              <Value> VNĐ</Value>
+                              <Style>
+                                <FontFamily>utm neo Sans Intel</FontFamily>
+                              </Style>
+                            </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>

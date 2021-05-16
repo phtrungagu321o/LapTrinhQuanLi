@@ -50,6 +50,18 @@ namespace ĐỒ_ÁN.DAO
             }
             return list;
         }
+        public List<ServiceDTO> listService()
+        {
+            List<ServiceDTO> list = new List<ServiceDTO>();
+            string query = "SELECT *FROM dbo.Service";
+            DataTable data = DataProvider.Instance.ExcuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                ServiceDTO food = new ServiceDTO(item);
+                list.Add(food);
+            }
+            return list;
+        }
         public List<MenuServicebyCategoryDTO> GetlistSearchService(string query)
         {
             List<MenuServicebyCategoryDTO> list = new List<MenuServicebyCategoryDTO>();

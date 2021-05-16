@@ -31,11 +31,12 @@ namespace ĐỒ_ÁN.GUI
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.uSPGetListBillByDateForReportBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.dBSearchForCBB = new ĐỒ_ÁN.DBSearchForCBB();
             this.uSPGetListBillByDateForReportBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetB = new ĐỒ_ÁN.dataSetB();
             this.uSPGetListBillByDateForReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dBSearchForCBBBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dBSearchForCBB = new ĐỒ_ÁN.DBSearchForCBB();
             this.reportViewerBill = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -45,18 +46,27 @@ namespace ĐỒ_ÁN.GUI
             this.uSP_GetListBillByDateForReportTableAdapter1 = new ĐỒ_ÁN.DBSearchForCBBTableAdapters.USP_GetListBillByDateForReportTableAdapter();
             this.uSP_GetListBillByDateForReportTableAdapter = new ĐỒ_ÁN.dataSetBTableAdapters.USP_GetListBillByDateForReportTableAdapter();
             this.uSPGetListBillByDateForReportBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.uSPGetListBillByDateForReportBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.uSPGetListBillByDateForReportBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBSearchForCBB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSPGetListBillByDateForReportBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSPGetListBillByDateForReportBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBSearchForCBBBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBSearchForCBB)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uSPGetListBillByDateForReportBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBSearchForCBBBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSPGetListBillByDateForReportBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uSPGetListBillByDateForReportBindingSource4)).BeginInit();
             this.SuspendLayout();
+            // 
+            // uSPGetListBillByDateForReportBindingSource4
+            // 
+            this.uSPGetListBillByDateForReportBindingSource4.DataMember = "USP_GetListBillByDateForReport";
+            this.uSPGetListBillByDateForReportBindingSource4.DataSource = this.dBSearchForCBB;
+            // 
+            // dBSearchForCBB
+            // 
+            this.dBSearchForCBB.DataSetName = "DBSearchForCBB";
+            this.dBSearchForCBB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // uSPGetListBillByDateForReportBindingSource1
             // 
@@ -78,14 +88,11 @@ namespace ĐỒ_ÁN.GUI
             this.dBSearchForCBBBindingSource.DataSource = this.dBSearchForCBB;
             this.dBSearchForCBBBindingSource.Position = 0;
             // 
-            // dBSearchForCBB
-            // 
-            this.dBSearchForCBB.DataSetName = "DBSearchForCBB";
-            this.dBSearchForCBB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // reportViewerBill
             // 
+            this.reportViewerBill.AutoSize = true;
             this.reportViewerBill.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewerBill.Font = new System.Drawing.Font("UTM Neo Sans Intel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             reportDataSource1.Name = "DataSetB";
             reportDataSource1.Value = this.uSPGetListBillByDateForReportBindingSource4;
             this.reportViewerBill.LocalReport.DataSources.Add(reportDataSource1);
@@ -108,9 +115,11 @@ namespace ĐỒ_ÁN.GUI
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(477, 37);
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button1.Font = new System.Drawing.Font("UTM Neo Sans Intel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(477, 38);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 25);
             this.button1.TabIndex = 1;
             this.button1.Text = "Tìm";
             this.button1.UseVisualStyleBackColor = true;
@@ -118,10 +127,12 @@ namespace ĐỒ_ÁN.GUI
             // 
             // cbbSearchService
             // 
+            this.cbbSearchService.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbbSearchService.Font = new System.Drawing.Font("UTM Neo Sans Intel", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbSearchService.FormattingEnabled = true;
             this.cbbSearchService.Location = new System.Drawing.Point(296, 37);
             this.cbbSearchService.Name = "cbbSearchService";
-            this.cbbSearchService.Size = new System.Drawing.Size(175, 21);
+            this.cbbSearchService.Size = new System.Drawing.Size(175, 26);
             this.cbbSearchService.TabIndex = 0;
             // 
             // uSP_GetListBillByDateForReportTableAdapter1
@@ -137,11 +148,6 @@ namespace ĐỒ_ÁN.GUI
             this.uSPGetListBillByDateForReportBindingSource3.DataMember = "USP_GetListBillByDateForReport";
             this.uSPGetListBillByDateForReportBindingSource3.DataSource = this.dBSearchForCBB;
             // 
-            // uSPGetListBillByDateForReportBindingSource4
-            // 
-            this.uSPGetListBillByDateForReportBindingSource4.DataMember = "USP_GetListBillByDateForReport";
-            this.uSPGetListBillByDateForReportBindingSource4.DataSource = this.dBSearchForCBB;
-            // 
             // ReportB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -152,17 +158,18 @@ namespace ĐỒ_ÁN.GUI
             this.Name = "ReportB";
             this.Text = "ReportB";
             this.Load += new System.EventHandler(this.ReportB_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.uSPGetListBillByDateForReportBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBSearchForCBB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSPGetListBillByDateForReportBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSPGetListBillByDateForReportBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBSearchForCBBBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBSearchForCBB)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.uSPGetListBillByDateForReportBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBSearchForCBBBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSPGetListBillByDateForReportBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uSPGetListBillByDateForReportBindingSource4)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

@@ -41,7 +41,7 @@ namespace ĐỒ_ÁN
             txtUser.Text = loginAccount.UserName;
             txtDisplayName.Text = loginAccount.DisPlayName;
             lblAccount.Text = loginAccount.UserName;
-            lblDisplayName.Text = loginAccount.DisPlayName;
+            lblDisplayName.Text = loginDisplayName.DisPlayName;
             switch (loginAccount.Type)
             {
                 case 2:

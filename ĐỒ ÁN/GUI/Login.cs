@@ -14,6 +14,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using log4net;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
 
 namespace ĐỒ_ÁN
 {
@@ -112,10 +113,40 @@ namespace ĐỒ_ÁN
         {
             
         }
+        public static string Decrypt(string toDecrypt)
+        {
+            string key = "ToiTenLaTrung";
+            bool useHashing = true;
+            byte[] keyArray;
+            byte[] toEncryptArray = Convert.FromBase64String(toDecrypt);
 
+            if (useHashing)
+            {
+                MD5CryptoServiceProvider hashmd5 = new MD5CryptoServiceProvider();
+                keyArray = hashmd5.ComputeHash(UTF8Encoding.UTF8.GetBytes(key));
+            }
+            else
+                keyArray = UTF8Encoding.UTF8.GetBytes(key);
+
+            TripleDESCryptoServiceProvider tdes = new TripleDESCryptoServiceProvider();
+            tdes.Key = keyArray;
+            tdes.Mode = CipherMode.ECB;
+            tdes.Padding = PaddingMode.PKCS7;
+
+            ICryptoTransform cTransform = tdes.CreateDecryptor();
+            byte[] resultArray = cTransform.TransformFinalBlock(toEncryptArray, 0, toEncryptArray.Length);
+
+            return UTF8Encoding.UTF8.GetString(resultArray);
+        }
         private void btnLogin_Click_1(object sender, EventArgs e)
         {
-            SqlConnection sqlconn = new SqlConnection(ĐỒ_ÁN.Properties.Settings.Default.ConnectionStr);
+            if(ĐỒ_ÁN.Properties.Settings.Default.ConnectionStr=="")
+            {
+                Connection f = new Connection();
+                f.Show();
+                return;
+            }    
+            SqlConnection sqlconn = new SqlConnection(Decrypt(ĐỒ_ÁN.Properties.Settings.Default.ConnectionStr));
             try
             {
                 sqlconn.Open();

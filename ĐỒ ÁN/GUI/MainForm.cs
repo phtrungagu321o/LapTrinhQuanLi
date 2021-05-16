@@ -267,13 +267,20 @@ namespace ĐỒ_ÁN.GUI
 
         private void iconButtonAdmin_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
-            ActivateButton(sender, RGBColors.color1);
-            AccountDTO login = AccountDAO.Instance.GetAccountByUserName(loginAccount.UserName);
-            Admin a = new Admin(login);
-            log.Info("User: |" + loginAccount.UserName + "| đã xem dữ liệu vào ngày: ");
-            OpenChildForm(a);
-            a.LoginAccount = loginAccount;
+            try
+            {
+                hideSubMenu();
+                ActivateButton(sender, RGBColors.color1);
+                AccountDTO login = AccountDAO.Instance.GetAccountByUserName(loginAccount.UserName);
+                Admin a = new Admin(login);
+                log.Info("User: |" + loginAccount.UserName + "| đã xem dữ liệu vào ngày: ");
+                OpenChildForm(a);
+                a.LoginAccount = loginAccount;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
 
@@ -305,7 +312,8 @@ namespace ĐỒ_ÁN.GUI
         {
             
             ActivateChildButton(sender, RGBColors.color4);
-            AccountProfile f = new AccountProfile(loginAccount);
+            AccountDTO login = AccountDAO.Instance.GetAccountByUserName(loginAccount.UserName);
+            AccountProfile f = new AccountProfile(login);
             f.UpdateAccount += F_UpdateAccount;
             OpenChildForm(f);
             
@@ -316,6 +324,7 @@ namespace ĐỒ_ÁN.GUI
         private void F_UpdateAccount(object sender, AccountEvent e)
         {
             iconButtonProfile.Text = "Thông tin tài khoản \n (" + e.Acc.DisPlayName + ")";
+
         }
 
         private void iconButtonExit_Click(object sender, EventArgs e)

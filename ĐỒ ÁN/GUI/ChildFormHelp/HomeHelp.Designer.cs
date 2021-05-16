@@ -31,7 +31,7 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
         {
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.iconButtonClose = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,22 +60,22 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // iconButton1
+            // iconButtonClose
             // 
-            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("UTM Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(722, 12);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(34, 26);
-            this.iconButton1.TabIndex = 2;
-            this.iconButton1.Text = "X";
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            this.iconButtonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButtonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonClose.Font = new System.Drawing.Font("UTM Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonClose.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonClose.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButtonClose.IconColor = System.Drawing.Color.Black;
+            this.iconButtonClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonClose.Location = new System.Drawing.Point(722, 12);
+            this.iconButtonClose.Name = "iconButtonClose";
+            this.iconButtonClose.Size = new System.Drawing.Size(34, 26);
+            this.iconButtonClose.TabIndex = 2;
+            this.iconButtonClose.Text = "X";
+            this.iconButtonClose.UseVisualStyleBackColor = true;
+            this.iconButtonClose.Click += new System.EventHandler(this.iconButtonClose_Click);
             // 
             // HomeHelp
             // 
@@ -84,7 +84,7 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(81)))));
             this.ClientSize = new System.Drawing.Size(805, 375);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.iconButton1);
+            this.Controls.Add(this.iconButtonClose);
             this.Controls.Add(this.label1);
             this.MinimumSize = new System.Drawing.Size(821, 414);
             this.Name = "HomeHelp";
@@ -98,7 +98,7 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconButtonClose;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

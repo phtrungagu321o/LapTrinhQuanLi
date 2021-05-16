@@ -42,6 +42,7 @@ namespace ĐỒ_ÁN.GUI
             // 
             // txt_url
             // 
+            this.txt_url.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_url.Location = new System.Drawing.Point(7, 26);
             this.txt_url.Multiline = true;
             this.txt_url.Name = "txt_url";
@@ -50,7 +51,8 @@ namespace ĐỒ_ÁN.GUI
             // 
             // btn_browser
             // 
-            this.btn_browser.Location = new System.Drawing.Point(378, 24);
+            this.btn_browser.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_browser.Location = new System.Drawing.Point(373, 34);
             this.btn_browser.Name = "btn_browser";
             this.btn_browser.Size = new System.Drawing.Size(83, 23);
             this.btn_browser.TabIndex = 18;
@@ -60,6 +62,7 @@ namespace ĐỒ_ÁN.GUI
             // 
             // btn_decrypt
             // 
+            this.btn_decrypt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_decrypt.Location = new System.Drawing.Point(596, 109);
             this.btn_decrypt.Name = "btn_decrypt";
             this.btn_decrypt.Size = new System.Drawing.Size(63, 23);
@@ -70,6 +73,7 @@ namespace ĐỒ_ÁN.GUI
             // 
             // btn_encrypt
             // 
+            this.btn_encrypt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_encrypt.Location = new System.Drawing.Point(233, 109);
             this.btn_encrypt.Name = "btn_encrypt";
             this.btn_encrypt.Size = new System.Drawing.Size(63, 23);
@@ -80,6 +84,7 @@ namespace ĐỒ_ÁN.GUI
             // 
             // txtDecipheredFile
             // 
+            this.txtDecipheredFile.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDecipheredFile.Location = new System.Drawing.Point(665, 63);
             this.txtDecipheredFile.Name = "txtDecipheredFile";
             this.txtDecipheredFile.Size = new System.Drawing.Size(288, 158);
@@ -88,6 +93,7 @@ namespace ĐỒ_ÁN.GUI
             // 
             // txtCiphertextFile
             // 
+            this.txtCiphertextFile.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCiphertextFile.Location = new System.Drawing.Point(302, 63);
             this.txtCiphertextFile.Name = "txtCiphertextFile";
             this.txtCiphertextFile.Size = new System.Drawing.Size(288, 163);
@@ -96,6 +102,7 @@ namespace ĐỒ_ÁN.GUI
             // 
             // txtPlaintextFile
             // 
+            this.txtPlaintextFile.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPlaintextFile.Location = new System.Drawing.Point(7, 63);
             this.txtPlaintextFile.Name = "txtPlaintextFile";
             this.txtPlaintextFile.Size = new System.Drawing.Size(220, 158);
@@ -123,6 +130,7 @@ namespace ĐỒ_ÁN.GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(988, 305);
             this.Controls.Add(this.panel1);
+            this.MinimumSize = new System.Drawing.Size(1004, 344);
             this.Name = "ToolEncrytAnDecryt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ToolBackUpAndReStore";

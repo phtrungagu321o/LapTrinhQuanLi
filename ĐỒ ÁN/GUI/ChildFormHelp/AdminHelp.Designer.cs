@@ -32,37 +32,37 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.iconButtonClose = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -144,6 +144,17 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             this.label21.TabIndex = 35;
             this.label21.Text = "+ Mật khẩu sau khi đặt lại sẽ bằng \"0\"";
             // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox12.Image = global::ĐỒ_ÁN.Properties.Resources.b4;
+            this.pictureBox12.Location = new System.Drawing.Point(0, 4210);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(676, 350);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 34;
+            this.pictureBox12.TabStop = false;
+            // 
             // label19
             // 
             this.label19.AutoSize = true;
@@ -155,6 +166,17 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             this.label19.Size = new System.Drawing.Size(515, 20);
             this.label19.TabIndex = 32;
             this.label19.Text = "- Chức năng THÊM, XÓA, SỬA  tài khoản và đặt loại mật khẩu tài khoản";
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox11.Image = global::ĐỒ_ÁN.Properties.Resources.b3;
+            this.pictureBox11.Location = new System.Drawing.Point(0, 3840);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(676, 350);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 31;
+            this.pictureBox11.TabStop = false;
             // 
             // label18
             // 
@@ -168,6 +190,17 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             this.label18.TabIndex = 30;
             this.label18.Text = "- Chức năng THÊM, XÓA, SỬA  phòng";
             // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox10.Image = global::ĐỒ_ÁN.Properties.Resources.b2;
+            this.pictureBox10.Location = new System.Drawing.Point(0, 3470);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(676, 350);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 29;
+            this.pictureBox10.TabStop = false;
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -179,6 +212,17 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             this.label17.Size = new System.Drawing.Size(306, 20);
             this.label17.TabIndex = 28;
             this.label17.Text = "- Chức năng THÊM, XÓA, SỬA loại Phòng";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox9.Image = global::ĐỒ_ÁN.Properties.Resources.b1;
+            this.pictureBox9.Location = new System.Drawing.Point(0, 3100);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(676, 350);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 27;
+            this.pictureBox9.TabStop = false;
             // 
             // label16
             // 
@@ -192,6 +236,17 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             this.label16.TabIndex = 26;
             this.label16.Text = "- Chức năng THÊM, XÓA, SỬA loại dịch vụ";
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox8.Image = global::ĐỒ_ÁN.Properties.Resources.a8;
+            this.pictureBox8.Location = new System.Drawing.Point(0, 2730);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(676, 350);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 25;
+            this.pictureBox8.TabStop = false;
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -203,6 +258,17 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             this.label15.Size = new System.Drawing.Size(540, 20);
             this.label15.TabIndex = 24;
             this.label15.Text = "- Tìm kiếm theo loại Và tên (Lựa chọn tên loại và tên dịch vụ  muốn tìm kiếm)";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox7.Image = global::ĐỒ_ÁN.Properties.Resources.a7;
+            this.pictureBox7.Location = new System.Drawing.Point(0, 2360);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(676, 350);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 23;
+            this.pictureBox7.TabStop = false;
             // 
             // label14
             // 
@@ -216,6 +282,17 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             this.label14.TabIndex = 22;
             this.label14.Text = "- Tìm kiếm theo loại (Lựa chọn tên loại muốn tìm kiếm)";
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox6.Image = global::ĐỒ_ÁN.Properties.Resources.ad6;
+            this.pictureBox6.Location = new System.Drawing.Point(0, 1990);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(676, 350);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 21;
+            this.pictureBox6.TabStop = false;
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -227,6 +304,17 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             this.label13.Size = new System.Drawing.Size(381, 20);
             this.label13.TabIndex = 20;
             this.label13.Text = "- Tìm kiếm theo tên (Nhập tên dịch vụ muốn tìm kiếm)";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox5.Image = global::ĐỒ_ÁN.Properties.Resources.ad5;
+            this.pictureBox5.Location = new System.Drawing.Point(0, 1620);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(676, 350);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 19;
+            this.pictureBox5.TabStop = false;
             // 
             // label12
             // 
@@ -300,6 +388,17 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             this.label7.TabIndex = 13;
             this.label7.Text = "Tìm kiếm:";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox4.Image = global::ĐỒ_ÁN.Properties.Resources.ad4;
+            this.pictureBox4.Location = new System.Drawing.Point(0, 1150);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(676, 350);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 12;
+            this.pictureBox4.TabStop = false;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -324,6 +423,17 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             this.label5.TabIndex = 10;
             this.label5.Text = "Các chức năng trong Dịch vụ:";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox3.Image = global::ĐỒ_ÁN.Properties.Resources.ad3;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 760);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(676, 350);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 9;
+            this.pictureBox3.TabStop = false;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -335,6 +445,17 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             this.label4.Size = new System.Drawing.Size(219, 20);
             this.label4.TabIndex = 8;
             this.label4.Text = "Lựa chọn Danh Sách Dịch Vụ";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox2.Image = global::ĐỒ_ÁN.Properties.Resources.ad2;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 390);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(676, 350);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
             // 
             // label3
             // 
@@ -348,6 +469,17 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             this.label3.TabIndex = 6;
             this.label3.Text = "Tạo báo cáo";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Image = global::ĐỒ_ÁN.Properties.Resources.ad1;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(676, 350);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -360,154 +492,22 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             this.label2.TabIndex = 5;
             this.label2.Text = "Chọn ngày để thống kê và báo cáo";
             // 
-            // pictureBox12
+            // iconButtonClose
             // 
-            this.pictureBox12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox12.Image = global::ĐỒ_ÁN.Properties.Resources.b4;
-            this.pictureBox12.Location = new System.Drawing.Point(0, 4210);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(676, 350);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 34;
-            this.pictureBox12.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox11.Image = global::ĐỒ_ÁN.Properties.Resources.b3;
-            this.pictureBox11.Location = new System.Drawing.Point(0, 3840);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(676, 350);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 31;
-            this.pictureBox11.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox10.Image = global::ĐỒ_ÁN.Properties.Resources.b2;
-            this.pictureBox10.Location = new System.Drawing.Point(0, 3470);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(676, 350);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 29;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox9.Image = global::ĐỒ_ÁN.Properties.Resources.b1;
-            this.pictureBox9.Location = new System.Drawing.Point(0, 3100);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(676, 350);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 27;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox8.Image = global::ĐỒ_ÁN.Properties.Resources.a8;
-            this.pictureBox8.Location = new System.Drawing.Point(0, 2730);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(676, 350);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 25;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox7.Image = global::ĐỒ_ÁN.Properties.Resources.a7;
-            this.pictureBox7.Location = new System.Drawing.Point(0, 2360);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(676, 350);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 23;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox6.Image = global::ĐỒ_ÁN.Properties.Resources.ad6;
-            this.pictureBox6.Location = new System.Drawing.Point(0, 1990);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(676, 350);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 21;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox5.Image = global::ĐỒ_ÁN.Properties.Resources.ad5;
-            this.pictureBox5.Location = new System.Drawing.Point(0, 1620);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(676, 350);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 19;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox4.Image = global::ĐỒ_ÁN.Properties.Resources.ad4;
-            this.pictureBox4.Location = new System.Drawing.Point(0, 1150);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(676, 350);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 12;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox3.Image = global::ĐỒ_ÁN.Properties.Resources.ad3;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 760);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(676, 350);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 9;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox2.Image = global::ĐỒ_ÁN.Properties.Resources.ad2;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 390);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(676, 350);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Image = global::ĐỒ_ÁN.Properties.Resources.ad1;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(676, 350);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("UTM Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(708, 12);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(34, 26);
-            this.iconButton1.TabIndex = 1;
-            this.iconButton1.Text = "X";
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            this.iconButtonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButtonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonClose.Font = new System.Drawing.Font("UTM Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonClose.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonClose.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButtonClose.IconColor = System.Drawing.Color.Black;
+            this.iconButtonClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonClose.Location = new System.Drawing.Point(708, 12);
+            this.iconButtonClose.Name = "iconButtonClose";
+            this.iconButtonClose.Size = new System.Drawing.Size(34, 26);
+            this.iconButtonClose.TabIndex = 1;
+            this.iconButtonClose.Text = "X";
+            this.iconButtonClose.UseVisualStyleBackColor = true;
+            this.iconButtonClose.Click += new System.EventHandler(this.iconButtonClose_Click);
             // 
             // AdminHelp
             // 
@@ -516,7 +516,7 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(81)))));
             this.ClientSize = new System.Drawing.Size(805, 375);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.iconButton1);
+            this.Controls.Add(this.iconButtonClose);
             this.Controls.Add(this.label1);
             this.MinimumSize = new System.Drawing.Size(821, 414);
             this.Name = "AdminHelp";
@@ -543,7 +543,7 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconButtonClose;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;

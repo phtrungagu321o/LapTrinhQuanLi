@@ -76,7 +76,6 @@ namespace ĐỒ_ÁN
                         break;
                     default:
                         btn.IconColor = Color.LightCoral;
-                        btn.ForeColor = Color.LightCoral;
                         break;
                 }    
                 

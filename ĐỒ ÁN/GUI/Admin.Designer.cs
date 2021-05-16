@@ -56,7 +56,7 @@ namespace ĐỒ_ÁN
             this.QuanLiPhongKaraokeDataSet = new ĐỒ_ÁN.QuanLiPhongKaraokeDataSet();
             this.dgvAccount = new System.Windows.Forms.DataGridView();
             this.panel40 = new System.Windows.Forms.Panel();
-            this.nmrAccountType = new System.Windows.Forms.NumericUpDown();
+            this.LlblTool = new System.Windows.Forms.LinkLabel();
             this.btnResetPassWord = new System.Windows.Forms.Button();
             this.panel43 = new System.Windows.Forms.Panel();
             this.cbbPosition = new System.Windows.Forms.ComboBox();
@@ -67,6 +67,7 @@ namespace ĐỒ_ÁN
             this.panel45 = new System.Windows.Forms.Panel();
             this.txtAccountDislayName = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
+            this.nmrAccountType = new System.Windows.Forms.NumericUpDown();
             this.panel46 = new System.Windows.Forms.Panel();
             this.btnShowAccount = new System.Windows.Forms.Button();
             this.btnUpdateAccount = new System.Windows.Forms.Button();
@@ -186,10 +187,10 @@ namespace ĐỒ_ÁN
             ((System.ComponentModel.ISupportInitialize)(this.QuanLiPhongKaraokeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).BeginInit();
             this.panel40.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nmrAccountType)).BeginInit();
             this.panel43.SuspendLayout();
             this.panel44.SuspendLayout();
             this.panel45.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrAccountType)).BeginInit();
             this.panel46.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoom)).BeginInit();
             this.panel26.SuspendLayout();
@@ -300,6 +301,7 @@ namespace ĐỒ_ÁN
             // panel40
             // 
             this.panel40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(81)))));
+            this.panel40.Controls.Add(this.LlblTool);
             this.panel40.Controls.Add(this.btnResetPassWord);
             this.panel40.Controls.Add(this.panel43);
             this.panel40.Controls.Add(this.panel44);
@@ -311,22 +313,19 @@ namespace ĐỒ_ÁN
             this.panel40.Size = new System.Drawing.Size(366, 293);
             this.panel40.TabIndex = 7;
             // 
-            // nmrAccountType
+            // LlblTool
             // 
-            this.nmrAccountType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
-            this.nmrAccountType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nmrAccountType.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nmrAccountType.ForeColor = System.Drawing.Color.Gainsboro;
-            this.nmrAccountType.Location = new System.Drawing.Point(381, 120);
-            this.nmrAccountType.Margin = new System.Windows.Forms.Padding(4);
-            this.nmrAccountType.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nmrAccountType.Name = "nmrAccountType";
-            this.nmrAccountType.Size = new System.Drawing.Size(42, 26);
-            this.nmrAccountType.TabIndex = 1;
+            this.LlblTool.AutoSize = true;
+            this.LlblTool.Font = new System.Drawing.Font("UTM Neo Sans Intel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LlblTool.ForeColor = System.Drawing.Color.Gainsboro;
+            this.LlblTool.LinkColor = System.Drawing.Color.Gainsboro;
+            this.LlblTool.Location = new System.Drawing.Point(76, 238);
+            this.LlblTool.Name = "LlblTool";
+            this.LlblTool.Size = new System.Drawing.Size(210, 27);
+            this.LlblTool.TabIndex = 9;
+            this.LlblTool.TabStop = true;
+            this.LlblTool.Text = "Tool mã hóa và giải mã";
+            this.LlblTool.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LlblTool_LinkClicked);
             // 
             // btnResetPassWord
             // 
@@ -448,6 +447,23 @@ namespace ĐỒ_ÁN
             this.label24.Size = new System.Drawing.Size(99, 22);
             this.label24.TabIndex = 0;
             this.label24.Text = "Tên hiển thị:";
+            // 
+            // nmrAccountType
+            // 
+            this.nmrAccountType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
+            this.nmrAccountType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nmrAccountType.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nmrAccountType.ForeColor = System.Drawing.Color.Gainsboro;
+            this.nmrAccountType.Location = new System.Drawing.Point(381, 120);
+            this.nmrAccountType.Margin = new System.Windows.Forms.Padding(4);
+            this.nmrAccountType.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nmrAccountType.Name = "nmrAccountType";
+            this.nmrAccountType.Size = new System.Drawing.Size(42, 26);
+            this.nmrAccountType.TabIndex = 1;
             // 
             // panel46
             // 
@@ -1826,7 +1842,7 @@ namespace ĐỒ_ÁN
             this.metroTabControlRoom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControlRoom.Location = new System.Drawing.Point(0, 0);
             this.metroTabControlRoom.Name = "metroTabControlRoom";
-            this.metroTabControlRoom.SelectedIndex = 3;
+            this.metroTabControlRoom.SelectedIndex = 2;
             this.metroTabControlRoom.Size = new System.Drawing.Size(845, 438);
             this.metroTabControlRoom.TabIndex = 2;
             this.metroTabControlRoom.UseSelectable = true;
@@ -2277,13 +2293,14 @@ namespace ĐỒ_ÁN
             ((System.ComponentModel.ISupportInitialize)(this.QuanLiPhongKaraokeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).EndInit();
             this.panel40.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nmrAccountType)).EndInit();
+            this.panel40.PerformLayout();
             this.panel43.ResumeLayout(false);
             this.panel43.PerformLayout();
             this.panel44.ResumeLayout(false);
             this.panel44.PerformLayout();
             this.panel45.ResumeLayout(false);
             this.panel45.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrAccountType)).EndInit();
             this.panel46.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoom)).EndInit();
             this.panel26.ResumeLayout(false);
@@ -2484,5 +2501,6 @@ namespace ĐỒ_ÁN
         private System.Windows.Forms.Panel pnSearchCategory;
         private FontAwesome.Sharp.IconButton iconButtonSearchCategory;
         private System.Windows.Forms.ComboBox cbbPosition;
+        private System.Windows.Forms.LinkLabel LlblTool;
     }
 }

@@ -17,7 +17,9 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             InitializeComponent();
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
+      
+
+        private void iconButtonClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }

@@ -31,21 +31,21 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.iconButtonClose = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -90,101 +90,28 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             this.panel1.Size = new System.Drawing.Size(693, 311);
             this.panel1.TabIndex = 4;
             // 
-            // label2
+            // label11
             // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(474, 20);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Thông tin tiền giờ, tổng tiền và danh sách món ăn của từng phòng:";
+            this.label11.AutoSize = true;
+            this.label11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label11.Location = new System.Drawing.Point(0, 1580);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(425, 20);
+            this.label11.TabIndex = 19;
+            this.label11.Text = " Sau khi |Thanh toán| bạn có thể in hoặc không in hóa đơn.";
             // 
-            // label3
+            // pictureBox4
             // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label3.Location = new System.Drawing.Point(0, 370);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(294, 20);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Danh sách Phòng thường và Phòng VIP:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label4.Location = new System.Drawing.Point(0, 740);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(488, 20);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Nút |Bắt đầu| để cập nhập trạng thái  |Có người| cho phòng đã chọn";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label5.Location = new System.Drawing.Point(0, 760);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(389, 20);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Nút |Thêm Món| để thêm món mới cho phòng đã chọn";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label6.Location = new System.Drawing.Point(0, 780);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(444, 20);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Nút |Thêm Món| để thanh toán |Hóa Đơn| của phòng đã chọn";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label7.Location = new System.Drawing.Point(0, 1150);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(576, 20);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Nút |Chuyển phòng| để chuyển từ phòng đã chọn sang 1 phòng trong danh sách";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label8.Location = new System.Drawing.Point(0, 1170);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(417, 20);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Khung |Giảm giá| để hiển thị số |%| giảm giá cho hóa đơn ";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label9.Location = new System.Drawing.Point(0, 1190);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(567, 20);
-            this.label9.TabIndex = 16;
-            this.label9.Text = " |Danh sách Thêm Món| để lựa chọn Loại và Tên dịch vụ cần thêm vào Hóa đơn";
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox4.Image = global::ĐỒ_ÁN.Properties.Resources._7;
+            this.pictureBox4.Location = new System.Drawing.Point(0, 1230);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(676, 350);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 18;
+            this.pictureBox4.TabStop = false;
             // 
             // label10
             // 
@@ -199,16 +126,41 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             this.label10.Text = " Khung |Số lượng món ăn | chứa 2 giá trị âm và dương dùng để thêm hoặc bớt số lươ" +
     "ng dịch vụ";
             // 
-            // pictureBox4
+            // label9
             // 
-            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox4.Image = global::ĐỒ_ÁN.Properties.Resources._7;
-            this.pictureBox4.Location = new System.Drawing.Point(0, 1230);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(676, 350);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 18;
-            this.pictureBox4.TabStop = false;
+            this.label9.AutoSize = true;
+            this.label9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label9.Location = new System.Drawing.Point(0, 1190);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(567, 20);
+            this.label9.TabIndex = 16;
+            this.label9.Text = " |Danh sách Thêm Món| để lựa chọn Loại và Tên dịch vụ cần thêm vào Hóa đơn";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label8.Location = new System.Drawing.Point(0, 1170);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(417, 20);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Khung |Giảm giá| để hiển thị số |%| giảm giá cho hóa đơn ";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label7.Location = new System.Drawing.Point(0, 1150);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(576, 20);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Nút |Chuyển phòng| để chuyển từ phòng đã chọn sang 1 phòng trong danh sách";
             // 
             // pictureBox3
             // 
@@ -221,6 +173,42 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             this.pictureBox3.TabIndex = 13;
             this.pictureBox3.TabStop = false;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label6.Location = new System.Drawing.Point(0, 780);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(444, 20);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Nút |Thêm Món| để thanh toán |Hóa Đơn| của phòng đã chọn";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label5.Location = new System.Drawing.Point(0, 760);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(389, 20);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Nút |Thêm Món| để thêm món mới cho phòng đã chọn";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label4.Location = new System.Drawing.Point(0, 740);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(488, 20);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Nút |Bắt đầu| để cập nhập trạng thái  |Có người| cho phòng đã chọn";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -231,6 +219,18 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label3.Location = new System.Drawing.Point(0, 370);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(294, 20);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Danh sách Phòng thường và Phòng VIP:";
             // 
             // pictureBox1
             // 
@@ -243,34 +243,34 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // iconButton1
+            // label2
             // 
-            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("UTM Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(738, 12);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(34, 26);
-            this.iconButton1.TabIndex = 2;
-            this.iconButton1.Text = "X";
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(474, 20);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Thông tin tiền giờ, tổng tiền và danh sách món ăn của từng phòng:";
             // 
-            // label11
+            // iconButtonClose
             // 
-            this.label11.AutoSize = true;
-            this.label11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label11.Location = new System.Drawing.Point(0, 1580);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(425, 20);
-            this.label11.TabIndex = 19;
-            this.label11.Text = " Sau khi |Thanh toán| bạn có thể in hoặc không in hóa đơn.";
+            this.iconButtonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButtonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonClose.Font = new System.Drawing.Font("UTM Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonClose.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonClose.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButtonClose.IconColor = System.Drawing.Color.Black;
+            this.iconButtonClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonClose.Location = new System.Drawing.Point(738, 12);
+            this.iconButtonClose.Name = "iconButtonClose";
+            this.iconButtonClose.Size = new System.Drawing.Size(34, 26);
+            this.iconButtonClose.TabIndex = 2;
+            this.iconButtonClose.Text = "X";
+            this.iconButtonClose.UseVisualStyleBackColor = true;
+            this.iconButtonClose.Click += new System.EventHandler(this.iconButtonClose_Click);
             // 
             // RoomManagerHelp
             // 
@@ -279,7 +279,7 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(81)))));
             this.ClientSize = new System.Drawing.Size(805, 375);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.iconButton1);
+            this.Controls.Add(this.iconButtonClose);
             this.Controls.Add(this.label1);
             this.MinimumSize = new System.Drawing.Size(821, 414);
             this.Name = "RoomManagerHelp";
@@ -298,7 +298,7 @@ namespace ĐỒ_ÁN.GUI.ChildFormHelp
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconButtonClose;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
